@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문의하기 | 사카에글로벌 주식회사</title>
+<meta name="description" content="견적, 보조금, 실기 데모, 설치 조건 등 문의하실 제품과 상담 내용을 알려 주십시오.">
+<link rel="icon" href="assets/117c52be5ecb1ebafe997be82697934e.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5CAD}a:hover{color:#083F78}
+.pg{font-family:'Inter','Noto Sans KR','Noto Sans JP',system-ui,sans-serif;color:#1D1D1F;background:#FFFFFF;line-height:1.65;-webkit-font-smoothing:antialiased}
+.pg{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+.pg h1,.pg h2,.pg h3,.pg h4,.pg summary,.pg figcaption,.pg .lead,.pg th{text-wrap:balance}
+.pg p,.pg li,.pg dd,.pg td{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px, 2vw, 24px)}
+.sec{padding:clamp(56px, 9.33vw, 112px) 0}
+.pale{background:#F5F5F7}
+.dark{background:#0B1320;color:#F5F5F7}
+.eye{font-size:15px;font-weight:600;color:#0B5CAD;letter-spacing:.04em;margin:0}
+.dark .eye{color:#8CC4FF}
+.h1{margin:10px 0 0;font-size: clamp(40px, 6vw, 72px);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.h2{margin:0;font-size: clamp(26px, 3.83vw, 46px);line-height:1.2;font-weight:700}
+.h3{margin:0;font-size: clamp(18px, 1.83vw, 22px);line-height:1.35;font-weight:700}
+.lead{margin:18px 0 0;font-size: clamp(16px, 1.67vw, 20px);line-height:1.6;color:#5F5F64}
+.dark .lead,.dark .mut{color:#C4CAD4}
+.mut{color:#5F5F64}
+.c{text-align:center}
+.c .lead{margin-left:auto;margin-right:auto;max-width:720px}
+.pill{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:500;border:0;cursor:pointer;font-family:inherit}
+.pill:hover{background:#083F78;color:#FFFFFF}
+.ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;border:1px solid #0B5CAD;color:#0B5CAD;text-decoration:none;font-size:16px;font-weight:500;background:transparent}
+.ghost:hover{background:#0B5CAD;color:#FFFFFF}
+.lk{text-decoration:none;font-size:16px}.lk:hover{text-decoration:underline}
+.dark a.lk{color:#8CC4FF}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border-radius:22px;padding:clamp(20px, 2.67vw, 32px);color:#1D1D1F;text-decoration:none;display:block}
+.pale .card{background:#FFFFFF}
+.card.g{background:#F5F5F7}
+.dark .card{background:#162235;color:#F5F5F7}
+a.card:hover{color:#1D1D1F;background:#E6EEF8;box-shadow:0 16px 44px rgba(11,40,80,.16)}
+.dark a.card:hover{color:#FFFFFF;background:#22395A;box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.pill,.ghost,.chip,.card,.lk,.nav a,.topic,.foot a,.tb tbody tr,details summary{transition:background-color .2s,color .2s,border-color .2s,box-shadow .25s}
+.card img,.slide img{transition:transform .5s}
+a.card:hover img{transform:scale(1.04)}
+.chip:hover{background:#0B5CAD !important;color:#FFFFFF !important;border-color:#0B5CAD !important}
+.chip.dng:hover{background:#B3261E !important;border-color:#B3261E !important}
+.topic{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2vw, 24px);border-radius:999px;border:1px solid #5C6B80;color:#FFFFFF;text-decoration:none;font-size:16px}
+.topic:hover{background:#FFFFFF;color:#0B1320;border-color:#FFFFFF}
+.lk:hover{color:#083F78}
+.dark a.lk:hover{color:#FFFFFF}
+.tb tbody tr:hover{background:#EEF5FC}
+.dark .tb tbody tr:hover{background:#22395A}
+details summary:hover{color:#0B5CAD}
+.slide:hover .more{background:#083F78}
+.show{display:none}
+.stage{position:relative}
+.slide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px, 4vw, 48px);align-items:center;text-decoration:none;color:#1D1D1F;background:#F5F5F7;border-radius:28px;padding:clamp(28px, 4.67vw, 56px) clamp(32px, 5.33vw, 64px);box-sizing:border-box}
+.slide:hover{color:#1D1D1F}
+.more{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;font-size:16px;font-weight:500;margin-top:clamp(17px, 2.33vw, 28px)}
+@keyframes rise{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scale(.88);border-radius:48px}to{transform:none}}
+@keyframes k1{0%{opacity:1;visibility:visible;transform:none}13%{opacity:1;visibility:visible;transform:none}17.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}17.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k2{0%,17.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}17.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}22%{opacity:1;visibility:visible;transform:none}33%{opacity:1;visibility:visible;transform:none}37.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}37.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k3{0%,37.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}37.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}42%{opacity:1;visibility:visible;transform:none}53%{opacity:1;visibility:visible;transform:none}57.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}57.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k4{0%,57.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}57.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}62%{opacity:1;visibility:visible;transform:none}73%{opacity:1;visibility:visible;transform:none}77.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}77.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k5{0%,77.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}77.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}82%{opacity:1;visibility:visible;transform:none}100%{opacity:1;visibility:visible;transform:none}}
+@keyframes kimg{from{transform:translateX(60px) rotate(2deg)}to{transform:translateX(-60px) rotate(-2deg)}}
+@keyframes kbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-height:1600px) and (min-width:901px) and (prefers-reduced-motion:no-preference){
+@supports (animation-timeline: view()){
+ .card,figure,.h2,.tb{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+ .growin{animation:grow linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ .tiles{display:none}
+ .show{display:block;height:3400px;view-timeline-name:--show;view-timeline-axis:block}
+ .stage{position:sticky;top:92px;height:620px}
+ .stage .slide{position:absolute;inset:0;z-index:1;animation-timeline:--show;animation-range:contain 0% contain 100%;animation-timing-function:linear;animation-fill-mode:both}
+ .sl1{animation-name:k1}.sl2{animation-name:k2}.sl3{animation-name:k3}.sl4{animation-name:k4}.sl5{animation-name:k5}
+ .stage .slide img{animation:kimg linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .bar{animation:kbar linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .stage figure,.stage .card,.stage .h2{animation:none}
+}}
+.ph{display:block;width:100%;object-fit:contain}
+.nav a{color:#1D1D1F;text-decoration:none}.nav a:hover{color:#0B5CAD}
+.foot a{color:#424245;text-decoration:none}.foot a:hover{text-decoration:underline}
+.chip{font:inherit;font-size:15px;font-weight:500;min-height:44px;padding:0 20px;border-radius:999px;cursor:pointer}
+.dl{margin:0;border-top:1px solid #D2D2D7}
+.dl>div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid #D2D2D7}
+.dl dt{color:#5F5F64}.dl dd{margin:0}
+.tb{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
+.tb th,.tb td{padding:14px 10px;border-bottom:1px solid #E3E3E8;vertical-align:top}
+.tb thead th{color:#5F5F64;font-weight:500;border-bottom:1px solid #C7C7CC}
+.scroll{overflow-x:auto}
+.spec th,.spec td{text-align:center;padding:16px 12px}
+.spec thead th{background:#F5F5F7;border-bottom:0;padding:20px 12px;color:#1D1D1F;font-weight:700;font-size: clamp(16px, 1.67vw, 20px)}
+.spec tbody th{text-align:left;padding-left:clamp(22px, 3vw, 36px);white-space:nowrap;font-weight:500;color:#5F5F64}
+.spec tbody tr:nth-child(odd){background:#F7F9FC}
+.spec tbody tr:first-child td{font-size: clamp(16px, 1.67vw, 20px);font-weight:700;color:#0B5CAD}
+.spec td:nth-child(5),.spec th:nth-child(5){border-left:2px solid #C7C7CC}
+.spec .tg{display:block;width:fit-content;margin:0 auto 8px;font-size:12px;font-weight:700;color:#FFFFFF;border-radius:999px;padding:3px 14px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
+.fld{font:inherit;font-size:16px;width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;border:1px solid #86868B;border-radius:12px;background:#FFFFFF;color:#1D1D1F}
+.fld:focus,.chip:focus-visible,.pill:focus-visible{outline:2px solid #0B5CAD;outline-offset:2px}
+.lab{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.hasdrop{position:relative;display:flex;align-items:center;height:76px}
+.sub{display:none;position:absolute;top:100%;left:-18px;z-index:20}
+.sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
+.sub a:hover{background:#F5F5F7}
+.hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
+.mnav,.mlang{display:none;position:relative}
+.mlang{display:block}
+.langtxt{display:none !important}
+.nhead:hover span{color:#0B5CAD}
+.mnav summary,.mlang summary{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;height:44px;padding:0 8px;border-radius:12px;box-sizing:border-box}
+.mnav summary:hover,.mlang summary:hover,.mnav[open] summary,.mlang[open] summary{background:#EDEDF0}
+.drop{position:absolute;right:0;top:54px;z-index:20;display:flex;flex-direction:column;min-width:230px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.drop a,.drop>span{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border-radius:10px;color:#1D1D1F;text-decoration:none;font-size:16px;box-sizing:border-box}
+.drop a:hover{background:#F5F5F7}
+.drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
+@media (max-width:900px){
+ .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
+ .nav{display:none !important}
+
+ .dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .split{grid-template-columns:minmax(0,1fr) !important}
+}
+@media (min-width:901px) and (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body style="margin: 0">
+<div id="app">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-ko.html" aria-label="SAKAE GLOBAL 홈" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="메인 메뉴" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-ko.html">제품 정보</a><div class="sub"><div><a href="cutting-ko.html">파이버 레이저 절단기</a><a href="welder-ko.html">레이저 용접기</a><a href="robot-ko.html">협동 용접 로봇</a><a href="stopper-ko.html">충격 흡수형 카스토퍼</a><a href="separator-ko.html">압축공기용 세퍼레이터</a></div></div></div>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="contact.html" style="color: inherit; text-decoration: none">日本語</a> · <strong style="color: #1D1D1F">한국어</strong> · <a href="contact-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="contact-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="언어 선택"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">한국어</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="contact.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</span>
+<a href="contact-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="contact-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact-ko.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">문의하기</a>
+<details class="mnav">
+<summary aria-label="메뉴 열기"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-ko.html">제품 정보</a>
+<a href="cutting-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">파이버 레이저 절단기</a>
+<a href="welder-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">레이저 용접기</a>
+<a href="robot-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">협동 용접 로봇</a>
+<a href="stopper-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">압축공기용 세퍼레이터</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+<a href="contact-ko.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">문의하기</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main class="pale" style="padding: clamp(36px, 6vw, 72px) 0 clamp(48px, 8vw, 96px)">
+<div class="wrap" style="max-width: 800px">
+<div class="c"><p class="eye">문의하기</p><h1 class="h2" style="margin-top: 8px">제품·기술 상담</h1>
+<p class="lead">견적, 보조금, 실기 데모, 설치 조건 등 문의하실 제품과 상담 내용을 알려 주십시오.</p></div>
+<div role="group" aria-label="상담 종류" class="row" style="justify-content: center; gap: 10px; margin-top: clamp(20px, 2.67vw, 32px)">
+
+<button type="button" class="chip" aria-pressed="" style="border: 1px solid #1D1D1F; background: #1D1D1F; color: #FFFFFF">견적·주문</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">보조금 상담</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">테스트 가공·데모</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">카탈로그 요청</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">기타 문의</button>
+
+</div>
+
+<form novalidate="" class="card" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(25px, 3.33vw, 40px); display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 15px; color: #424245; background: #F5F5F7; border-radius: 12px; padding: 14px 16px">원하시는 제품·형식, 수량, 납품 지역, 희망 납기를 아시는 범위에서 알려 주십시오.</p>
+<div class="g2" style="gap: 18px">
+<label class="lab">대상 제품
+<select class="fld" name="product"><option value="none">미정·해당 없음</option><option value="cutting">파이버 레이저 절단기</option><option value="welder">레이저 용접기</option><option value="robot">협동 용접 로봇</option><option value="stopper">충격 흡수형 카스토퍼</option><option value="separator">압축공기용 세퍼레이터</option></select></label>
+<label class="lab" style="display: none">형식·기종명
+<input class="fld" type="text" name="model" placeholder="제품명 또는 형식"></label>
+<label class="lab" style="display: none">재질·판 두께
+<input class="fld" type="text" name="material" placeholder="예) SUS304 t3.0"></label>
+<label class="lab" style="display: none">가공 크기(판·관 치수)
+<input class="fld" type="text" name="size" placeholder="예) 3,048 × 1,524 mm, 원형관 Ø100"></label>
+<label class="lab" style="display: none">월간 가공량
+<input class="fld" type="text" name="volume" placeholder="예) 월 20톤"></label>
+<label class="lab" style="display: none">용접할 제품·이음
+<input class="fld" type="text" name="joint" placeholder="예) SUS 박스 제품의 모서리 이음"></label>
+<label class="lab" style="display: none">공장 전원
+<input class="fld" type="text" name="power" placeholder="예) 단상 200 V"></label>
+<label class="lab" style="display: none">워크 치수
+<input class="fld" type="text" name="work" placeholder="예) 600 × 400 × 300 mm"></label>
+<label class="lab" style="display: none">사용 중인 용접기·지그
+<input class="fld" type="text" name="equip" placeholder="예) CO2 용접기 350 A"></label>
+<label class="lab" style="display: none">주차 면수·설치 대수
+<input class="fld" type="text" name="bays" placeholder="예) 20대분"></label>
+<label class="lab" style="display: none">포장 종류
+<input class="fld" type="text" name="pavement" placeholder="예) 아스팔트"></label>
+<label class="lab" style="display: none">대상 차량
+<input class="fld" type="text" name="vehicle" placeholder="예) 승용차, 트럭"></label>
+<label class="lab" style="display: none">사용 유량
+<input class="fld" type="text" name="flow" placeholder="예) 800 L/min"></label>
+<label class="lab" style="display: none">사용 압력
+<input class="fld" type="text" name="pressure" placeholder="예) 0.7 MPa"></label>
+<label class="lab" style="display: none">접속 구경
+<input class="fld" type="text" name="port" placeholder="예) 3/8"></label>
+<label class="lab" style="display: none">연결할 기기
+<input class="fld" type="text" name="device" placeholder="예) 도장 건, 레이저 가공기"></label>
+<label class="lab" style="display: none">수량
+<input class="fld" type="text" name="qty" placeholder="예) 1대"></label>
+<label class="lab" style="display: flex">납품 지역
+<input class="fld" type="text" name="region" placeholder="예) 일본·아이치현"></label>
+<label class="lab" style="display: flex">희망 납기
+<input class="fld" type="text" name="delivery" placeholder="예) 2027년 3월"></label>
+</div>
+<label style="display: none; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="alsoFunding" style="width: 20px; height: 20px">보조금 활용도 상담하기</label>
+<div style="border-top: 1px solid #D2D2D7; padding-top: 22px; display: flex; flex-direction: column; gap: 18px">
+<div class="g2" style="gap: 18px">
+<label class="lab">회사명(필수)
+<input class="fld" type="text" name="company" required="" autocomplete="organization" placeholder="회사명·공장명"></label>
+<label class="lab">성함(필수)
+<input class="fld" type="text" name="person" required="" autocomplete="name"></label>
+<label class="lab">회신받을 이메일 주소(필수)
+<input class="fld" type="email" name="email" required="" autocomplete="email"></label>
+<label class="lab">전화번호(선택)
+<input class="fld" type="tel" name="phone" autocomplete="tel"></label>
+</div>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="font-size: 14px; font-weight: 600; padding: 0">희망 연락 방법</legend>
+<div class="row" style="gap: clamp(16px, 2vw, 24px)">
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="이메일" checked="" style="width: 20px; height: 20px">이메일</label>
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="전화" style="width: 20px; height: 20px">전화</label>
+</div>
+</fieldset>
+<label class="lab">문의 내용
+<textarea class="fld" name="message" rows="5" style="resize: vertical" placeholder="필요한 사양, 가공 내용, 설치 조건 등"></textarea></label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="agree" style="width: 20px; height: 20px"><span><a href="company-ko.html#privacy">개인정보 보호방침</a>에 동의합니다(필수)</span></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+
+<button type="button" class="pill" style="align-self: center; min-height: 52px; padding: 0 clamp(25px, 3.33vw, 40px); font-size: clamp(15px, 1.42vw, 17px)">작성 내용 확인하기</button>
+<p class="mut c" style="margin: 0; font-size: 13px">버튼을 누르면 작성 내용 확인 화면으로 넘어갑니다.</p>
+</div>
+</form>
+
+
+
+
+
+<div class="g2" style="margin-top: 16px">
+<div class="card"><h2 class="h3">전화</h2><p style="margin: 8px 0 0; font-size: clamp(18px, 1.83vw, 22px); font-weight: 700">050-1753-9326</p><p class="mut" style="margin: 2px 0 0; font-size: 14px">대표 전화</p></div>
+<div class="card"><h2 class="h3">이메일</h2><p style="margin: 8px 0 0">문의·견적·주문</p><p style="margin: 2px 0 0"><a href="mailto:info@sakaeglobal.com">info@sakaeglobal.com</a></p></div>
+</div>
+</div>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">제품 정보</strong>
+<a href="cutting-ko.html">파이버 레이저 절단기</a>
+<a href="welder-ko.html">레이저 용접기</a>
+<a href="robot-ko.html">협동 용접 로봇</a>
+<a href="stopper-ko.html">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html">압축공기용 세퍼레이터</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">상담</strong>
+<a href="contact-ko.html">견적·주문</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="contact-ko.html">테스트 가공·데모</a>
+<a href="contact-ko.html">카탈로그 요청</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">회사 정보</strong>
+<a href="company-ko.html">기업 안내</a>
+<a href="news-ko.html">공지사항</a>
+<a href="company-ko.html#careers">채용 정보</a>
+<a href="company-ko.html#privacy">개인정보 보호방침</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">공식 YouTube 채널</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 사카에글로벌 주식회사</div>
+</div>
+</footer>
+</div>
+</div>
+<template id="tpl">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-ko.html" aria-label="SAKAE GLOBAL 홈" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="메인 메뉴" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-ko.html">제품 정보</a><div class="sub"><div><a href="cutting-ko.html">파이버 레이저 절단기</a><a href="welder-ko.html">레이저 용접기</a><a href="robot-ko.html">협동 용접 로봇</a><a href="stopper-ko.html">충격 흡수형 카스토퍼</a><a href="separator-ko.html">압축공기용 세퍼레이터</a></div></div></div>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="contact.html" style="color: inherit; text-decoration: none">日本語</a> · <strong style="color: #1D1D1F">한국어</strong> · <a href="contact-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="contact-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="언어 선택"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">한국어</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="contact.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</span>
+<a href="contact-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="contact-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact-ko.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">문의하기</a>
+<details class="mnav">
+<summary aria-label="메뉴 열기"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-ko.html">제품 정보</a>
+<a href="cutting-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">파이버 레이저 절단기</a>
+<a href="welder-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">레이저 용접기</a>
+<a href="robot-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">협동 용접 로봇</a>
+<a href="stopper-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">압축공기용 세퍼레이터</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+<a href="contact-ko.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">문의하기</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main class="pale" style="padding: clamp(36px, 6vw, 72px) 0 clamp(48px, 8vw, 96px)">
+<div class="wrap" style="max-width: 800px">
+<div class="c"><p class="eye">문의하기</p><h1 class="h2" style="margin-top: 8px">제품·기술 상담</h1>
+<p class="lead">견적, 보조금, 실기 데모, 설치 조건 등 문의하실 제품과 상담 내용을 알려 주십시오.</p></div>
+<div role="group" aria-label="상담 종류" class="row" style="justify-content: center; gap: 10px; margin-top: clamp(20px, 2.67vw, 32px)">
+<template data-for="types" data-as="t">
+<button type="button" class="chip" onClick="{{t.pick}}" aria-pressed="{{t.on}}" style="border: 1px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}">{{t.label}}</button>
+</template>
+</div>
+
+<form onSubmit="{{check}}" noValidate="{{true}}" class="card" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(25px, 3.33vw, 40px); display: {{formDisp}}; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 15px; color: #424245; background: #F5F5F7; border-radius: 12px; padding: 14px 16px">{{lead}}</p>
+<div class="g2" style="gap: 18px">
+<label class="lab">대상 제품
+<select class="fld" name="product" onChange="{{onProduct}}"><option value="none">미정·해당 없음</option><option value="cutting">파이버 레이저 절단기</option><option value="welder">레이저 용접기</option><option value="robot">협동 용접 로봇</option><option value="stopper">충격 흡수형 카스토퍼</option><option value="separator">압축공기용 세퍼레이터</option></select></label>
+<label class="lab" style="display: {{d.model}}">형식·기종명
+<input class="fld" type="text" name="model" placeholder="제품명 또는 형식"></label>
+<label class="lab" style="display: {{d.material}}">재질·판 두께
+<input class="fld" type="text" name="material" placeholder="예) SUS304 t3.0"></label>
+<label class="lab" style="display: {{d.size}}">가공 크기(판·관 치수)
+<input class="fld" type="text" name="size" placeholder="예) 3,048 × 1,524 mm, 원형관 Ø100"></label>
+<label class="lab" style="display: {{d.volume}}">월간 가공량
+<input class="fld" type="text" name="volume" placeholder="예) 월 20톤"></label>
+<label class="lab" style="display: {{d.joint}}">용접할 제품·이음
+<input class="fld" type="text" name="joint" placeholder="예) SUS 박스 제품의 모서리 이음"></label>
+<label class="lab" style="display: {{d.power}}">공장 전원
+<input class="fld" type="text" name="power" placeholder="예) 단상 200 V"></label>
+<label class="lab" style="display: {{d.work}}">워크 치수
+<input class="fld" type="text" name="work" placeholder="예) 600 × 400 × 300 mm"></label>
+<label class="lab" style="display: {{d.equip}}">사용 중인 용접기·지그
+<input class="fld" type="text" name="equip" placeholder="예) CO2 용접기 350 A"></label>
+<label class="lab" style="display: {{d.bays}}">주차 면수·설치 대수
+<input class="fld" type="text" name="bays" placeholder="예) 20대분"></label>
+<label class="lab" style="display: {{d.pavement}}">포장 종류
+<input class="fld" type="text" name="pavement" placeholder="예) 아스팔트"></label>
+<label class="lab" style="display: {{d.vehicle}}">대상 차량
+<input class="fld" type="text" name="vehicle" placeholder="예) 승용차, 트럭"></label>
+<label class="lab" style="display: {{d.flow}}">사용 유량
+<input class="fld" type="text" name="flow" placeholder="예) 800 L/min"></label>
+<label class="lab" style="display: {{d.pressure}}">사용 압력
+<input class="fld" type="text" name="pressure" placeholder="예) 0.7 MPa"></label>
+<label class="lab" style="display: {{d.port}}">접속 구경
+<input class="fld" type="text" name="port" placeholder="예) 3/8"></label>
+<label class="lab" style="display: {{d.device}}">연결할 기기
+<input class="fld" type="text" name="device" placeholder="예) 도장 건, 레이저 가공기"></label>
+<label class="lab" style="display: {{d.qty}}">수량
+<input class="fld" type="text" name="qty" placeholder="예) 1대"></label>
+<label class="lab" style="display: {{d.region}}">납품 지역
+<input class="fld" type="text" name="region" placeholder="예) 일본·아이치현"></label>
+<label class="lab" style="display: {{d.delivery}}">희망 납기
+<input class="fld" type="text" name="delivery" placeholder="예) 2027년 3월"></label>
+</div>
+<label style="display: {{d.funding}}; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="alsoFunding" style="width: 20px; height: 20px">보조금 활용도 상담하기</label>
+<div style="border-top: 1px solid #D2D2D7; padding-top: 22px; display: flex; flex-direction: column; gap: 18px">
+<div class="g2" style="gap: 18px">
+<label class="lab">회사명(필수)
+<input class="fld" type="text" name="company" required autocomplete="organization" placeholder="회사명·공장명"></label>
+<label class="lab">성함(필수)
+<input class="fld" type="text" name="person" required autocomplete="name"></label>
+<label class="lab">회신받을 이메일 주소(필수)
+<input class="fld" type="email" name="email" required autocomplete="email"></label>
+<label class="lab">전화번호(선택)
+<input class="fld" type="tel" name="phone" autocomplete="tel"></label>
+</div>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="font-size: 14px; font-weight: 600; padding: 0">희망 연락 방법</legend>
+<div class="row" style="gap: clamp(16px, 2vw, 24px)">
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="이메일" defaultChecked="{{true}}" style="width: 20px; height: 20px">이메일</label>
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="전화" style="width: 20px; height: 20px">전화</label>
+</div>
+</fieldset>
+<label class="lab">문의 내용
+<textarea class="fld" name="message" rows="5" style="resize: vertical" placeholder="필요한 사양, 가공 내용, 설치 조건 등"></textarea></label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="agree" style="width: 20px; height: 20px"><span><a href="company-ko.html#privacy">개인정보 보호방침</a>에 동의합니다(필수)</span></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+<template data-if="hasErr">
+<p role="alert" style="margin: 0; padding: 14px 18px; border-radius: 12px; background: #FDECEA; color: #B3261E; font-size: 15px; font-weight: 600">{{errText}}</p>
+</template>
+<button type="button" onClick="{{check}}" class="pill" style="align-self: center; min-height: 52px; padding: 0 clamp(25px, 3.33vw, 40px); font-size: clamp(15px, 1.42vw, 17px)">작성 내용 확인하기</button>
+<p class="mut c" style="margin: 0; font-size: 13px">버튼을 누르면 작성 내용 확인 화면으로 넘어갑니다.</p>
+</div>
+</form>
+
+<template data-if="isConfirm">
+<div class="card" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(25px, 3.33vw, 40px)">
+<h2 class="h3" style="font-size: clamp(21px, 2.17vw, 26px)">작성 내용 확인</h2>
+<p class="mut" style="margin: 6px 0 0; font-size: 15px">아래 내용으로 전송합니다. 괜찮으시면 "보내기"를 눌러 주십시오.</p>
+<dl style="margin: 20px 0 0; font-size: 16px; border-top: 1px solid #D2D2D7">
+<template data-for="rows" data-as="r">
+<div style="display: grid; grid-template-columns: minmax(120px, 220px) minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid #D2D2D7"><dt class="mut">{{r.k}}</dt><dd style="margin: 0; font-weight: 600; white-space: pre-wrap; overflow-wrap: anywhere">{{r.v}}</dd></div>
+</template>
+</dl>
+<template data-if="failed">
+<p role="alert" style="margin: 20px 0 0; padding: 14px 18px; border-radius: 12px; background: #FDECEA; color: #B3261E; font-size: 15px; font-weight: 600">전송하지 못했습니다. 통신 환경을 확인하신 후 다시 시도해 주십시오. 해결되지 않으면 info@sakaeglobal.com으로 연락해 주십시오.</p>
+</template>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px); gap: 12px">
+<button type="button" onClick="{{back}}" class="ghost" style="min-height: 52px; padding: 0 clamp(20px, 2.67vw, 32px); font-size: 16px; cursor: pointer; font-family: inherit">수정하기</button>
+<button type="button" onClick="{{send}}" class="pill" style="min-height: 52px; padding: 0 clamp(25px, 3.33vw, 40px); font-size: clamp(15px, 1.42vw, 17px)">{{sendLabel}}</button>
+</div>
+</div>
+</template>
+
+<template data-if="isDone">
+<div role="status" class="card c" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(28px, 4.67vw, 56px) clamp(25px, 3.33vw, 40px); border: 2px solid #0B5CAD">
+<h2 class="h3" style="font-size: clamp(22px, 2.33vw, 28px)">문의가 접수되었습니다.</h2>
+<p class="mut" style="margin: 10px 0 0; font-size: 16px">담당자가 연락드리겠습니다.</p>
+<button type="button" onClick="{{again}}" class="ghost" style="margin-top: clamp(16px, 2vw, 24px); min-height: 48px; padding: 0 clamp(17px, 2.33vw, 28px); font-size: 15px; cursor: pointer; font-family: inherit">새 문의 작성하기</button>
+</div>
+</template>
+
+<div class="g2" style="margin-top: 16px">
+<div class="card"><h2 class="h3">전화</h2><p style="margin: 8px 0 0; font-size: clamp(18px, 1.83vw, 22px); font-weight: 700">050-1753-9326</p><p class="mut" style="margin: 2px 0 0; font-size: 14px">대표 전화</p></div>
+<div class="card"><h2 class="h3">이메일</h2><p style="margin: 8px 0 0">문의·견적·주문</p><p style="margin: 2px 0 0"><a href="mailto:info@sakaeglobal.com">info@sakaeglobal.com</a></p></div>
+</div>
+</div>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">제품 정보</strong>
+<a href="cutting-ko.html">파이버 레이저 절단기</a>
+<a href="welder-ko.html">레이저 용접기</a>
+<a href="robot-ko.html">협동 용접 로봇</a>
+<a href="stopper-ko.html">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html">압축공기용 세퍼레이터</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">상담</strong>
+<a href="contact-ko.html">견적·주문</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="contact-ko.html">테스트 가공·데모</a>
+<a href="contact-ko.html">카탈로그 요청</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">회사 정보</strong>
+<a href="company-ko.html">기업 안내</a>
+<a href="news-ko.html">공지사항</a>
+<a href="company-ko.html#careers">채용 정보</a>
+<a href="company-ko.html#privacy">개인정보 보호방침</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">공식 YouTube 채널</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 사카에글로벌 주식회사</div>
+</div>
+</footer>
+</div>
+</template>
+<script src="site.js"></script>
+<script>
+var EXT = {};
+class Component extends DCLogic {
+  renderVals() {
+    if (!this._oc) {
+      this._oc = true;
+      try {
+        document.addEventListener('click', (e) => {
+          const path = e.composedPath ? e.composedPath() : [e.target];
+          const root = path[0] && path[0].getRootNode ? path[0].getRootNode() : document;
+          const close = (r) => { try { r.querySelectorAll('details.mlang[open], details.mnav[open]').forEach((d) => { if (path.indexOf(d) < 0) d.removeAttribute('open'); }); } catch (x) {} };
+          close(root); if (root !== document) close(document);
+        }, true);
+      } catch (x) {}
+    }
+
+    const st = this.state || {};
+    const sel = st.type || 'order';
+    const labels = { order: '견적·주문', subsidy: '보조금 상담', demo: '테스트 가공·데모', catalog: '카탈로그 요청', general: '기타 문의' };
+    const leads = {
+      order: '원하시는 제품·형식, 수량, 납품 지역, 희망 납기를 아시는 범위에서 알려 주십시오.',
+      subsidy: '설치 예정지, 도입 시기, 검토 중인 설비를 알려 주십시오. 활용할 수 있을 만한 제도 안내와 신청 자료 준비를 도와드립니다.',
+      demo: '사용 재료, 판 두께, 확인하고 싶은 가공 내용을 알려 주십시오.',
+      catalog: '원하시는 제품이나 형식을 알려 주십시오.',
+      general: '사용 중인 제품은 형식과 문의 내용을 알려 주십시오. 일반 상담은 제품을 선택하지 않으셔도 됩니다.'
+    };
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyouqunTgzOETwYZQg-DbY2j2d_dYsDwNC27cUHBlwGtAZlLRF1nKUsDCyPG3MONPJj-w/exec';
+    const types = Object.keys(labels).map((id) => {
+      const on = id === sel;
+      return { label: labels[id], on: on, bg: on ? '#1D1D1F' : '#FFFFFF', fg: on ? '#FFFFFF' : '#1D1D1F', bd: on ? '#1D1D1F' : '#86868B', pick: () => this.setState({ type: id }) };
+    });
+    const names = { model: '형식·기종명', material: '재질·판 두께', size: '가공 크기(판·관 치수)', volume: '월간 가공량', joint: '용접할 제품·이음', power: '공장 전원', work: '워크 치수', equip: '사용 중인 용접기·지그', bays: '주차 면수·설치 대수', pavement: '포장 종류', vehicle: '대상 차량', flow: '사용 유량', pressure: '사용 압력', port: '접속 구경', device: '연결할 기기', qty: '수량', region: '납품 지역', delivery: '희망 납기', company: '회사명', person: '성함', phone: '전화번호', email: '회신받을 이메일 주소', preferred: '희망 연락 방법' };
+    const PROD = { none: '미정·해당 없음', cutting: '파이버 레이저 절단기', welder: '레이저 용접기', robot: '협동 용접 로봇', stopper: '충격 흡수형 카스토퍼', separator: '압축공기용 세퍼레이터' };
+    const prod = PROD[st.prod] ? st.prod : 'none';
+    const detail = sel === 'order' || sel === 'demo' || sel === 'subsidy';
+    const is = (...a) => a.indexOf(prod) >= 0;
+    const SHOW = { model: prod !== 'none', material: detail && is('cutting', 'welder'), size: detail && is('cutting'), volume: detail && is('cutting'), joint: detail && is('welder', 'robot'), power: detail && is('welder'), work: detail && is('robot'), equip: detail && is('robot'), bays: detail && is('stopper'), pavement: detail && is('stopper'), vehicle: detail && is('stopper'), flow: detail && is('separator'), pressure: detail && is('separator'), port: detail && is('separator'), device: detail && is('separator'), qty: sel === 'order' && prod !== 'none', region: sel === 'order' || sel === 'subsidy', delivery: sel === 'order', funding: sel === 'order' && is('cutting', 'welder', 'robot') };
+    const d = {}; Object.keys(SHOW).forEach((k) => { d[k] = SHOW[k] ? 'flex' : 'none'; });
+    const Z = (x) => String(x).replace(/\u200b/g, '');
+    const step = st.step || 'form';
+    const check = (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      const form = (e && e.currentTarget && e.currentTarget.closest) ? (e.currentTarget.closest('form') || e.currentTarget) : e.target;
+      const f = new FormData(form);
+      const get = (k) => String(f.get(k) || '').trim();
+      const miss = [];
+      if (!get('company')) miss.push(names.company);
+      if (!get('person')) miss.push(names.person);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(get('email'))) miss.push('올바른 이메일 주소');
+      if (!f.get('agree')) miss.push('개인정보 보호방침 동의');
+      if (miss.length) { this.setState({ errs: miss }); return; }
+      const rows = [{ k: '상담 종류', v: labels[sel] }, { k: '대상 제품', v: PROD[prod] }];
+      const DIRECT = { model: 'model', material: 'material', qty: 'quantity', region: 'region', delivery: 'delivery' };
+      const payload = { topic: Z(labels[sel]), product: Z(PROD[prod]), website: get('website'), page: String(location.href).slice(0, 200) };
+      const extra = [];
+      Object.keys(SHOW).forEach((k) => {
+        if (k === 'funding' || !SHOW[k] || !get(k)) return;
+        rows.push({ k: names[k], v: get(k) });
+        if (DIRECT[k]) payload[DIRECT[k]] = get(k); else extra.push(Z(names[k]) + ': ' + get(k));
+      });
+      ['company', 'person', 'phone', 'email', 'preferred'].forEach((k) => { if (get(k)) rows.push({ k: names[k], v: get(k) }); });
+      const fund = SHOW.funding && f.get('alsoFunding');
+      if (fund) rows.push({ k: '보조금 상담', v: '보조금 활용도 상담하기' });
+      if (get('message')) rows.push({ k: '문의 내용', v: get('message') });
+      payload.company = get('company'); payload.name = get('person'); payload.phone = get('phone'); payload.email = get('email'); payload.contact = Z(get('preferred'));
+      payload.subsidy = fund ? 'yes' : '';
+      payload.message = (extra.length ? extra.join('\n') + '\n\n' : '') + get('message');
+      this._form = form;
+      this.setState({ step: 'confirm', rows: rows, payload: payload, errs: null, failed: false, sending: false });
+    };
+    const back = () => this.setState({ step: 'form', failed: false, sending: false });
+    const again = () => { try { if (this._form) this._form.reset(); } catch (x) {} this.setState({ step: 'form', rows: null, payload: null, failed: false, sending: false, errs: null }); };
+    const send = () => {
+      if (st.sending || !st.payload) return;
+      const p = new URLSearchParams();
+      Object.keys(st.payload).forEach((k) => p.append(k, st.payload[k]));
+      this.setState({ sending: true, failed: false });
+      let done = false;
+      const fail = () => { if (done) return; done = true; this.setState({ sending: false, failed: true }); };
+      const timer = setTimeout(fail, 15000);
+      try {
+        fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: p })
+          .then(() => { if (done) return; done = true; clearTimeout(timer); this.setState({ sending: false, step: 'done' }); })
+          .catch(() => { clearTimeout(timer); fail(); });
+      } catch (x) { clearTimeout(timer); fail(); }
+    };
+    return {
+      onProduct: (e) => this.setState({ prod: e.target.value }), d: d,
+      types: types, lead: leads[sel], check: check, back: back, send: send, again: again,
+      formDisp: step === 'form' ? 'flex' : 'none',
+      isConfirm: step === 'confirm', isDone: step === 'done',
+      rows: (st.rows || []).map((r) => ({ k: Z(r.k), v: r.v })),
+      failed: !!st.failed, sendLabel: st.sending ? '전송 중…' : '보내기',
+      hasErr: !!(st.errs && st.errs.length), errText: st.errs ? '다음 항목을 입력해 주십시오: ' + st.errs.map(Z).join(' / ') : ''
+    
+    };
+
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

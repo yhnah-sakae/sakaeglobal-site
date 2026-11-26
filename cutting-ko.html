@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>파이버 레이저 절단기 | 사카에글로벌 주식회사</title>
+<meta name="description" content="강판에서 부품을 잘라내는 평면 가공기와, 원형관·각관에 구멍과 윤곽을 가공하는 파이프 전용기를 취급합니다. 원재료의 형상과 크기에 맞춰 절단기, 소재 교환 테이블, 자동 분류를 조합합니다.">
+<link rel="icon" href="assets/117c52be5ecb1ebafe997be82697934e.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5CAD}a:hover{color:#083F78}
+.pg{font-family:'Inter','Noto Sans KR','Noto Sans JP',system-ui,sans-serif;color:#1D1D1F;background:#FFFFFF;line-height:1.65;-webkit-font-smoothing:antialiased}
+.pg{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+.pg h1,.pg h2,.pg h3,.pg h4,.pg summary,.pg figcaption,.pg .lead,.pg th{text-wrap:balance}
+.pg p,.pg li,.pg dd,.pg td{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px, 2vw, 24px)}
+.sec{padding:clamp(56px, 9.33vw, 112px) 0}
+.pale{background:#F5F5F7}
+.dark{background:#0B1320;color:#F5F5F7}
+.eye{font-size:15px;font-weight:600;color:#0B5CAD;letter-spacing:.04em;margin:0}
+.dark .eye{color:#8CC4FF}
+.h1{margin:10px 0 0;font-size: clamp(40px, 6vw, 72px);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.h2{margin:0;font-size: clamp(26px, 3.83vw, 46px);line-height:1.2;font-weight:700}
+.h3{margin:0;font-size: clamp(18px, 1.83vw, 22px);line-height:1.35;font-weight:700}
+.lead{margin:18px 0 0;font-size: clamp(16px, 1.67vw, 20px);line-height:1.6;color:#5F5F64}
+.dark .lead,.dark .mut{color:#C4CAD4}
+.mut{color:#5F5F64}
+.c{text-align:center}
+.c .lead{margin-left:auto;margin-right:auto;max-width:720px}
+.pill{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:500;border:0;cursor:pointer;font-family:inherit}
+.pill:hover{background:#083F78;color:#FFFFFF}
+.ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;border:1px solid #0B5CAD;color:#0B5CAD;text-decoration:none;font-size:16px;font-weight:500;background:transparent}
+.ghost:hover{background:#0B5CAD;color:#FFFFFF}
+.lk{text-decoration:none;font-size:16px}.lk:hover{text-decoration:underline}
+.dark a.lk{color:#8CC4FF}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border-radius:22px;padding:clamp(20px, 2.67vw, 32px);color:#1D1D1F;text-decoration:none;display:block}
+.pale .card{background:#FFFFFF}
+.card.g{background:#F5F5F7}
+.dark .card{background:#162235;color:#F5F5F7}
+a.card:hover{color:#1D1D1F;background:#E6EEF8;box-shadow:0 16px 44px rgba(11,40,80,.16)}
+.dark a.card:hover{color:#FFFFFF;background:#22395A;box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.pill,.ghost,.chip,.card,.lk,.nav a,.topic,.foot a,.tb tbody tr,details summary{transition:background-color .2s,color .2s,border-color .2s,box-shadow .25s}
+.card img,.slide img{transition:transform .5s}
+a.card:hover img{transform:scale(1.04)}
+.chip:hover{background:#0B5CAD !important;color:#FFFFFF !important;border-color:#0B5CAD !important}
+.chip.dng:hover{background:#B3261E !important;border-color:#B3261E !important}
+.topic{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2vw, 24px);border-radius:999px;border:1px solid #5C6B80;color:#FFFFFF;text-decoration:none;font-size:16px}
+.topic:hover{background:#FFFFFF;color:#0B1320;border-color:#FFFFFF}
+.lk:hover{color:#083F78}
+.dark a.lk:hover{color:#FFFFFF}
+.tb tbody tr:hover{background:#EEF5FC}
+.dark .tb tbody tr:hover{background:#22395A}
+details summary:hover{color:#0B5CAD}
+.slide:hover .more{background:#083F78}
+.show{display:none}
+.stage{position:relative}
+.slide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px, 4vw, 48px);align-items:center;text-decoration:none;color:#1D1D1F;background:#F5F5F7;border-radius:28px;padding:clamp(28px, 4.67vw, 56px) clamp(32px, 5.33vw, 64px);box-sizing:border-box}
+.slide:hover{color:#1D1D1F}
+.more{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;font-size:16px;font-weight:500;margin-top:clamp(17px, 2.33vw, 28px)}
+@keyframes rise{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scale(.88);border-radius:48px}to{transform:none}}
+@keyframes k1{0%{opacity:1;visibility:visible;transform:none}13%{opacity:1;visibility:visible;transform:none}17.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}17.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k2{0%,17.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}17.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}22%{opacity:1;visibility:visible;transform:none}33%{opacity:1;visibility:visible;transform:none}37.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}37.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k3{0%,37.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}37.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}42%{opacity:1;visibility:visible;transform:none}53%{opacity:1;visibility:visible;transform:none}57.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}57.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k4{0%,57.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}57.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}62%{opacity:1;visibility:visible;transform:none}73%{opacity:1;visibility:visible;transform:none}77.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}77.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k5{0%,77.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}77.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}82%{opacity:1;visibility:visible;transform:none}100%{opacity:1;visibility:visible;transform:none}}
+@keyframes kimg{from{transform:translateX(60px) rotate(2deg)}to{transform:translateX(-60px) rotate(-2deg)}}
+@keyframes kbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-height:1600px) and (min-width:901px) and (prefers-reduced-motion:no-preference){
+@supports (animation-timeline: view()){
+ .card,figure,.h2,.tb{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+ .growin{animation:grow linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ .tiles{display:none}
+ .show{display:block;height:3400px;view-timeline-name:--show;view-timeline-axis:block}
+ .stage{position:sticky;top:92px;height:620px}
+ .stage .slide{position:absolute;inset:0;z-index:1;animation-timeline:--show;animation-range:contain 0% contain 100%;animation-timing-function:linear;animation-fill-mode:both}
+ .sl1{animation-name:k1}.sl2{animation-name:k2}.sl3{animation-name:k3}.sl4{animation-name:k4}.sl5{animation-name:k5}
+ .stage .slide img{animation:kimg linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .bar{animation:kbar linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .stage figure,.stage .card,.stage .h2{animation:none}
+}}
+.ph{display:block;width:100%;object-fit:contain}
+.nav a{color:#1D1D1F;text-decoration:none}.nav a:hover{color:#0B5CAD}
+.foot a{color:#424245;text-decoration:none}.foot a:hover{text-decoration:underline}
+.chip{font:inherit;font-size:15px;font-weight:500;min-height:44px;padding:0 20px;border-radius:999px;cursor:pointer}
+.dl{margin:0;border-top:1px solid #D2D2D7}
+.dl>div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid #D2D2D7}
+.dl dt{color:#5F5F64}.dl dd{margin:0}
+.tb{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
+.tb th,.tb td{padding:14px 10px;border-bottom:1px solid #E3E3E8;vertical-align:top}
+.tb thead th{color:#5F5F64;font-weight:500;border-bottom:1px solid #C7C7CC}
+.scroll{overflow-x:auto}
+.spec th,.spec td{text-align:center;padding:16px 12px}
+.spec thead th{background:#F5F5F7;border-bottom:0;padding:20px 12px;color:#1D1D1F;font-weight:700;font-size: clamp(16px, 1.67vw, 20px)}
+.spec tbody th{text-align:left;padding-left:clamp(22px, 3vw, 36px);white-space:nowrap;font-weight:500;color:#5F5F64}
+.spec tbody tr:nth-child(odd){background:#F7F9FC}
+.spec tbody tr:first-child td{font-size: clamp(16px, 1.67vw, 20px);font-weight:700;color:#0B5CAD}
+.spec td:nth-child(5),.spec th:nth-child(5){border-left:2px solid #C7C7CC}
+.spec .tg{display:block;width:fit-content;margin:0 auto 8px;font-size:12px;font-weight:700;color:#FFFFFF;border-radius:999px;padding:3px 14px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
+.fld{font:inherit;font-size:16px;width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;border:1px solid #86868B;border-radius:12px;background:#FFFFFF;color:#1D1D1F}
+.fld:focus,.chip:focus-visible,.pill:focus-visible{outline:2px solid #0B5CAD;outline-offset:2px}
+.lab{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.hasdrop{position:relative;display:flex;align-items:center;height:76px}
+.sub{display:none;position:absolute;top:100%;left:-18px;z-index:20}
+.sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
+.sub a:hover{background:#F5F5F7}
+.hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
+.mnav,.mlang{display:none;position:relative}
+.mlang{display:block}
+.langtxt{display:none !important}
+.nhead:hover span{color:#0B5CAD}
+.mnav summary,.mlang summary{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;height:44px;padding:0 8px;border-radius:12px;box-sizing:border-box}
+.mnav summary:hover,.mlang summary:hover,.mnav[open] summary,.mlang[open] summary{background:#EDEDF0}
+.drop{position:absolute;right:0;top:54px;z-index:20;display:flex;flex-direction:column;min-width:230px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.drop a,.drop>span{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border-radius:10px;color:#1D1D1F;text-decoration:none;font-size:16px;box-sizing:border-box}
+.drop a:hover{background:#F5F5F7}
+.drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
+@media (max-width:900px){
+ .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
+ .nav{display:none !important}
+
+ .dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .split{grid-template-columns:minmax(0,1fr) !important}
+}
+@media (min-width:901px) and (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body style="margin: 0">
+<div id="app">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-ko.html" aria-label="SAKAE GLOBAL 홈" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="메인 메뉴" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-ko.html" style="font-weight: 700">제품 정보</a><div class="sub"><div><a href="cutting-ko.html">파이버 레이저 절단기</a><a href="welder-ko.html">레이저 용접기</a><a href="robot-ko.html">협동 용접 로봇</a><a href="stopper-ko.html">충격 흡수형 카스토퍼</a><a href="separator-ko.html">압축공기용 세퍼레이터</a></div></div></div>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="cutting.html" style="color: inherit; text-decoration: none">日本語</a> · <strong style="color: #1D1D1F">한국어</strong> · <a href="cutting-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="cutting-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="언어 선택"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">한국어</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="cutting.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</span>
+<a href="cutting-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="cutting-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact-ko.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">문의하기</a>
+<details class="mnav">
+<summary aria-label="메뉴 열기"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-ko.html" style="font-weight: 700">제품 정보</a>
+<a href="cutting-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">파이버 레이저 절단기</a>
+<a href="welder-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">레이저 용접기</a>
+<a href="robot-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">협동 용접 로봇</a>
+<a href="stopper-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">압축공기용 세퍼레이터</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+<a href="contact-ko.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">문의하기</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main>
+<nav aria-label="현재 위치" class="wrap" style="padding-top: clamp(17px, 2.33vw, 28px); padding-bottom: 8px">
+<a class="lk" href="products-ko.html" style="display: inline-block; padding: 10px 0">‹ 제품 목록으로 돌아가기</a>
+</nav>
+<section class="c" style="padding: clamp(44px, 7.33vw, 88px) 0 clamp(36px, 6vw, 72px)">
+<div class="wrap">
+<p class="eye">제품 정보 · HK LASER</p>
+<h1 class="h1" style="font-size: clamp(33px, 5vw, 60px)">파이버 레이저 절단기</h1>
+<p class="lead">강판에서 부품을 잘라내는 평면 가공기와, 원형관·각관에 구멍과 윤곽을 가공하는 파이프 전용기를 취급합니다. 원재료의 형상과 크기에 맞춰 절단기, 소재 교환 테이블, 자동 분류를 조합합니다.</p>
+</div>
+</section>
+
+<section class="sec pale" id="cutting" style="padding-top: clamp(44px, 7.33vw, 88px)">
+<div class="wrap">
+<div class="row" style="justify-content: space-between; align-items: flex-end; margin-bottom: clamp(17px, 2.33vw, 28px)">
+<div><h2 class="h2">HK LASER의 절단기</h2><p class="lead" style="margin-top: 8px">가공할 재료의 형상을 선택하고 사진과 사양을 비교해 보십시오.</p></div>
+<div role="group" aria-label="재료의 형상" class="row" style="gap: 8px">
+
+<button type="button" class="chip" aria-pressed="" style="border: 1px solid #1D1D1F; background: #1D1D1F; color: #FFFFFF">판재용</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">파이프용</button>
+
+</div>
+</div>
+<div class="g3">
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/4df533686cd27ffd309c2434f629425b.webp" alt="S-Matic K315의 반송·절단·분류 장치를 나타낸 구성도" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">투입·절단·분류</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">S-Matic K315</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">판재 투입, 레이저 절단, 부품 분류, 잔재 회수를 하나의 라인에서 수행합니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,000 × 1,500 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">투입부터 분류까지 전자동</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">15,593 × 6,158 × 3,679 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/b1eeea59d8e4efbd51b27eff7747e2d2.webp" alt="KUBE 1212 FIBER의 본체와 조작면" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">인출식 경사 테이블</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">KUBE 1212 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">소형 판재 가공에 적합한 정사각형 테이블을 갖추고 있으며, 전면에서 소재를 넣고 뺄 수 있습니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">1,240 × 1,240 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">인출식 경사 테이블</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">4,010 × 2,210 × 2,180 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/35831a17966fd9e8be06de5e284ea465.webp" alt="외부 교환 테이블을 달지 않은 FL 2512 FIBER 본체" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">1·2테이블 사양</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FL 2512 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">수동으로 꺼내는 1테이블 사양과 승강식 셔틀을 사용하는 2테이블 사양 중에서 선택할 수 있습니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">1,240 × 2,490 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">1테이블·2테이블 선택</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">4,800 × 2,320 × 2,680 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/3477239982ff3a3c6205ce0693975190.webp" alt="FL 3015 FIBER 본체와 옆으로 뻗은 소재 테이블" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">사이드 로딩</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FL 3015 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">큰 측면 도어로 정척 판재를 넣고 빼는 레이저 절단기입니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">측면 도어로 소재 반입</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">4,908 × 9,290 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/af4799858c655c5be942306a14fcfd89.webp" alt="RS3015 FIBER의 전면과 측면 본체" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">전면·측면에서 작업</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">RS3015 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">전면과 측면 도어로 가공실 안의 워크에 손이 닿습니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">2.5 G 고속 모션</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">2,270 × 11,250 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/4bbbc7702f1ec1eaade26de07e474e07.webp" alt="FS 시리즈의 FS3015 FIBER 본체" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">장척 판재·양문형 도어</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FS Series</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">판재 길이에 맞춰 가공 범위를 선택하는 시리즈입니다. 사진은 FS3015 FIBER입니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 – 8,250 × 2,540 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">테이블 크기 6기종</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,300 × 11,218 mm (FS3015)</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/8ce3e98554736f919eda7d18c87419e5.webp" alt="FO12025 FIBER의 개방형 테이블과 갠트리" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">대형 강판용 갠트리</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FO Series</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">대형 강판 위를 갠트리가 이동하는 개방형 절단기입니다. 사진은 FO12025 FIBER입니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">12,192 × 2,540 – 30,480 × 3,048 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">대형 강판·베벨 가공 대응</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">6,200 × 21,000 mm (FO12025)</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/c68ccc5697e5715700e49c35c27c1ba9.webp" alt="FE 시리즈의 FE3015 FIBER와 조작부" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">접이식 도어·여러 가공 크기</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FE Series</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">접이식 도어와 스텝을 갖춰 가공실에 드나들기 쉬운 구조입니다. 사진은 FE3015 FIBER입니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 – 8,250 × 2,540 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">접이식 도어와 스텝</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">문의해 주십시오</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/b7e873589b57ec47752e1214ea789838.webp" alt="HD 시리즈의 HD3015와 셔틀 테이블" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">소재 감지·수평 셔틀</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">HD Series</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">소재 자동 감지와 수평 셔틀 테이블을 갖춘 판재용 레이저 절단기입니다. 게재 기종은 HD3015입니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 – 12,000 × 4,000 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">수평 셔틀 테이블</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">2,850 × 8,604 mm (HD3015)</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+<a class="card" href="model-ko.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/7ba3b3bf582caf4370471f950167260b.webp" alt="FC3015 FIBER 본체와 소재 교환 테이블" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">승강식 셔틀 테이블</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FC3015 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">승강식 셔틀 테이블로 소재를 교환하는 3015 클래스 절단기입니다.</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">가공 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">특징</dt><dd style="margin: 0; text-align: right; font-weight: 600">승강식 셔틀 테이블</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">제품 크기</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,283 × 10,632 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+
+</div>
+<p class="mut" style="margin: 20px 0 0; font-size: 13px">수치는 기재된 기종·구성에 해당합니다. 설치 조건과 옵션은 견적 시 확인해 주십시오.</p>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<p class="eye c">HK LASER &amp; SYSTEMS</p>
+<h2 class="h2 c" style="margin-top: 8px">레이저 가공기 외길 메이커</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">1990년 설립 이래 2차원 레이저 가공기에 전념해 온 전문 메이커입니다. 전 세계 3,000대가 넘는 납품 실적이 있으며, 일본에서는 나고야에 거점을 두고 있습니다.</p>
+<div class="g4" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">1990</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">설립</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">36</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">년간 레이저 가공기에 전념</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">3,000+</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">대 납품 실적(전 세계)</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">35</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">대/월 최대 생산 능력</p></div>
+</div>
+</div>
+</section>
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2 c">비용과 품질을 잡는 HK의 기술</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">매일의 유지 비용과 후공정의 수고를 줄이는 독자 기술입니다.</p>
+<div class="g3" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">믹스 가스 절단</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">질소와 산소를 최적 비율로 혼합. 6 mm를 넘는 연강을 버를 줄이면서 약 10% 빠르게 절단해 후공정을 줄입니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">저압 질소 절단</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">독자 줌 헤드와 챔버 노즐로 7~8 bar 저압 질소 절단. 메이커 시험에서 질소 소비량을 약 60% 절감했습니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">허니컴 구조 프레임</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">가벼움과 강성을 양립한 고강도 프레임. 변형을 억제해 고속 가공에서도 정밀도를 유지합니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">직관적인 조작 화면</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">터치 조작의 알기 쉬운 화면. 중단 후 재절단과 조건 설정도 간단하며 온라인으로 업데이트할 수 있습니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">파이버 레이저의 에너지 절감</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">CO2 레이저(4 kW)에 비해 파이버(8 kW)는 소비 전력을 약 22% 줄이고, 박판에서는 최대 약 5배 속도로 절단합니다(메이커 비교값).</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">단계적으로 진행하는 자동화</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">스마트 로더, 스마트 셀, 스마트 타워, 8단 자동화 타워까지. 소재 투입부터 반출·보관까지 필요한 범위부터 자동화할 수 있습니다.</p></div>
+</div>
+<p class="mut c" style="margin: 20px 0 0; font-size: 13px">수치는 메이커가 공표한 시험·비교값입니다. 재질, 판 두께, 가공 조건에 따라 달라집니다.</p>
+</div>
+</section>
+<section class="sec">
+<div class="wrap split" style="display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: clamp(28px, 4.67vw, 56px)">
+<div>
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">기종 선택 방법</h2>
+<p class="lead" style="font-size: clamp(15px, 1.42vw, 17px)">광섬유로 전송한 레이저 광을 가공 헤드에서 집광해 금속을 국소적으로 녹입니다. 노즐에서 나오는 어시스트 가스가 용융 금속을 배출하고, NC 제어로 도면의 윤곽을 따라 절단합니다. 판재용은 평면 위를 가공하고, 파이프 전용기는 척으로 관을 잡아 회전시키며 가공합니다.</p>
+</div>
+<div>
+<div class="scroll">
+<table class="tb" style="min-width: 520px">
+<thead><tr><th scope="col">가공·반송 조건</th><th scope="col">후보 기종</th></tr></thead>
+<tbody>
+
+<tr><td>소형 판재, 정면에서 반입</td><td style="font-weight: 600">KUBE1212</td></tr>
+
+<tr><td>판재, 수동 또는 2단 테이블 교환</td><td style="font-weight: 600">FL2512</td></tr>
+
+<tr><td>측면 접근, 반입 동선에 맞춘 배치</td><td style="font-weight: 600">FL3015</td></tr>
+
+<tr><td>정척판, 절단 속도와 테이블 사양 비교</td><td style="font-weight: 600">RS3015 / FS / FE / HD / FC3015</td></tr>
+
+<tr><td>절단 부품 자동 분류</td><td style="font-weight: 600">S-Matic K315</td></tr>
+
+<tr><td>장척 강판</td><td style="font-weight: 600">FO</td></tr>
+
+<tr><td>원형관·각관, 지름과 1본당 질량으로 선정</td><td style="font-weight: 600">TL6527-S / TL9036-X</td></tr>
+
+</tbody>
+</table>
+</div>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">견적에는 재질, 판 두께 또는 관의 단면 치수, 소재 길이, 월간 가공량을 적어 주십시오.</p>
+</div>
+</div>
+</section>
+
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">사양 포인트</h2>
+<dl class="dl" style="margin-top: clamp(17px, 2.33vw, 28px)">
+
+<div><dt>판재 가공 크기 예</dt><dd>KUBE1212는 1,240 × 1,240 mm, FL3015는 3,048 × 1,524 mm. FO 시리즈는 공칭 길이 12·20·30 m의 장척판에 대응합니다.</dd></div>
+
+<div><dt>파이프의 지름·길이·질량</dt><dd>TL6527-S는 원형관 Ø12–273 mm, 표준 길이 6.5 m, 최대 200 kg/본. TL9036-X는 Ø40–360 mm, 표준 길이 9 m, 최대 1,200 kg/본.</dd></div>
+
+<div><dt>재질·출력·절단 판 두께</dt><dd>연강, 스테인리스강, 알루미늄은 절단할 수 있는 판 두께가 다릅니다. RS3015 6 kW 사양의 경우 메이커 값은 순서대로 최대 25, 20, 15 mm입니다.</dd></div>
+
+<div><dt>가공 속도와 급속 이송</dt><dd>FL3015의 최대 절단 속도는 55 m/min, 최대 합성 급속 이송은 140 m/min입니다. 실제 절단 속도는 재질, 판 두께, 형상, 가스 조건에 따라 달라집니다.</dd></div>
+
+<div><dt>소재 교환과 자동화</dt><dd>전면 인출식, 측면 반입, 셔틀 테이블을 비교할 수 있습니다. S-Matic K315는 소재 투입부터 절단 후 부품 분류, 잔재 회수까지를 일체화합니다.</dd></div>
+
+</dl>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">레이저 출력별 최대 절단 판 두께</h2>
+<div role="group" aria-label="기종" class="row" style="gap: 8px; margin-top: clamp(16px, 2vw, 24px)">
+
+<button type="button" class="chip" aria-pressed="" style="border: 1px solid #1D1D1F; background: #1D1D1F; color: #FFFFFF">FS Series</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">FL 3015</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">RS3015</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">FE / HD Series</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">FC3015</button>
+
+</div>
+<div class="scroll" style="margin-top: 20px">
+<table class="tb" style="min-width: 640px">
+<thead><tr><th scope="col">레이저 출력</th><th scope="col">연강</th><th scope="col">스테인리스강(클린 컷)</th><th scope="col">알루미늄</th><th scope="col">구리</th><th scope="col">황동</th></tr></thead>
+<tbody>
+
+<tr><th scope="row">2.5 kW</th><td>16 mm</td><td>8 mm</td><td>8 mm</td><td>4 mm</td><td>6 mm</td></tr>
+
+<tr><th scope="row">3 kW</th><td>16 mm</td><td>10 mm</td><td>10 mm</td><td>6 mm</td><td>8 mm</td></tr>
+
+<tr><th scope="row">4 kW</th><td>20 mm</td><td>12 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
+
+<tr><th scope="row">6 kW</th><td>25 mm</td><td>20 mm</td><td>15 mm</td><td>8 mm</td><td>12 mm</td></tr>
+
+<tr><th scope="row">8 kW</th><td>30 mm</td><td>25 mm</td><td>25 mm</td><td>8 mm</td><td>12 mm</td></tr>
+
+<tr><th scope="row">10 kW</th><td>30 mm</td><td>30 mm</td><td>30 mm</td><td>10 mm</td><td>15 mm</td></tr>
+
+<tr><th scope="row">12 kW</th><td>30 mm</td><td>35 mm</td><td>35 mm</td><td>10 mm</td><td>15 mm</td></tr>
+
+<tr><th scope="row">15 kW</th><td>35 mm</td><td>40 mm</td><td>40 mm</td><td>12 mm</td><td>15 mm</td></tr>
+
+</tbody>
+</table>
+</div>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">판 두께 단위는 mm입니다. 수치는 메이커가 공표한 기종별 참고값입니다. 재질, 표면 상태, 가스 품질과 가공 환경에 따라 절단 결과는 달라집니다. 선택 가능한 출력은 견적 시 확인해 주십시오.</p>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap split" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4.67vw, 56px); align-items: start">
+<div>
+<p class="eye">CAD/CAM</p>
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px); margin-top: 8px">지금 쓰는 공정·소프트웨어와 연결해 사용</h2>
+<p style="margin: 20px 0 0; font-size: clamp(15px, 1.42vw, 17px)">HK 레이저 가공기는 판금용 CAD/CAM "MetaCAM"에 대응합니다. MetaCAM은 가공기 메이커의 틀을 넘어 가공 데이터를 공유할 수 있는 소프트웨어로, 각 사의 레이저·펀치·벤더에 대응합니다.</p>
+<p style="margin: 14px 0 0; font-size: clamp(15px, 1.42vw, 17px); font-weight: 600">아마다 벤더와 AP100을 쓰는 공장에서도 MetaCAM을 통해 전개 데이터를 활용해 HK 가공기를 지금의 공정에 편입할 수 있습니다.</p>
+<p class="mut" style="margin: 16px 0 0; font-size: 13px">연계할 수 있는 데이터 범위는 소프트웨어 버전과 구성에 따라 다릅니다. 도입 전에 현재 환경을 알려 주십시오. 기재된 회사명·제품명은 각 사의 상표 또는 등록상표입니다.</p>
+</div>
+<div class="card g">
+<h3 class="h3">MetaCAM으로 할 수 있는 것</h3>
+<ul style="list-style: none; margin: 12px 0 0; padding: 0; font-size: 16px; border-top: 1px solid #D2D2D7">
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">타사 CAD/CAM으로 만든 제품 데이터를 변환해 활용</li>
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">여러 메이커 가공기의 데이터를 일원 관리</li>
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">굽힘 공정까지 고려한 전개와 네스팅</li>
+</ul>
+<a class="pill" href="contact-ko.html" style="margin-top: 20px">연계 상담하기</a>
+</div>
+</div>
+</section>
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2 c">도입 후에도 멈추지 않게 하는 지원</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">메이커(HK)의 서비스 체제입니다. 일본에서의 대응 내용은 견적 시 안내해 드립니다.</p>
+<div class="g3" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">원격 모니터링 HK INSIGHT</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">가동 상황과 이력을 PC나 스마트폰으로 실시간 확인할 수 있습니다. 메이커의 모니터링 팀도 함께 지켜봅니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">리모트 서비스</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">24시간 365일 접수. 2023년에는 서비스 안건의 93% 이상을 원격 대응으로 해결했습니다(메이커 실적).</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">예방 정비와 오퍼레이터 교육</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">보증 기간 2년 동안 2회, 엔지니어가 방문해 점검합니다. 오퍼레이터를 위한 추가 교육도 실시합니다.</p></div>
+</div>
+</div>
+</section>
+<section class="sec dark c">
+<div class="wrap">
+<h2 class="h2">견적·도입 상담</h2>
+<p class="lead">재질, 판 두께 또는 관의 단면 치수, 소재 길이, 월간 가공량을 알려 주십시오.</p>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px)"><a class="pill" href="contact-ko.html">견적·주문</a><a class="lk" href="contact-ko.html">테스트 가공·데모 ›</a></div>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">제품 정보</strong>
+<a href="cutting-ko.html">파이버 레이저 절단기</a>
+<a href="welder-ko.html">레이저 용접기</a>
+<a href="robot-ko.html">협동 용접 로봇</a>
+<a href="stopper-ko.html">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html">압축공기용 세퍼레이터</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">상담</strong>
+<a href="contact-ko.html">견적·주문</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="contact-ko.html">테스트 가공·데모</a>
+<a href="contact-ko.html">카탈로그 요청</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">회사 정보</strong>
+<a href="company-ko.html">기업 안내</a>
+<a href="news-ko.html">공지사항</a>
+<a href="company-ko.html#careers">채용 정보</a>
+<a href="company-ko.html#privacy">개인정보 보호방침</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">공식 YouTube 채널</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 사카에글로벌 주식회사</div>
+</div>
+</footer>
+</div>
+</div>
+<template id="tpl">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-ko.html" aria-label="SAKAE GLOBAL 홈" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="메인 메뉴" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-ko.html" style="font-weight: 700">제품 정보</a><div class="sub"><div><a href="cutting-ko.html">파이버 레이저 절단기</a><a href="welder-ko.html">레이저 용접기</a><a href="robot-ko.html">협동 용접 로봇</a><a href="stopper-ko.html">충격 흡수형 카스토퍼</a><a href="separator-ko.html">압축공기용 세퍼레이터</a></div></div></div>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="cutting.html" style="color: inherit; text-decoration: none">日本語</a> · <strong style="color: #1D1D1F">한국어</strong> · <a href="cutting-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="cutting-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="언어 선택"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">한국어</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="cutting.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</span>
+<a href="cutting-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="cutting-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact-ko.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">문의하기</a>
+<details class="mnav">
+<summary aria-label="메뉴 열기"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-ko.html" style="font-weight: 700">제품 정보</a>
+<a href="cutting-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">파이버 레이저 절단기</a>
+<a href="welder-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">레이저 용접기</a>
+<a href="robot-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">협동 용접 로봇</a>
+<a href="stopper-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">압축공기용 세퍼레이터</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+<a href="contact-ko.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">문의하기</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main>
+<nav aria-label="현재 위치" class="wrap" style="padding-top: clamp(17px, 2.33vw, 28px); padding-bottom: 8px">
+<a class="lk" href="products-ko.html" style="display: inline-block; padding: 10px 0">‹ 제품 목록으로 돌아가기</a>
+</nav>
+<section class="c" style="padding: clamp(44px, 7.33vw, 88px) 0 clamp(36px, 6vw, 72px)">
+<div class="wrap">
+<p class="eye">제품 정보 · HK LASER</p>
+<h1 class="h1" style="font-size: clamp(33px, 5vw, 60px)">파이버 레이저 절단기</h1>
+<p class="lead">강판에서 부품을 잘라내는 평면 가공기와, 원형관·각관에 구멍과 윤곽을 가공하는 파이프 전용기를 취급합니다. 원재료의 형상과 크기에 맞춰 절단기, 소재 교환 테이블, 자동 분류를 조합합니다.</p>
+</div>
+</section>
+
+<section class="sec pale" id="cutting" style="padding-top: clamp(44px, 7.33vw, 88px)">
+<div class="wrap">
+<div class="row" style="justify-content: space-between; align-items: flex-end; margin-bottom: clamp(17px, 2.33vw, 28px)">
+<div><h2 class="h2">HK LASER의 절단기</h2><p class="lead" style="margin-top: 8px">가공할 재료의 형상을 선택하고 사진과 사양을 비교해 보십시오.</p></div>
+<div role="group" aria-label="재료의 형상" class="row" style="gap: 8px">
+<template data-for="kinds" data-as="k">
+<button type="button" class="chip" onClick="{{k.pick}}" aria-pressed="{{k.on}}" style="border: 1px solid {{k.bd}}; background: {{k.bg}}; color: {{k.fg}}">{{k.label}}</button>
+</template>
+</div>
+</div>
+<div class="g3">
+<template data-for="models" data-as="m">
+<a class="card" href="model-ko.html" onClick="{{m.open}}" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="{{m.img}}" alt="{{m.alt}}" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">{{m.short}}</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">{{m.title}}</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">{{m.lead}}</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+<template data-for="m.specs" data-as="s">
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">{{s.k}}</dt><dd style="margin: 0; text-align: right; font-weight: 600">{{s.v}}</dd></div>
+</template>
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">자세히 보기 ›</span>
+</a>
+</template>
+</div>
+<p class="mut" style="margin: 20px 0 0; font-size: 13px">수치는 기재된 기종·구성에 해당합니다. 설치 조건과 옵션은 견적 시 확인해 주십시오.</p>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<p class="eye c">HK LASER &amp; SYSTEMS</p>
+<h2 class="h2 c" style="margin-top: 8px">레이저 가공기 외길 메이커</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">1990년 설립 이래 2차원 레이저 가공기에 전념해 온 전문 메이커입니다. 전 세계 3,000대가 넘는 납품 실적이 있으며, 일본에서는 나고야에 거점을 두고 있습니다.</p>
+<div class="g4" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">1990</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">설립</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">36</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">년간 레이저 가공기에 전념</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">3,000+</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">대 납품 실적(전 세계)</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">35</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">대/월 최대 생산 능력</p></div>
+</div>
+</div>
+</section>
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2 c">비용과 품질을 잡는 HK의 기술</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">매일의 유지 비용과 후공정의 수고를 줄이는 독자 기술입니다.</p>
+<div class="g3" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">믹스 가스 절단</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">질소와 산소를 최적 비율로 혼합. 6 mm를 넘는 연강을 버를 줄이면서 약 10% 빠르게 절단해 후공정을 줄입니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">저압 질소 절단</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">독자 줌 헤드와 챔버 노즐로 7~8 bar 저압 질소 절단. 메이커 시험에서 질소 소비량을 약 60% 절감했습니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">허니컴 구조 프레임</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">가벼움과 강성을 양립한 고강도 프레임. 변형을 억제해 고속 가공에서도 정밀도를 유지합니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">직관적인 조작 화면</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">터치 조작의 알기 쉬운 화면. 중단 후 재절단과 조건 설정도 간단하며 온라인으로 업데이트할 수 있습니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">파이버 레이저의 에너지 절감</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">CO2 레이저(4 kW)에 비해 파이버(8 kW)는 소비 전력을 약 22% 줄이고, 박판에서는 최대 약 5배 속도로 절단합니다(메이커 비교값).</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">단계적으로 진행하는 자동화</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">스마트 로더, 스마트 셀, 스마트 타워, 8단 자동화 타워까지. 소재 투입부터 반출·보관까지 필요한 범위부터 자동화할 수 있습니다.</p></div>
+</div>
+<p class="mut c" style="margin: 20px 0 0; font-size: 13px">수치는 메이커가 공표한 시험·비교값입니다. 재질, 판 두께, 가공 조건에 따라 달라집니다.</p>
+</div>
+</section>
+<section class="sec">
+<div class="wrap split" style="display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: clamp(28px, 4.67vw, 56px)">
+<div>
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">기종 선택 방법</h2>
+<p class="lead" style="font-size: clamp(15px, 1.42vw, 17px)">광섬유로 전송한 레이저 광을 가공 헤드에서 집광해 금속을 국소적으로 녹입니다. 노즐에서 나오는 어시스트 가스가 용융 금속을 배출하고, NC 제어로 도면의 윤곽을 따라 절단합니다. 판재용은 평면 위를 가공하고, 파이프 전용기는 척으로 관을 잡아 회전시키며 가공합니다.</p>
+</div>
+<div>
+<div class="scroll">
+<table class="tb" style="min-width: 520px">
+<thead><tr><th scope="col">가공·반송 조건</th><th scope="col">후보 기종</th></tr></thead>
+<tbody>
+<template data-for="guide" data-as="g">
+<tr><td>{{g.c}}</td><td style="font-weight: 600">{{g.m}}</td></tr>
+</template>
+</tbody>
+</table>
+</div>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">견적에는 재질, 판 두께 또는 관의 단면 치수, 소재 길이, 월간 가공량을 적어 주십시오.</p>
+</div>
+</div>
+</section>
+
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">사양 포인트</h2>
+<dl class="dl" style="margin-top: clamp(17px, 2.33vw, 28px)">
+<template data-for="points" data-as="p">
+<div><dt>{{p.k}}</dt><dd>{{p.v}}</dd></div>
+</template>
+</dl>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">레이저 출력별 최대 절단 판 두께</h2>
+<div role="group" aria-label="기종" class="row" style="gap: 8px; margin-top: clamp(16px, 2vw, 24px)">
+<template data-for="capTabs" data-as="t">
+<button type="button" class="chip" onClick="{{t.pick}}" aria-pressed="{{t.on}}" style="border: 1px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}">{{t.label}}</button>
+</template>
+</div>
+<div class="scroll" style="margin-top: 20px">
+<table class="tb" style="min-width: 640px">
+<thead><tr><th scope="col">레이저 출력</th><th scope="col">연강</th><th scope="col">{{susHead}}</th><th scope="col">알루미늄</th><th scope="col">구리</th><th scope="col">황동</th></tr></thead>
+<tbody>
+<template data-for="cap" data-as="r">
+<tr><th scope="row">{{r.p}} kW</th><td>{{r.a}} mm</td><td>{{r.b}} mm</td><td>{{r.c}} mm</td><td>{{r.d}} mm</td><td>{{r.e}} mm</td></tr>
+</template>
+</tbody>
+</table>
+</div>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">판 두께 단위는 mm입니다. 수치는 메이커가 공표한 기종별 참고값입니다. 재질, 표면 상태, 가스 품질과 가공 환경에 따라 절단 결과는 달라집니다. 선택 가능한 출력은 견적 시 확인해 주십시오.</p>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap split" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4.67vw, 56px); align-items: start">
+<div>
+<p class="eye">CAD/CAM</p>
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px); margin-top: 8px">지금 쓰는 공정·소프트웨어와 연결해 사용</h2>
+<p style="margin: 20px 0 0; font-size: clamp(15px, 1.42vw, 17px)">HK 레이저 가공기는 판금용 CAD/CAM "MetaCAM"에 대응합니다. MetaCAM은 가공기 메이커의 틀을 넘어 가공 데이터를 공유할 수 있는 소프트웨어로, 각 사의 레이저·펀치·벤더에 대응합니다.</p>
+<p style="margin: 14px 0 0; font-size: clamp(15px, 1.42vw, 17px); font-weight: 600">아마다 벤더와 AP100을 쓰는 공장에서도 MetaCAM을 통해 전개 데이터를 활용해 HK 가공기를 지금의 공정에 편입할 수 있습니다.</p>
+<p class="mut" style="margin: 16px 0 0; font-size: 13px">연계할 수 있는 데이터 범위는 소프트웨어 버전과 구성에 따라 다릅니다. 도입 전에 현재 환경을 알려 주십시오. 기재된 회사명·제품명은 각 사의 상표 또는 등록상표입니다.</p>
+</div>
+<div class="card g">
+<h3 class="h3">MetaCAM으로 할 수 있는 것</h3>
+<ul style="list-style: none; margin: 12px 0 0; padding: 0; font-size: 16px; border-top: 1px solid #D2D2D7">
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">타사 CAD/CAM으로 만든 제품 데이터를 변환해 활용</li>
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">여러 메이커 가공기의 데이터를 일원 관리</li>
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">굽힘 공정까지 고려한 전개와 네스팅</li>
+</ul>
+<a class="pill" href="contact-ko.html" style="margin-top: 20px">연계 상담하기</a>
+</div>
+</div>
+</section>
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2 c">도입 후에도 멈추지 않게 하는 지원</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">메이커(HK)의 서비스 체제입니다. 일본에서의 대응 내용은 견적 시 안내해 드립니다.</p>
+<div class="g3" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">원격 모니터링 HK INSIGHT</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">가동 상황과 이력을 PC나 스마트폰으로 실시간 확인할 수 있습니다. 메이커의 모니터링 팀도 함께 지켜봅니다.</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">리모트 서비스</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">24시간 365일 접수. 2023년에는 서비스 안건의 93% 이상을 원격 대응으로 해결했습니다(메이커 실적).</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">예방 정비와 오퍼레이터 교육</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">보증 기간 2년 동안 2회, 엔지니어가 방문해 점검합니다. 오퍼레이터를 위한 추가 교육도 실시합니다.</p></div>
+</div>
+</div>
+</section>
+<section class="sec dark c">
+<div class="wrap">
+<h2 class="h2">견적·도입 상담</h2>
+<p class="lead">재질, 판 두께 또는 관의 단면 치수, 소재 길이, 월간 가공량을 알려 주십시오.</p>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px)"><a class="pill" href="contact-ko.html">견적·주문</a><a class="lk" href="contact-ko.html">테스트 가공·데모 ›</a></div>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">제품 정보</strong>
+<a href="cutting-ko.html">파이버 레이저 절단기</a>
+<a href="welder-ko.html">레이저 용접기</a>
+<a href="robot-ko.html">협동 용접 로봇</a>
+<a href="stopper-ko.html">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html">압축공기용 세퍼레이터</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">상담</strong>
+<a href="contact-ko.html">견적·주문</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="contact-ko.html">테스트 가공·데모</a>
+<a href="contact-ko.html">카탈로그 요청</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">회사 정보</strong>
+<a href="company-ko.html">기업 안내</a>
+<a href="news-ko.html">공지사항</a>
+<a href="company-ko.html#careers">채용 정보</a>
+<a href="company-ko.html#privacy">개인정보 보호방침</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">공식 YouTube 채널</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 사카에글로벌 주식회사</div>
+</div>
+</footer>
+</div>
+</template>
+<script src="site.js"></script>
+<script>
+var EXT = {"3477239982ff3a3c6205ce0693975190": "webp", "35831a17966fd9e8be06de5e284ea465": "webp", "4bbbc7702f1ec1eaade26de07e474e07": "webp", "4df533686cd27ffd309c2434f629425b": "webp", "7378c43bc5e401b9bd793d1791ea638c": "webp", "7ba3b3bf582caf4370471f950167260b": "webp", "8ce3e98554736f919eda7d18c87419e5": "webp", "8f79d2b48bd837ca652cea95046d5a6b": "webp", "af4799858c655c5be942306a14fcfd89": "webp", "b1eeea59d8e4efbd51b27eff7747e2d2": "webp", "b7e873589b57ec47752e1214ea789838": "webp", "c68ccc5697e5715700e49c35c27c1ba9": "webp"};
+class Component extends DCLogic {
+  renderVals() {
+    if (!this._oc) {
+      this._oc = true;
+      try {
+        document.addEventListener('click', (e) => {
+          const path = e.composedPath ? e.composedPath() : [e.target];
+          const root = path[0] && path[0].getRootNode ? path[0].getRootNode() : document;
+          const close = (r) => { try { r.querySelectorAll('details.mlang[open], details.mnav[open]').forEach((d) => { if (path.indexOf(d) < 0) d.removeAttribute('open'); }); } catch (x) {} };
+          close(root); if (root !== document) close(document);
+        }, true);
+      } catch (x) {}
+    }
+
+    const st = this.state || {};
+    const kind = st.kind || 'sheet';
+    const capSel = st.cap || 'fs';
+    const B = (id) => 'assets/' + id + '.' + (EXT[id] || 'webp');
+    const S = (pairs) => pairs.map((p) => ({ k: p[0], v: p[1] }));
+    const chip = (on) => ({ on: on, bg: on ? '#1D1D1F' : '#FFFFFF', fg: on ? '#FFFFFF' : '#1D1D1F', bd: on ? '#1D1D1F' : '#86868B' });
+    const area = '가공 크기', trav = '최대 합성 급속 이송 속도';
+    const IDS = ['s-matic-k315', 'kube-1212', 'fl-2512', 'fl-3015', 'rs-3015', 'fs-series', 'fo-series', 'fe-series', 'hd-series', 'fc-3015', 'tl6527-s', 'tl9036-x'];
+    const CARD = [[['가공 크기', '3,000 × 1,500 mm'], ['특징', '투입부터 분류까지 전자동'], ['제품 크기', '15,593 × 6,158 × 3,679 mm']], [['가공 크기', '1,240 × 1,240 mm'], ['특징', '인출식 경사 테이블'], ['제품 크기', '4,010 × 2,210 × 2,180 mm']], [['가공 크기', '1,240 × 2,490 mm'], ['특징', '1테이블·2테이블 선택'], ['제품 크기', '4,800 × 2,320 × 2,680 mm']], [['가공 크기', '3,048 × 1,524 mm'], ['특징', '측면 도어로 소재 반입'], ['제품 크기', '4,908 × 9,290 mm']], [['가공 크기', '3,048 × 1,524 mm'], ['특징', '2.5 G 고속 모션'], ['제품 크기', '2,270 × 11,250 mm']], [['가공 크기', '3,048 × 1,524 – 8,250 × 2,540 mm'], ['특징', '테이블 크기 6기종'], ['제품 크기', '3,300 × 11,218 mm (FS3015)']], [['가공 크기', '12,192 × 2,540 – 30,480 × 3,048 mm'], ['특징', '대형 강판·베벨 가공 대응'], ['제품 크기', '6,200 × 21,000 mm (FO12025)']], [['가공 크기', '3,048 × 1,524 – 8,250 × 2,540 mm'], ['특징', '접이식 도어와 스텝'], ['제품 크기', '문의해 주십시오']], [['가공 크기', '3,048 × 1,524 – 12,000 × 4,000 mm'], ['특징', '수평 셔틀 테이블'], ['제품 크기', '2,850 × 8,604 mm (HD3015)']], [['가공 크기', '3,048 × 1,524 mm'], ['특징', '승강식 셔틀 테이블'], ['제품 크기', '3,283 × 10,632 mm']], [['가공 크기', 'Ø12–273 mm × 6,500 mm'], ['특징', '디지털 척으로 고속 가공'], ['제품 크기', '12,500 × 4,700 × 2,600 mm']], [['가공 크기', 'Ø40–360 mm × 9,000 mm'], ['특징', '3D 베벨·3+1 트윈 척'], ['제품 크기', '20,500 × 6,500 × 3,200 mm']]];
+    const all = [
+      { kind: 'sheet', title: 'S-Matic K315', short: '투입·절단·분류', img: B('4df533686cd27ffd309c2434f629425b'), alt: 'S-Matic K315의 반송·절단·분류 장치를 나타낸 구성도', lead: '판재 투입, 레이저 절단, 부품 분류, 잔재 회수를 하나의 라인에서 수행합니다.', specs: S([['가공 크기', '3,000 × 1,500 mm'], ['대상 판 두께', '1–6 mm'], ['부품 분류', '진공 흡착']]) },
+      { kind: 'sheet', title: 'KUBE 1212 FIBER', short: '인출식 경사 테이블', img: B('b1eeea59d8e4efbd51b27eff7747e2d2'), alt: 'KUBE 1212 FIBER의 본체와 조작면', lead: '소형 판재 가공에 적합한 정사각형 테이블을 갖추고 있으며, 전면에서 소재를 넣고 뺄 수 있습니다.', specs: S([[area, '1,240 × 1,240 mm'], ['테이블', '인출·경사식'], ['기계 질량', '3,450 kg']]) },
+      { kind: 'sheet', title: 'FL 2512 FIBER', short: '1·2테이블 사양', img: B('35831a17966fd9e8be06de5e284ea465'), alt: '외부 교환 테이블을 달지 않은 FL 2512 FIBER 본체', lead: '수동으로 꺼내는 1테이블 사양과 승강식 셔틀을 사용하는 2테이블 사양 중에서 선택할 수 있습니다.', specs: S([['최대 레이저 출력', '6 kW'], ['테이블', '1테이블 / 2테이블'], ['소재 위치 맞춤', '볼 리프트(1테이블 사양)']]) },
+      { kind: 'sheet', title: 'FL 3015 FIBER', short: '사이드 로딩', img: B('3477239982ff3a3c6205ce0693975190'), alt: 'FL 3015 FIBER 본체와 옆으로 뻗은 소재 테이블', lead: '큰 측면 도어로 정척 판재를 넣고 빼는 레이저 절단기입니다.', specs: S([[area, '3,048 × 1,524 mm'], [trav, '140 m/min'], ['레이아웃', 'S / R']]) },
+      { kind: 'sheet', title: 'RS3015 FIBER', short: '전면·측면에서 작업', img: B('af4799858c655c5be942306a14fcfd89'), alt: 'RS3015 FIBER의 전면과 측면 본체', lead: '전면과 측면 도어로 가공실 안의 워크에 손이 닿습니다.', specs: S([[area, '3,048 × 1,524 mm'], [trav, '140 m/min'], ['접근', '전면·측면 도어']]) },
+      { kind: 'sheet', title: 'FS Series', short: '장척 판재·양문형 도어', img: B('4bbbc7702f1ec1eaade26de07e474e07'), alt: 'FS 시리즈의 FS3015 FIBER 본체', lead: '판재 길이에 맞춰 가공 범위를 선택하는 시리즈입니다. 사진은 FS3015 FIBER입니다.', specs: S([['FS3015 가공 크기', '3,048 × 1,524 mm'], ['FS8025 가공 크기', '8,250 × 2,540 mm'], [trav, '140 m/min']]) },
+      { kind: 'sheet', title: 'FO Series', short: '대형 강판용 갠트리', img: B('8ce3e98554736f919eda7d18c87419e5'), alt: 'FO12025 FIBER의 개방형 테이블과 갠트리', lead: '대형 강판 위를 갠트리가 이동하는 개방형 절단기입니다. 사진은 FO12025 FIBER입니다.', specs: S([['게재 기종', 'FO12025 FIBER'], ['일본 사양의 테이블 길이', '12 / 20 / 30 m'], ['테이블 폭 구성', '2.5 / 3.1 m']]) },
+      { kind: 'sheet', title: 'FE Series', short: '접이식 도어·여러 가공 크기', img: B('c68ccc5697e5715700e49c35c27c1ba9'), alt: 'FE 시리즈의 FE3015 FIBER와 조작부', lead: '접이식 도어와 스텝을 갖춰 가공실에 드나들기 쉬운 구조입니다. 사진은 FE3015 FIBER입니다.', specs: S([['FE3015 가공 크기', '3,048 × 1,524 mm'], ['시리즈 최대 가공 크기', '8,250 × 2,540 mm'], [trav, '100 m/min']]) },
+      { kind: 'sheet', title: 'HD Series', short: '소재 감지·수평 셔틀', img: B('b7e873589b57ec47752e1214ea789838'), alt: 'HD 시리즈의 HD3015와 셔틀 테이블', lead: '소재 자동 감지와 수평 셔틀 테이블을 갖춘 판재용 레이저 절단기입니다. 게재 기종은 HD3015입니다.', specs: S([['게재 기종', 'HD3015'], ['제어 장치', 'FSCUT'], ['테이블', '수평 셔틀']]) },
+      { kind: 'sheet', title: 'FC3015 FIBER', short: '승강식 셔틀 테이블', img: B('7ba3b3bf582caf4370471f950167260b'), alt: 'FC3015 FIBER 본체와 소재 교환 테이블', lead: '승강식 셔틀 테이블로 소재를 교환하는 3015 클래스 절단기입니다.', specs: S([[area, '3,048 × 1,524 mm'], ['최대 절단 속도', '50 m/min'], ['제어 장치', 'Siemens NC']]) },
+      { kind: 'tube', title: 'TL6527-S', short: '원형관 Ø12–273 mm', img: B('7378c43bc5e401b9bd793d1791ea638c'), alt: 'TL6527-S의 파이프 가공 라인과 소재 지지부', lead: '원형관·각관을 가공하는 파이프용 레이저 절단기입니다. 일본 사양 6 kW는 외경 12~273 mm의 원형관에 대응합니다.', specs: S([['원형관 외경', 'Ø12–273 mm'], ['각관 단면 치수', '12 × 12 – 200 × 200 mm'], ['최대 가공 길이', '6,500 mm'], ['워크 최대 질량', '200 kg'], ['일본 사양 레이저 출력', '6 kW']]) },
+      { kind: 'tube', title: 'TL9036-X', short: '원형관 Ø40–360 mm', img: B('8f79d2b48bd837ca652cea95046d5a6b'), alt: 'TL9036-X 장척 파이프 절단기 전체', lead: '대구경·장척 파이프에 대응하는 레이저 절단기입니다. 원형관은 외경 360 mm까지, 각관은 250 mm 각까지 가공할 수 있습니다.', specs: S([['원형관 외경', 'Ø40–360 mm'], ['각관 단면 치수', '40 × 40 – 250 × 250 mm'], ['표준 가공 길이', '9,000 mm'], ['워크 최대 질량', '1,200 kg'], ['일본 사양 레이저 출력', '6–12 kW']]) }
+    ];
+    const fs = [[2.5, 16, 8, 8, 4, 6], [3, 16, 10, 10, 6, 8], [4, 20, 12, 12, 6, 10], [6, 25, 20, 15, 8, 12], [8, 30, 25, 25, 8, 12], [10, 30, 30, 30, 10, 15], [12, 30, 35, 35, 10, 15], [15, 35, 40, 40, 12, 15]];
+    const fe = [[6, 22, 16, 14, 6, 10], [12, 25, 25, 25, 8, 12], [20, 40, 40, 40, 15, 15], [30, 50, 50, 50, 20, 20]];
+    const fc = [[6, 25, 20, 15, 8, 12], [12, 30, 35, 35, 10, 15], [20, 40, 45, 45, 12, 20], [30, 50, 50, 50, 12, 20]];
+    const caps = { fs: { label: 'FS Series', rows: fs, clean: true }, fl: { label: 'FL 3015', rows: fs.slice(2), clean: true }, rs: { label: 'RS3015', rows: fs.slice(3), clean: true }, fe: { label: 'FE / HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
+    return {
+      kinds: [['sheet', '판재용'], ['tube', '파이프용']].map((k) => ({ label: k[1], ...chip(k[0] === kind), pick: () => this.setState({ kind: k[0] }) })),
+      models: all.map((m, i) => ({ ...m, specs: S(CARD[i]), open: () => { try { localStorage.setItem('sakae-model', IDS[i]); } catch (e) {} } })).filter((m) => m.kind === kind),
+      guide: [
+        { c: '소형 판재, 정면에서 반입', m: 'KUBE1212' },
+        { c: '판재, 수동 또는 2단 테이블 교환', m: 'FL2512' },
+        { c: '측면 접근, 반입 동선에 맞춘 배치', m: 'FL3015' },
+        { c: '정척판, 절단 속도와 테이블 사양 비교', m: 'RS3015 / FS / FE / HD / FC3015' },
+        { c: '절단 부품 자동 분류', m: 'S-Matic K315' },
+        { c: '장척 강판', m: 'FO' },
+        { c: '원형관·각관, 지름과 1본당 질량으로 선정', m: 'TL6527-S / TL9036-X' }
+      ],
+      points: S([
+        ['판재 가공 크기 예', 'KUBE1212는 1,240 × 1,240 mm, FL3015는 3,048 × 1,524 mm. FO 시리즈는 공칭 길이 12·20·30 m의 장척판에 대응합니다.'],
+        ['파이프의 지름·길이·질량', 'TL6527-S는 원형관 Ø12–273 mm, 표준 길이 6.5 m, 최대 200 kg/본. TL9036-X는 Ø40–360 mm, 표준 길이 9 m, 최대 1,200 kg/본.'],
+        ['재질·출력·절단 판 두께', '연강, 스테인리스강, 알루미늄은 절단할 수 있는 판 두께가 다릅니다. RS3015 6 kW 사양의 경우 메이커 값은 순서대로 최대 25, 20, 15 mm입니다.'],
+        ['가공 속도와 급속 이송', 'FL3015의 최대 절단 속도는 55 m/min, 최대 합성 급속 이송은 140 m/min입니다. 실제 절단 속도는 재질, 판 두께, 형상, 가스 조건에 따라 달라집니다.'],
+        ['소재 교환과 자동화', '전면 인출식, 측면 반입, 셔틀 테이블을 비교할 수 있습니다. S-Matic K315는 소재 투입부터 절단 후 부품 분류, 잔재 회수까지를 일체화합니다.']
+      ]),
+      capTabs: Object.keys(caps).map((id) => ({ label: caps[id].label, ...chip(id === capSel), pick: () => this.setState({ cap: id }) })),
+      cap: caps[capSel].rows.map((r) => ({ p: r[0], a: r[1], b: r[2], c: r[3], d: r[4], e: r[5] })),
+      susHead: caps[capSel].clean ? '스테인리스강(클린 컷)' : '스테인리스강'
+    
+    };
+
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ | 栄グローバル株式会社</title>
+<meta name="description" content="お見積もり、補助金、実機デモ、設置条件など、お問い合わせの製品とご相談内容をお知らせください。">
+<link rel="icon" href="assets/117c52be5ecb1ebafe997be82697934e.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5CAD}a:hover{color:#083F78}
+.pg{font-family:'Inter','Noto Sans JP',system-ui,sans-serif;color:#1D1D1F;background:#FFFFFF;line-height:1.65;-webkit-font-smoothing:antialiased}
+.pg{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+.pg h1,.pg h2,.pg h3,.pg h4,.pg summary,.pg figcaption,.pg .lead,.pg th{text-wrap:balance}
+.pg p,.pg li,.pg dd,.pg td{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px, 2vw, 24px)}
+.sec{padding:clamp(56px, 9.33vw, 112px) 0}
+.pale{background:#F5F5F7}
+.dark{background:#0B1320;color:#F5F5F7}
+.eye{font-size:15px;font-weight:600;color:#0B5CAD;letter-spacing:.04em;margin:0}
+.dark .eye{color:#8CC4FF}
+.h1{margin:10px 0 0;font-size: clamp(40px, 6vw, 72px);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.h2{margin:0;font-size: clamp(26px, 3.83vw, 46px);line-height:1.2;font-weight:700}
+.h3{margin:0;font-size: clamp(18px, 1.83vw, 22px);line-height:1.35;font-weight:700}
+.lead{margin:18px 0 0;font-size: clamp(16px, 1.67vw, 20px);line-height:1.6;color:#5F5F64}
+.dark .lead,.dark .mut{color:#C4CAD4}
+.mut{color:#5F5F64}
+.c{text-align:center}
+.c .lead{margin-left:auto;margin-right:auto;max-width:720px}
+.pill{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:500;border:0;cursor:pointer;font-family:inherit}
+.pill:hover{background:#083F78;color:#FFFFFF}
+.ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;border:1px solid #0B5CAD;color:#0B5CAD;text-decoration:none;font-size:16px;font-weight:500;background:transparent}
+.ghost:hover{background:#0B5CAD;color:#FFFFFF}
+.lk{text-decoration:none;font-size:16px}.lk:hover{text-decoration:underline}
+.dark a.lk{color:#8CC4FF}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border-radius:22px;padding:clamp(20px, 2.67vw, 32px);color:#1D1D1F;text-decoration:none;display:block}
+.pale .card{background:#FFFFFF}
+.card.g{background:#F5F5F7}
+.dark .card{background:#162235;color:#F5F5F7}
+a.card:hover{color:#1D1D1F;background:#E6EEF8;box-shadow:0 16px 44px rgba(11,40,80,.16)}
+.dark a.card:hover{color:#FFFFFF;background:#22395A;box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.pill,.ghost,.chip,.card,.lk,.nav a,.topic,.foot a,.tb tbody tr,details summary{transition:background-color .2s,color .2s,border-color .2s,box-shadow .25s}
+.card img,.slide img{transition:transform .5s}
+a.card:hover img{transform:scale(1.04)}
+.chip:hover{background:#0B5CAD !important;color:#FFFFFF !important;border-color:#0B5CAD !important}
+.chip.dng:hover{background:#B3261E !important;border-color:#B3261E !important}
+.topic{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2vw, 24px);border-radius:999px;border:1px solid #5C6B80;color:#FFFFFF;text-decoration:none;font-size:16px}
+.topic:hover{background:#FFFFFF;color:#0B1320;border-color:#FFFFFF}
+.lk:hover{color:#083F78}
+.dark a.lk:hover{color:#FFFFFF}
+.tb tbody tr:hover{background:#EEF5FC}
+.dark .tb tbody tr:hover{background:#22395A}
+details summary:hover{color:#0B5CAD}
+.slide:hover .more{background:#083F78}
+.show{display:none}
+.stage{position:relative}
+.slide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px, 4vw, 48px);align-items:center;text-decoration:none;color:#1D1D1F;background:#F5F5F7;border-radius:28px;padding:clamp(28px, 4.67vw, 56px) clamp(32px, 5.33vw, 64px);box-sizing:border-box}
+.slide:hover{color:#1D1D1F}
+.more{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;font-size:16px;font-weight:500;margin-top:clamp(17px, 2.33vw, 28px)}
+@keyframes rise{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scale(.88);border-radius:48px}to{transform:none}}
+@keyframes k1{0%{opacity:1;visibility:visible;transform:none}13%{opacity:1;visibility:visible;transform:none}17.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}17.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k2{0%,17.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}17.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}22%{opacity:1;visibility:visible;transform:none}33%{opacity:1;visibility:visible;transform:none}37.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}37.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k3{0%,37.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}37.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}42%{opacity:1;visibility:visible;transform:none}53%{opacity:1;visibility:visible;transform:none}57.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}57.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k4{0%,57.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}57.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}62%{opacity:1;visibility:visible;transform:none}73%{opacity:1;visibility:visible;transform:none}77.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}77.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k5{0%,77.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}77.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}82%{opacity:1;visibility:visible;transform:none}100%{opacity:1;visibility:visible;transform:none}}
+@keyframes kimg{from{transform:translateX(60px) rotate(2deg)}to{transform:translateX(-60px) rotate(-2deg)}}
+@keyframes kbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-height:1600px) and (min-width:901px) and (prefers-reduced-motion:no-preference){
+@supports (animation-timeline: view()){
+ .card,figure,.h2,.tb{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+ .growin{animation:grow linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ .tiles{display:none}
+ .show{display:block;height:3400px;view-timeline-name:--show;view-timeline-axis:block}
+ .stage{position:sticky;top:92px;height:620px}
+ .stage .slide{position:absolute;inset:0;z-index:1;animation-timeline:--show;animation-range:contain 0% contain 100%;animation-timing-function:linear;animation-fill-mode:both}
+ .sl1{animation-name:k1}.sl2{animation-name:k2}.sl3{animation-name:k3}.sl4{animation-name:k4}.sl5{animation-name:k5}
+ .stage .slide img{animation:kimg linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .bar{animation:kbar linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .stage figure,.stage .card,.stage .h2{animation:none}
+}}
+.ph{display:block;width:100%;object-fit:contain}
+.nav a{color:#1D1D1F;text-decoration:none}.nav a:hover{color:#0B5CAD}
+.foot a{color:#424245;text-decoration:none}.foot a:hover{text-decoration:underline}
+.chip{font:inherit;font-size:15px;font-weight:500;min-height:44px;padding:0 20px;border-radius:999px;cursor:pointer}
+.dl{margin:0;border-top:1px solid #D2D2D7}
+.dl>div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid #D2D2D7}
+.dl dt{color:#5F5F64}.dl dd{margin:0}
+.tb{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
+.tb th,.tb td{padding:14px 10px;border-bottom:1px solid #E3E3E8;vertical-align:top}
+.tb thead th{color:#5F5F64;font-weight:500;border-bottom:1px solid #C7C7CC}
+.scroll{overflow-x:auto}
+.spec th,.spec td{text-align:center;padding:16px 12px}
+.spec thead th{background:#F5F5F7;border-bottom:0;padding:20px 12px;color:#1D1D1F;font-weight:700;font-size: clamp(16px, 1.67vw, 20px)}
+.spec tbody th{text-align:left;padding-left:clamp(22px, 3vw, 36px);white-space:nowrap;font-weight:500;color:#5F5F64}
+.spec tbody tr:nth-child(odd){background:#F7F9FC}
+.spec tbody tr:first-child td{font-size: clamp(16px, 1.67vw, 20px);font-weight:700;color:#0B5CAD}
+.spec td:nth-child(5),.spec th:nth-child(5){border-left:2px solid #C7C7CC}
+.spec .tg{display:block;width:fit-content;margin:0 auto 8px;font-size:12px;font-weight:700;color:#FFFFFF;border-radius:999px;padding:3px 14px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
+.fld{font:inherit;font-size:16px;width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;border:1px solid #86868B;border-radius:12px;background:#FFFFFF;color:#1D1D1F}
+.fld:focus,.chip:focus-visible,.pill:focus-visible{outline:2px solid #0B5CAD;outline-offset:2px}
+.lab{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.hasdrop{position:relative;display:flex;align-items:center;height:76px}
+.sub{display:none;position:absolute;top:100%;left:-18px;z-index:20}
+.sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
+.sub a:hover{background:#F5F5F7}
+.hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
+.mnav,.mlang{display:none;position:relative}
+.mlang{display:block}
+.langtxt{display:none !important}
+.nhead:hover span{color:#0B5CAD}
+.mnav summary,.mlang summary{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;height:44px;padding:0 8px;border-radius:12px;box-sizing:border-box}
+.mnav summary:hover,.mlang summary:hover,.mnav[open] summary,.mlang[open] summary{background:#EDEDF0}
+.drop{position:absolute;right:0;top:54px;z-index:20;display:flex;flex-direction:column;min-width:230px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.drop a,.drop>span{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border-radius:10px;color:#1D1D1F;text-decoration:none;font-size:16px;box-sizing:border-box}
+.drop a:hover{background:#F5F5F7}
+.drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
+@media (max-width:900px){
+ .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
+ .nav{display:none !important}
+
+ .dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .split{grid-template-columns:minmax(0,1fr) !important}
+}
+@media (min-width:901px) and (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body style="margin: 0">
+<div id="app">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index.html" aria-label="SAKAE GLOBAL ホーム" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="メインメニュー" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products.html">製品情報</a><div class="sub"><div><a href="cutting.html">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><strong style="color: #1D1D1F">日本語</strong> · <a href="contact-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="contact-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="contact-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="言語を選択"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">日本語</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</span>
+<a href="contact-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="contact-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="contact-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">お問い合わせ</a>
+<details class="mnav">
+<summary aria-label="メニューを開く"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products.html">製品情報</a>
+<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">ファイバーレーザー切断機</a>
+<a href="welder.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">レーザー溶接機</a>
+<a href="robot.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">協働溶接ロボット</a>
+<a href="stopper.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">衝撃吸収型カーストッパー</a>
+<a href="separator.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">圧縮空気用セパレーター</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+<a href="contact.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">お問い合わせ</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main class="pale" style="padding: clamp(36px, 6vw, 72px) 0 clamp(48px, 8vw, 96px)">
+<div class="wrap" style="max-width: 800px">
+<div class="c"><p class="eye">お問い合わせ</p><h1 class="h2" style="margin-top: 8px">製品・技術の​ご相談</h1>
+<p class="lead">お見積もり、​補助金、​実機デモ、​設置条件など、​お問い合わせの​製品と​ご相談内容を​お知らせ​ください。</p></div>
+<div role="group" aria-label="ご相談の種類" class="row" style="justify-content: center; gap: 10px; margin-top: clamp(20px, 2.67vw, 32px)">
+
+<button type="button" class="chip" aria-pressed="" style="border: 1px solid #1D1D1F; background: #1D1D1F; color: #FFFFFF">お見積もり・ご注文</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">補助金相談</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">テスト加工・デモ</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">カタログ請求</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">その​他の​お問い合わせ</button>
+
+</div>
+
+<form novalidate="" class="card" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(25px, 3.33vw, 40px); display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 15px; color: #424245; background: #F5F5F7; border-radius: 12px; padding: 14px 16px">ご希望の​製品・型式、​数量、​納入先地域、​ご希望の​納期を、​分かる​範囲で​お知らせ​ください。</p>
+<div class="g2" style="gap: 18px">
+<label class="lab">対象製品
+<select class="fld" name="product"><option value="none">未定・​該当なし</option><option value="cutting">ファイバーレーザー切断機</option><option value="welder">レーザー溶接機</option><option value="robot">協働溶接ロボット</option><option value="stopper">衝撃吸収型カーストッパー</option><option value="separator">圧縮空気用セパレーター</option></select></label>
+<label class="lab" style="display: none">型式・機種名
+<input class="fld" type="text" name="model" placeholder="製品名または型式"></label>
+<label class="lab" style="display: none">材質・板厚
+<input class="fld" type="text" name="material" placeholder="例）SUS304 t3.0"></label>
+<label class="lab" style="display: none">加工サイズ​（板・管の​寸法）​
+<input class="fld" type="text" name="size" placeholder="例）3,048 × 1,524 mm、丸管 Ø100"></label>
+<label class="lab" style="display: none">月間の加工量
+<input class="fld" type="text" name="volume" placeholder="例）月20トン"></label>
+<label class="lab" style="display: none">溶接する​製品・継手
+<input class="fld" type="text" name="joint" placeholder="例）SUS箱物の角継手"></label>
+<label class="lab" style="display: none">工場の電源
+<input class="fld" type="text" name="power" placeholder="例）単相200 V"></label>
+<label class="lab" style="display: none">ワークの寸法
+<input class="fld" type="text" name="work" placeholder="例）600 × 400 × 300 mm"></label>
+<label class="lab" style="display: none">お使いの​溶接機・治具
+<input class="fld" type="text" name="equip" placeholder="例）CO2溶接機 350 A"></label>
+<label class="lab" style="display: none">駐車枠数・設置台数
+<input class="fld" type="text" name="bays" placeholder="例）20台分"></label>
+<label class="lab" style="display: none">舗装の種類
+<input class="fld" type="text" name="pavement" placeholder="例）アスファルト"></label>
+<label class="lab" style="display: none">対象車両
+<input class="fld" type="text" name="vehicle" placeholder="例）乗用車、トラック"></label>
+<label class="lab" style="display: none">使用流量
+<input class="fld" type="text" name="flow" placeholder="例）800 L/min"></label>
+<label class="lab" style="display: none">使用圧力
+<input class="fld" type="text" name="pressure" placeholder="例）0.7 MPa"></label>
+<label class="lab" style="display: none">接続口径
+<input class="fld" type="text" name="port" placeholder="例）3/8"></label>
+<label class="lab" style="display: none">接続する機器
+<input class="fld" type="text" name="device" placeholder="例）塗装ガン、レーザー加工機"></label>
+<label class="lab" style="display: none">数量
+<input class="fld" type="text" name="qty" placeholder="例）1台"></label>
+<label class="lab" style="display: flex">納入先地域
+<input class="fld" type="text" name="region" placeholder="例）日本・愛知県"></label>
+<label class="lab" style="display: flex">希望納期
+<input class="fld" type="text" name="delivery" placeholder="例）2027年3月"></label>
+</div>
+<label style="display: none; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="alsoFunding" style="width: 20px; height: 20px">補助金の​活用も​相談する</label>
+<div style="border-top: 1px solid #D2D2D7; padding-top: 22px; display: flex; flex-direction: column; gap: 18px">
+<div class="g2" style="gap: 18px">
+<label class="lab">会社名​（必須）​
+<input class="fld" type="text" name="company" required="" autocomplete="organization" placeholder="会社名・工場名"></label>
+<label class="lab">お名前​（必須）​
+<input class="fld" type="text" name="person" required="" autocomplete="name"></label>
+<label class="lab">返信先メールアドレス​（必須）​
+<input class="fld" type="email" name="email" required="" autocomplete="email"></label>
+<label class="lab">電話番号​（任意）​
+<input class="fld" type="tel" name="phone" autocomplete="tel"></label>
+</div>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="font-size: 14px; font-weight: 600; padding: 0">ご希望の​連絡方法</legend>
+<div class="row" style="gap: clamp(16px, 2vw, 24px)">
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="メール" checked="" style="width: 20px; height: 20px">メール</label>
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="電話" style="width: 20px; height: 20px">電話</label>
+</div>
+</fieldset>
+<label class="lab">お問い合わせ内容
+<textarea class="fld" name="message" rows="5" style="resize: vertical" placeholder="必要な仕様、加工内容、設置条件など"></textarea></label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="agree" style="width: 20px; height: 20px"><span><a href="company.html#privacy">個人情報保護方針</a>に​同意する​（必須）</span></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+
+<button type="button" class="pill" style="align-self: center; min-height: 52px; padding: 0 clamp(25px, 3.33vw, 40px); font-size: clamp(15px, 1.42vw, 17px)">入力内容を​確認する</button>
+<p class="mut c" style="margin: 0; font-size: 13px">ボタンを​押すと、​入力内容の​確認画面に​進みます。</p>
+</div>
+</form>
+
+
+
+
+
+<div class="g2" style="margin-top: 16px">
+<div class="card"><h2 class="h3">お電話</h2><p style="margin: 8px 0 0; font-size: clamp(18px, 1.83vw, 22px); font-weight: 700">050-1753-9326</p><p class="mut" style="margin: 2px 0 0; font-size: 14px">代表電話</p></div>
+<div class="card"><h2 class="h3">メール</h2><p style="margin: 8px 0 0">お問い合わせ・​お見積もり・ご注文</p><p style="margin: 2px 0 0"><a href="mailto:info@sakaeglobal.com">info@sakaeglobal.com</a></p></div>
+</div>
+</div>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">製品情報</strong>
+<a href="cutting.html">ファイバーレーザー切断機</a>
+<a href="welder.html">レーザー溶接機</a>
+<a href="robot.html">協働溶接ロボット</a>
+<a href="stopper.html">衝撃吸収型カーストッパー</a>
+<a href="separator.html">圧縮空気用セパレーター</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">ご相談</strong>
+<a href="contact.html">お見積もり・ご注文</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="contact.html">テスト加工・デモ</a>
+<a href="contact.html">カタログ請求</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">会社情報</strong>
+<a href="company.html">企業案内</a>
+<a href="news.html">お知らせ</a>
+<a href="company.html#careers">採用情報</a>
+<a href="company.html#privacy">個人情報保護方針</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">公式YouTubeチャンネル</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 栄グローバル株式会社</div>
+</div>
+</footer>
+</div>
+</div>
+<template id="tpl">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index.html" aria-label="SAKAE GLOBAL ホーム" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="メインメニュー" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products.html">製品情報</a><div class="sub"><div><a href="cutting.html">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><strong style="color: #1D1D1F">日本語</strong> · <a href="contact-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="contact-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="contact-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="言語を選択"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">日本語</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</span>
+<a href="contact-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="contact-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="contact-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">お問い合わせ</a>
+<details class="mnav">
+<summary aria-label="メニューを開く"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products.html">製品情報</a>
+<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">ファイバーレーザー切断機</a>
+<a href="welder.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">レーザー溶接機</a>
+<a href="robot.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">協働溶接ロボット</a>
+<a href="stopper.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">衝撃吸収型カーストッパー</a>
+<a href="separator.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">圧縮空気用セパレーター</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+<a href="contact.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">お問い合わせ</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main class="pale" style="padding: clamp(36px, 6vw, 72px) 0 clamp(48px, 8vw, 96px)">
+<div class="wrap" style="max-width: 800px">
+<div class="c"><p class="eye">お問い合わせ</p><h1 class="h2" style="margin-top: 8px">製品・技術の&#8203;ご相談</h1>
+<p class="lead">お見積もり、&#8203;補助金、&#8203;実機デモ、&#8203;設置条件など、&#8203;お問い合わせの&#8203;製品と&#8203;ご相談内容を&#8203;お知らせ&#8203;ください。</p></div>
+<div role="group" aria-label="ご相談の種類" class="row" style="justify-content: center; gap: 10px; margin-top: clamp(20px, 2.67vw, 32px)">
+<template data-for="types" data-as="t">
+<button type="button" class="chip" onClick="{{t.pick}}" aria-pressed="{{t.on}}" style="border: 1px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}">{{t.label}}</button>
+</template>
+</div>
+
+<form onSubmit="{{check}}" noValidate="{{true}}" class="card" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(25px, 3.33vw, 40px); display: {{formDisp}}; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 15px; color: #424245; background: #F5F5F7; border-radius: 12px; padding: 14px 16px">{{lead}}</p>
+<div class="g2" style="gap: 18px">
+<label class="lab">対象製品
+<select class="fld" name="product" onChange="{{onProduct}}"><option value="none">未定・&#8203;該当なし</option><option value="cutting">ファイバーレーザー切断機</option><option value="welder">レーザー溶接機</option><option value="robot">協働溶接ロボット</option><option value="stopper">衝撃吸収型カーストッパー</option><option value="separator">圧縮空気用セパレーター</option></select></label>
+<label class="lab" style="display: {{d.model}}">型式・機種名
+<input class="fld" type="text" name="model" placeholder="製品名または型式"></label>
+<label class="lab" style="display: {{d.material}}">材質・板厚
+<input class="fld" type="text" name="material" placeholder="例）SUS304 t3.0"></label>
+<label class="lab" style="display: {{d.size}}">加工サイズ&#8203;（板・管の&#8203;寸法）&#8203;
+<input class="fld" type="text" name="size" placeholder="例）3,048 × 1,524 mm、丸管 Ø100"></label>
+<label class="lab" style="display: {{d.volume}}">月間の加工量
+<input class="fld" type="text" name="volume" placeholder="例）月20トン"></label>
+<label class="lab" style="display: {{d.joint}}">溶接する&#8203;製品・継手
+<input class="fld" type="text" name="joint" placeholder="例）SUS箱物の角継手"></label>
+<label class="lab" style="display: {{d.power}}">工場の電源
+<input class="fld" type="text" name="power" placeholder="例）単相200 V"></label>
+<label class="lab" style="display: {{d.work}}">ワークの寸法
+<input class="fld" type="text" name="work" placeholder="例）600 × 400 × 300 mm"></label>
+<label class="lab" style="display: {{d.equip}}">お使いの&#8203;溶接機・治具
+<input class="fld" type="text" name="equip" placeholder="例）CO2溶接機 350 A"></label>
+<label class="lab" style="display: {{d.bays}}">駐車枠数・設置台数
+<input class="fld" type="text" name="bays" placeholder="例）20台分"></label>
+<label class="lab" style="display: {{d.pavement}}">舗装の種類
+<input class="fld" type="text" name="pavement" placeholder="例）アスファルト"></label>
+<label class="lab" style="display: {{d.vehicle}}">対象車両
+<input class="fld" type="text" name="vehicle" placeholder="例）乗用車、トラック"></label>
+<label class="lab" style="display: {{d.flow}}">使用流量
+<input class="fld" type="text" name="flow" placeholder="例）800 L/min"></label>
+<label class="lab" style="display: {{d.pressure}}">使用圧力
+<input class="fld" type="text" name="pressure" placeholder="例）0.7 MPa"></label>
+<label class="lab" style="display: {{d.port}}">接続口径
+<input class="fld" type="text" name="port" placeholder="例）3/8"></label>
+<label class="lab" style="display: {{d.device}}">接続する機器
+<input class="fld" type="text" name="device" placeholder="例）塗装ガン、レーザー加工機"></label>
+<label class="lab" style="display: {{d.qty}}">数量
+<input class="fld" type="text" name="qty" placeholder="例）1台"></label>
+<label class="lab" style="display: {{d.region}}">納入先地域
+<input class="fld" type="text" name="region" placeholder="例）日本・愛知県"></label>
+<label class="lab" style="display: {{d.delivery}}">希望納期
+<input class="fld" type="text" name="delivery" placeholder="例）2027年3月"></label>
+</div>
+<label style="display: {{d.funding}}; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="alsoFunding" style="width: 20px; height: 20px">補助金の&#8203;活用も&#8203;相談する</label>
+<div style="border-top: 1px solid #D2D2D7; padding-top: 22px; display: flex; flex-direction: column; gap: 18px">
+<div class="g2" style="gap: 18px">
+<label class="lab">会社名&#8203;（必須）&#8203;
+<input class="fld" type="text" name="company" required autocomplete="organization" placeholder="会社名・工場名"></label>
+<label class="lab">お名前&#8203;（必須）&#8203;
+<input class="fld" type="text" name="person" required autocomplete="name"></label>
+<label class="lab">返信先メールアドレス&#8203;（必須）&#8203;
+<input class="fld" type="email" name="email" required autocomplete="email"></label>
+<label class="lab">電話番号&#8203;（任意）&#8203;
+<input class="fld" type="tel" name="phone" autocomplete="tel"></label>
+</div>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="font-size: 14px; font-weight: 600; padding: 0">ご希望の&#8203;連絡方法</legend>
+<div class="row" style="gap: clamp(16px, 2vw, 24px)">
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="メール" defaultChecked="{{true}}" style="width: 20px; height: 20px">メール</label>
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="電話" style="width: 20px; height: 20px">電話</label>
+</div>
+</fieldset>
+<label class="lab">お問い合わせ内容
+<textarea class="fld" name="message" rows="5" style="resize: vertical" placeholder="必要な仕様、加工内容、設置条件など"></textarea></label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="agree" style="width: 20px; height: 20px"><span><a href="company.html#privacy">個人情報保護方針</a>に&#8203;同意する&#8203;（必須）</span></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+<template data-if="hasErr">
+<p role="alert" style="margin: 0; padding: 14px 18px; border-radius: 12px; background: #FDECEA; color: #B3261E; font-size: 15px; font-weight: 600">{{errText}}</p>
+</template>
+<button type="button" onClick="{{check}}" class="pill" style="align-self: center; min-height: 52px; padding: 0 clamp(25px, 3.33vw, 40px); font-size: clamp(15px, 1.42vw, 17px)">入力内容を&#8203;確認する</button>
+<p class="mut c" style="margin: 0; font-size: 13px">ボタンを&#8203;押すと、&#8203;入力内容の&#8203;確認画面に&#8203;進みます。</p>
+</div>
+</form>
+
+<template data-if="isConfirm">
+<div class="card" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(25px, 3.33vw, 40px)">
+<h2 class="h3" style="font-size: clamp(21px, 2.17vw, 26px)">入力内容の&#8203;ご確認</h2>
+<p class="mut" style="margin: 6px 0 0; font-size: 15px">以下の&#8203;内容で&#8203;送信します。&#8203;よろしければ&#8203;「送信する」を&#8203;押してください。</p>
+<dl style="margin: 20px 0 0; font-size: 16px; border-top: 1px solid #D2D2D7">
+<template data-for="rows" data-as="r">
+<div style="display: grid; grid-template-columns: minmax(120px, 220px) minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid #D2D2D7"><dt class="mut">{{r.k}}</dt><dd style="margin: 0; font-weight: 600; white-space: pre-wrap; overflow-wrap: anywhere">{{r.v}}</dd></div>
+</template>
+</dl>
+<template data-if="failed">
+<p role="alert" style="margin: 20px 0 0; padding: 14px 18px; border-radius: 12px; background: #FDECEA; color: #B3261E; font-size: 15px; font-weight: 600">送信できませんでした。&#8203;通信環境を&#8203;ご確認の&#8203;うえ、&#8203;もう&#8203;一度&#8203;お試しください。&#8203;解決しない&#8203;場合は&#8203; info@sakaeglobal.com まで&#8203;ご連絡ください。</p>
+</template>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px); gap: 12px">
+<button type="button" onClick="{{back}}" class="ghost" style="min-height: 52px; padding: 0 clamp(20px, 2.67vw, 32px); font-size: 16px; cursor: pointer; font-family: inherit">修正する</button>
+<button type="button" onClick="{{send}}" class="pill" style="min-height: 52px; padding: 0 clamp(25px, 3.33vw, 40px); font-size: clamp(15px, 1.42vw, 17px)">{{sendLabel}}</button>
+</div>
+</div>
+</template>
+
+<template data-if="isDone">
+<div role="status" class="card c" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(28px, 4.67vw, 56px) clamp(25px, 3.33vw, 40px); border: 2px solid #0B5CAD">
+<h2 class="h3" style="font-size: clamp(22px, 2.33vw, 28px)">お問い合わせを&#8203;受け付けました。</h2>
+<p class="mut" style="margin: 10px 0 0; font-size: 16px">担当者より&#8203;ご連絡いたします。</p>
+<button type="button" onClick="{{again}}" class="ghost" style="margin-top: clamp(16px, 2vw, 24px); min-height: 48px; padding: 0 clamp(17px, 2.33vw, 28px); font-size: 15px; cursor: pointer; font-family: inherit">新しい&#8203;お問い合わせを&#8203;書く</button>
+</div>
+</template>
+
+<div class="g2" style="margin-top: 16px">
+<div class="card"><h2 class="h3">お電話</h2><p style="margin: 8px 0 0; font-size: clamp(18px, 1.83vw, 22px); font-weight: 700">050-1753-9326</p><p class="mut" style="margin: 2px 0 0; font-size: 14px">代表電話</p></div>
+<div class="card"><h2 class="h3">メール</h2><p style="margin: 8px 0 0">お問い合わせ・&#8203;お見積もり・ご注文</p><p style="margin: 2px 0 0"><a href="mailto:info@sakaeglobal.com">info@sakaeglobal.com</a></p></div>
+</div>
+</div>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">製品情報</strong>
+<a href="cutting.html">ファイバーレーザー切断機</a>
+<a href="welder.html">レーザー溶接機</a>
+<a href="robot.html">協働溶接ロボット</a>
+<a href="stopper.html">衝撃吸収型カーストッパー</a>
+<a href="separator.html">圧縮空気用セパレーター</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">ご相談</strong>
+<a href="contact.html">お見積もり・ご注文</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="contact.html">テスト加工・デモ</a>
+<a href="contact.html">カタログ請求</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">会社情報</strong>
+<a href="company.html">企業案内</a>
+<a href="news.html">お知らせ</a>
+<a href="company.html#careers">採用情報</a>
+<a href="company.html#privacy">個人情報保護方針</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">公式YouTubeチャンネル</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 栄グローバル株式会社</div>
+</div>
+</footer>
+</div>
+</template>
+<script src="site.js"></script>
+<script>
+var EXT = {};
+class Component extends DCLogic {
+  renderVals() {
+    if (!this._oc) {
+      this._oc = true;
+      try {
+        document.addEventListener('click', (e) => {
+          const path = e.composedPath ? e.composedPath() : [e.target];
+          const root = path[0] && path[0].getRootNode ? path[0].getRootNode() : document;
+          const close = (r) => { try { r.querySelectorAll('details.mlang[open], details.mnav[open]').forEach((d) => { if (path.indexOf(d) < 0) d.removeAttribute('open'); }); } catch (x) {} };
+          close(root); if (root !== document) close(document);
+        }, true);
+      } catch (x) {}
+    }
+
+    const st = this.state || {};
+    const sel = st.type || 'order';
+    const labels = { order: 'お見積もり・ご注文', subsidy: '補助金相談', demo: 'テスト加工・デモ', catalog: 'カタログ請求', general: 'その\u200b他の\u200bお問い合わせ' };
+    const leads = {
+      order: 'ご希望の\u200b製品・型式、\u200b数量、\u200b納入先地域、\u200bご希望の\u200b納期を、\u200b分かる\u200b範囲で\u200bお知らせ\u200bください。',
+      subsidy: '設置予定地、\u200b導入時期、\u200b検討中の\u200b設備を\u200bお知らせ\u200bください。\u200b活用できそうな\u200b制度の\u200bご案内と、\u200b申請資料の\u200b準備を\u200bお手伝いします。',
+      demo: '使用材料、\u200b板厚、\u200b確認したい\u200b加工内容を\u200bお知らせ\u200bください。',
+      catalog: 'ご希望の\u200b製品や\u200b型式を\u200bお知らせ\u200bください。',
+      general: 'ご使用中の\u200b製品に\u200bついては、\u200b型式と\u200bお問い合わせ内容を\u200bお知らせ\u200bください。\u200b一般の\u200bご相談では\u200b製品の\u200b選択は\u200b不要です。'
+    };
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyouqunTgzOETwYZQg-DbY2j2d_dYsDwNC27cUHBlwGtAZlLRF1nKUsDCyPG3MONPJj-w/exec';
+    const types = Object.keys(labels).map((id) => {
+      const on = id === sel;
+      return { label: labels[id], on: on, bg: on ? '#1D1D1F' : '#FFFFFF', fg: on ? '#FFFFFF' : '#1D1D1F', bd: on ? '#1D1D1F' : '#86868B', pick: () => this.setState({ type: id }) };
+    });
+    const names = { model: '型式・機種名', material: '材質・板厚', size: '加工サイズ\u200b（板・管の\u200b寸法）', volume: '月間の加工量', joint: '溶接する\u200b製品・継手', power: '工場の電源', work: 'ワークの寸法', equip: 'お使いの\u200b溶接機・治具', bays: '駐車枠数・設置台数', pavement: '舗装の種類', vehicle: '対象車両', flow: '使用流量', pressure: '使用圧力', port: '接続口径', device: '接続する機器', qty: '数量', region: '納入先地域', delivery: '希望納期', company: '会社名', person: 'お名前', phone: '電話番号', email: '返信先メールアドレス', preferred: 'ご希望の\u200b連絡方法' };
+    const PROD = { none: '未定・\u200b該当なし', cutting: 'ファイバーレーザー切断機', welder: 'レーザー溶接機', robot: '協働溶接ロボット', stopper: '衝撃吸収型カーストッパー', separator: '圧縮空気用セパレーター' };
+    const prod = PROD[st.prod] ? st.prod : 'none';
+    const detail = sel === 'order' || sel === 'demo' || sel === 'subsidy';
+    const is = (...a) => a.indexOf(prod) >= 0;
+    const SHOW = { model: prod !== 'none', material: detail && is('cutting', 'welder'), size: detail && is('cutting'), volume: detail && is('cutting'), joint: detail && is('welder', 'robot'), power: detail && is('welder'), work: detail && is('robot'), equip: detail && is('robot'), bays: detail && is('stopper'), pavement: detail && is('stopper'), vehicle: detail && is('stopper'), flow: detail && is('separator'), pressure: detail && is('separator'), port: detail && is('separator'), device: detail && is('separator'), qty: sel === 'order' && prod !== 'none', region: sel === 'order' || sel === 'subsidy', delivery: sel === 'order', funding: sel === 'order' && is('cutting', 'welder', 'robot') };
+    const d = {}; Object.keys(SHOW).forEach((k) => { d[k] = SHOW[k] ? 'flex' : 'none'; });
+    const Z = (x) => String(x).replace(/\u200b/g, '');
+    const step = st.step || 'form';
+    const check = (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      const form = (e && e.currentTarget && e.currentTarget.closest) ? (e.currentTarget.closest('form') || e.currentTarget) : e.target;
+      const f = new FormData(form);
+      const get = (k) => String(f.get(k) || '').trim();
+      const miss = [];
+      if (!get('company')) miss.push(names.company);
+      if (!get('person')) miss.push(names.person);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(get('email'))) miss.push('正しい\u200bメールアドレス');
+      if (!f.get('agree')) miss.push('個人情報保護方針への\u200b同意');
+      if (miss.length) { this.setState({ errs: miss }); return; }
+      const rows = [{ k: 'ご相談の種類', v: labels[sel] }, { k: '対象製品', v: PROD[prod] }];
+      const DIRECT = { model: 'model', material: 'material', qty: 'quantity', region: 'region', delivery: 'delivery' };
+      const payload = { topic: Z(labels[sel]), product: Z(PROD[prod]), website: get('website'), page: String(location.href).slice(0, 200) };
+      const extra = [];
+      Object.keys(SHOW).forEach((k) => {
+        if (k === 'funding' || !SHOW[k] || !get(k)) return;
+        rows.push({ k: names[k], v: get(k) });
+        if (DIRECT[k]) payload[DIRECT[k]] = get(k); else extra.push(Z(names[k]) + ': ' + get(k));
+      });
+      ['company', 'person', 'phone', 'email', 'preferred'].forEach((k) => { if (get(k)) rows.push({ k: names[k], v: get(k) }); });
+      const fund = SHOW.funding && f.get('alsoFunding');
+      if (fund) rows.push({ k: '補助金相談', v: '補助金の\u200b活用も\u200b相談する' });
+      if (get('message')) rows.push({ k: 'お問い合わせ内容', v: get('message') });
+      payload.company = get('company'); payload.name = get('person'); payload.phone = get('phone'); payload.email = get('email'); payload.contact = Z(get('preferred'));
+      payload.subsidy = fund ? 'yes' : '';
+      payload.message = (extra.length ? extra.join('\n') + '\n\n' : '') + get('message');
+      this._form = form;
+      this.setState({ step: 'confirm', rows: rows, payload: payload, errs: null, failed: false, sending: false });
+    };
+    const back = () => this.setState({ step: 'form', failed: false, sending: false });
+    const again = () => { try { if (this._form) this._form.reset(); } catch (x) {} this.setState({ step: 'form', rows: null, payload: null, failed: false, sending: false, errs: null }); };
+    const send = () => {
+      if (st.sending || !st.payload) return;
+      const p = new URLSearchParams();
+      Object.keys(st.payload).forEach((k) => p.append(k, st.payload[k]));
+      this.setState({ sending: true, failed: false });
+      let done = false;
+      const fail = () => { if (done) return; done = true; this.setState({ sending: false, failed: true }); };
+      const timer = setTimeout(fail, 15000);
+      try {
+        fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: p })
+          .then(() => { if (done) return; done = true; clearTimeout(timer); this.setState({ sending: false, step: 'done' }); })
+          .catch(() => { clearTimeout(timer); fail(); });
+      } catch (x) { clearTimeout(timer); fail(); }
+    };
+    return {
+      onProduct: (e) => this.setState({ prod: e.target.value }), d: d,
+      types: types, lead: leads[sel], check: check, back: back, send: send, again: again,
+      formDisp: step === 'form' ? 'flex' : 'none',
+      isConfirm: step === 'confirm', isDone: step === 'done',
+      rows: (st.rows || []).map((r) => ({ k: Z(r.k), v: r.v })),
+      failed: !!st.failed, sendLabel: st.sending ? '送信しています…' : '送信する',
+      hasErr: !!(st.errs && st.errs.length), errText: st.errs ? '次の\u200b項目を\u200bご入力ください\u200b：' + st.errs.map(Z).join('／') : ''
+    
+    };
+
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

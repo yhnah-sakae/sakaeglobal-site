@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>協働溶接ロボット | 栄グローバル株式会社</title>
+<meta name="description" content="栄グローバルの溶接専用プログラムを使い、作業者がトーチを手で動かして溶接経路を教示します。同じ継手を繰り返し溶接するときは、ロボットが登録済みの経路を再現します。作業者はワークの段取りと仕上がりの確認に集中できます。">
+<link rel="icon" href="assets/117c52be5ecb1ebafe997be82697934e.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5CAD}a:hover{color:#083F78}
+.pg{font-family:'Inter','Noto Sans JP',system-ui,sans-serif;color:#1D1D1F;background:#FFFFFF;line-height:1.65;-webkit-font-smoothing:antialiased}
+.pg{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+.pg h1,.pg h2,.pg h3,.pg h4,.pg summary,.pg figcaption,.pg .lead,.pg th{text-wrap:balance}
+.pg p,.pg li,.pg dd,.pg td{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px, 2vw, 24px)}
+.sec{padding:clamp(56px, 9.33vw, 112px) 0}
+.pale{background:#F5F5F7}
+.dark{background:#0B1320;color:#F5F5F7}
+.eye{font-size:15px;font-weight:600;color:#0B5CAD;letter-spacing:.04em;margin:0}
+.dark .eye{color:#8CC4FF}
+.h1{margin:10px 0 0;font-size: clamp(40px, 6vw, 72px);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.h2{margin:0;font-size: clamp(26px, 3.83vw, 46px);line-height:1.2;font-weight:700}
+.h3{margin:0;font-size: clamp(18px, 1.83vw, 22px);line-height:1.35;font-weight:700}
+.lead{margin:18px 0 0;font-size: clamp(16px, 1.67vw, 20px);line-height:1.6;color:#5F5F64}
+.dark .lead,.dark .mut{color:#C4CAD4}
+.mut{color:#5F5F64}
+.c{text-align:center}
+.c .lead{margin-left:auto;margin-right:auto;max-width:720px}
+.pill{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:500;border:0;cursor:pointer;font-family:inherit}
+.pill:hover{background:#083F78;color:#FFFFFF}
+.ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;border:1px solid #0B5CAD;color:#0B5CAD;text-decoration:none;font-size:16px;font-weight:500;background:transparent}
+.ghost:hover{background:#0B5CAD;color:#FFFFFF}
+.lk{text-decoration:none;font-size:16px}.lk:hover{text-decoration:underline}
+.dark a.lk{color:#8CC4FF}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border-radius:22px;padding:clamp(20px, 2.67vw, 32px);color:#1D1D1F;text-decoration:none;display:block}
+.pale .card{background:#FFFFFF}
+.card.g{background:#F5F5F7}
+.dark .card{background:#162235;color:#F5F5F7}
+a.card:hover{color:#1D1D1F;background:#E6EEF8;box-shadow:0 16px 44px rgba(11,40,80,.16)}
+.dark a.card:hover{color:#FFFFFF;background:#22395A;box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.pill,.ghost,.chip,.card,.lk,.nav a,.topic,.foot a,.tb tbody tr,details summary{transition:background-color .2s,color .2s,border-color .2s,box-shadow .25s}
+.card img,.slide img{transition:transform .5s}
+a.card:hover img{transform:scale(1.04)}
+.chip:hover{background:#0B5CAD !important;color:#FFFFFF !important;border-color:#0B5CAD !important}
+.chip.dng:hover{background:#B3261E !important;border-color:#B3261E !important}
+.topic{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2vw, 24px);border-radius:999px;border:1px solid #5C6B80;color:#FFFFFF;text-decoration:none;font-size:16px}
+.topic:hover{background:#FFFFFF;color:#0B1320;border-color:#FFFFFF}
+.lk:hover{color:#083F78}
+.dark a.lk:hover{color:#FFFFFF}
+.tb tbody tr:hover{background:#EEF5FC}
+.dark .tb tbody tr:hover{background:#22395A}
+details summary:hover{color:#0B5CAD}
+.slide:hover .more{background:#083F78}
+.show{display:none}
+.stage{position:relative}
+.slide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px, 4vw, 48px);align-items:center;text-decoration:none;color:#1D1D1F;background:#F5F5F7;border-radius:28px;padding:clamp(28px, 4.67vw, 56px) clamp(32px, 5.33vw, 64px);box-sizing:border-box}
+.slide:hover{color:#1D1D1F}
+.more{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;font-size:16px;font-weight:500;margin-top:clamp(17px, 2.33vw, 28px)}
+@keyframes rise{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scale(.88);border-radius:48px}to{transform:none}}
+@keyframes k1{0%{opacity:1;visibility:visible;transform:none}13%{opacity:1;visibility:visible;transform:none}17.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}17.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k2{0%,17.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}17.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}22%{opacity:1;visibility:visible;transform:none}33%{opacity:1;visibility:visible;transform:none}37.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}37.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k3{0%,37.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}37.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}42%{opacity:1;visibility:visible;transform:none}53%{opacity:1;visibility:visible;transform:none}57.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}57.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k4{0%,57.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}57.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}62%{opacity:1;visibility:visible;transform:none}73%{opacity:1;visibility:visible;transform:none}77.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}77.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k5{0%,77.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}77.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}82%{opacity:1;visibility:visible;transform:none}100%{opacity:1;visibility:visible;transform:none}}
+@keyframes kimg{from{transform:translateX(60px) rotate(2deg)}to{transform:translateX(-60px) rotate(-2deg)}}
+@keyframes kbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-height:1600px) and (min-width:901px) and (prefers-reduced-motion:no-preference){
+@supports (animation-timeline: view()){
+ .card,figure,.h2,.tb{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+ .growin{animation:grow linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ .tiles{display:none}
+ .show{display:block;height:3400px;view-timeline-name:--show;view-timeline-axis:block}
+ .stage{position:sticky;top:92px;height:620px}
+ .stage .slide{position:absolute;inset:0;z-index:1;animation-timeline:--show;animation-range:contain 0% contain 100%;animation-timing-function:linear;animation-fill-mode:both}
+ .sl1{animation-name:k1}.sl2{animation-name:k2}.sl3{animation-name:k3}.sl4{animation-name:k4}.sl5{animation-name:k5}
+ .stage .slide img{animation:kimg linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .bar{animation:kbar linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .stage figure,.stage .card,.stage .h2{animation:none}
+}}
+.ph{display:block;width:100%;object-fit:contain}
+.nav a{color:#1D1D1F;text-decoration:none}.nav a:hover{color:#0B5CAD}
+.foot a{color:#424245;text-decoration:none}.foot a:hover{text-decoration:underline}
+.chip{font:inherit;font-size:15px;font-weight:500;min-height:44px;padding:0 20px;border-radius:999px;cursor:pointer}
+.dl{margin:0;border-top:1px solid #D2D2D7}
+.dl>div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid #D2D2D7}
+.dl dt{color:#5F5F64}.dl dd{margin:0}
+.tb{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
+.tb th,.tb td{padding:14px 10px;border-bottom:1px solid #E3E3E8;vertical-align:top}
+.tb thead th{color:#5F5F64;font-weight:500;border-bottom:1px solid #C7C7CC}
+.scroll{overflow-x:auto}
+.spec th,.spec td{text-align:center;padding:16px 12px}
+.spec thead th{background:#F5F5F7;border-bottom:0;padding:20px 12px;color:#1D1D1F;font-weight:700;font-size: clamp(16px, 1.67vw, 20px)}
+.spec tbody th{text-align:left;padding-left:clamp(22px, 3vw, 36px);white-space:nowrap;font-weight:500;color:#5F5F64}
+.spec tbody tr:nth-child(odd){background:#F7F9FC}
+.spec tbody tr:first-child td{font-size: clamp(16px, 1.67vw, 20px);font-weight:700;color:#0B5CAD}
+.spec td:nth-child(5),.spec th:nth-child(5){border-left:2px solid #C7C7CC}
+.spec .tg{display:block;width:fit-content;margin:0 auto 8px;font-size:12px;font-weight:700;color:#FFFFFF;border-radius:999px;padding:3px 14px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
+.fld{font:inherit;font-size:16px;width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;border:1px solid #86868B;border-radius:12px;background:#FFFFFF;color:#1D1D1F}
+.fld:focus,.chip:focus-visible,.pill:focus-visible{outline:2px solid #0B5CAD;outline-offset:2px}
+.lab{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.hasdrop{position:relative;display:flex;align-items:center;height:76px}
+.sub{display:none;position:absolute;top:100%;left:-18px;z-index:20}
+.sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
+.sub a:hover{background:#F5F5F7}
+.hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
+.mnav,.mlang{display:none;position:relative}
+.mlang{display:block}
+.langtxt{display:none !important}
+.nhead:hover span{color:#0B5CAD}
+.mnav summary,.mlang summary{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;height:44px;padding:0 8px;border-radius:12px;box-sizing:border-box}
+.mnav summary:hover,.mlang summary:hover,.mnav[open] summary,.mlang[open] summary{background:#EDEDF0}
+.drop{position:absolute;right:0;top:54px;z-index:20;display:flex;flex-direction:column;min-width:230px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.drop a,.drop>span{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border-radius:10px;color:#1D1D1F;text-decoration:none;font-size:16px;box-sizing:border-box}
+.drop a:hover{background:#F5F5F7}
+.drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
+@media (max-width:900px){
+ .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
+ .nav{display:none !important}
+
+ .dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .split{grid-template-columns:minmax(0,1fr) !important}
+}
+@media (min-width:901px) and (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body style="margin: 0">
+<div id="app">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index.html" aria-label="SAKAE GLOBAL ホーム" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="メインメニュー" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products.html" style="font-weight: 700">製品情報</a><div class="sub"><div><a href="cutting.html">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><strong style="color: #1D1D1F">日本語</strong> · <a href="robot-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="robot-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="robot-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="言語を選択"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">日本語</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</span>
+<a href="robot-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="robot-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="robot-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">お問い合わせ</a>
+<details class="mnav">
+<summary aria-label="メニューを開く"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products.html" style="font-weight: 700">製品情報</a>
+<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">ファイバーレーザー切断機</a>
+<a href="welder.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">レーザー溶接機</a>
+<a href="robot.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">協働溶接ロボット</a>
+<a href="stopper.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">衝撃吸収型カーストッパー</a>
+<a href="separator.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">圧縮空気用セパレーター</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+<a href="contact.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">お問い合わせ</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+<main>
+<nav aria-label="パンくず" class="wrap" style="padding-top: clamp(17px, 2.33vw, 28px); padding-bottom: 8px">
+<a class="lk" href="products.html" style="display: inline-block; padding: 10px 0">‹ 製品一覧へ​戻る</a>
+</nav>
+<section class="sec" id="robot">
+<div class="wrap">
+<div class="split" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4.67vw, 56px); align-items: center">
+<div>
+<p class="eye">協働ロボット 溶接・切断ソリューション</p>
+<h2 class="h2" style="margin-top: 8px">協働溶接ロボット</h2>
+<p class="lead" style="font-size: clamp(15px, 1.5vw, 18px)">栄グローバルの​溶接専用​プログラムを​使い、​作業者が​トーチを​手で​動かして​溶接経路を​教示します。​同じ​継手を​繰り返し溶接する​ときは、​ロボットが​登録済みの​経路を​再現します。​作業者は​ワークの​段取りと​仕上がりの​確認に​集中できます。</p>
+<p class="mut" style="margin: 16px 0 0; font-size: 15px">定盤・台車型の​ほか、​大きな​ワークには​走行軸を​組み合わせた​構成が​あります。​ロボットアームには、​Rainbow Robotics の​ RB シリーズを​採用しています。</p>
+</div>
+<figure style="margin: 0">
+<img src="assets/c568bca1db108f67d42ba7ccfbf8f8fa.webp" alt="溶接テーブル上のワークに向けてトーチを動かす協働ロボット" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px">
+<figcaption class="mut" style="font-size: 13px; margin-top: 12px">協働ロボットに​よる​溶接</figcaption>
+</figure>
+</div>
+<dl class="dl" style="margin-top: clamp(24px, 4vw, 48px)">
+
+<div><dt>RB20-1900 アーム単体の​可搬質量・リーチ</dt><dd style="font-weight: 600">20 kg / 1,900 mm</dd></div>
+
+<div><dt>教示方法</dt><dd style="font-weight: 600">ダイレクトティーチング</dd></div>
+
+<div><dt>溶接動作の例</dt><dd style="font-weight: 600">直線・円弧・ウィービング</dd></div>
+
+<div><dt>大型ワーク向け構成</dt><dd style="font-weight: 600">ガントリー・走行型</dd></div>
+
+</dl>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">ロボットを​触った​ことがない​方でも、​すぐに​使えます</h3>
+<p class="mut" style="margin: 8px 0 0; font-size: 16px">難しい​操作は​不要です。​直線1回の​溶接なら、​約30秒で​設定できます。</p>
+<ol class="g4" style="list-style: none; margin: clamp(16px, 2vw, 24px) 0 0; padding: 0">
+
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">1</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">溶接条件を​アイコンで​選択</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">画面の​アイコンから​溶接条件を​選びます。</p></li>
+
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">2</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">作業位置へ​移動</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">日本語の​音声案内に​沿って、​ロボットを​手で​動かします。</p></li>
+
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">3</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">動作確認</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">溶接の​前に、​登録した​動きを​確認します。</p></li>
+
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">4</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">溶接開始</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">ボタンを​押すと、​登録した​経路で​溶接します。</p></li>
+
+</ol>
+<div class="g2" style="margin-top: 16px">
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">選べる​溶接方法</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">直線溶接、​曲線溶接、​スポット、​ウィービング。​協働ロボットを​手で​動かすだけの​簡単な​ティーチングで​登録できます。</p></div>
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">作業の​保存・​呼び出し</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">作成した​プログラムは、​USB・サーバー・​パソコンなど​外部へ​保存できます。​繰り返しの​作業は​呼び出すだけです。</p></div>
+</div>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">機種・システム構成</h3>
+<div class="g4" style="margin-top: clamp(16px, 2vw, 24px)">
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/d8ba7ac305ac453b0c0bad9823efbf20.webp" alt="独立移動型​（台車）" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">独立移動型​（台車）</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">溶接機・ガスなど​必要な​機材を​台車に​載せ、​電源を​入れるだけで​どこでも​溶接</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/1940102c67df8ebb8653f3eae7c251c9.webp" alt="固定設置型" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">固定設置型</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">普段​お使いの​溶接治具に​設置して、​そのまま​使用</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/452587a66d183c7b916710d3ef996b98.webp" alt="定盤設置型" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">定盤設置型</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">溶接定盤の​上に​協働ロボットを​設置</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/b87dddcdbf57b2e02be0ee6080c36957.webp" alt="移動型​（ポータブル）" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">移動型​（ポータブル）</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">ロボット重量 約15 kg。​狭い​空間や​設置が​難しい​現場にも​持ち運び可能</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/135da41385a20a3aa72ee7ff85745b91.webp" alt="ホイスト移動型" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">ホイスト移動型</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">クレーン・ホイストで​作業位置に​移動</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/0991b5fe1ccd5e382ff0a3496a40ce1d.webp" alt="パイプ・フランジ溶接型" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">パイプ・フランジ溶接型</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">管と​フランジの​円周を​溶接</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/dd3e36b671c1f11d8ae236efabea53e1.webp" alt="ガントリー・走行型" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">ガントリー・走行型</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">X・Y・Z軸の​同期走行で、​広い​範囲の​大型溶接物に​対応</span></figcaption>
+</figure>
+
+</div>
+<div class="card g scroll" style="margin-top: 16px">
+<h3 class="h3">組み合わせできる​溶接機・切断機</h3>
+<table class="tb" style="min-width: 640px; margin-top: 8px">
+<thead><tr><th scope="col">用途</th><th scope="col">機器メーカー</th><th scope="col">出力</th><th scope="col">機能</th><th scope="col">機種名</th></tr></thead>
+<tbody>
+
+<tr><th scope="row">空冷アーク溶接</th><td>ESAB</td><td>400 A</td><td>MMA / GMAW / DPT</td><td>Transmig 400 i</td></tr>
+
+<tr><th scope="row">空冷・水冷アーク溶接</th><td>ESAB</td><td>500 A</td><td>CO2, MIG, MAG, Pulse</td><td>Transmig 500P</td></tr>
+
+<tr><th scope="row">空冷アーク溶接</th><td>DAIHEN</td><td>350 A</td><td>CO2, MIG, MAG</td><td>WB-M350Ⅱ</td></tr>
+
+<tr><th scope="row">空冷・水冷アーク溶接</th><td>DAIHEN</td><td>500 A</td><td>CO2, MIG, MAG</td><td>WB-M500Ⅱ</td></tr>
+
+<tr><th scope="row">空冷アーク溶接</th><td>HYOSUNG</td><td>350 A ／ 500 A</td><td>CO2, MIG, MAG</td><td>PFC 350R ／ PFC 500R</td></tr>
+
+<tr><th scope="row">水冷アーク溶接</th><td>Fronius</td><td>400 A ／ 600 A</td><td>CMT / Pushpull</td><td>TPSi 400 CMT ／ TPSi 600 CMT</td></tr>
+
+<tr><th scope="row">水冷レーザー溶接</th><td>ASEA</td><td>1.5 ／ 2 ／ 3 kW</td><td>レーザー溶接、​クリーニング</td><td>ASEA-1500W ／ 2000W ／ 3000W</td></tr>
+
+<tr><th scope="row">プラズマ切断</th><td>THERMACUT</td><td>45 ／ 85 ／ 105 A</td><td>切断</td><td>EX-TRAFIRE 45HD ／ 85HD ／ 105HD</td></tr>
+
+<tr><th scope="row">プラズマ切断</th><td>HYPERTHERM</td><td>170 ／ 300 A</td><td>切断</td><td>XPR 170 ／ XPR 300</td></tr>
+
+</tbody>
+</table>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">設置タイプは、​移動台車型​（JWS）、​固定設置型​（JWF）、​定盤設置型​（JWT）、​移動型​（JWP・ロボット重量 約15 kg）、​ガントリー・走行型​（JWG）から​選べます。​ガントリー・走行型の​走行軸は、​X軸 3・5・10 m、​Y軸 5〜30 m、​Z軸 1・3 m の​組み合わせに​対応します。​特注仕様も​ご相談ください。</p>
+</div>
+<div class="card g scroll" style="margin-top: 16px">
+<h3 class="h3">ロボット仕様​（RBシリーズ）</h3>
+<p class="mut" style="margin: 6px 0 0; font-size: 15px">IP66等級の​防塵・防水性能と、​作業者の​安全を​確保する​PFL機能を​備えています。</p>
+<table class="tb" style="min-width: 640px; margin-top: 8px">
+<thead><tr><th scope="col">機種</th><th scope="col">積載重量</th><th scope="col">リーチ</th><th scope="col">反復精密度</th><th scope="col">設置面積</th><th scope="col">重量</th></tr></thead>
+<tbody>
+
+<tr><th scope="row">RB3-730</th><td>3 kg</td><td>730 mm</td><td>±0.05 mm</td><td>Ø128 mm</td><td>11.0 kg</td></tr>
+
+<tr><th scope="row">RB5-850</th><td>5 kg</td><td>850 mm</td><td>±0.05 mm</td><td>Ø173 mm</td><td>22.0 kg</td></tr>
+
+<tr><th scope="row">RB3-1200</th><td>3 kg</td><td>1,200 mm</td><td>±0.05 mm</td><td>Ø173 mm</td><td>22.4 kg</td></tr>
+
+<tr><th scope="row">RB10-1300</th><td>10 kg</td><td>1,300 mm</td><td>±0.05 mm</td><td>Ø196 mm</td><td>37.1 kg</td></tr>
+
+<tr><th scope="row">RB20-1900</th><td>20 kg</td><td>1,900 mm</td><td>—</td><td>—</td><td>—</td></tr>
+
+</tbody>
+</table>
+</div>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">オプション</h3>
+<div class="g3" style="margin-top: clamp(16px, 2vw, 24px)">
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">ポジショナー</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">ワークを​回転・​傾斜させて、​溶接しやすい​姿勢に​保ちます。</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">ツールチェンジャー​（​手動・​自動）</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">ねじの​取付なしで、​簡単かつ​素早く​道具を​交換できます。​軽量で​長時間の​稼働にも​対応します。</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">OLP​（オフラインプログラミング）</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">ソフトウェア​「OCTOPUS」。​シミュレーションで​プロセスを​検証し、​衝突・誤​作動を​自動で​検査します。</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">3D ビジョンセンサー</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">Photoneo 製。​ポイントクラウドを​活用した​3次元スキャンで、​高い​精度と​広い​認識範囲を​備えます。</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">溶接線 ​自動検出センサー</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">SCANSONIC 製 TH6D。​レーザーセンサーで​溶接線を​検出し、​高反射素材にも​適用できます。</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">プラズマ・レーザーの​適用</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">ガントリー・走行型は、​プラズマ切断や​レーザー溶接との​組み合わせにも​対応します。</p></div>
+
+</div>
+<p class="mut" style="margin: 20px 0 0; font-size: 14px">ロボット単体または​CO₂溶接機との​組み合わせも​選べます。​選定時は​ワーク寸法、​継手形状と​既存の​治具・電源を​お知らせ​ください。</p>
+<div class="row" style="margin-top: 20px"><a class="pill" href="contact.html">テスト加工・デモ</a><a class="lk" href="https://www.youtube.com/@SAKAEGLOBAL">製​品動画​（YouTube）​›</a></div>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">製品情報</strong>
+<a href="cutting.html">ファイバーレーザー切断機</a>
+<a href="welder.html">レーザー溶接機</a>
+<a href="robot.html">協働溶接ロボット</a>
+<a href="stopper.html">衝撃吸収型カーストッパー</a>
+<a href="separator.html">圧縮空気用セパレーター</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">ご相談</strong>
+<a href="contact.html">お見積もり・ご注文</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="contact.html">テスト加工・デモ</a>
+<a href="contact.html">カタログ請求</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">会社情報</strong>
+<a href="company.html">企業案内</a>
+<a href="news.html">お知らせ</a>
+<a href="company.html#careers">採用情報</a>
+<a href="company.html#privacy">個人情報保護方針</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">公式YouTubeチャンネル</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 栄グローバル株式会社</div>
+</div>
+</footer>
+</div>
+</div>
+<template id="tpl">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index.html" aria-label="SAKAE GLOBAL ホーム" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="メインメニュー" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products.html" style="font-weight: 700">製品情報</a><div class="sub"><div><a href="cutting.html">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><strong style="color: #1D1D1F">日本語</strong> · <a href="robot-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="robot-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="robot-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="言語を選択"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">日本語</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</span>
+<a href="robot-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="robot-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="robot-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">お問い合わせ</a>
+<details class="mnav">
+<summary aria-label="メニューを開く"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products.html" style="font-weight: 700">製品情報</a>
+<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">ファイバーレーザー切断機</a>
+<a href="welder.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">レーザー溶接機</a>
+<a href="robot.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">協働溶接ロボット</a>
+<a href="stopper.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">衝撃吸収型カーストッパー</a>
+<a href="separator.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">圧縮空気用セパレーター</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+<a href="contact.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">お問い合わせ</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+<main>
+<nav aria-label="パンくず" class="wrap" style="padding-top: clamp(17px, 2.33vw, 28px); padding-bottom: 8px">
+<a class="lk" href="products.html" style="display: inline-block; padding: 10px 0">‹ 製品一覧へ&#8203;戻る</a>
+</nav>
+<section class="sec" id="robot">
+<div class="wrap">
+<div class="split" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4.67vw, 56px); align-items: center">
+<div>
+<p class="eye">協働ロボット 溶接・切断ソリューション</p>
+<h2 class="h2" style="margin-top: 8px">協働溶接ロボット</h2>
+<p class="lead" style="font-size: clamp(15px, 1.5vw, 18px)">栄グローバルの&#8203;溶接専用&#8203;プログラムを&#8203;使い、&#8203;作業者が&#8203;トーチを&#8203;手で&#8203;動かして&#8203;溶接経路を&#8203;教示します。&#8203;同じ&#8203;継手を&#8203;繰り返し溶接する&#8203;ときは、&#8203;ロボットが&#8203;登録済みの&#8203;経路を&#8203;再現します。&#8203;作業者は&#8203;ワークの&#8203;段取りと&#8203;仕上がりの&#8203;確認に&#8203;集中できます。</p>
+<p class="mut" style="margin: 16px 0 0; font-size: 15px">定盤・台車型の&#8203;ほか、&#8203;大きな&#8203;ワークには&#8203;走行軸を&#8203;組み合わせた&#8203;構成が&#8203;あります。&#8203;ロボットアームには、&#8203;Rainbow Robotics の&#8203; RB シリーズを&#8203;採用しています。</p>
+</div>
+<figure style="margin: 0">
+<img src="assets/c568bca1db108f67d42ba7ccfbf8f8fa.webp" alt="溶接テーブル上のワークに向けてトーチを動かす協働ロボット" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px">
+<figcaption class="mut" style="font-size: 13px; margin-top: 12px">協働ロボットに&#8203;よる&#8203;溶接</figcaption>
+</figure>
+</div>
+<dl class="dl" style="margin-top: clamp(24px, 4vw, 48px)">
+<template data-for="robotSpecs" data-as="p">
+<div><dt>{{p.k}}</dt><dd style="font-weight: 600">{{p.v}}</dd></div>
+</template>
+</dl>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">ロボットを&#8203;触った&#8203;ことがない&#8203;方でも、&#8203;すぐに&#8203;使えます</h3>
+<p class="mut" style="margin: 8px 0 0; font-size: 16px">難しい&#8203;操作は&#8203;不要です。&#8203;直線1回の&#8203;溶接なら、&#8203;約30秒で&#8203;設定できます。</p>
+<ol class="g4" style="list-style: none; margin: clamp(16px, 2vw, 24px) 0 0; padding: 0">
+<template data-for="robotSteps" data-as="s">
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">{{s.no}}</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">{{s.t}}</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">{{s.d}}</p></li>
+</template>
+</ol>
+<div class="g2" style="margin-top: 16px">
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">選べる&#8203;溶接方法</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">直線溶接、&#8203;曲線溶接、&#8203;スポット、&#8203;ウィービング。&#8203;協働ロボットを&#8203;手で&#8203;動かすだけの&#8203;簡単な&#8203;ティーチングで&#8203;登録できます。</p></div>
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">作業の&#8203;保存・&#8203;呼び出し</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">作成した&#8203;プログラムは、&#8203;USB・サーバー・&#8203;パソコンなど&#8203;外部へ&#8203;保存できます。&#8203;繰り返しの&#8203;作業は&#8203;呼び出すだけです。</p></div>
+</div>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">機種・システム構成</h3>
+<div class="g4" style="margin-top: clamp(16px, 2vw, 24px)">
+<template data-for="robots" data-as="r">
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="{{r.img}}" alt="{{r.name}}" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">{{r.name}}</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">{{r.use}}</span></figcaption>
+</figure>
+</template>
+</div>
+<div class="card g scroll" style="margin-top: 16px">
+<h3 class="h3">組み合わせできる&#8203;溶接機・切断機</h3>
+<table class="tb" style="min-width: 640px; margin-top: 8px">
+<thead><tr><th scope="col">用途</th><th scope="col">機器メーカー</th><th scope="col">出力</th><th scope="col">機能</th><th scope="col">機種名</th></tr></thead>
+<tbody>
+<template data-for="robotEquip" data-as="r">
+<tr><th scope="row">{{r.u}}</th><td>{{r.m}}</td><td>{{r.o}}</td><td>{{r.f}}</td><td>{{r.n}}</td></tr>
+</template>
+</tbody>
+</table>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">設置タイプは、&#8203;移動台車型&#8203;（JWS）、&#8203;固定設置型&#8203;（JWF）、&#8203;定盤設置型&#8203;（JWT）、&#8203;移動型&#8203;（JWP・ロボット重量 約15 kg）、&#8203;ガントリー・走行型&#8203;（JWG）から&#8203;選べます。&#8203;ガントリー・走行型の&#8203;走行軸は、&#8203;X軸 3・5・10 m、&#8203;Y軸 5〜30 m、&#8203;Z軸 1・3 m の&#8203;組み合わせに&#8203;対応します。&#8203;特注仕様も&#8203;ご相談ください。</p>
+</div>
+<div class="card g scroll" style="margin-top: 16px">
+<h3 class="h3">ロボット仕様&#8203;（RBシリーズ）</h3>
+<p class="mut" style="margin: 6px 0 0; font-size: 15px">IP66等級の&#8203;防塵・防水性能と、&#8203;作業者の&#8203;安全を&#8203;確保する&#8203;PFL機能を&#8203;備えています。</p>
+<table class="tb" style="min-width: 640px; margin-top: 8px">
+<thead><tr><th scope="col">機種</th><th scope="col">積載重量</th><th scope="col">リーチ</th><th scope="col">反復精密度</th><th scope="col">設置面積</th><th scope="col">重量</th></tr></thead>
+<tbody>
+<template data-for="robotArms" data-as="r">
+<tr><th scope="row">{{r.m}}</th><td>{{r.p}}</td><td>{{r.r}}</td><td>{{r.a}}</td><td>{{r.f}}</td><td>{{r.w}}</td></tr>
+</template>
+</tbody>
+</table>
+</div>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">オプション</h3>
+<div class="g3" style="margin-top: clamp(16px, 2vw, 24px)">
+<template data-for="robotOptions" data-as="o">
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">{{o.t}}</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">{{o.d}}</p></div>
+</template>
+</div>
+<p class="mut" style="margin: 20px 0 0; font-size: 14px">ロボット単体または&#8203;CO₂溶接機との&#8203;組み合わせも&#8203;選べます。&#8203;選定時は&#8203;ワーク寸法、&#8203;継手形状と&#8203;既存の&#8203;治具・電源を&#8203;お知らせ&#8203;ください。</p>
+<div class="row" style="margin-top: 20px"><a class="pill" href="contact.html">テスト加工・デモ</a><a class="lk" href="https://www.youtube.com/@SAKAEGLOBAL">製&#8203;品動画&#8203;（YouTube）&#8203;›</a></div>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">製品情報</strong>
+<a href="cutting.html">ファイバーレーザー切断機</a>
+<a href="welder.html">レーザー溶接機</a>
+<a href="robot.html">協働溶接ロボット</a>
+<a href="stopper.html">衝撃吸収型カーストッパー</a>
+<a href="separator.html">圧縮空気用セパレーター</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">ご相談</strong>
+<a href="contact.html">お見積もり・ご注文</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="contact.html">テスト加工・デモ</a>
+<a href="contact.html">カタログ請求</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">会社情報</strong>
+<a href="company.html">企業案内</a>
+<a href="news.html">お知らせ</a>
+<a href="company.html#careers">採用情報</a>
+<a href="company.html#privacy">個人情報保護方針</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">公式YouTubeチャンネル</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 栄グローバル株式会社</div>
+</div>
+</footer>
+</div>
+</template>
+<script src="site.js"></script>
+<script>
+var EXT = {"0991b5fe1ccd5e382ff0a3496a40ce1d": "webp", "135da41385a20a3aa72ee7ff85745b91": "webp", "1940102c67df8ebb8653f3eae7c251c9": "webp", "452587a66d183c7b916710d3ef996b98": "webp", "b87dddcdbf57b2e02be0ee6080c36957": "webp", "d8ba7ac305ac453b0c0bad9823efbf20": "webp", "dd3e36b671c1f11d8ae236efabea53e1": "webp"};
+class Component extends DCLogic {
+  renderVals() {
+    if (!this._oc) {
+      this._oc = true;
+      try {
+        document.addEventListener('click', (e) => {
+          const path = e.composedPath ? e.composedPath() : [e.target];
+          const root = path[0] && path[0].getRootNode ? path[0].getRootNode() : document;
+          const close = (r) => { try { r.querySelectorAll('details.mlang[open], details.mnav[open]').forEach((d) => { if (path.indexOf(d) < 0) d.removeAttribute('open'); }); } catch (x) {} };
+          close(root); if (root !== document) close(document);
+        }, true);
+      } catch (x) {}
+    }
+
+    const B = (id) => 'assets/' + id + '.' + (EXT[id] || 'webp');
+    const S = (pairs) => pairs.map((p) => ({ k: p[0], v: p[1] }));
+    return {
+      robotSpecs: S([
+        ['RB20-1900 アーム単体の\u200b可搬質量・リーチ', '20 kg / 1,900 mm'],
+        ['教示方法', 'ダイレクトティーチング'],
+        ['溶接動作の例', '直線・円弧・ウィービング'],
+        ['大型ワーク向け構成', 'ガントリー・走行型']
+      ]),
+      robotSteps: [
+        { no: '1', t: '溶接条件を\u200bアイコンで\u200b選択', d: '画面の\u200bアイコンから\u200b溶接条件を\u200b選びます。' },
+        { no: '2', t: '作業位置へ\u200b移動', d: '日本語の\u200b音声案内に\u200b沿って、\u200bロボットを\u200b手で\u200b動かします。' },
+        { no: '3', t: '動作確認', d: '溶接の\u200b前に、\u200b登録した\u200b動きを\u200b確認します。' },
+        { no: '4', t: '溶接開始', d: 'ボタンを\u200b押すと、\u200b登録した\u200b経路で\u200b溶接します。' }
+      ],
+      robotEquip: [
+        ['空冷アーク溶接', 'ESAB', '400 A', 'MMA / GMAW / DPT', 'Transmig 400 i'],
+        ['空冷・水冷アーク溶接', 'ESAB', '500 A', 'CO2, MIG, MAG, Pulse', 'Transmig 500P'],
+        ['空冷アーク溶接', 'DAIHEN', '350 A', 'CO2, MIG, MAG', 'WB-M350Ⅱ'],
+        ['空冷・水冷アーク溶接', 'DAIHEN', '500 A', 'CO2, MIG, MAG', 'WB-M500Ⅱ'],
+        ['空冷アーク溶接', 'HYOSUNG', '350 A ／ 500 A', 'CO2, MIG, MAG', 'PFC 350R ／ PFC 500R'],
+        ['水冷アーク溶接', 'Fronius', '400 A ／ 600 A', 'CMT / Pushpull', 'TPSi 400 CMT ／ TPSi 600 CMT'],
+        ['水冷レーザー溶接', 'ASEA', '1.5 ／ 2 ／ 3 kW', 'レーザー溶接、\u200bクリーニング', 'ASEA-1500W ／ 2000W ／ 3000W'],
+        ['プラズマ切断', 'THERMACUT', '45 ／ 85 ／ 105 A', '切断', 'EX-TRAFIRE 45HD ／ 85HD ／ 105HD'],
+        ['プラズマ切断', 'HYPERTHERM', '170 ／ 300 A', '切断', 'XPR 170 ／ XPR 300']
+      ].map((r) => ({ u: r[0], m: r[1], o: r[2], f: r[3], n: r[4] })),
+      robotArms: [
+        ['RB3-730', '3 kg', '730 mm', '±0.05 mm', 'Ø128 mm', '11.0 kg'],
+        ['RB5-850', '5 kg', '850 mm', '±0.05 mm', 'Ø173 mm', '22.0 kg'],
+        ['RB3-1200', '3 kg', '1,200 mm', '±0.05 mm', 'Ø173 mm', '22.4 kg'],
+        ['RB10-1300', '10 kg', '1,300 mm', '±0.05 mm', 'Ø196 mm', '37.1 kg'],
+        ['RB20-1900', '20 kg', '1,900 mm', '—', '—', '—']
+      ].map((r) => ({ m: r[0], p: r[1], r: r[2], a: r[3], f: r[4], w: r[5] })),
+      robotOptions: [
+        { t: 'ポジショナー', d: 'ワークを\u200b回転・\u200b傾斜させて、\u200b溶接しやすい\u200b姿勢に\u200b保ちます。' },
+        { t: 'ツールチェンジャー\u200b（\u200b手動・\u200b自動）', d: 'ねじの\u200b取付なしで、\u200b簡単かつ\u200b素早く\u200b道具を\u200b交換できます。\u200b軽量で\u200b長時間の\u200b稼働にも\u200b対応します。' },
+        { t: 'OLP\u200b（オフラインプログラミング）', d: 'ソフトウェア\u200b「OCTOPUS」。\u200bシミュレーションで\u200bプロセスを\u200b検証し、\u200b衝突・誤\u200b作動を\u200b自動で\u200b検査します。' },
+        { t: '3D ビジョンセンサー', d: 'Photoneo 製。\u200bポイントクラウドを\u200b活用した\u200b3次元スキャンで、\u200b高い\u200b精度と\u200b広い\u200b認識範囲を\u200b備えます。' },
+        { t: '溶接線 \u200b自動検出センサー', d: 'SCANSONIC 製 TH6D。\u200bレーザーセンサーで\u200b溶接線を\u200b検出し、\u200b高反射素材にも\u200b適用できます。' },
+        { t: 'プラズマ・レーザーの\u200b適用', d: 'ガントリー・走行型は、\u200bプラズマ切断や\u200bレーザー溶接との\u200b組み合わせにも\u200b対応します。' }
+      ],
+      robots: [
+        { img: B('d8ba7ac305ac453b0c0bad9823efbf20'), name: '独立移動型\u200b（台車）', use: '溶接機・ガスなど\u200b必要な\u200b機材を\u200b台車に\u200b載せ、\u200b電源を\u200b入れるだけで\u200bどこでも\u200b溶接' },
+        { img: B('1940102c67df8ebb8653f3eae7c251c9'), name: '固定設置型', use: '普段\u200bお使いの\u200b溶接治具に\u200b設置して、\u200bそのまま\u200b使用' },
+        { img: B('452587a66d183c7b916710d3ef996b98'), name: '定盤設置型', use: '溶接定盤の\u200b上に\u200b協働ロボットを\u200b設置' },
+        { img: B('b87dddcdbf57b2e02be0ee6080c36957'), name: '移動型\u200b（ポータブル）', use: 'ロボット重量 約15 kg。\u200b狭い\u200b空間や\u200b設置が\u200b難しい\u200b現場にも\u200b持ち運び可能' },
+        { img: B('135da41385a20a3aa72ee7ff85745b91'), name: 'ホイスト移動型', use: 'クレーン・ホイストで\u200b作業位置に\u200b移動' },
+        { img: B('0991b5fe1ccd5e382ff0a3496a40ce1d'), name: 'パイプ・フランジ溶接型', use: '管と\u200bフランジの\u200b円周を\u200b溶接' },
+        { img: B('dd3e36b671c1f11d8ae236efabea53e1'), name: 'ガントリー・走行型', use: 'X・Y・Z軸の\u200b同期走行で、\u200b広い\u200b範囲の\u200b大型溶接物に\u200b対応' }
+      ]
+    };
+
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

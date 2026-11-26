@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ファイバーレーザー切断機 | 栄グローバル株式会社</title>
+<meta name="description" content="鋼板から部品を切り出す平面加工機と、丸管・角管に穴や輪郭を加工するパイプ専用機を取り扱っています。原材料の形状とサイズに合わせて、切断機、材料交換テーブル、自動仕分けを組み合わせます。">
+<link rel="icon" href="assets/117c52be5ecb1ebafe997be82697934e.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5CAD}a:hover{color:#083F78}
+.pg{font-family:'Inter','Noto Sans JP',system-ui,sans-serif;color:#1D1D1F;background:#FFFFFF;line-height:1.65;-webkit-font-smoothing:antialiased}
+.pg{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+.pg h1,.pg h2,.pg h3,.pg h4,.pg summary,.pg figcaption,.pg .lead,.pg th{text-wrap:balance}
+.pg p,.pg li,.pg dd,.pg td{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px, 2vw, 24px)}
+.sec{padding:clamp(56px, 9.33vw, 112px) 0}
+.pale{background:#F5F5F7}
+.dark{background:#0B1320;color:#F5F5F7}
+.eye{font-size:15px;font-weight:600;color:#0B5CAD;letter-spacing:.04em;margin:0}
+.dark .eye{color:#8CC4FF}
+.h1{margin:10px 0 0;font-size: clamp(40px, 6vw, 72px);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.h2{margin:0;font-size: clamp(26px, 3.83vw, 46px);line-height:1.2;font-weight:700}
+.h3{margin:0;font-size: clamp(18px, 1.83vw, 22px);line-height:1.35;font-weight:700}
+.lead{margin:18px 0 0;font-size: clamp(16px, 1.67vw, 20px);line-height:1.6;color:#5F5F64}
+.dark .lead,.dark .mut{color:#C4CAD4}
+.mut{color:#5F5F64}
+.c{text-align:center}
+.c .lead{margin-left:auto;margin-right:auto;max-width:720px}
+.pill{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:500;border:0;cursor:pointer;font-family:inherit}
+.pill:hover{background:#083F78;color:#FFFFFF}
+.ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;border:1px solid #0B5CAD;color:#0B5CAD;text-decoration:none;font-size:16px;font-weight:500;background:transparent}
+.ghost:hover{background:#0B5CAD;color:#FFFFFF}
+.lk{text-decoration:none;font-size:16px}.lk:hover{text-decoration:underline}
+.dark a.lk{color:#8CC4FF}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border-radius:22px;padding:clamp(20px, 2.67vw, 32px);color:#1D1D1F;text-decoration:none;display:block}
+.pale .card{background:#FFFFFF}
+.card.g{background:#F5F5F7}
+.dark .card{background:#162235;color:#F5F5F7}
+a.card:hover{color:#1D1D1F;background:#E6EEF8;box-shadow:0 16px 44px rgba(11,40,80,.16)}
+.dark a.card:hover{color:#FFFFFF;background:#22395A;box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.pill,.ghost,.chip,.card,.lk,.nav a,.topic,.foot a,.tb tbody tr,details summary{transition:background-color .2s,color .2s,border-color .2s,box-shadow .25s}
+.card img,.slide img{transition:transform .5s}
+a.card:hover img{transform:scale(1.04)}
+.chip:hover{background:#0B5CAD !important;color:#FFFFFF !important;border-color:#0B5CAD !important}
+.chip.dng:hover{background:#B3261E !important;border-color:#B3261E !important}
+.topic{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2vw, 24px);border-radius:999px;border:1px solid #5C6B80;color:#FFFFFF;text-decoration:none;font-size:16px}
+.topic:hover{background:#FFFFFF;color:#0B1320;border-color:#FFFFFF}
+.lk:hover{color:#083F78}
+.dark a.lk:hover{color:#FFFFFF}
+.tb tbody tr:hover{background:#EEF5FC}
+.dark .tb tbody tr:hover{background:#22395A}
+details summary:hover{color:#0B5CAD}
+.slide:hover .more{background:#083F78}
+.show{display:none}
+.stage{position:relative}
+.slide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px, 4vw, 48px);align-items:center;text-decoration:none;color:#1D1D1F;background:#F5F5F7;border-radius:28px;padding:clamp(28px, 4.67vw, 56px) clamp(32px, 5.33vw, 64px);box-sizing:border-box}
+.slide:hover{color:#1D1D1F}
+.more{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;font-size:16px;font-weight:500;margin-top:clamp(17px, 2.33vw, 28px)}
+@keyframes rise{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scale(.88);border-radius:48px}to{transform:none}}
+@keyframes k1{0%{opacity:1;visibility:visible;transform:none}13%{opacity:1;visibility:visible;transform:none}17.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}17.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k2{0%,17.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}17.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}22%{opacity:1;visibility:visible;transform:none}33%{opacity:1;visibility:visible;transform:none}37.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}37.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k3{0%,37.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}37.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}42%{opacity:1;visibility:visible;transform:none}53%{opacity:1;visibility:visible;transform:none}57.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}57.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k4{0%,57.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}57.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}62%{opacity:1;visibility:visible;transform:none}73%{opacity:1;visibility:visible;transform:none}77.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}77.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k5{0%,77.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}77.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}82%{opacity:1;visibility:visible;transform:none}100%{opacity:1;visibility:visible;transform:none}}
+@keyframes kimg{from{transform:translateX(60px) rotate(2deg)}to{transform:translateX(-60px) rotate(-2deg)}}
+@keyframes kbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-height:1600px) and (min-width:901px) and (prefers-reduced-motion:no-preference){
+@supports (animation-timeline: view()){
+ .card,figure,.h2,.tb{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+ .growin{animation:grow linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ .tiles{display:none}
+ .show{display:block;height:3400px;view-timeline-name:--show;view-timeline-axis:block}
+ .stage{position:sticky;top:92px;height:620px}
+ .stage .slide{position:absolute;inset:0;z-index:1;animation-timeline:--show;animation-range:contain 0% contain 100%;animation-timing-function:linear;animation-fill-mode:both}
+ .sl1{animation-name:k1}.sl2{animation-name:k2}.sl3{animation-name:k3}.sl4{animation-name:k4}.sl5{animation-name:k5}
+ .stage .slide img{animation:kimg linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .bar{animation:kbar linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .stage figure,.stage .card,.stage .h2{animation:none}
+}}
+.ph{display:block;width:100%;object-fit:contain}
+.nav a{color:#1D1D1F;text-decoration:none}.nav a:hover{color:#0B5CAD}
+.foot a{color:#424245;text-decoration:none}.foot a:hover{text-decoration:underline}
+.chip{font:inherit;font-size:15px;font-weight:500;min-height:44px;padding:0 20px;border-radius:999px;cursor:pointer}
+.dl{margin:0;border-top:1px solid #D2D2D7}
+.dl>div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid #D2D2D7}
+.dl dt{color:#5F5F64}.dl dd{margin:0}
+.tb{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
+.tb th,.tb td{padding:14px 10px;border-bottom:1px solid #E3E3E8;vertical-align:top}
+.tb thead th{color:#5F5F64;font-weight:500;border-bottom:1px solid #C7C7CC}
+.scroll{overflow-x:auto}
+.spec th,.spec td{text-align:center;padding:16px 12px}
+.spec thead th{background:#F5F5F7;border-bottom:0;padding:20px 12px;color:#1D1D1F;font-weight:700;font-size: clamp(16px, 1.67vw, 20px)}
+.spec tbody th{text-align:left;padding-left:clamp(22px, 3vw, 36px);white-space:nowrap;font-weight:500;color:#5F5F64}
+.spec tbody tr:nth-child(odd){background:#F7F9FC}
+.spec tbody tr:first-child td{font-size: clamp(16px, 1.67vw, 20px);font-weight:700;color:#0B5CAD}
+.spec td:nth-child(5),.spec th:nth-child(5){border-left:2px solid #C7C7CC}
+.spec .tg{display:block;width:fit-content;margin:0 auto 8px;font-size:12px;font-weight:700;color:#FFFFFF;border-radius:999px;padding:3px 14px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
+.fld{font:inherit;font-size:16px;width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;border:1px solid #86868B;border-radius:12px;background:#FFFFFF;color:#1D1D1F}
+.fld:focus,.chip:focus-visible,.pill:focus-visible{outline:2px solid #0B5CAD;outline-offset:2px}
+.lab{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.hasdrop{position:relative;display:flex;align-items:center;height:76px}
+.sub{display:none;position:absolute;top:100%;left:-18px;z-index:20}
+.sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
+.sub a:hover{background:#F5F5F7}
+.hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
+.mnav,.mlang{display:none;position:relative}
+.mlang{display:block}
+.langtxt{display:none !important}
+.nhead:hover span{color:#0B5CAD}
+.mnav summary,.mlang summary{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;height:44px;padding:0 8px;border-radius:12px;box-sizing:border-box}
+.mnav summary:hover,.mlang summary:hover,.mnav[open] summary,.mlang[open] summary{background:#EDEDF0}
+.drop{position:absolute;right:0;top:54px;z-index:20;display:flex;flex-direction:column;min-width:230px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.drop a,.drop>span{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border-radius:10px;color:#1D1D1F;text-decoration:none;font-size:16px;box-sizing:border-box}
+.drop a:hover{background:#F5F5F7}
+.drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
+@media (max-width:900px){
+ .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
+ .nav{display:none !important}
+
+ .dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .split{grid-template-columns:minmax(0,1fr) !important}
+}
+@media (min-width:901px) and (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body style="margin: 0">
+<div id="app">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index.html" aria-label="SAKAE GLOBAL ホーム" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="メインメニュー" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products.html" style="font-weight: 700">製品情報</a><div class="sub"><div><a href="cutting.html">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><strong style="color: #1D1D1F">日本語</strong> · <a href="cutting-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="cutting-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="cutting-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="言語を選択"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">日本語</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</span>
+<a href="cutting-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="cutting-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="cutting-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">お問い合わせ</a>
+<details class="mnav">
+<summary aria-label="メニューを開く"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products.html" style="font-weight: 700">製品情報</a>
+<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">ファイバーレーザー切断機</a>
+<a href="welder.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">レーザー溶接機</a>
+<a href="robot.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">協働溶接ロボット</a>
+<a href="stopper.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">衝撃吸収型カーストッパー</a>
+<a href="separator.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">圧縮空気用セパレーター</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+<a href="contact.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">お問い合わせ</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main>
+<nav aria-label="パンくず" class="wrap" style="padding-top: clamp(17px, 2.33vw, 28px); padding-bottom: 8px">
+<a class="lk" href="products.html" style="display: inline-block; padding: 10px 0">‹ 製品一覧へ​戻る</a>
+</nav>
+<section class="c" style="padding: clamp(44px, 7.33vw, 88px) 0 clamp(36px, 6vw, 72px)">
+<div class="wrap">
+<p class="eye">製品情報 · HK LASER</p>
+<h1 class="h1" style="font-size: clamp(33px, 5vw, 60px)">ファイバーレーザー切断機</h1>
+<p class="lead">鋼板から​部品を​切り出す平面加工機と、​丸管・角管に​穴や​輪郭を​加工する​パイプ専用機を​取り扱っています。​原材料の​形状と​サイズに​合わせて、​切断機、​材料交換テーブル、​自動仕分けを​組み合わせます。</p>
+</div>
+</section>
+
+<section class="sec pale" id="cutting" style="padding-top: clamp(44px, 7.33vw, 88px)">
+<div class="wrap">
+<div class="row" style="justify-content: space-between; align-items: flex-end; margin-bottom: clamp(17px, 2.33vw, 28px)">
+<div><h2 class="h2">HK LASERの​切断機</h2><p class="lead" style="margin-top: 8px">加工する​材料の​形状を​選び、​写真と​仕様を​見比べてください。</p></div>
+<div role="group" aria-label="材料の形状" class="row" style="gap: 8px">
+
+<button type="button" class="chip" aria-pressed="" style="border: 1px solid #1D1D1F; background: #1D1D1F; color: #FFFFFF">板材用</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">パイプ用</button>
+
+</div>
+</div>
+<div class="g3">
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/4df533686cd27ffd309c2434f629425b.webp" alt="S-Matic K315の​搬送・切断・仕分け装置を​示す構成図" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">投入・切断・仕分け</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">S-Matic K315</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">板材の​投入、​レーザー切断、​部品の​仕分け、​残材の​回収を​一つの​ラインで​行います。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,000 × 1,500 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">投入から​仕分けまで​全自動</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">15,593 × 6,158 × 3,679 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/b1eeea59d8e4efbd51b27eff7747e2d2.webp" alt="KUBE 1212 FIBERの​筐体と​操作面" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">引き出し式傾斜テーブル</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">KUBE 1212 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">小型板材の​加工に​適した​正方形の​テーブルを​備え、​前面から​材料を​出し入れできます。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">1,240 × 1,240 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">引き出し式傾斜テーブル</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">4,010 × 2,210 × 2,180 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/35831a17966fd9e8be06de5e284ea465.webp" alt="外部交換テーブルを​付けていない​FL 2512 FIBERの​本体" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">1・2テーブル仕様</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FL 2512 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">手動で​引き出す1テーブル仕様と、​昇降式シャトルを​使う​2テーブル仕様から​選べます。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">1,240 × 2,490 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">1テーブル／2テーブルを​選択</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">4,800 × 2,320 × 2,680 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/3477239982ff3a3c6205ce0693975190.webp" alt="FL 3015 FIBER本体と​横に​張り出した​材料テーブル" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">サイドローディング</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FL 3015 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">大きな​側面扉から​定尺の​板材を​出し入れする​レーザー切断機です。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">側面扉からの​材料搬入</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">4,908 × 9,290 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/af4799858c655c5be942306a14fcfd89.webp" alt="RS3015 FIBERの​前面と​側面の​筐体" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">前面・側面からの​作業</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">RS3015 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">前面と​側面の​扉から、​加工室内の​ワークに​手が​届きます。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">2.5 Gの​高速モーション</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">2,270 × 11,250 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/4bbbc7702f1ec1eaade26de07e474e07.webp" alt="FSシリーズの​FS3015 FIBER本体" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">長尺板材・両開き扉</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FS Series</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">板材の​長さに​合わせて​加工範囲を​選ぶシリーズです。​写真は​FS3015 FIBERです。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 – 8,250 × 2,540 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">テーブルサイズ6機種</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,300 × 11,218 mm（FS3015）</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/8ce3e98554736f919eda7d18c87419e5.webp" alt="FO12025 FIBERの​開放型テーブルと​ガントリー" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">大型鋼板用ガントリー</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FO Series</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">大型鋼板の​上を​ガントリーが​移動する​開放型の​切断機です。​写真は​FO12025 FIBERです。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">12,192 × 2,540 – 30,480 × 3,048 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">大型鋼板・ベベル加工対応</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">6,200 × 21,000 mm（FO12025）</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/c68ccc5697e5715700e49c35c27c1ba9.webp" alt="FEシリーズの​FE3015 FIBERと​操作部" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">折りたたみ扉・複数の​加工サイズ</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FE Series</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">折りたたみ式の​扉と​ステップを​備え、​加工室に​出入りしやすい​構造です。​写真は​FE3015 FIBERです。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 – 8,250 × 2,540 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">折りたたみ扉と​ステップ</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">お問い合わせ​ください</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/b7e873589b57ec47752e1214ea789838.webp" alt="HDシリーズの​HD3015と​シャトルテーブル" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">材料検知・水平シャトル</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">HD Series</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">材料の​自動検知と​水平シャトルテーブルを​備えた​板材用レーザー切断機です。​掲載機種は​HD3015です。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 – 12,000 × 4,000 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">水平シャトルテーブル</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">2,850 × 8,604 mm（HD3015）</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+<a class="card" href="model.html" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="assets/7ba3b3bf582caf4370471f950167260b.webp" alt="FC3015 FIBERの​本体と​材料交換テーブル" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">昇降式シャトルテーブル</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">FC3015 FIBER</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">昇降式シャトルテーブルで​材料を​交換する​3015クラスの​切断機です。</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">加工サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,048 × 1,524 mm</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">特長</dt><dd style="margin: 0; text-align: right; font-weight: 600">昇降式シャトルテーブル</dd></div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">製品サイズ</dt><dd style="margin: 0; text-align: right; font-weight: 600">3,283 × 10,632 mm</dd></div>
+
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく​見る​ ›</span>
+</a>
+
+</div>
+<p class="mut" style="margin: 20px 0 0; font-size: 13px">数値は​記載の​機種・構成に​対応します。​設置条件や​オプションは​お見積もりの​際に​ご確認ください。</p>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<p class="eye c">HK LASER &amp; SYSTEMS</p>
+<h2 class="h2 c" style="margin-top: 8px">レーザー加工機ひとすじの​メーカー</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">1990年の​設立以来、​2次元レーザー加工機に​専念してきた​専業メーカーです。​世界で​3,000台を​超える​納入実績が​あり、​日本では​名古屋に​拠点を​置いています。</p>
+<div class="g4" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">1990</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">設立</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">36</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">年間、​レーザー加工機に​専念</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">3,000+</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">台の​納入実績​（世界）</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">35</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">台／月の​最大生産能力</p></div>
+</div>
+</div>
+</section>
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2 c">コストと​仕上がりに​効く、​HKの​技術</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">毎日の​ランニングコストと、​後工程の​手間を​減らすための​独自技術です。</p>
+<div class="g3" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">ミックスガス切断</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">窒素と​酸素を​最適な​比率で​混合。​6 mmを​超える​軟鋼を、​バリを​抑えながら​約10%速く​切断でき、​後工程を​減らせます。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">低圧窒素切断</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">独自の​ズームヘッドと​チャンバーノズルに​より、​7〜8 barの​低圧で​窒素切断。​メーカー試験では​窒素の​消費量を​約60%削減しています。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">ハニカム構造フレーム</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">軽さと​剛性を​両立した​高強度フレーム。​変形を​抑え、​高速加工でも​精度を​保ちます。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">直観的な​操作画面</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">タッチ操作の​分かりやすい​画面。​中断後の​再切断や​条件設定も​簡単で、​オンラインで​更新できます。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">ファイバーレーザーの​省エネ性</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">CO2レーザー​（4 kW）と​比べ、​ファイバー​（8 kW）は​消費電力を​約22%抑え、​薄板では​最大約5倍の​速度で​切断します​（メーカー比較値）。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">段階的に​進められる​自動化</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">スマートローダー、​スマートセル、​スマートタワー、​8段​自動化タワーまで。​材料の​投入から​搬出・保管まで、​必要な​範囲から​自動化できます。</p></div>
+</div>
+<p class="mut c" style="margin: 20px 0 0; font-size: 13px">数値は​メーカー公表の​試験・比較値です。​材質、​板厚、​加工条件に​より​異なります。</p>
+</div>
+</section>
+<section class="sec">
+<div class="wrap split" style="display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: clamp(28px, 4.67vw, 56px)">
+<div>
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">機種の選び方</h2>
+<p class="lead" style="font-size: clamp(15px, 1.42vw, 17px)">光ファイバーで​伝送した​レーザー光を​加工ヘッドで​集光し、​金属を​局所的に​溶かします。​ノズルからの​アシストガスが​溶融金属を​排出し、​NC制御で​図面の​輪郭に​沿って​切断します。​板材用は​平面上を​加工し、​パイプ専用機は​チャックで​管を​保持・回転させて​加工します。</p>
+</div>
+<div>
+<div class="scroll">
+<table class="tb" style="min-width: 520px">
+<thead><tr><th scope="col">加工・搬送条件</th><th scope="col">候補機種</th></tr></thead>
+<tbody>
+
+<tr><td>小型板材、​正面から​搬入</td><td style="font-weight: 600">KUBE1212</td></tr>
+
+<tr><td>板材、​手動または​2段テーブル交換</td><td style="font-weight: 600">FL2512</td></tr>
+
+<tr><td>側面からの​アクセス、​搬入動線に​合わせた​配置</td><td style="font-weight: 600">FL3015</td></tr>
+
+<tr><td>定尺板、​切断速度と​テーブル仕様を​比較</td><td style="font-weight: 600">RS3015 / FS / FE / HD / FC3015</td></tr>
+
+<tr><td>切断部品の​自動仕分け</td><td style="font-weight: 600">S-Matic K315</td></tr>
+
+<tr><td>長尺の鋼板</td><td style="font-weight: 600">FO</td></tr>
+
+<tr><td>丸管・角管、​径と​1本当たり質量で​選定</td><td style="font-weight: 600">TL6527-S / TL9036-X</td></tr>
+
+</tbody>
+</table>
+</div>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">見積もりには、​材質、​板厚または​管の​断面寸法、​素材長、​月間の​加工量を​ご記入ください。</p>
+</div>
+</div>
+</section>
+
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">仕様の​ポイント</h2>
+<dl class="dl" style="margin-top: clamp(17px, 2.33vw, 28px)">
+
+<div><dt>板材の​加工サイズ例</dt><dd>KUBE1212は​1,240 × 1,240 mm、​FL3015は​3,048 × 1,524 mm。​FOシリーズは​公称長12・20・30 mの​長尺板に​対応します。</dd></div>
+
+<div><dt>パイプの​径・長さ・​質量</dt><dd>TL6527-Sは​丸管Ø12–273 mm、​標準長6.5 m、​最大200 kg/本。​TL9036-Xは​Ø40–360 mm、​標準長9 m、​最大1,200 kg/本。</dd></div>
+
+<div><dt>材質・出力・切断板厚</dt><dd>軟鋼、​ステンレス鋼、​アルミでは​切断できる​板厚が​異なります。​RS3015の​6 kW仕様の​場合、​メーカー値は​順に​最大25、​20、​15 mmです。</dd></div>
+
+<div><dt>加工速度と​早送り</dt><dd>FL3015の​最大切断速度は​55 m/min、​最大合成早送りは​140 m/minです。​実際の​切断速度は​材質、​板厚、​形状、​ガス条件で​変わります。</dd></div>
+
+<div><dt>材料交換と​自動化</dt><dd>前面引出し式、​側面搬入、​シャトルテーブルを​比較できます。​S-Matic K315は​材料投入から​切断後の​部品仕分け、​残材回収までを​一体​化します。</dd></div>
+
+</dl>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">レーザー出力別の​最大切断板厚</h2>
+<div role="group" aria-label="機種" class="row" style="gap: 8px; margin-top: clamp(16px, 2vw, 24px)">
+
+<button type="button" class="chip" aria-pressed="" style="border: 1px solid #1D1D1F; background: #1D1D1F; color: #FFFFFF">FS Series</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">FL 3015</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">RS3015</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">FE / HD Series</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">FC3015</button>
+
+</div>
+<div class="scroll" style="margin-top: 20px">
+<table class="tb" style="min-width: 640px">
+<thead><tr><th scope="col">レーザー出力</th><th scope="col">軟鋼</th><th scope="col">ステンレス鋼​（クリーンカット）</th><th scope="col">アルミ</th><th scope="col">銅</th><th scope="col">黄銅</th></tr></thead>
+<tbody>
+
+<tr><th scope="row">2.5 kW</th><td>16 mm</td><td>8 mm</td><td>8 mm</td><td>4 mm</td><td>6 mm</td></tr>
+
+<tr><th scope="row">3 kW</th><td>16 mm</td><td>10 mm</td><td>10 mm</td><td>6 mm</td><td>8 mm</td></tr>
+
+<tr><th scope="row">4 kW</th><td>20 mm</td><td>12 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
+
+<tr><th scope="row">6 kW</th><td>25 mm</td><td>20 mm</td><td>15 mm</td><td>8 mm</td><td>12 mm</td></tr>
+
+<tr><th scope="row">8 kW</th><td>30 mm</td><td>25 mm</td><td>25 mm</td><td>8 mm</td><td>12 mm</td></tr>
+
+<tr><th scope="row">10 kW</th><td>30 mm</td><td>30 mm</td><td>30 mm</td><td>10 mm</td><td>15 mm</td></tr>
+
+<tr><th scope="row">12 kW</th><td>30 mm</td><td>35 mm</td><td>35 mm</td><td>10 mm</td><td>15 mm</td></tr>
+
+<tr><th scope="row">15 kW</th><td>35 mm</td><td>40 mm</td><td>40 mm</td><td>12 mm</td><td>15 mm</td></tr>
+
+</tbody>
+</table>
+</div>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">板厚の​単位は​mmです。​数値は​メーカー公表の​機種別参考値です。​材質、​表面状態、​ガス品質や​加工環境で​切断結果は​変わります。​選択できる​出力は​お見積もり時に​ご確認ください。</p>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap split" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4.67vw, 56px); align-items: start">
+<div>
+<p class="eye">CAD/CAM</p>
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px); margin-top: 8px">今​お使いの​工程・ソフトと、​つなげて​使える</h2>
+<p style="margin: 20px 0 0; font-size: clamp(15px, 1.42vw, 17px)">HKの​レーザー加工機は、​板金用CAD/CAM​「MetaCAM」に​対応しています。​MetaCAMは​加工機メーカーの​枠を​超えて​加工データを​共有できる​ソフトで、​各社の​レーザー・パンチ・ベンダーに​対応しています。</p>
+<p style="margin: 14px 0 0; font-size: clamp(15px, 1.42vw, 17px); font-weight: 600">アマダ製ベンダーと​AP100を​お使いの​工場でも、​MetaCAMを​介して​展開データを​活用し、​HKの​加工機を​今の​工程に​組み込めます。</p>
+<p class="mut" style="margin: 16px 0 0; font-size: 13px">連携できる​データの​範囲は、​ソフトの​バージョンや​構成に​より​異なります。​導入前に​現在の​環境を​お知らせ​ください。​記載の​社名・製品名は​各社の​商標または​登録商標です。</p>
+</div>
+<div class="card g">
+<h3 class="h3">MetaCAMで​できる​こと</h3>
+<ul style="list-style: none; margin: 12px 0 0; padding: 0; font-size: 16px; border-top: 1px solid #D2D2D7">
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">他社の​CAD/CAMで​作成した​製品データを​変換して​活用</li>
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">複数メーカーの​加工機の​データを​一元管理</li>
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">曲げ工程まで​見据えた​展開と​ネスティング</li>
+</ul>
+<a class="pill" href="contact.html" style="margin-top: 20px">連携に​ついて​相談する</a>
+</div>
+</div>
+</section>
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2 c">導入後も、​止めない​ための​サポート</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">メーカー​（HK）の​サービス体制です。​日本での​対応内容は、​お見積もりの​際に​ご案内します。</p>
+<div class="g3" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">遠隔モニタリング HK INSIGHT</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">稼働状況や​履歴を、​パソコンや​スマートフォンで​リアルタイムに​確認できます。​メーカーの​監視チームも​一緒に​見守ります。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">リモートサービス</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">24時間365日受付。​2023年は、​サービス案件の​93%以上を​遠隔対応で​解決しています​（メーカー実績）。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">予防整備と​オペレーター教育</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">保証期間の​2年間に​2回、​エンジニアが​訪問して​点検します。​オペレーター向けの​追加教育も​行います。</p></div>
+</div>
+</div>
+</section>
+<section class="sec dark c">
+<div class="wrap">
+<h2 class="h2">お見積もり・導入の​ご相談</h2>
+<p class="lead">材質、​板厚または​管の​断面寸法、​素材長、​月間の​加工量を​お知らせ​ください。</p>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px)"><a class="pill" href="contact.html">お見積もり・ご注文</a><a class="lk" href="contact.html">テスト加工・デモ ›</a></div>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">製品情報</strong>
+<a href="cutting.html">ファイバーレーザー切断機</a>
+<a href="welder.html">レーザー溶接機</a>
+<a href="robot.html">協働溶接ロボット</a>
+<a href="stopper.html">衝撃吸収型カーストッパー</a>
+<a href="separator.html">圧縮空気用セパレーター</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">ご相談</strong>
+<a href="contact.html">お見積もり・ご注文</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="contact.html">テスト加工・デモ</a>
+<a href="contact.html">カタログ請求</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">会社情報</strong>
+<a href="company.html">企業案内</a>
+<a href="news.html">お知らせ</a>
+<a href="company.html#careers">採用情報</a>
+<a href="company.html#privacy">個人情報保護方針</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">公式YouTubeチャンネル</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 栄グローバル株式会社</div>
+</div>
+</footer>
+</div>
+</div>
+<template id="tpl">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index.html" aria-label="SAKAE GLOBAL ホーム" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="メインメニュー" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products.html" style="font-weight: 700">製品情報</a><div class="sub"><div><a href="cutting.html">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><strong style="color: #1D1D1F">日本語</strong> · <a href="cutting-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="cutting-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="cutting-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="言語を選択"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">日本語</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</span>
+<a href="cutting-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="cutting-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="cutting-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">お問い合わせ</a>
+<details class="mnav">
+<summary aria-label="メニューを開く"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products.html" style="font-weight: 700">製品情報</a>
+<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">ファイバーレーザー切断機</a>
+<a href="welder.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">レーザー溶接機</a>
+<a href="robot.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">協働溶接ロボット</a>
+<a href="stopper.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">衝撃吸収型カーストッパー</a>
+<a href="separator.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">圧縮空気用セパレーター</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="company.html">会社情報</a>
+<a href="news.html">お知らせ</a>
+<a href="contact.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">お問い合わせ</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main>
+<nav aria-label="パンくず" class="wrap" style="padding-top: clamp(17px, 2.33vw, 28px); padding-bottom: 8px">
+<a class="lk" href="products.html" style="display: inline-block; padding: 10px 0">‹ 製品一覧へ&#8203;戻る</a>
+</nav>
+<section class="c" style="padding: clamp(44px, 7.33vw, 88px) 0 clamp(36px, 6vw, 72px)">
+<div class="wrap">
+<p class="eye">製品情報 · HK LASER</p>
+<h1 class="h1" style="font-size: clamp(33px, 5vw, 60px)">ファイバーレーザー切断機</h1>
+<p class="lead">鋼板から&#8203;部品を&#8203;切り出す平面加工機と、&#8203;丸管・角管に&#8203;穴や&#8203;輪郭を&#8203;加工する&#8203;パイプ専用機を&#8203;取り扱っています。&#8203;原材料の&#8203;形状と&#8203;サイズに&#8203;合わせて、&#8203;切断機、&#8203;材料交換テーブル、&#8203;自動仕分けを&#8203;組み合わせます。</p>
+</div>
+</section>
+
+<section class="sec pale" id="cutting" style="padding-top: clamp(44px, 7.33vw, 88px)">
+<div class="wrap">
+<div class="row" style="justify-content: space-between; align-items: flex-end; margin-bottom: clamp(17px, 2.33vw, 28px)">
+<div><h2 class="h2">HK LASERの&#8203;切断機</h2><p class="lead" style="margin-top: 8px">加工する&#8203;材料の&#8203;形状を&#8203;選び、&#8203;写真と&#8203;仕様を&#8203;見比べてください。</p></div>
+<div role="group" aria-label="材料の形状" class="row" style="gap: 8px">
+<template data-for="kinds" data-as="k">
+<button type="button" class="chip" onClick="{{k.pick}}" aria-pressed="{{k.on}}" style="border: 1px solid {{k.bd}}; background: {{k.bg}}; color: {{k.fg}}">{{k.label}}</button>
+</template>
+</div>
+</div>
+<div class="g3">
+<template data-for="models" data-as="m">
+<a class="card" href="model.html" onClick="{{m.open}}" style="padding: clamp(17px, 2.33vw, 28px); display: flex; flex-direction: column">
+<div style="height: 150px; display: flex; align-items: center; justify-content: center"><img src="{{m.img}}" alt="{{m.alt}}" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<p class="eye" style="font-size: 13px; margin-top: 18px">{{m.short}}</p>
+<h3 class="h3" style="font-size: clamp(19px, 2vw, 24px); margin-top: 4px">{{m.title}}</h3>
+<p class="mut" style="margin: 8px 0 14px; font-size: 15px; flex-grow: 1">{{m.lead}}</p>
+<dl style="margin: 0; font-size: 14px; border-top: 1px solid #E3E3E8">
+<template data-for="m.specs" data-as="s">
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #E3E3E8"><dt class="mut">{{s.k}}</dt><dd style="margin: 0; text-align: right; font-weight: 600">{{s.v}}</dd></div>
+</template>
+</dl>
+<span class="more" style="align-self: flex-start; margin-top: 18px; min-height: 44px; padding: 0 22px; font-size: 15px">詳しく&#8203;見る&#8203; ›</span>
+</a>
+</template>
+</div>
+<p class="mut" style="margin: 20px 0 0; font-size: 13px">数値は&#8203;記載の&#8203;機種・構成に&#8203;対応します。&#8203;設置条件や&#8203;オプションは&#8203;お見積もりの&#8203;際に&#8203;ご確認ください。</p>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<p class="eye c">HK LASER &amp; SYSTEMS</p>
+<h2 class="h2 c" style="margin-top: 8px">レーザー加工機ひとすじの&#8203;メーカー</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">1990年の&#8203;設立以来、&#8203;2次元レーザー加工機に&#8203;専念してきた&#8203;専業メーカーです。&#8203;世界で&#8203;3,000台を&#8203;超える&#8203;納入実績が&#8203;あり、&#8203;日本では&#8203;名古屋に&#8203;拠点を&#8203;置いています。</p>
+<div class="g4" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">1990</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">設立</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">36</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">年間、&#8203;レーザー加工機に&#8203;専念</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">3,000+</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">台の&#8203;納入実績&#8203;（世界）</p></div>
+<div class="card g c" style="padding: clamp(17px, 2.33vw, 28px) 16px"><p style="margin: 0; font-size: clamp(26px, 3.33vw, 40px); font-weight: 700; color: #0B5CAD; letter-spacing: -0.02em">35</p><p class="mut" style="margin: 4px 0 0; font-size: 14px">台／月の&#8203;最大生産能力</p></div>
+</div>
+</div>
+</section>
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2 c">コストと&#8203;仕上がりに&#8203;効く、&#8203;HKの&#8203;技術</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">毎日の&#8203;ランニングコストと、&#8203;後工程の&#8203;手間を&#8203;減らすための&#8203;独自技術です。</p>
+<div class="g3" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">ミックスガス切断</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">窒素と&#8203;酸素を&#8203;最適な&#8203;比率で&#8203;混合。&#8203;6 mmを&#8203;超える&#8203;軟鋼を、&#8203;バリを&#8203;抑えながら&#8203;約10%速く&#8203;切断でき、&#8203;後工程を&#8203;減らせます。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">低圧窒素切断</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">独自の&#8203;ズームヘッドと&#8203;チャンバーノズルに&#8203;より、&#8203;7〜8 barの&#8203;低圧で&#8203;窒素切断。&#8203;メーカー試験では&#8203;窒素の&#8203;消費量を&#8203;約60%削減しています。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">ハニカム構造フレーム</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">軽さと&#8203;剛性を&#8203;両立した&#8203;高強度フレーム。&#8203;変形を&#8203;抑え、&#8203;高速加工でも&#8203;精度を&#8203;保ちます。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">直観的な&#8203;操作画面</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">タッチ操作の&#8203;分かりやすい&#8203;画面。&#8203;中断後の&#8203;再切断や&#8203;条件設定も&#8203;簡単で、&#8203;オンラインで&#8203;更新できます。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">ファイバーレーザーの&#8203;省エネ性</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">CO2レーザー&#8203;（4 kW）と&#8203;比べ、&#8203;ファイバー&#8203;（8 kW）は&#8203;消費電力を&#8203;約22%抑え、&#8203;薄板では&#8203;最大約5倍の&#8203;速度で&#8203;切断します&#8203;（メーカー比較値）。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">段階的に&#8203;進められる&#8203;自動化</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">スマートローダー、&#8203;スマートセル、&#8203;スマートタワー、&#8203;8段&#8203;自動化タワーまで。&#8203;材料の&#8203;投入から&#8203;搬出・保管まで、&#8203;必要な&#8203;範囲から&#8203;自動化できます。</p></div>
+</div>
+<p class="mut c" style="margin: 20px 0 0; font-size: 13px">数値は&#8203;メーカー公表の&#8203;試験・比較値です。&#8203;材質、&#8203;板厚、&#8203;加工条件に&#8203;より&#8203;異なります。</p>
+</div>
+</section>
+<section class="sec">
+<div class="wrap split" style="display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: clamp(28px, 4.67vw, 56px)">
+<div>
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">機種の選び方</h2>
+<p class="lead" style="font-size: clamp(15px, 1.42vw, 17px)">光ファイバーで&#8203;伝送した&#8203;レーザー光を&#8203;加工ヘッドで&#8203;集光し、&#8203;金属を&#8203;局所的に&#8203;溶かします。&#8203;ノズルからの&#8203;アシストガスが&#8203;溶融金属を&#8203;排出し、&#8203;NC制御で&#8203;図面の&#8203;輪郭に&#8203;沿って&#8203;切断します。&#8203;板材用は&#8203;平面上を&#8203;加工し、&#8203;パイプ専用機は&#8203;チャックで&#8203;管を&#8203;保持・回転させて&#8203;加工します。</p>
+</div>
+<div>
+<div class="scroll">
+<table class="tb" style="min-width: 520px">
+<thead><tr><th scope="col">加工・搬送条件</th><th scope="col">候補機種</th></tr></thead>
+<tbody>
+<template data-for="guide" data-as="g">
+<tr><td>{{g.c}}</td><td style="font-weight: 600">{{g.m}}</td></tr>
+</template>
+</tbody>
+</table>
+</div>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">見積もりには、&#8203;材質、&#8203;板厚または&#8203;管の&#8203;断面寸法、&#8203;素材長、&#8203;月間の&#8203;加工量を&#8203;ご記入ください。</p>
+</div>
+</div>
+</section>
+
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">仕様の&#8203;ポイント</h2>
+<dl class="dl" style="margin-top: clamp(17px, 2.33vw, 28px)">
+<template data-for="points" data-as="p">
+<div><dt>{{p.k}}</dt><dd>{{p.v}}</dd></div>
+</template>
+</dl>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">レーザー出力別の&#8203;最大切断板厚</h2>
+<div role="group" aria-label="機種" class="row" style="gap: 8px; margin-top: clamp(16px, 2vw, 24px)">
+<template data-for="capTabs" data-as="t">
+<button type="button" class="chip" onClick="{{t.pick}}" aria-pressed="{{t.on}}" style="border: 1px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}">{{t.label}}</button>
+</template>
+</div>
+<div class="scroll" style="margin-top: 20px">
+<table class="tb" style="min-width: 640px">
+<thead><tr><th scope="col">レーザー出力</th><th scope="col">軟鋼</th><th scope="col">{{susHead}}</th><th scope="col">アルミ</th><th scope="col">銅</th><th scope="col">黄銅</th></tr></thead>
+<tbody>
+<template data-for="cap" data-as="r">
+<tr><th scope="row">{{r.p}} kW</th><td>{{r.a}} mm</td><td>{{r.b}} mm</td><td>{{r.c}} mm</td><td>{{r.d}} mm</td><td>{{r.e}} mm</td></tr>
+</template>
+</tbody>
+</table>
+</div>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">板厚の&#8203;単位は&#8203;mmです。&#8203;数値は&#8203;メーカー公表の&#8203;機種別参考値です。&#8203;材質、&#8203;表面状態、&#8203;ガス品質や&#8203;加工環境で&#8203;切断結果は&#8203;変わります。&#8203;選択できる&#8203;出力は&#8203;お見積もり時に&#8203;ご確認ください。</p>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap split" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4.67vw, 56px); align-items: start">
+<div>
+<p class="eye">CAD/CAM</p>
+<h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px); margin-top: 8px">今&#8203;お使いの&#8203;工程・ソフトと、&#8203;つなげて&#8203;使える</h2>
+<p style="margin: 20px 0 0; font-size: clamp(15px, 1.42vw, 17px)">HKの&#8203;レーザー加工機は、&#8203;板金用CAD/CAM&#8203;「MetaCAM」に&#8203;対応しています。&#8203;MetaCAMは&#8203;加工機メーカーの&#8203;枠を&#8203;超えて&#8203;加工データを&#8203;共有できる&#8203;ソフトで、&#8203;各社の&#8203;レーザー・パンチ・ベンダーに&#8203;対応しています。</p>
+<p style="margin: 14px 0 0; font-size: clamp(15px, 1.42vw, 17px); font-weight: 600">アマダ製ベンダーと&#8203;AP100を&#8203;お使いの&#8203;工場でも、&#8203;MetaCAMを&#8203;介して&#8203;展開データを&#8203;活用し、&#8203;HKの&#8203;加工機を&#8203;今の&#8203;工程に&#8203;組み込めます。</p>
+<p class="mut" style="margin: 16px 0 0; font-size: 13px">連携できる&#8203;データの&#8203;範囲は、&#8203;ソフトの&#8203;バージョンや&#8203;構成に&#8203;より&#8203;異なります。&#8203;導入前に&#8203;現在の&#8203;環境を&#8203;お知らせ&#8203;ください。&#8203;記載の&#8203;社名・製品名は&#8203;各社の&#8203;商標または&#8203;登録商標です。</p>
+</div>
+<div class="card g">
+<h3 class="h3">MetaCAMで&#8203;できる&#8203;こと</h3>
+<ul style="list-style: none; margin: 12px 0 0; padding: 0; font-size: 16px; border-top: 1px solid #D2D2D7">
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">他社の&#8203;CAD/CAMで&#8203;作成した&#8203;製品データを&#8203;変換して&#8203;活用</li>
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">複数メーカーの&#8203;加工機の&#8203;データを&#8203;一元管理</li>
+<li style="padding: 10px 0; border-bottom: 1px solid #D2D2D7">曲げ工程まで&#8203;見据えた&#8203;展開と&#8203;ネスティング</li>
+</ul>
+<a class="pill" href="contact.html" style="margin-top: 20px">連携に&#8203;ついて&#8203;相談する</a>
+</div>
+</div>
+</section>
+<section class="sec pale">
+<div class="wrap">
+<h2 class="h2 c">導入後も、&#8203;止めない&#8203;ための&#8203;サポート</h2>
+<p class="lead c" style="font-size: clamp(15px, 1.5vw, 18px)">メーカー&#8203;（HK）の&#8203;サービス体制です。&#8203;日本での&#8203;対応内容は、&#8203;お見積もりの&#8203;際に&#8203;ご案内します。</p>
+<div class="g3" style="margin-top: clamp(22px, 3vw, 36px)">
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">遠隔モニタリング HK INSIGHT</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">稼働状況や&#8203;履歴を、&#8203;パソコンや&#8203;スマートフォンで&#8203;リアルタイムに&#8203;確認できます。&#8203;メーカーの&#8203;監視チームも&#8203;一緒に&#8203;見守ります。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">リモートサービス</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">24時間365日受付。&#8203;2023年は、&#8203;サービス案件の&#8203;93%以上を&#8203;遠隔対応で&#8203;解決しています&#8203;（メーカー実績）。</p></div>
+<div class="card"><h3 class="h3" style="font-size: clamp(16px, 1.67vw, 20px)">予防整備と&#8203;オペレーター教育</h3><p class="mut" style="margin: 8px 0 0; font-size: 15px">保証期間の&#8203;2年間に&#8203;2回、&#8203;エンジニアが&#8203;訪問して&#8203;点検します。&#8203;オペレーター向けの&#8203;追加教育も&#8203;行います。</p></div>
+</div>
+</div>
+</section>
+<section class="sec dark c">
+<div class="wrap">
+<h2 class="h2">お見積もり・導入の&#8203;ご相談</h2>
+<p class="lead">材質、&#8203;板厚または&#8203;管の&#8203;断面寸法、&#8203;素材長、&#8203;月間の&#8203;加工量を&#8203;お知らせ&#8203;ください。</p>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px)"><a class="pill" href="contact.html">お見積もり・ご注文</a><a class="lk" href="contact.html">テスト加工・デモ ›</a></div>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">製品情報</strong>
+<a href="cutting.html">ファイバーレーザー切断機</a>
+<a href="welder.html">レーザー溶接機</a>
+<a href="robot.html">協働溶接ロボット</a>
+<a href="stopper.html">衝撃吸収型カーストッパー</a>
+<a href="separator.html">圧縮空気用セパレーター</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">ご相談</strong>
+<a href="contact.html">お見積もり・ご注文</a>
+<a href="subsidy.html">補助金・導入支援</a>
+<a href="contact.html">テスト加工・デモ</a>
+<a href="contact.html">カタログ請求</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">会社情報</strong>
+<a href="company.html">企業案内</a>
+<a href="news.html">お知らせ</a>
+<a href="company.html#careers">採用情報</a>
+<a href="company.html#privacy">個人情報保護方針</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">公式YouTubeチャンネル</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 栄グローバル株式会社</div>
+</div>
+</footer>
+</div>
+</template>
+<script src="site.js"></script>
+<script>
+var EXT = {"3477239982ff3a3c6205ce0693975190": "webp", "35831a17966fd9e8be06de5e284ea465": "webp", "4bbbc7702f1ec1eaade26de07e474e07": "webp", "4df533686cd27ffd309c2434f629425b": "webp", "7378c43bc5e401b9bd793d1791ea638c": "webp", "7ba3b3bf582caf4370471f950167260b": "webp", "8ce3e98554736f919eda7d18c87419e5": "webp", "8f79d2b48bd837ca652cea95046d5a6b": "webp", "af4799858c655c5be942306a14fcfd89": "webp", "b1eeea59d8e4efbd51b27eff7747e2d2": "webp", "b7e873589b57ec47752e1214ea789838": "webp", "c68ccc5697e5715700e49c35c27c1ba9": "webp"};
+class Component extends DCLogic {
+  renderVals() {
+    if (!this._oc) {
+      this._oc = true;
+      try {
+        document.addEventListener('click', (e) => {
+          const path = e.composedPath ? e.composedPath() : [e.target];
+          const root = path[0] && path[0].getRootNode ? path[0].getRootNode() : document;
+          const close = (r) => { try { r.querySelectorAll('details.mlang[open], details.mnav[open]').forEach((d) => { if (path.indexOf(d) < 0) d.removeAttribute('open'); }); } catch (x) {} };
+          close(root); if (root !== document) close(document);
+        }, true);
+      } catch (x) {}
+    }
+
+    const st = this.state || {};
+    const kind = st.kind || 'sheet';
+    const capSel = st.cap || 'fs';
+    const B = (id) => 'assets/' + id + '.' + (EXT[id] || 'webp');
+    const S = (pairs) => pairs.map((p) => ({ k: p[0], v: p[1] }));
+    const chip = (on) => ({ on: on, bg: on ? '#1D1D1F' : '#FFFFFF', fg: on ? '#FFFFFF' : '#1D1D1F', bd: on ? '#1D1D1F' : '#86868B' });
+    const area = '加工サイズ', trav = '最大合成早送り速度';
+    const IDS = ['s-matic-k315', 'kube-1212', 'fl-2512', 'fl-3015', 'rs-3015', 'fs-series', 'fo-series', 'fe-series', 'hd-series', 'fc-3015', 'tl6527-s', 'tl9036-x'];
+    const CARD = [[['加工サイズ', '3,000 × 1,500 mm'], ['特長', '投入から\u200b仕分けまで\u200b全自動'], ['製品サイズ', '15,593 × 6,158 × 3,679 mm']], [['加工サイズ', '1,240 × 1,240 mm'], ['特長', '引き出し式傾斜テーブル'], ['製品サイズ', '4,010 × 2,210 × 2,180 mm']], [['加工サイズ', '1,240 × 2,490 mm'], ['特長', '1テーブル／2テーブルを\u200b選択'], ['製品サイズ', '4,800 × 2,320 × 2,680 mm']], [['加工サイズ', '3,048 × 1,524 mm'], ['特長', '側面扉からの\u200b材料搬入'], ['製品サイズ', '4,908 × 9,290 mm']], [['加工サイズ', '3,048 × 1,524 mm'], ['特長', '2.5 Gの\u200b高速モーション'], ['製品サイズ', '2,270 × 11,250 mm']], [['加工サイズ', '3,048 × 1,524 – 8,250 × 2,540 mm'], ['特長', 'テーブルサイズ6機種'], ['製品サイズ', '3,300 × 11,218 mm（FS3015）']], [['加工サイズ', '12,192 × 2,540 – 30,480 × 3,048 mm'], ['特長', '大型鋼板・ベベル加工対応'], ['製品サイズ', '6,200 × 21,000 mm（FO12025）']], [['加工サイズ', '3,048 × 1,524 – 8,250 × 2,540 mm'], ['特長', '折りたたみ扉と\u200bステップ'], ['製品サイズ', 'お問い合わせ\u200bください']], [['加工サイズ', '3,048 × 1,524 – 12,000 × 4,000 mm'], ['特長', '水平シャトルテーブル'], ['製品サイズ', '2,850 × 8,604 mm（HD3015）']], [['加工サイズ', '3,048 × 1,524 mm'], ['特長', '昇降式シャトルテーブル'], ['製品サイズ', '3,283 × 10,632 mm']], [['加工サイズ', 'Ø12–273 mm × 6,500 mm'], ['特長', 'デジタルチャックで\u200b高速加工'], ['製品サイズ', '12,500 × 4,700 × 2,600 mm']], [['加工サイズ', 'Ø40–360 mm × 9,000 mm'], ['特長', '3Dベベル・3+1ツインチャック'], ['製品サイズ', '20,500 × 6,500 × 3,200 mm']]];
+    const all = [
+      { kind: 'sheet', title: 'S-Matic K315', short: '投入・切断・仕分け', img: B('4df533686cd27ffd309c2434f629425b'), alt: 'S-Matic K315の\u200b搬送・切断・仕分け装置を\u200b示す構成図', lead: '板材の\u200b投入、\u200bレーザー切断、\u200b部品の\u200b仕分け、\u200b残材の\u200b回収を\u200b一つの\u200bラインで\u200b行います。', specs: S([['加工サイズ', '3,000 × 1,500 mm'], ['対象板厚', '1–6 mm'], ['部品の仕分け', '真空吸着']]) },
+      { kind: 'sheet', title: 'KUBE 1212 FIBER', short: '引き出し式傾斜テーブル', img: B('b1eeea59d8e4efbd51b27eff7747e2d2'), alt: 'KUBE 1212 FIBERの\u200b筐体と\u200b操作面', lead: '小型板材の\u200b加工に\u200b適した\u200b正方形の\u200bテーブルを\u200b備え、\u200b前面から\u200b材料を\u200b出し入れできます。', specs: S([[area, '1,240 × 1,240 mm'], ['テーブル', '引き出し・傾斜式'], ['機械質量', '3,450 kg']]) },
+      { kind: 'sheet', title: 'FL 2512 FIBER', short: '1・2テーブル仕様', img: B('35831a17966fd9e8be06de5e284ea465'), alt: '外部交換テーブルを\u200b付けていない\u200bFL 2512 FIBERの\u200b本体', lead: '手動で\u200b引き出す1テーブル仕様と、\u200b昇降式シャトルを\u200b使う\u200b2テーブル仕様から\u200b選べます。', specs: S([['最大レーザー出力', '6 kW'], ['テーブル', '1テーブル／2テーブル'], ['材料の\u200b位置合わせ', 'ボールリフト\u200b（1テーブル仕様）']]) },
+      { kind: 'sheet', title: 'FL 3015 FIBER', short: 'サイドローディング', img: B('3477239982ff3a3c6205ce0693975190'), alt: 'FL 3015 FIBER本体と\u200b横に\u200b張り出した\u200b材料テーブル', lead: '大きな\u200b側面扉から\u200b定尺の\u200b板材を\u200b出し入れする\u200bレーザー切断機です。', specs: S([[area, '3,048 × 1,524 mm'], [trav, '140 m/min'], ['レイアウト', 'S / R']]) },
+      { kind: 'sheet', title: 'RS3015 FIBER', short: '前面・側面からの\u200b作業', img: B('af4799858c655c5be942306a14fcfd89'), alt: 'RS3015 FIBERの\u200b前面と\u200b側面の\u200b筐体', lead: '前面と\u200b側面の\u200b扉から、\u200b加工室内の\u200bワークに\u200b手が\u200b届きます。', specs: S([[area, '3,048 × 1,524 mm'], [trav, '140 m/min'], ['アクセス', '前面・側面扉']]) },
+      { kind: 'sheet', title: 'FS Series', short: '長尺板材・両開き扉', img: B('4bbbc7702f1ec1eaade26de07e474e07'), alt: 'FSシリーズの\u200bFS3015 FIBER本体', lead: '板材の\u200b長さに\u200b合わせて\u200b加工範囲を\u200b選ぶシリーズです。\u200b写真は\u200bFS3015 FIBERです。', specs: S([['FS3015 加工サイズ', '3,048 × 1,524 mm'], ['FS8025 加工サイズ', '8,250 × 2,540 mm'], [trav, '140 m/min']]) },
+      { kind: 'sheet', title: 'FO Series', short: '大型鋼板用ガントリー', img: B('8ce3e98554736f919eda7d18c87419e5'), alt: 'FO12025 FIBERの\u200b開放型テーブルと\u200bガントリー', lead: '大型鋼板の\u200b上を\u200bガントリーが\u200b移動する\u200b開放型の\u200b切断機です。\u200b写真は\u200bFO12025 FIBERです。', specs: S([['掲載機種', 'FO12025 FIBER'], ['国内向け仕様の\u200bテーブル長', '12 / 20 / 30 m'], ['テーブル幅の\u200b構成', '2.5 / 3.1 m']]) },
+      { kind: 'sheet', title: 'FE Series', short: '折りたたみ扉・複数の\u200b加工サイズ', img: B('c68ccc5697e5715700e49c35c27c1ba9'), alt: 'FEシリーズの\u200bFE3015 FIBERと\u200b操作部', lead: '折りたたみ式の\u200b扉と\u200bステップを\u200b備え、\u200b加工室に\u200b出入りしやすい\u200b構造です。\u200b写真は\u200bFE3015 FIBERです。', specs: S([['FE3015 加工サイズ', '3,048 × 1,524 mm'], ['シリーズ最大加工サイズ', '8,250 × 2,540 mm'], [trav, '100 m/min']]) },
+      { kind: 'sheet', title: 'HD Series', short: '材料検知・水平シャトル', img: B('b7e873589b57ec47752e1214ea789838'), alt: 'HDシリーズの\u200bHD3015と\u200bシャトルテーブル', lead: '材料の\u200b自動検知と\u200b水平シャトルテーブルを\u200b備えた\u200b板材用レーザー切断機です。\u200b掲載機種は\u200bHD3015です。', specs: S([['掲載機種', 'HD3015'], ['制御装置', 'FSCUT'], ['テーブル', '水平シャトル']]) },
+      { kind: 'sheet', title: 'FC3015 FIBER', short: '昇降式シャトルテーブル', img: B('7ba3b3bf582caf4370471f950167260b'), alt: 'FC3015 FIBERの\u200b本体と\u200b材料交換テーブル', lead: '昇降式シャトルテーブルで\u200b材料を\u200b交換する\u200b3015クラスの\u200b切断機です。', specs: S([[area, '3,048 × 1,524 mm'], ['最大切断速度', '50 m/min'], ['制御装置', 'Siemens NC']]) },
+      { kind: 'tube', title: 'TL6527-S', short: '丸管 Ø12–273 mm', img: B('7378c43bc5e401b9bd793d1791ea638c'), alt: 'TL6527-Sの\u200bパイプ加工ラインと\u200b材料支持部', lead: '丸管・角管を\u200b加工する\u200bパイプ用レーザー切断機です。\u200b日本向け6 kW仕様は、\u200b外径12〜273 mmの\u200b丸管に\u200b対応します。', specs: S([['丸管の外径', 'Ø12–273 mm'], ['角管の\u200b断面寸法', '12 × 12 – 200 × 200 mm'], ['最大加工長', '6,500 mm'], ['ワークの\u200b最大質量', '200 kg'], ['日本向けレーザー出力', '6 kW']]) },
+      { kind: 'tube', title: 'TL9036-X', short: '丸管 Ø40–360 mm', img: B('8f79d2b48bd837ca652cea95046d5a6b'), alt: 'TL9036-Xの\u200b長尺パイプ切断機全体', lead: '大径・長尺の\u200bパイプに\u200b対応する\u200bレーザー切断機です。\u200b丸管は\u200b外径360 mmまで、\u200b角管は\u200b250 mm角まで\u200b加工できます。', specs: S([['丸管の外径', 'Ø40–360 mm'], ['角管の\u200b断面寸法', '40 × 40 – 250 × 250 mm'], ['標準加工長', '9,000 mm'], ['ワークの\u200b最大質量', '1,200 kg'], ['日本向けレーザー出力', '6–12 kW']]) }
+    ];
+    const fs = [[2.5, 16, 8, 8, 4, 6], [3, 16, 10, 10, 6, 8], [4, 20, 12, 12, 6, 10], [6, 25, 20, 15, 8, 12], [8, 30, 25, 25, 8, 12], [10, 30, 30, 30, 10, 15], [12, 30, 35, 35, 10, 15], [15, 35, 40, 40, 12, 15]];
+    const fe = [[6, 22, 16, 14, 6, 10], [12, 25, 25, 25, 8, 12], [20, 40, 40, 40, 15, 15], [30, 50, 50, 50, 20, 20]];
+    const fc = [[6, 25, 20, 15, 8, 12], [12, 30, 35, 35, 10, 15], [20, 40, 45, 45, 12, 20], [30, 50, 50, 50, 12, 20]];
+    const caps = { fs: { label: 'FS Series', rows: fs, clean: true }, fl: { label: 'FL 3015', rows: fs.slice(2), clean: true }, rs: { label: 'RS3015', rows: fs.slice(3), clean: true }, fe: { label: 'FE / HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
+    return {
+      kinds: [['sheet', '板材用'], ['tube', 'パイプ用']].map((k) => ({ label: k[1], ...chip(k[0] === kind), pick: () => this.setState({ kind: k[0] }) })),
+      models: all.map((m, i) => ({ ...m, specs: S(CARD[i]), open: () => { try { localStorage.setItem('sakae-model', IDS[i]); } catch (e) {} } })).filter((m) => m.kind === kind),
+      guide: [
+        { c: '小型板材、\u200b正面から\u200b搬入', m: 'KUBE1212' },
+        { c: '板材、\u200b手動または\u200b2段テーブル交換', m: 'FL2512' },
+        { c: '側面からの\u200bアクセス、\u200b搬入動線に\u200b合わせた\u200b配置', m: 'FL3015' },
+        { c: '定尺板、\u200b切断速度と\u200bテーブル仕様を\u200b比較', m: 'RS3015 / FS / FE / HD / FC3015' },
+        { c: '切断部品の\u200b自動仕分け', m: 'S-Matic K315' },
+        { c: '長尺の鋼板', m: 'FO' },
+        { c: '丸管・角管、\u200b径と\u200b1本当たり質量で\u200b選定', m: 'TL6527-S / TL9036-X' }
+      ],
+      points: S([
+        ['板材の\u200b加工サイズ例', 'KUBE1212は\u200b1,240 × 1,240 mm、\u200bFL3015は\u200b3,048 × 1,524 mm。\u200bFOシリーズは\u200b公称長12・20・30 mの\u200b長尺板に\u200b対応します。'],
+        ['パイプの\u200b径・長さ・\u200b質量', 'TL6527-Sは\u200b丸管Ø12–273 mm、\u200b標準長6.5 m、\u200b最大200 kg/本。\u200bTL9036-Xは\u200bØ40–360 mm、\u200b標準長9 m、\u200b最大1,200 kg/本。'],
+        ['材質・出力・切断板厚', '軟鋼、\u200bステンレス鋼、\u200bアルミでは\u200b切断できる\u200b板厚が\u200b異なります。\u200bRS3015の\u200b6 kW仕様の\u200b場合、\u200bメーカー値は\u200b順に\u200b最大25、\u200b20、\u200b15 mmです。'],
+        ['加工速度と\u200b早送り', 'FL3015の\u200b最大切断速度は\u200b55 m/min、\u200b最大合成早送りは\u200b140 m/minです。\u200b実際の\u200b切断速度は\u200b材質、\u200b板厚、\u200b形状、\u200bガス条件で\u200b変わります。'],
+        ['材料交換と\u200b自動化', '前面引出し式、\u200b側面搬入、\u200bシャトルテーブルを\u200b比較できます。\u200bS-Matic K315は\u200b材料投入から\u200b切断後の\u200b部品仕分け、\u200b残材回収までを\u200b一体\u200b化します。']
+      ]),
+      capTabs: Object.keys(caps).map((id) => ({ label: caps[id].label, ...chip(id === capSel), pick: () => this.setState({ cap: id }) })),
+      cap: caps[capSel].rows.map((r) => ({ p: r[0], a: r[1], b: r[2], c: r[3], d: r[4], e: r[5] })),
+      susHead: caps[capSel].clean ? 'ステンレス鋼\u200b（クリーンカット）' : 'ステンレス鋼'
+    
+    };
+
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

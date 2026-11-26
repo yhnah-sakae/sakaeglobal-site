@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>联系我们 | SAKAE GLOBAL 株式会社</title>
+<meta name="description" content="报价、补助金、实机演示、安装条件等，请告知您咨询的产品和内容。">
+<link rel="icon" href="assets/117c52be5ecb1ebafe997be82697934e.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5CAD}a:hover{color:#083F78}
+.pg{font-family:'Inter','Noto Sans SC','Noto Sans JP',system-ui,sans-serif;color:#1D1D1F;background:#FFFFFF;line-height:1.65;-webkit-font-smoothing:antialiased}
+.pg{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+.pg h1,.pg h2,.pg h3,.pg h4,.pg summary,.pg figcaption,.pg .lead,.pg th{text-wrap:balance}
+.pg p,.pg li,.pg dd,.pg td{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px, 2vw, 24px)}
+.sec{padding:clamp(56px, 9.33vw, 112px) 0}
+.pale{background:#F5F5F7}
+.dark{background:#0B1320;color:#F5F5F7}
+.eye{font-size:15px;font-weight:600;color:#0B5CAD;letter-spacing:.04em;margin:0}
+.dark .eye{color:#8CC4FF}
+.h1{margin:10px 0 0;font-size: clamp(40px, 6vw, 72px);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.h2{margin:0;font-size: clamp(26px, 3.83vw, 46px);line-height:1.2;font-weight:700}
+.h3{margin:0;font-size: clamp(18px, 1.83vw, 22px);line-height:1.35;font-weight:700}
+.lead{margin:18px 0 0;font-size: clamp(16px, 1.67vw, 20px);line-height:1.6;color:#5F5F64}
+.dark .lead,.dark .mut{color:#C4CAD4}
+.mut{color:#5F5F64}
+.c{text-align:center}
+.c .lead{margin-left:auto;margin-right:auto;max-width:720px}
+.pill{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:500;border:0;cursor:pointer;font-family:inherit}
+.pill:hover{background:#083F78;color:#FFFFFF}
+.ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;border:1px solid #0B5CAD;color:#0B5CAD;text-decoration:none;font-size:16px;font-weight:500;background:transparent}
+.ghost:hover{background:#0B5CAD;color:#FFFFFF}
+.lk{text-decoration:none;font-size:16px}.lk:hover{text-decoration:underline}
+.dark a.lk{color:#8CC4FF}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border-radius:22px;padding:clamp(20px, 2.67vw, 32px);color:#1D1D1F;text-decoration:none;display:block}
+.pale .card{background:#FFFFFF}
+.card.g{background:#F5F5F7}
+.dark .card{background:#162235;color:#F5F5F7}
+a.card:hover{color:#1D1D1F;background:#E6EEF8;box-shadow:0 16px 44px rgba(11,40,80,.16)}
+.dark a.card:hover{color:#FFFFFF;background:#22395A;box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.pill,.ghost,.chip,.card,.lk,.nav a,.topic,.foot a,.tb tbody tr,details summary{transition:background-color .2s,color .2s,border-color .2s,box-shadow .25s}
+.card img,.slide img{transition:transform .5s}
+a.card:hover img{transform:scale(1.04)}
+.chip:hover{background:#0B5CAD !important;color:#FFFFFF !important;border-color:#0B5CAD !important}
+.chip.dng:hover{background:#B3261E !important;border-color:#B3261E !important}
+.topic{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2vw, 24px);border-radius:999px;border:1px solid #5C6B80;color:#FFFFFF;text-decoration:none;font-size:16px}
+.topic:hover{background:#FFFFFF;color:#0B1320;border-color:#FFFFFF}
+.lk:hover{color:#083F78}
+.dark a.lk:hover{color:#FFFFFF}
+.tb tbody tr:hover{background:#EEF5FC}
+.dark .tb tbody tr:hover{background:#22395A}
+details summary:hover{color:#0B5CAD}
+.slide:hover .more{background:#083F78}
+.show{display:none}
+.stage{position:relative}
+.slide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px, 4vw, 48px);align-items:center;text-decoration:none;color:#1D1D1F;background:#F5F5F7;border-radius:28px;padding:clamp(28px, 4.67vw, 56px) clamp(32px, 5.33vw, 64px);box-sizing:border-box}
+.slide:hover{color:#1D1D1F}
+.more{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;font-size:16px;font-weight:500;margin-top:clamp(17px, 2.33vw, 28px)}
+@keyframes rise{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scale(.88);border-radius:48px}to{transform:none}}
+@keyframes k1{0%{opacity:1;visibility:visible;transform:none}13%{opacity:1;visibility:visible;transform:none}17.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}17.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k2{0%,17.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}17.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}22%{opacity:1;visibility:visible;transform:none}33%{opacity:1;visibility:visible;transform:none}37.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}37.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k3{0%,37.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}37.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}42%{opacity:1;visibility:visible;transform:none}53%{opacity:1;visibility:visible;transform:none}57.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}57.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k4{0%,57.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}57.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}62%{opacity:1;visibility:visible;transform:none}73%{opacity:1;visibility:visible;transform:none}77.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}77.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k5{0%,77.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}77.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}82%{opacity:1;visibility:visible;transform:none}100%{opacity:1;visibility:visible;transform:none}}
+@keyframes kimg{from{transform:translateX(60px) rotate(2deg)}to{transform:translateX(-60px) rotate(-2deg)}}
+@keyframes kbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-height:1600px) and (min-width:901px) and (prefers-reduced-motion:no-preference){
+@supports (animation-timeline: view()){
+ .card,figure,.h2,.tb{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+ .growin{animation:grow linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ .tiles{display:none}
+ .show{display:block;height:3400px;view-timeline-name:--show;view-timeline-axis:block}
+ .stage{position:sticky;top:92px;height:620px}
+ .stage .slide{position:absolute;inset:0;z-index:1;animation-timeline:--show;animation-range:contain 0% contain 100%;animation-timing-function:linear;animation-fill-mode:both}
+ .sl1{animation-name:k1}.sl2{animation-name:k2}.sl3{animation-name:k3}.sl4{animation-name:k4}.sl5{animation-name:k5}
+ .stage .slide img{animation:kimg linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .bar{animation:kbar linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .stage figure,.stage .card,.stage .h2{animation:none}
+}}
+.ph{display:block;width:100%;object-fit:contain}
+.nav a{color:#1D1D1F;text-decoration:none}.nav a:hover{color:#0B5CAD}
+.foot a{color:#424245;text-decoration:none}.foot a:hover{text-decoration:underline}
+.chip{font:inherit;font-size:15px;font-weight:500;min-height:44px;padding:0 20px;border-radius:999px;cursor:pointer}
+.dl{margin:0;border-top:1px solid #D2D2D7}
+.dl>div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid #D2D2D7}
+.dl dt{color:#5F5F64}.dl dd{margin:0}
+.tb{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
+.tb th,.tb td{padding:14px 10px;border-bottom:1px solid #E3E3E8;vertical-align:top}
+.tb thead th{color:#5F5F64;font-weight:500;border-bottom:1px solid #C7C7CC}
+.scroll{overflow-x:auto}
+.spec th,.spec td{text-align:center;padding:16px 12px}
+.spec thead th{background:#F5F5F7;border-bottom:0;padding:20px 12px;color:#1D1D1F;font-weight:700;font-size: clamp(16px, 1.67vw, 20px)}
+.spec tbody th{text-align:left;padding-left:clamp(22px, 3vw, 36px);white-space:nowrap;font-weight:500;color:#5F5F64}
+.spec tbody tr:nth-child(odd){background:#F7F9FC}
+.spec tbody tr:first-child td{font-size: clamp(16px, 1.67vw, 20px);font-weight:700;color:#0B5CAD}
+.spec td:nth-child(5),.spec th:nth-child(5){border-left:2px solid #C7C7CC}
+.spec .tg{display:block;width:fit-content;margin:0 auto 8px;font-size:12px;font-weight:700;color:#FFFFFF;border-radius:999px;padding:3px 14px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
+.fld{font:inherit;font-size:16px;width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;border:1px solid #86868B;border-radius:12px;background:#FFFFFF;color:#1D1D1F}
+.fld:focus,.chip:focus-visible,.pill:focus-visible{outline:2px solid #0B5CAD;outline-offset:2px}
+.lab{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.hasdrop{position:relative;display:flex;align-items:center;height:76px}
+.sub{display:none;position:absolute;top:100%;left:-18px;z-index:20}
+.sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
+.sub a:hover{background:#F5F5F7}
+.hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
+.mnav,.mlang{display:none;position:relative}
+.mlang{display:block}
+.langtxt{display:none !important}
+.nhead:hover span{color:#0B5CAD}
+.mnav summary,.mlang summary{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;height:44px;padding:0 8px;border-radius:12px;box-sizing:border-box}
+.mnav summary:hover,.mlang summary:hover,.mnav[open] summary,.mlang[open] summary{background:#EDEDF0}
+.drop{position:absolute;right:0;top:54px;z-index:20;display:flex;flex-direction:column;min-width:230px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.drop a,.drop>span{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border-radius:10px;color:#1D1D1F;text-decoration:none;font-size:16px;box-sizing:border-box}
+.drop a:hover{background:#F5F5F7}
+.drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
+@media (max-width:900px){
+ .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
+ .nav{display:none !important}
+
+ .dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .split{grid-template-columns:minmax(0,1fr) !important}
+}
+@media (min-width:901px) and (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body style="margin: 0">
+<div id="app">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-zh.html" aria-label="SAKAE GLOBAL 首页" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="主菜单" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-zh.html">产品信息</a><div class="sub"><div><a href="cutting-zh.html">光纤激光切割机</a><a href="welder-zh.html">激光焊接机</a><a href="robot-zh.html">协作焊接机器人</a><a href="stopper-zh.html">缓冲型车轮挡</a><a href="separator-zh.html">压缩空气用分离器</a></div></div></div>
+<a href="subsidy-zh.html">补助金、导入支持</a>
+<a href="company-zh.html">公司信息</a>
+<a href="news-zh.html">最新消息</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="contact.html" style="color: inherit; text-decoration: none">日本語</a> · <a href="contact-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="contact-en.html" style="color: inherit; text-decoration: none">EN</a> · <strong style="color: #1D1D1F">中文</strong></span>
+<details class="mlang">
+<summary aria-label="选择语言"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">中文</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="contact.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<a href="contact-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="contact-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</span>
+</div>
+</details>
+<a class="pill hpill" href="contact-zh.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">联系我们</a>
+<details class="mnav">
+<summary aria-label="打开菜单"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-zh.html">产品信息</a>
+<a href="cutting-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">光纤激光切割机</a>
+<a href="welder-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">激光焊接机</a>
+<a href="robot-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">协作焊接机器人</a>
+<a href="stopper-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">缓冲型车轮挡</a>
+<a href="separator-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">压缩空气用分离器</a>
+<a href="subsidy-zh.html">补助金、导入支持</a>
+<a href="company-zh.html">公司信息</a>
+<a href="news-zh.html">最新消息</a>
+<a href="contact-zh.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">联系我们</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main class="pale" style="padding: clamp(36px, 6vw, 72px) 0 clamp(48px, 8vw, 96px)">
+<div class="wrap" style="max-width: 800px">
+<div class="c"><p class="eye">联系我们</p><h1 class="h2" style="margin-top: 8px">产品、​技术咨询</h1>
+<p class="lead">报价、​补助金、​实机​演示、​安装​条​件等，​请​告知​您​咨询​的​产品​和​内容。</p></div>
+<div role="group" aria-label="咨询类别" class="row" style="justify-content: center; gap: 10px; margin-top: clamp(20px, 2.67vw, 32px)">
+
+<button type="button" class="chip" aria-pressed="" style="border: 1px solid #1D1D1F; background: #1D1D1F; color: #FFFFFF">报价、订购</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">补助金咨询</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">试加工、演示</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">索取样本</button>
+
+<button type="button" class="chip" style="border: 1px solid #86868B; background: #FFFFFF; color: #1D1D1F">其他咨询</button>
+
+</div>
+
+<form novalidate="" class="card" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(25px, 3.33vw, 40px); display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 15px; color: #424245; background: #F5F5F7; border-radius: 12px; padding: 14px 16px">请在已知范围内告知所需产品、型号、数量、交货地区和希望交期。</p>
+<div class="g2" style="gap: 18px">
+<label class="lab">对象产品
+<select class="fld" name="product"><option value="none">未定、不适用</option><option value="cutting">光纤激光​切割机</option><option value="welder">激光焊接机</option><option value="robot">协作焊接机器人</option><option value="stopper">缓冲型车轮挡</option><option value="separator">压缩​空气​用​分离器</option></select></label>
+<label class="lab" style="display: none">型号、​机型​名称
+<input class="fld" type="text" name="model" placeholder="产品名称或型号"></label>
+<label class="lab" style="display: none">材质、板厚
+<input class="fld" type="text" name="material" placeholder="例）SUS304 t3.0"></label>
+<label class="lab" style="display: none">加工尺寸​（板​材、​管材尺寸）​
+<input class="fld" type="text" name="size" placeholder="例）3,048 × 1,524 mm、圆管 Ø100"></label>
+<label class="lab" style="display: none">月加工量
+<input class="fld" type="text" name="volume" placeholder="例）每月 20 吨"></label>
+<label class="lab" style="display: none">焊接​的​产品、​接头​
+<input class="fld" type="text" name="joint" placeholder="例）不锈钢箱体的角接头"></label>
+<label class="lab" style="display: none">工厂电源
+<input class="fld" type="text" name="power" placeholder="例）单相 200 V"></label>
+<label class="lab" style="display: none">工件尺寸
+<input class="fld" type="text" name="work" placeholder="例）600 × 400 × 300 mm"></label>
+<label class="lab" style="display: none">现有​焊​接机、​夹具
+<input class="fld" type="text" name="equip" placeholder="例）CO2 焊机 350 A"></label>
+<label class="lab" style="display: none">车位数、​安装数量​
+<input class="fld" type="text" name="bays" placeholder="例）20 个车位"></label>
+<label class="lab" style="display: none">路面种类
+<input class="fld" type="text" name="pavement" placeholder="例）沥青"></label>
+<label class="lab" style="display: none">对象车辆
+<input class="fld" type="text" name="vehicle" placeholder="例）乘用车、卡车"></label>
+<label class="lab" style="display: none">使用流量
+<input class="fld" type="text" name="flow" placeholder="例）800 L/min"></label>
+<label class="lab" style="display: none">使用压力
+<input class="fld" type="text" name="pressure" placeholder="例）0.7 MPa"></label>
+<label class="lab" style="display: none">连接口径
+<input class="fld" type="text" name="port" placeholder="例）3/8"></label>
+<label class="lab" style="display: none">连接的设备
+<input class="fld" type="text" name="device" placeholder="例）喷枪、激光加工机"></label>
+<label class="lab" style="display: none">数量
+<input class="fld" type="text" name="qty" placeholder="例）1台"></label>
+<label class="lab" style="display: flex">交货地区
+<input class="fld" type="text" name="region" placeholder="例）日本爱知县"></label>
+<label class="lab" style="display: flex">希望交期
+<input class="fld" type="text" name="delivery" placeholder="例）2027年3月"></label>
+</div>
+<label style="display: none; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="alsoFunding" style="width: 20px; height: 20px">同时​咨询补助金​的​利用</label>
+<div style="border-top: 1px solid #D2D2D7; padding-top: 22px; display: flex; flex-direction: column; gap: 18px">
+<div class="g2" style="gap: 18px">
+<label class="lab">公司​名称​（必填）​
+<input class="fld" type="text" name="company" required="" autocomplete="organization" placeholder="公司名称、工厂名称"></label>
+<label class="lab">姓名（必填）
+<input class="fld" type="text" name="person" required="" autocomplete="name"></label>
+<label class="lab">回复​用​电子邮箱​（必填）​
+<input class="fld" type="email" name="email" required="" autocomplete="email"></label>
+<label class="lab">电话​号​码​（选填）​
+<input class="fld" type="tel" name="phone" autocomplete="tel"></label>
+</div>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="font-size: 14px; font-weight: 600; padding: 0">希望​的​联系​方式</legend>
+<div class="row" style="gap: clamp(16px, 2vw, 24px)">
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="电子邮件" checked="" style="width: 20px; height: 20px">电子邮件</label>
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="电话" style="width: 20px; height: 20px">电话</label>
+</div>
+</fieldset>
+<label class="lab">咨询内容
+<textarea class="fld" name="message" rows="5" style="resize: vertical" placeholder="所需规格、加工内容、安装条件等"></textarea></label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="agree" style="width: 20px; height: 20px"><span><a href="company-zh.html#privacy">个人​信息​保护​方针</a>：​同意​（必填）</span></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+
+<button type="button" class="pill" style="align-self: center; min-height: 52px; padding: 0 clamp(25px, 3.33vw, 40px); font-size: clamp(15px, 1.42vw, 17px)">确认填写内容</button>
+<p class="mut c" style="margin: 0; font-size: 13px">按下​按钮后​将​进入填​写内容确​认​画面。</p>
+</div>
+</form>
+
+
+
+
+
+<div class="g2" style="margin-top: 16px">
+<div class="card"><h2 class="h3">电话</h2><p style="margin: 8px 0 0; font-size: clamp(18px, 1.83vw, 22px); font-weight: 700">050-1753-9326</p><p class="mut" style="margin: 2px 0 0; font-size: 14px">总机</p></div>
+<div class="card"><h2 class="h3">电子邮件</h2><p style="margin: 8px 0 0">咨询、​报价、​订购</p><p style="margin: 2px 0 0"><a href="mailto:info@sakaeglobal.com">info@sakaeglobal.com</a></p></div>
+</div>
+</div>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 ​愛知県名​古屋​市西区​又​穂町1丁目7​1</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">产品信息</strong>
+<a href="cutting-zh.html">光纤激光​切割机</a>
+<a href="welder-zh.html">激光焊接机</a>
+<a href="robot-zh.html">协作焊接机器人</a>
+<a href="stopper-zh.html">缓冲型车轮挡</a>
+<a href="separator-zh.html">压缩​空气​用​分离器</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">咨询</strong>
+<a href="contact-zh.html">报价、订购</a>
+<a href="subsidy-zh.html">补助金、​导入​支持</a>
+<a href="contact-zh.html">试加工、演示</a>
+<a href="contact-zh.html">索取样本</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">公司信息</strong>
+<a href="company-zh.html">企业介绍</a>
+<a href="news-zh.html">最新消息</a>
+<a href="company-zh.html#careers">招聘信息</a>
+<a href="company-zh.html#privacy">个人​信息​保护​方针</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">官方 ​YouTube ​频道</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© ​SA​KAE ​G​LOBAL ​株式​会​社</div>
+</div>
+</footer>
+</div>
+</div>
+<template id="tpl">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-zh.html" aria-label="SAKAE GLOBAL 首页" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="主菜单" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-zh.html">产品信息</a><div class="sub"><div><a href="cutting-zh.html">光纤激光切割机</a><a href="welder-zh.html">激光焊接机</a><a href="robot-zh.html">协作焊接机器人</a><a href="stopper-zh.html">缓冲型车轮挡</a><a href="separator-zh.html">压缩空气用分离器</a></div></div></div>
+<a href="subsidy-zh.html">补助金、导入支持</a>
+<a href="company-zh.html">公司信息</a>
+<a href="news-zh.html">最新消息</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="contact.html" style="color: inherit; text-decoration: none">日本語</a> · <a href="contact-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="contact-en.html" style="color: inherit; text-decoration: none">EN</a> · <strong style="color: #1D1D1F">中文</strong></span>
+<details class="mlang">
+<summary aria-label="选择语言"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">中文</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="contact.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<a href="contact-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="contact-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</span>
+</div>
+</details>
+<a class="pill hpill" href="contact-zh.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">联系我们</a>
+<details class="mnav">
+<summary aria-label="打开菜单"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-zh.html">产品信息</a>
+<a href="cutting-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">光纤激光切割机</a>
+<a href="welder-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">激光焊接机</a>
+<a href="robot-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">协作焊接机器人</a>
+<a href="stopper-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">缓冲型车轮挡</a>
+<a href="separator-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">压缩空气用分离器</a>
+<a href="subsidy-zh.html">补助金、导入支持</a>
+<a href="company-zh.html">公司信息</a>
+<a href="news-zh.html">最新消息</a>
+<a href="contact-zh.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">联系我们</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main class="pale" style="padding: clamp(36px, 6vw, 72px) 0 clamp(48px, 8vw, 96px)">
+<div class="wrap" style="max-width: 800px">
+<div class="c"><p class="eye">联系我们</p><h1 class="h2" style="margin-top: 8px">产品、&#8203;技术咨询</h1>
+<p class="lead">报价、&#8203;补助金、&#8203;实机&#8203;演示、&#8203;安装&#8203;条&#8203;件等，&#8203;请&#8203;告知&#8203;您&#8203;咨询&#8203;的&#8203;产品&#8203;和&#8203;内容。</p></div>
+<div role="group" aria-label="咨询类别" class="row" style="justify-content: center; gap: 10px; margin-top: clamp(20px, 2.67vw, 32px)">
+<template data-for="types" data-as="t">
+<button type="button" class="chip" onClick="{{t.pick}}" aria-pressed="{{t.on}}" style="border: 1px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}">{{t.label}}</button>
+</template>
+</div>
+
+<form onSubmit="{{check}}" noValidate="{{true}}" class="card" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(25px, 3.33vw, 40px); display: {{formDisp}}; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 15px; color: #424245; background: #F5F5F7; border-radius: 12px; padding: 14px 16px">{{lead}}</p>
+<div class="g2" style="gap: 18px">
+<label class="lab">对象产品
+<select class="fld" name="product" onChange="{{onProduct}}"><option value="none">未定、不适用</option><option value="cutting">光纤激光&#8203;切割机</option><option value="welder">激光焊接机</option><option value="robot">协作焊接机器人</option><option value="stopper">缓冲型车轮挡</option><option value="separator">压缩&#8203;空气&#8203;用&#8203;分离器</option></select></label>
+<label class="lab" style="display: {{d.model}}">型号、&#8203;机型&#8203;名称
+<input class="fld" type="text" name="model" placeholder="产品名称或型号"></label>
+<label class="lab" style="display: {{d.material}}">材质、板厚
+<input class="fld" type="text" name="material" placeholder="例）SUS304 t3.0"></label>
+<label class="lab" style="display: {{d.size}}">加工尺寸&#8203;（板&#8203;材、&#8203;管材尺寸）&#8203;
+<input class="fld" type="text" name="size" placeholder="例）3,048 × 1,524 mm、圆管 Ø100"></label>
+<label class="lab" style="display: {{d.volume}}">月加工量
+<input class="fld" type="text" name="volume" placeholder="例）每月 20 吨"></label>
+<label class="lab" style="display: {{d.joint}}">焊接&#8203;的&#8203;产品、&#8203;接头&#8203;
+<input class="fld" type="text" name="joint" placeholder="例）不锈钢箱体的角接头"></label>
+<label class="lab" style="display: {{d.power}}">工厂电源
+<input class="fld" type="text" name="power" placeholder="例）单相 200 V"></label>
+<label class="lab" style="display: {{d.work}}">工件尺寸
+<input class="fld" type="text" name="work" placeholder="例）600 × 400 × 300 mm"></label>
+<label class="lab" style="display: {{d.equip}}">现有&#8203;焊&#8203;接机、&#8203;夹具
+<input class="fld" type="text" name="equip" placeholder="例）CO2 焊机 350 A"></label>
+<label class="lab" style="display: {{d.bays}}">车位数、&#8203;安装数量&#8203;
+<input class="fld" type="text" name="bays" placeholder="例）20 个车位"></label>
+<label class="lab" style="display: {{d.pavement}}">路面种类
+<input class="fld" type="text" name="pavement" placeholder="例）沥青"></label>
+<label class="lab" style="display: {{d.vehicle}}">对象车辆
+<input class="fld" type="text" name="vehicle" placeholder="例）乘用车、卡车"></label>
+<label class="lab" style="display: {{d.flow}}">使用流量
+<input class="fld" type="text" name="flow" placeholder="例）800 L/min"></label>
+<label class="lab" style="display: {{d.pressure}}">使用压力
+<input class="fld" type="text" name="pressure" placeholder="例）0.7 MPa"></label>
+<label class="lab" style="display: {{d.port}}">连接口径
+<input class="fld" type="text" name="port" placeholder="例）3/8"></label>
+<label class="lab" style="display: {{d.device}}">连接的设备
+<input class="fld" type="text" name="device" placeholder="例）喷枪、激光加工机"></label>
+<label class="lab" style="display: {{d.qty}}">数量
+<input class="fld" type="text" name="qty" placeholder="例）1台"></label>
+<label class="lab" style="display: {{d.region}}">交货地区
+<input class="fld" type="text" name="region" placeholder="例）日本爱知县"></label>
+<label class="lab" style="display: {{d.delivery}}">希望交期
+<input class="fld" type="text" name="delivery" placeholder="例）2027年3月"></label>
+</div>
+<label style="display: {{d.funding}}; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="alsoFunding" style="width: 20px; height: 20px">同时&#8203;咨询补助金&#8203;的&#8203;利用</label>
+<div style="border-top: 1px solid #D2D2D7; padding-top: 22px; display: flex; flex-direction: column; gap: 18px">
+<div class="g2" style="gap: 18px">
+<label class="lab">公司&#8203;名称&#8203;（必填）&#8203;
+<input class="fld" type="text" name="company" required autocomplete="organization" placeholder="公司名称、工厂名称"></label>
+<label class="lab">姓名（必填）
+<input class="fld" type="text" name="person" required autocomplete="name"></label>
+<label class="lab">回复&#8203;用&#8203;电子邮箱&#8203;（必填）&#8203;
+<input class="fld" type="email" name="email" required autocomplete="email"></label>
+<label class="lab">电话&#8203;号&#8203;码&#8203;（选填）&#8203;
+<input class="fld" type="tel" name="phone" autocomplete="tel"></label>
+</div>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="font-size: 14px; font-weight: 600; padding: 0">希望&#8203;的&#8203;联系&#8203;方式</legend>
+<div class="row" style="gap: clamp(16px, 2vw, 24px)">
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="电子邮件" defaultChecked="{{true}}" style="width: 20px; height: 20px">电子邮件</label>
+<label style="display: flex; gap: 8px; align-items: center; min-height: 44px"><input type="radio" name="preferred" value="电话" style="width: 20px; height: 20px">电话</label>
+</div>
+</fieldset>
+<label class="lab">咨询内容
+<textarea class="fld" name="message" rows="5" style="resize: vertical" placeholder="所需规格、加工内容、安装条件等"></textarea></label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 44px"><input type="checkbox" name="agree" style="width: 20px; height: 20px"><span><a href="company-zh.html#privacy">个人&#8203;信息&#8203;保护&#8203;方针</a>：&#8203;同意&#8203;（必填）</span></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+<template data-if="hasErr">
+<p role="alert" style="margin: 0; padding: 14px 18px; border-radius: 12px; background: #FDECEA; color: #B3261E; font-size: 15px; font-weight: 600">{{errText}}</p>
+</template>
+<button type="button" onClick="{{check}}" class="pill" style="align-self: center; min-height: 52px; padding: 0 clamp(25px, 3.33vw, 40px); font-size: clamp(15px, 1.42vw, 17px)">确认填写内容</button>
+<p class="mut c" style="margin: 0; font-size: 13px">按下&#8203;按钮后&#8203;将&#8203;进入填&#8203;写内容确&#8203;认&#8203;画面。</p>
+</div>
+</form>
+
+<template data-if="isConfirm">
+<div class="card" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(25px, 3.33vw, 40px)">
+<h2 class="h3" style="font-size: clamp(21px, 2.17vw, 26px)">确认填写内容</h2>
+<p class="mut" style="margin: 6px 0 0; font-size: 15px">将&#8203;发送&#8203;以下&#8203;内容。&#8203;确认无误后&#8203;请&#8203;按&#8203;“发送”。</p>
+<dl style="margin: 20px 0 0; font-size: 16px; border-top: 1px solid #D2D2D7">
+<template data-for="rows" data-as="r">
+<div style="display: grid; grid-template-columns: minmax(120px, 220px) minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid #D2D2D7"><dt class="mut">{{r.k}}</dt><dd style="margin: 0; font-weight: 600; white-space: pre-wrap; overflow-wrap: anywhere">{{r.v}}</dd></div>
+</template>
+</dl>
+<template data-if="failed">
+<p role="alert" style="margin: 20px 0 0; padding: 14px 18px; border-radius: 12px; background: #FDECEA; color: #B3261E; font-size: 15px; font-weight: 600">发送&#8203;失败。&#8203;请&#8203;确认网络&#8203;环境后&#8203;重试。&#8203;如仍&#8203;无法&#8203;解决，&#8203;请&#8203;联系 &#8203;info@sakaeglobal.com。</p>
+</template>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px); gap: 12px">
+<button type="button" onClick="{{back}}" class="ghost" style="min-height: 52px; padding: 0 clamp(20px, 2.67vw, 32px); font-size: 16px; cursor: pointer; font-family: inherit">修改</button>
+<button type="button" onClick="{{send}}" class="pill" style="min-height: 52px; padding: 0 clamp(25px, 3.33vw, 40px); font-size: clamp(15px, 1.42vw, 17px)">{{sendLabel}}</button>
+</div>
+</div>
+</template>
+
+<template data-if="isDone">
+<div role="status" class="card c" style="margin-top: clamp(17px, 2.33vw, 28px); padding: clamp(28px, 4.67vw, 56px) clamp(25px, 3.33vw, 40px); border: 2px solid #0B5CAD">
+<h2 class="h3" style="font-size: clamp(22px, 2.33vw, 28px)">已&#8203;收到&#8203;您&#8203;的&#8203;咨询。</h2>
+<p class="mut" style="margin: 10px 0 0; font-size: 16px">负责人&#8203;将&#8203;与&#8203;您&#8203;联系。</p>
+<button type="button" onClick="{{again}}" class="ghost" style="margin-top: clamp(16px, 2vw, 24px); min-height: 48px; padding: 0 clamp(17px, 2.33vw, 28px); font-size: 15px; cursor: pointer; font-family: inherit">填写新的咨询</button>
+</div>
+</template>
+
+<div class="g2" style="margin-top: 16px">
+<div class="card"><h2 class="h3">电话</h2><p style="margin: 8px 0 0; font-size: clamp(18px, 1.83vw, 22px); font-weight: 700">050-1753-9326</p><p class="mut" style="margin: 2px 0 0; font-size: 14px">总机</p></div>
+<div class="card"><h2 class="h3">电子邮件</h2><p style="margin: 8px 0 0">咨询、&#8203;报价、&#8203;订购</p><p style="margin: 2px 0 0"><a href="mailto:info@sakaeglobal.com">info@sakaeglobal.com</a></p></div>
+</div>
+</div>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 &#8203;愛知県名&#8203;古屋&#8203;市西区&#8203;又&#8203;穂町1丁目7&#8203;1</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">产品信息</strong>
+<a href="cutting-zh.html">光纤激光&#8203;切割机</a>
+<a href="welder-zh.html">激光焊接机</a>
+<a href="robot-zh.html">协作焊接机器人</a>
+<a href="stopper-zh.html">缓冲型车轮挡</a>
+<a href="separator-zh.html">压缩&#8203;空气&#8203;用&#8203;分离器</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">咨询</strong>
+<a href="contact-zh.html">报价、订购</a>
+<a href="subsidy-zh.html">补助金、&#8203;导入&#8203;支持</a>
+<a href="contact-zh.html">试加工、演示</a>
+<a href="contact-zh.html">索取样本</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">公司信息</strong>
+<a href="company-zh.html">企业介绍</a>
+<a href="news-zh.html">最新消息</a>
+<a href="company-zh.html#careers">招聘信息</a>
+<a href="company-zh.html#privacy">个人&#8203;信息&#8203;保护&#8203;方针</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">官方 &#8203;YouTube &#8203;频道</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© &#8203;SA&#8203;KAE &#8203;G&#8203;LOBAL &#8203;株式&#8203;会&#8203;社</div>
+</div>
+</footer>
+</div>
+</template>
+<script src="site.js"></script>
+<script>
+var EXT = {};
+class Component extends DCLogic {
+  renderVals() {
+    if (!this._oc) {
+      this._oc = true;
+      try {
+        document.addEventListener('click', (e) => {
+          const path = e.composedPath ? e.composedPath() : [e.target];
+          const root = path[0] && path[0].getRootNode ? path[0].getRootNode() : document;
+          const close = (r) => { try { r.querySelectorAll('details.mlang[open], details.mnav[open]').forEach((d) => { if (path.indexOf(d) < 0) d.removeAttribute('open'); }); } catch (x) {} };
+          close(root); if (root !== document) close(document);
+        }, true);
+      } catch (x) {}
+    }
+
+    const st = this.state || {};
+    const sel = st.type || 'order';
+    const labels = { order: '报价、订购', subsidy: '补助金咨询', demo: '试加工、演示', catalog: '索取样本', general: '其他咨询' };
+    const leads = {
+      order: '请在已知范围内告知所需产品、型号、数量、交货地区和希望交期。',
+      subsidy: '请告知预定安装地点、导入时间和正在考虑的设备。我们将介绍可能适用的制度，并协助准备申请资料。',
+      demo: '请告知使用材料、板厚及希望确认的加工内容。',
+      catalog: '请告知您需要的产品或型号。',
+      general: '对于正在使用的产品，请告知型号和咨询内容。一般咨询无需选择产品。'
+    };
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyouqunTgzOETwYZQg-DbY2j2d_dYsDwNC27cUHBlwGtAZlLRF1nKUsDCyPG3MONPJj-w/exec';
+    const types = Object.keys(labels).map((id) => {
+      const on = id === sel;
+      return { label: labels[id], on: on, bg: on ? '#1D1D1F' : '#FFFFFF', fg: on ? '#FFFFFF' : '#1D1D1F', bd: on ? '#1D1D1F' : '#86868B', pick: () => this.setState({ type: id }) };
+    });
+    const names = { model: '型号、机型名称', material: '材质、板厚', size: '加工尺寸（板材、管材尺寸）', volume: '月加工量', joint: '焊接的产品、接头', power: '工厂电源', work: '工件尺寸', equip: '现有焊接机、夹具', bays: '车位数、安装数量', pavement: '路面种类', vehicle: '对象车辆', flow: '使用流量', pressure: '使用压力', port: '连接口径', device: '连接的设备', qty: '数量', region: '交货地区', delivery: '希望交期', company: '公司名称', person: '姓名', phone: '电话号码', email: '回复用电子邮箱', preferred: '希望的联系方式' };
+    const PROD = { none: '未定、不适用', cutting: '光纤激光切割机', welder: '激光焊接机', robot: '协作焊接机器人', stopper: '缓冲型车轮挡', separator: '压缩空气用分离器' };
+    const prod = PROD[st.prod] ? st.prod : 'none';
+    const detail = sel === 'order' || sel === 'demo' || sel === 'subsidy';
+    const is = (...a) => a.indexOf(prod) >= 0;
+    const SHOW = { model: prod !== 'none', material: detail && is('cutting', 'welder'), size: detail && is('cutting'), volume: detail && is('cutting'), joint: detail && is('welder', 'robot'), power: detail && is('welder'), work: detail && is('robot'), equip: detail && is('robot'), bays: detail && is('stopper'), pavement: detail && is('stopper'), vehicle: detail && is('stopper'), flow: detail && is('separator'), pressure: detail && is('separator'), port: detail && is('separator'), device: detail && is('separator'), qty: sel === 'order' && prod !== 'none', region: sel === 'order' || sel === 'subsidy', delivery: sel === 'order', funding: sel === 'order' && is('cutting', 'welder', 'robot') };
+    const d = {}; Object.keys(SHOW).forEach((k) => { d[k] = SHOW[k] ? 'flex' : 'none'; });
+    const Z = (x) => String(x).replace(/\u200b/g, '');
+    const step = st.step || 'form';
+    const check = (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      const form = (e && e.currentTarget && e.currentTarget.closest) ? (e.currentTarget.closest('form') || e.currentTarget) : e.target;
+      const f = new FormData(form);
+      const get = (k) => String(f.get(k) || '').trim();
+      const miss = [];
+      if (!get('company')) miss.push(names.company);
+      if (!get('person')) miss.push(names.person);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(get('email'))) miss.push('正确的电子邮箱');
+      if (!f.get('agree')) miss.push('同意个人信息保护方针');
+      if (miss.length) { this.setState({ errs: miss }); return; }
+      const rows = [{ k: '咨询类别', v: labels[sel] }, { k: '对象产品', v: PROD[prod] }];
+      const DIRECT = { model: 'model', material: 'material', qty: 'quantity', region: 'region', delivery: 'delivery' };
+      const payload = { topic: Z(labels[sel]), product: Z(PROD[prod]), website: get('website'), page: String(location.href).slice(0, 200) };
+      const extra = [];
+      Object.keys(SHOW).forEach((k) => {
+        if (k === 'funding' || !SHOW[k] || !get(k)) return;
+        rows.push({ k: names[k], v: get(k) });
+        if (DIRECT[k]) payload[DIRECT[k]] = get(k); else extra.push(Z(names[k]) + ': ' + get(k));
+      });
+      ['company', 'person', 'phone', 'email', 'preferred'].forEach((k) => { if (get(k)) rows.push({ k: names[k], v: get(k) }); });
+      const fund = SHOW.funding && f.get('alsoFunding');
+      if (fund) rows.push({ k: '补助金咨询', v: '同时咨询补助金的利用' });
+      if (get('message')) rows.push({ k: '咨询内容', v: get('message') });
+      payload.company = get('company'); payload.name = get('person'); payload.phone = get('phone'); payload.email = get('email'); payload.contact = Z(get('preferred'));
+      payload.subsidy = fund ? 'yes' : '';
+      payload.message = (extra.length ? extra.join('\n') + '\n\n' : '') + get('message');
+      this._form = form;
+      this.setState({ step: 'confirm', rows: rows, payload: payload, errs: null, failed: false, sending: false });
+    };
+    const back = () => this.setState({ step: 'form', failed: false, sending: false });
+    const again = () => { try { if (this._form) this._form.reset(); } catch (x) {} this.setState({ step: 'form', rows: null, payload: null, failed: false, sending: false, errs: null }); };
+    const send = () => {
+      if (st.sending || !st.payload) return;
+      const p = new URLSearchParams();
+      Object.keys(st.payload).forEach((k) => p.append(k, st.payload[k]));
+      this.setState({ sending: true, failed: false });
+      let done = false;
+      const fail = () => { if (done) return; done = true; this.setState({ sending: false, failed: true }); };
+      const timer = setTimeout(fail, 15000);
+      try {
+        fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: p })
+          .then(() => { if (done) return; done = true; clearTimeout(timer); this.setState({ sending: false, step: 'done' }); })
+          .catch(() => { clearTimeout(timer); fail(); });
+      } catch (x) { clearTimeout(timer); fail(); }
+    };
+    return {
+      onProduct: (e) => this.setState({ prod: e.target.value }), d: d,
+      types: types, lead: leads[sel], check: check, back: back, send: send, again: again,
+      formDisp: step === 'form' ? 'flex' : 'none',
+      isConfirm: step === 'confirm', isDone: step === 'done',
+      rows: (st.rows || []).map((r) => ({ k: Z(r.k), v: r.v })),
+      failed: !!st.failed, sendLabel: st.sending ? '正在发送…' : '发送',
+      hasErr: !!(st.errs && st.errs.length), errText: st.errs ? '请填写以下项目：' + st.errs.map(Z).join(' / ') : ''
+    
+    };
+
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

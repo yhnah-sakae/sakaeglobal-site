@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>협동 용접 로봇 | 사카에글로벌 주식회사</title>
+<meta name="description" content="사카에글로벌의 용접 전용 프로그램을 사용해 작업자가 토치를 손으로 움직여 용접 경로를 교시합니다. 같은 이음을 반복 용접할 때는 로봇이 등록된 경로를 재현합니다. 작업자는 워크 준비와 마무리 확인에 집중할 수 있습니다.">
+<link rel="icon" href="assets/117c52be5ecb1ebafe997be82697934e.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5CAD}a:hover{color:#083F78}
+.pg{font-family:'Inter','Noto Sans KR','Noto Sans JP',system-ui,sans-serif;color:#1D1D1F;background:#FFFFFF;line-height:1.65;-webkit-font-smoothing:antialiased}
+.pg{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+.pg h1,.pg h2,.pg h3,.pg h4,.pg summary,.pg figcaption,.pg .lead,.pg th{text-wrap:balance}
+.pg p,.pg li,.pg dd,.pg td{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px, 2vw, 24px)}
+.sec{padding:clamp(56px, 9.33vw, 112px) 0}
+.pale{background:#F5F5F7}
+.dark{background:#0B1320;color:#F5F5F7}
+.eye{font-size:15px;font-weight:600;color:#0B5CAD;letter-spacing:.04em;margin:0}
+.dark .eye{color:#8CC4FF}
+.h1{margin:10px 0 0;font-size: clamp(40px, 6vw, 72px);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.h2{margin:0;font-size: clamp(26px, 3.83vw, 46px);line-height:1.2;font-weight:700}
+.h3{margin:0;font-size: clamp(18px, 1.83vw, 22px);line-height:1.35;font-weight:700}
+.lead{margin:18px 0 0;font-size: clamp(16px, 1.67vw, 20px);line-height:1.6;color:#5F5F64}
+.dark .lead,.dark .mut{color:#C4CAD4}
+.mut{color:#5F5F64}
+.c{text-align:center}
+.c .lead{margin-left:auto;margin-right:auto;max-width:720px}
+.pill{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:500;border:0;cursor:pointer;font-family:inherit}
+.pill:hover{background:#083F78;color:#FFFFFF}
+.ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;border:1px solid #0B5CAD;color:#0B5CAD;text-decoration:none;font-size:16px;font-weight:500;background:transparent}
+.ghost:hover{background:#0B5CAD;color:#FFFFFF}
+.lk{text-decoration:none;font-size:16px}.lk:hover{text-decoration:underline}
+.dark a.lk{color:#8CC4FF}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border-radius:22px;padding:clamp(20px, 2.67vw, 32px);color:#1D1D1F;text-decoration:none;display:block}
+.pale .card{background:#FFFFFF}
+.card.g{background:#F5F5F7}
+.dark .card{background:#162235;color:#F5F5F7}
+a.card:hover{color:#1D1D1F;background:#E6EEF8;box-shadow:0 16px 44px rgba(11,40,80,.16)}
+.dark a.card:hover{color:#FFFFFF;background:#22395A;box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.pill,.ghost,.chip,.card,.lk,.nav a,.topic,.foot a,.tb tbody tr,details summary{transition:background-color .2s,color .2s,border-color .2s,box-shadow .25s}
+.card img,.slide img{transition:transform .5s}
+a.card:hover img{transform:scale(1.04)}
+.chip:hover{background:#0B5CAD !important;color:#FFFFFF !important;border-color:#0B5CAD !important}
+.chip.dng:hover{background:#B3261E !important;border-color:#B3261E !important}
+.topic{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2vw, 24px);border-radius:999px;border:1px solid #5C6B80;color:#FFFFFF;text-decoration:none;font-size:16px}
+.topic:hover{background:#FFFFFF;color:#0B1320;border-color:#FFFFFF}
+.lk:hover{color:#083F78}
+.dark a.lk:hover{color:#FFFFFF}
+.tb tbody tr:hover{background:#EEF5FC}
+.dark .tb tbody tr:hover{background:#22395A}
+details summary:hover{color:#0B5CAD}
+.slide:hover .more{background:#083F78}
+.show{display:none}
+.stage{position:relative}
+.slide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px, 4vw, 48px);align-items:center;text-decoration:none;color:#1D1D1F;background:#F5F5F7;border-radius:28px;padding:clamp(28px, 4.67vw, 56px) clamp(32px, 5.33vw, 64px);box-sizing:border-box}
+.slide:hover{color:#1D1D1F}
+.more{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;font-size:16px;font-weight:500;margin-top:clamp(17px, 2.33vw, 28px)}
+@keyframes rise{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scale(.88);border-radius:48px}to{transform:none}}
+@keyframes k1{0%{opacity:1;visibility:visible;transform:none}13%{opacity:1;visibility:visible;transform:none}17.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}17.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k2{0%,17.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}17.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}22%{opacity:1;visibility:visible;transform:none}33%{opacity:1;visibility:visible;transform:none}37.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}37.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k3{0%,37.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}37.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}42%{opacity:1;visibility:visible;transform:none}53%{opacity:1;visibility:visible;transform:none}57.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}57.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k4{0%,57.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}57.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}62%{opacity:1;visibility:visible;transform:none}73%{opacity:1;visibility:visible;transform:none}77.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}77.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k5{0%,77.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}77.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}82%{opacity:1;visibility:visible;transform:none}100%{opacity:1;visibility:visible;transform:none}}
+@keyframes kimg{from{transform:translateX(60px) rotate(2deg)}to{transform:translateX(-60px) rotate(-2deg)}}
+@keyframes kbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-height:1600px) and (min-width:901px) and (prefers-reduced-motion:no-preference){
+@supports (animation-timeline: view()){
+ .card,figure,.h2,.tb{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+ .growin{animation:grow linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ .tiles{display:none}
+ .show{display:block;height:3400px;view-timeline-name:--show;view-timeline-axis:block}
+ .stage{position:sticky;top:92px;height:620px}
+ .stage .slide{position:absolute;inset:0;z-index:1;animation-timeline:--show;animation-range:contain 0% contain 100%;animation-timing-function:linear;animation-fill-mode:both}
+ .sl1{animation-name:k1}.sl2{animation-name:k2}.sl3{animation-name:k3}.sl4{animation-name:k4}.sl5{animation-name:k5}
+ .stage .slide img{animation:kimg linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .bar{animation:kbar linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .stage figure,.stage .card,.stage .h2{animation:none}
+}}
+.ph{display:block;width:100%;object-fit:contain}
+.nav a{color:#1D1D1F;text-decoration:none}.nav a:hover{color:#0B5CAD}
+.foot a{color:#424245;text-decoration:none}.foot a:hover{text-decoration:underline}
+.chip{font:inherit;font-size:15px;font-weight:500;min-height:44px;padding:0 20px;border-radius:999px;cursor:pointer}
+.dl{margin:0;border-top:1px solid #D2D2D7}
+.dl>div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid #D2D2D7}
+.dl dt{color:#5F5F64}.dl dd{margin:0}
+.tb{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
+.tb th,.tb td{padding:14px 10px;border-bottom:1px solid #E3E3E8;vertical-align:top}
+.tb thead th{color:#5F5F64;font-weight:500;border-bottom:1px solid #C7C7CC}
+.scroll{overflow-x:auto}
+.spec th,.spec td{text-align:center;padding:16px 12px}
+.spec thead th{background:#F5F5F7;border-bottom:0;padding:20px 12px;color:#1D1D1F;font-weight:700;font-size: clamp(16px, 1.67vw, 20px)}
+.spec tbody th{text-align:left;padding-left:clamp(22px, 3vw, 36px);white-space:nowrap;font-weight:500;color:#5F5F64}
+.spec tbody tr:nth-child(odd){background:#F7F9FC}
+.spec tbody tr:first-child td{font-size: clamp(16px, 1.67vw, 20px);font-weight:700;color:#0B5CAD}
+.spec td:nth-child(5),.spec th:nth-child(5){border-left:2px solid #C7C7CC}
+.spec .tg{display:block;width:fit-content;margin:0 auto 8px;font-size:12px;font-weight:700;color:#FFFFFF;border-radius:999px;padding:3px 14px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
+.fld{font:inherit;font-size:16px;width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;border:1px solid #86868B;border-radius:12px;background:#FFFFFF;color:#1D1D1F}
+.fld:focus,.chip:focus-visible,.pill:focus-visible{outline:2px solid #0B5CAD;outline-offset:2px}
+.lab{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.hasdrop{position:relative;display:flex;align-items:center;height:76px}
+.sub{display:none;position:absolute;top:100%;left:-18px;z-index:20}
+.sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
+.sub a:hover{background:#F5F5F7}
+.hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
+.mnav,.mlang{display:none;position:relative}
+.mlang{display:block}
+.langtxt{display:none !important}
+.nhead:hover span{color:#0B5CAD}
+.mnav summary,.mlang summary{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;height:44px;padding:0 8px;border-radius:12px;box-sizing:border-box}
+.mnav summary:hover,.mlang summary:hover,.mnav[open] summary,.mlang[open] summary{background:#EDEDF0}
+.drop{position:absolute;right:0;top:54px;z-index:20;display:flex;flex-direction:column;min-width:230px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.drop a,.drop>span{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border-radius:10px;color:#1D1D1F;text-decoration:none;font-size:16px;box-sizing:border-box}
+.drop a:hover{background:#F5F5F7}
+.drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
+@media (max-width:900px){
+ .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
+ .nav{display:none !important}
+
+ .dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .split{grid-template-columns:minmax(0,1fr) !important}
+}
+@media (min-width:901px) and (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body style="margin: 0">
+<div id="app">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-ko.html" aria-label="SAKAE GLOBAL 홈" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="메인 메뉴" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-ko.html" style="font-weight: 700">제품 정보</a><div class="sub"><div><a href="cutting-ko.html">파이버 레이저 절단기</a><a href="welder-ko.html">레이저 용접기</a><a href="robot-ko.html">협동 용접 로봇</a><a href="stopper-ko.html">충격 흡수형 카스토퍼</a><a href="separator-ko.html">압축공기용 세퍼레이터</a></div></div></div>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="robot.html" style="color: inherit; text-decoration: none">日本語</a> · <strong style="color: #1D1D1F">한국어</strong> · <a href="robot-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="robot-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="언어 선택"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">한국어</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="robot.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</span>
+<a href="robot-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="robot-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact-ko.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">문의하기</a>
+<details class="mnav">
+<summary aria-label="메뉴 열기"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-ko.html" style="font-weight: 700">제품 정보</a>
+<a href="cutting-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">파이버 레이저 절단기</a>
+<a href="welder-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">레이저 용접기</a>
+<a href="robot-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">협동 용접 로봇</a>
+<a href="stopper-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">압축공기용 세퍼레이터</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+<a href="contact-ko.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">문의하기</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+<main>
+<nav aria-label="현재 위치" class="wrap" style="padding-top: clamp(17px, 2.33vw, 28px); padding-bottom: 8px">
+<a class="lk" href="products-ko.html" style="display: inline-block; padding: 10px 0">‹ 제품 목록으로 돌아가기</a>
+</nav>
+<section class="sec" id="robot">
+<div class="wrap">
+<div class="split" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4.67vw, 56px); align-items: center">
+<div>
+<p class="eye">협동 로봇 용접·절단 솔루션</p>
+<h2 class="h2" style="margin-top: 8px">협동 용접 로봇</h2>
+<p class="lead" style="font-size: clamp(15px, 1.5vw, 18px)">사카에글로벌의 용접 전용 프로그램을 사용해 작업자가 토치를 손으로 움직여 용접 경로를 교시합니다. 같은 이음을 반복 용접할 때는 로봇이 등록된 경로를 재현합니다. 작업자는 워크 준비와 마무리 확인에 집중할 수 있습니다.</p>
+<p class="mut" style="margin: 16px 0 0; font-size: 15px">정반·대차형 외에 큰 워크에는 주행축을 조합한 구성이 있습니다. 로봇 암에는 Rainbow Robotics의 RB 시리즈를 채용했습니다.</p>
+</div>
+<figure style="margin: 0">
+<img src="assets/c568bca1db108f67d42ba7ccfbf8f8fa.webp" alt="용접 테이블 위의 워크를 향해 토치를 움직이는 협동 로봇" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px">
+<figcaption class="mut" style="font-size: 13px; margin-top: 12px">협동 로봇을 이용한 용접</figcaption>
+</figure>
+</div>
+<dl class="dl" style="margin-top: clamp(24px, 4vw, 48px)">
+
+<div><dt>RB20-1900 암 단품의 가반 질량·리치</dt><dd style="font-weight: 600">20 kg / 1,900 mm</dd></div>
+
+<div><dt>교시 방법</dt><dd style="font-weight: 600">다이렉트 티칭</dd></div>
+
+<div><dt>용접 동작 예</dt><dd style="font-weight: 600">직선·원호·위빙</dd></div>
+
+<div><dt>대형 워크용 구성</dt><dd style="font-weight: 600">갠트리·주행형</dd></div>
+
+</dl>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">로봇을 다뤄 본 적이 없는 분도 바로 사용할 수 있습니다</h3>
+<p class="mut" style="margin: 8px 0 0; font-size: 16px">어려운 조작은 필요 없습니다. 직선 1회 용접이라면 약 30초에 설정할 수 있습니다.</p>
+<ol class="g4" style="list-style: none; margin: clamp(16px, 2vw, 24px) 0 0; padding: 0">
+
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">1</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">용접 조건을 아이콘으로 선택</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">화면의 아이콘에서 용접 조건을 선택합니다.</p></li>
+
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">2</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">작업 위치로 이동</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">일본어 음성 안내에 따라 로봇을 손으로 움직입니다.</p></li>
+
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">3</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">동작 확인</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">용접 전에 등록한 움직임을 확인합니다.</p></li>
+
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">4</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">용접 시작</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">버튼을 누르면 등록한 경로로 용접합니다.</p></li>
+
+</ol>
+<div class="g2" style="margin-top: 16px">
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">선택할 수 있는 용접 방법</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">직선 용접, 곡선 용접, 스폿, 위빙. 협동 로봇을 손으로 움직이기만 하는 간단한 티칭으로 등록할 수 있습니다.</p></div>
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">작업 저장·불러오기</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">작성한 프로그램은 USB·서버·PC 등 외부에 저장할 수 있습니다. 반복 작업은 불러오기만 하면 됩니다.</p></div>
+</div>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">기종·시스템 구성</h3>
+<div class="g4" style="margin-top: clamp(16px, 2vw, 24px)">
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/d8ba7ac305ac453b0c0bad9823efbf20.webp" alt="독립 이동형(대차)" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">독립 이동형(대차)</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">용접기·가스 등 필요한 기자재를 대차에 싣고, 전원만 켜면 어디서든 용접</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/1940102c67df8ebb8653f3eae7c251c9.webp" alt="고정 설치형" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">고정 설치형</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">평소 쓰시는 용접 지그에 설치해 그대로 사용</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/452587a66d183c7b916710d3ef996b98.webp" alt="정반 설치형" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">정반 설치형</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">용접 정반 위에 협동 로봇을 설치</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/b87dddcdbf57b2e02be0ee6080c36957.webp" alt="이동형(포터블)" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">이동형(포터블)</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">로봇 중량 약 15 kg. 좁은 공간이나 설치가 어려운 현장에도 운반 가능</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/135da41385a20a3aa72ee7ff85745b91.webp" alt="호이스트 이동형" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">호이스트 이동형</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">크레인·호이스트로 작업 위치로 이동</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/0991b5fe1ccd5e382ff0a3496a40ce1d.webp" alt="파이프·플랜지 용접형" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">파이프·플랜지 용접형</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">관과 플랜지의 원주를 용접</span></figcaption>
+</figure>
+
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="assets/dd3e36b671c1f11d8ae236efabea53e1.webp" alt="갠트리·주행형" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">갠트리·주행형</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">X·Y·Z축 동기 주행으로 넓은 범위의 대형 용접물에 대응</span></figcaption>
+</figure>
+
+</div>
+<div class="card g scroll" style="margin-top: 16px">
+<h3 class="h3">조합할 수 있는 용접기·절단기</h3>
+<table class="tb" style="min-width: 640px; margin-top: 8px">
+<thead><tr><th scope="col">용도</th><th scope="col">기기 메이커</th><th scope="col">출력</th><th scope="col">기능</th><th scope="col">기종명</th></tr></thead>
+<tbody>
+
+<tr><th scope="row">공랭 아크 용접</th><td>ESAB</td><td>400 A</td><td>MMA / GMAW / DPT</td><td>Transmig 400 i</td></tr>
+
+<tr><th scope="row">공랭·수랭 아크 용접</th><td>ESAB</td><td>500 A</td><td>CO2, MIG, MAG, Pulse</td><td>Transmig 500P</td></tr>
+
+<tr><th scope="row">공랭 아크 용접</th><td>DAIHEN</td><td>350 A</td><td>CO2, MIG, MAG</td><td>WB-M350Ⅱ</td></tr>
+
+<tr><th scope="row">공랭·수랭 아크 용접</th><td>DAIHEN</td><td>500 A</td><td>CO2, MIG, MAG</td><td>WB-M500Ⅱ</td></tr>
+
+<tr><th scope="row">공랭 아크 용접</th><td>HYOSUNG</td><td>350 A / 500 A</td><td>CO2, MIG, MAG</td><td>PFC 350R / PFC 500R</td></tr>
+
+<tr><th scope="row">수랭 아크 용접</th><td>Fronius</td><td>400 A / 600 A</td><td>CMT / Pushpull</td><td>TPSi 400 CMT / TPSi 600 CMT</td></tr>
+
+<tr><th scope="row">수랭 레이저 용접</th><td>ASEA</td><td>1.5 / 2 / 3 kW</td><td>레이저 용접, 클리닝</td><td>ASEA-1500W / 2000W / 3000W</td></tr>
+
+<tr><th scope="row">플라즈마 절단</th><td>THERMACUT</td><td>45 / 85 / 105 A</td><td>절단</td><td>EX-TRAFIRE 45HD / 85HD / 105HD</td></tr>
+
+<tr><th scope="row">플라즈마 절단</th><td>HYPERTHERM</td><td>170 / 300 A</td><td>절단</td><td>XPR 170 / XPR 300</td></tr>
+
+</tbody>
+</table>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">설치 타입은 이동 대차형(JWS), 고정 설치형(JWF), 정반 설치형(JWT), 이동형(JWP·로봇 중량 약 15 kg), 갠트리·주행형(JWG) 중에서 선택할 수 있습니다. 갠트리·주행형의 주행축은 X축 3·5·10 m, Y축 5~30 m, Z축 1·3 m의 조합에 대응합니다. 특주 사양도 상담해 주십시오.</p>
+</div>
+<div class="card g scroll" style="margin-top: 16px">
+<h3 class="h3">로봇 사양(RB 시리즈)</h3>
+<p class="mut" style="margin: 6px 0 0; font-size: 15px">IP66 등급의 방진·방수 성능과 작업자의 안전을 확보하는 PFL 기능을 갖추고 있습니다.</p>
+<table class="tb" style="min-width: 640px; margin-top: 8px">
+<thead><tr><th scope="col">기종</th><th scope="col">적재 중량</th><th scope="col">리치</th><th scope="col">반복 정밀도</th><th scope="col">설치 면적</th><th scope="col">중량</th></tr></thead>
+<tbody>
+
+<tr><th scope="row">RB3-730</th><td>3 kg</td><td>730 mm</td><td>±0.05 mm</td><td>Ø128 mm</td><td>11.0 kg</td></tr>
+
+<tr><th scope="row">RB5-850</th><td>5 kg</td><td>850 mm</td><td>±0.05 mm</td><td>Ø173 mm</td><td>22.0 kg</td></tr>
+
+<tr><th scope="row">RB3-1200</th><td>3 kg</td><td>1,200 mm</td><td>±0.05 mm</td><td>Ø173 mm</td><td>22.4 kg</td></tr>
+
+<tr><th scope="row">RB10-1300</th><td>10 kg</td><td>1,300 mm</td><td>±0.05 mm</td><td>Ø196 mm</td><td>37.1 kg</td></tr>
+
+<tr><th scope="row">RB20-1900</th><td>20 kg</td><td>1,900 mm</td><td>—</td><td>—</td><td>—</td></tr>
+
+</tbody>
+</table>
+</div>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">옵션</h3>
+<div class="g3" style="margin-top: clamp(16px, 2vw, 24px)">
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">포지셔너</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">워크를 회전·경사시켜 용접하기 쉬운 자세로 유지합니다.</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">툴 체인저(수동·자동)</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">나사 체결 없이 간단하고 빠르게 공구를 교환할 수 있습니다. 가볍고 장시간 가동에도 대응합니다.</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">OLP(오프라인 프로그래밍)</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">소프트웨어 'OCTOPUS'. 시뮬레이션으로 프로세스를 검증하고 충돌·오작동을 자동으로 검사합니다.</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">3D 비전 센서</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">Photoneo 제품. 포인트 클라우드를 활용한 3차원 스캔으로 높은 정밀도와 넓은 인식 범위를 갖추고 있습니다.</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">용접선 자동 검출 센서</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">SCANSONIC 제품 TH6D. 레이저 센서로 용접선을 검출하며 고반사 소재에도 적용할 수 있습니다.</p></div>
+
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">플라즈마·레이저 적용</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">갠트리·주행형은 플라즈마 절단이나 레이저 용접과의 조합에도 대응합니다.</p></div>
+
+</div>
+<p class="mut" style="margin: 20px 0 0; font-size: 14px">로봇 단품 또는 CO₂ 용접기와의 조합도 선택할 수 있습니다. 선정 시에는 워크 치수, 이음 형상과 기존 지그·전원을 알려 주십시오.</p>
+<div class="row" style="margin-top: 20px"><a class="pill" href="contact-ko.html">테스트 가공·데모</a><a class="lk" href="https://www.youtube.com/@SAKAEGLOBAL">제품 동영상(YouTube) ›</a></div>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">제품 정보</strong>
+<a href="cutting-ko.html">파이버 레이저 절단기</a>
+<a href="welder-ko.html">레이저 용접기</a>
+<a href="robot-ko.html">협동 용접 로봇</a>
+<a href="stopper-ko.html">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html">압축공기용 세퍼레이터</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">상담</strong>
+<a href="contact-ko.html">견적·주문</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="contact-ko.html">테스트 가공·데모</a>
+<a href="contact-ko.html">카탈로그 요청</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">회사 정보</strong>
+<a href="company-ko.html">기업 안내</a>
+<a href="news-ko.html">공지사항</a>
+<a href="company-ko.html#careers">채용 정보</a>
+<a href="company-ko.html#privacy">개인정보 보호방침</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">공식 YouTube 채널</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 사카에글로벌 주식회사</div>
+</div>
+</footer>
+</div>
+</div>
+<template id="tpl">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-ko.html" aria-label="SAKAE GLOBAL 홈" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="메인 메뉴" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-ko.html" style="font-weight: 700">제품 정보</a><div class="sub"><div><a href="cutting-ko.html">파이버 레이저 절단기</a><a href="welder-ko.html">레이저 용접기</a><a href="robot-ko.html">협동 용접 로봇</a><a href="stopper-ko.html">충격 흡수형 카스토퍼</a><a href="separator-ko.html">압축공기용 세퍼레이터</a></div></div></div>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="robot.html" style="color: inherit; text-decoration: none">日本語</a> · <strong style="color: #1D1D1F">한국어</strong> · <a href="robot-en.html" style="color: inherit; text-decoration: none">EN</a> · <a href="robot-zh.html" style="color: inherit; text-decoration: none">中文</a></span>
+<details class="mlang">
+<summary aria-label="언어 선택"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">한국어</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="robot.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</span>
+<a href="robot-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<a href="robot-zh.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</a>
+</div>
+</details>
+<a class="pill hpill" href="contact-ko.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">문의하기</a>
+<details class="mnav">
+<summary aria-label="메뉴 열기"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-ko.html" style="font-weight: 700">제품 정보</a>
+<a href="cutting-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">파이버 레이저 절단기</a>
+<a href="welder-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">레이저 용접기</a>
+<a href="robot-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">협동 용접 로봇</a>
+<a href="stopper-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">압축공기용 세퍼레이터</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="company-ko.html">회사 정보</a>
+<a href="news-ko.html">공지사항</a>
+<a href="contact-ko.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">문의하기</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+<main>
+<nav aria-label="현재 위치" class="wrap" style="padding-top: clamp(17px, 2.33vw, 28px); padding-bottom: 8px">
+<a class="lk" href="products-ko.html" style="display: inline-block; padding: 10px 0">‹ 제품 목록으로 돌아가기</a>
+</nav>
+<section class="sec" id="robot">
+<div class="wrap">
+<div class="split" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4.67vw, 56px); align-items: center">
+<div>
+<p class="eye">협동 로봇 용접·절단 솔루션</p>
+<h2 class="h2" style="margin-top: 8px">협동 용접 로봇</h2>
+<p class="lead" style="font-size: clamp(15px, 1.5vw, 18px)">사카에글로벌의 용접 전용 프로그램을 사용해 작업자가 토치를 손으로 움직여 용접 경로를 교시합니다. 같은 이음을 반복 용접할 때는 로봇이 등록된 경로를 재현합니다. 작업자는 워크 준비와 마무리 확인에 집중할 수 있습니다.</p>
+<p class="mut" style="margin: 16px 0 0; font-size: 15px">정반·대차형 외에 큰 워크에는 주행축을 조합한 구성이 있습니다. 로봇 암에는 Rainbow Robotics의 RB 시리즈를 채용했습니다.</p>
+</div>
+<figure style="margin: 0">
+<img src="assets/c568bca1db108f67d42ba7ccfbf8f8fa.webp" alt="용접 테이블 위의 워크를 향해 토치를 움직이는 협동 로봇" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px">
+<figcaption class="mut" style="font-size: 13px; margin-top: 12px">협동 로봇을 이용한 용접</figcaption>
+</figure>
+</div>
+<dl class="dl" style="margin-top: clamp(24px, 4vw, 48px)">
+<template data-for="robotSpecs" data-as="p">
+<div><dt>{{p.k}}</dt><dd style="font-weight: 600">{{p.v}}</dd></div>
+</template>
+</dl>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">로봇을 다뤄 본 적이 없는 분도 바로 사용할 수 있습니다</h3>
+<p class="mut" style="margin: 8px 0 0; font-size: 16px">어려운 조작은 필요 없습니다. 직선 1회 용접이라면 약 30초에 설정할 수 있습니다.</p>
+<ol class="g4" style="list-style: none; margin: clamp(16px, 2vw, 24px) 0 0; padding: 0">
+<template data-for="robotSteps" data-as="s">
+<li class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><span class="eye" style="font-size: clamp(21px, 2.17vw, 26px); font-weight: 700">{{s.no}}</span><h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">{{s.t}}</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">{{s.d}}</p></li>
+</template>
+</ol>
+<div class="g2" style="margin-top: 16px">
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">선택할 수 있는 용접 방법</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">직선 용접, 곡선 용접, 스폿, 위빙. 협동 로봇을 손으로 움직이기만 하는 간단한 티칭으로 등록할 수 있습니다.</p></div>
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">작업 저장·불러오기</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">작성한 프로그램은 USB·서버·PC 등 외부에 저장할 수 있습니다. 반복 작업은 불러오기만 하면 됩니다.</p></div>
+</div>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">기종·시스템 구성</h3>
+<div class="g4" style="margin-top: clamp(16px, 2vw, 24px)">
+<template data-for="robots" data-as="r">
+<figure class="card g" style="margin: 0; padding: 20px">
+<div style="height: 190px; background: #FFFFFF; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box"><img src="{{r.img}}" alt="{{r.name}}" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+<figcaption style="margin-top: 14px"><strong style="font-size: 16px">{{r.name}}</strong><span class="mut" style="display: block; font-size: 14px; margin-top: 2px">{{r.use}}</span></figcaption>
+</figure>
+</template>
+</div>
+<div class="card g scroll" style="margin-top: 16px">
+<h3 class="h3">조합할 수 있는 용접기·절단기</h3>
+<table class="tb" style="min-width: 640px; margin-top: 8px">
+<thead><tr><th scope="col">용도</th><th scope="col">기기 메이커</th><th scope="col">출력</th><th scope="col">기능</th><th scope="col">기종명</th></tr></thead>
+<tbody>
+<template data-for="robotEquip" data-as="r">
+<tr><th scope="row">{{r.u}}</th><td>{{r.m}}</td><td>{{r.o}}</td><td>{{r.f}}</td><td>{{r.n}}</td></tr>
+</template>
+</tbody>
+</table>
+<p class="mut" style="margin: 16px 0 0; font-size: 14px">설치 타입은 이동 대차형(JWS), 고정 설치형(JWF), 정반 설치형(JWT), 이동형(JWP·로봇 중량 약 15 kg), 갠트리·주행형(JWG) 중에서 선택할 수 있습니다. 갠트리·주행형의 주행축은 X축 3·5·10 m, Y축 5~30 m, Z축 1·3 m의 조합에 대응합니다. 특주 사양도 상담해 주십시오.</p>
+</div>
+<div class="card g scroll" style="margin-top: 16px">
+<h3 class="h3">로봇 사양(RB 시리즈)</h3>
+<p class="mut" style="margin: 6px 0 0; font-size: 15px">IP66 등급의 방진·방수 성능과 작업자의 안전을 확보하는 PFL 기능을 갖추고 있습니다.</p>
+<table class="tb" style="min-width: 640px; margin-top: 8px">
+<thead><tr><th scope="col">기종</th><th scope="col">적재 중량</th><th scope="col">리치</th><th scope="col">반복 정밀도</th><th scope="col">설치 면적</th><th scope="col">중량</th></tr></thead>
+<tbody>
+<template data-for="robotArms" data-as="r">
+<tr><th scope="row">{{r.m}}</th><td>{{r.p}}</td><td>{{r.r}}</td><td>{{r.a}}</td><td>{{r.f}}</td><td>{{r.w}}</td></tr>
+</template>
+</tbody>
+</table>
+</div>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: clamp(32px, 5.33vw, 64px)">옵션</h3>
+<div class="g3" style="margin-top: clamp(16px, 2vw, 24px)">
+<template data-for="robotOptions" data-as="o">
+<div class="card g" style="padding: clamp(17px, 2.33vw, 28px)"><h4 style="margin: 0; font-size: clamp(16px, 1.58vw, 19px); font-weight: 700">{{o.t}}</h4><p class="mut" style="margin: 8px 0 0; font-size: 15px">{{o.d}}</p></div>
+</template>
+</div>
+<p class="mut" style="margin: 20px 0 0; font-size: 14px">로봇 단품 또는 CO₂ 용접기와의 조합도 선택할 수 있습니다. 선정 시에는 워크 치수, 이음 형상과 기존 지그·전원을 알려 주십시오.</p>
+<div class="row" style="margin-top: 20px"><a class="pill" href="contact-ko.html">테스트 가공·데모</a><a class="lk" href="https://www.youtube.com/@SAKAEGLOBAL">제품 동영상(YouTube) ›</a></div>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="사카에글로벌 주식회사" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 愛知県名古屋市西区又穂町1丁目71</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">제품 정보</strong>
+<a href="cutting-ko.html">파이버 레이저 절단기</a>
+<a href="welder-ko.html">레이저 용접기</a>
+<a href="robot-ko.html">협동 용접 로봇</a>
+<a href="stopper-ko.html">충격 흡수형 카스토퍼</a>
+<a href="separator-ko.html">압축공기용 세퍼레이터</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">상담</strong>
+<a href="contact-ko.html">견적·주문</a>
+<a href="subsidy-ko.html">보조금·도입 지원</a>
+<a href="contact-ko.html">테스트 가공·데모</a>
+<a href="contact-ko.html">카탈로그 요청</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">회사 정보</strong>
+<a href="company-ko.html">기업 안내</a>
+<a href="news-ko.html">공지사항</a>
+<a href="company-ko.html#careers">채용 정보</a>
+<a href="company-ko.html#privacy">개인정보 보호방침</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">공식 YouTube 채널</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© 사카에글로벌 주식회사</div>
+</div>
+</footer>
+</div>
+</template>
+<script src="site.js"></script>
+<script>
+var EXT = {"0991b5fe1ccd5e382ff0a3496a40ce1d": "webp", "135da41385a20a3aa72ee7ff85745b91": "webp", "1940102c67df8ebb8653f3eae7c251c9": "webp", "452587a66d183c7b916710d3ef996b98": "webp", "b87dddcdbf57b2e02be0ee6080c36957": "webp", "d8ba7ac305ac453b0c0bad9823efbf20": "webp", "dd3e36b671c1f11d8ae236efabea53e1": "webp"};
+class Component extends DCLogic {
+  renderVals() {
+    if (!this._oc) {
+      this._oc = true;
+      try {
+        document.addEventListener('click', (e) => {
+          const path = e.composedPath ? e.composedPath() : [e.target];
+          const root = path[0] && path[0].getRootNode ? path[0].getRootNode() : document;
+          const close = (r) => { try { r.querySelectorAll('details.mlang[open], details.mnav[open]').forEach((d) => { if (path.indexOf(d) < 0) d.removeAttribute('open'); }); } catch (x) {} };
+          close(root); if (root !== document) close(document);
+        }, true);
+      } catch (x) {}
+    }
+
+    const B = (id) => 'assets/' + id + '.' + (EXT[id] || 'webp');
+    const S = (pairs) => pairs.map((p) => ({ k: p[0], v: p[1] }));
+    return {
+      robotSpecs: S([
+        ['RB20-1900 암 단품의 가반 질량·리치', '20 kg / 1,900 mm'],
+        ['교시 방법', '다이렉트 티칭'],
+        ['용접 동작 예', '직선·원호·위빙'],
+        ['대형 워크용 구성', '갠트리·주행형']
+      ]),
+      robotSteps: [
+        { no: '1', t: '용접 조건을 아이콘으로 선택', d: '화면의 아이콘에서 용접 조건을 선택합니다.' },
+        { no: '2', t: '작업 위치로 이동', d: '일본어 음성 안내에 따라 로봇을 손으로 움직입니다.' },
+        { no: '3', t: '동작 확인', d: '용접 전에 등록한 움직임을 확인합니다.' },
+        { no: '4', t: '용접 시작', d: '버튼을 누르면 등록한 경로로 용접합니다.' }
+      ],
+      robotEquip: [
+        ['공랭 아크 용접', 'ESAB', '400 A', 'MMA / GMAW / DPT', 'Transmig 400 i'],
+        ['공랭·수랭 아크 용접', 'ESAB', '500 A', 'CO2, MIG, MAG, Pulse', 'Transmig 500P'],
+        ['공랭 아크 용접', 'DAIHEN', '350 A', 'CO2, MIG, MAG', 'WB-M350Ⅱ'],
+        ['공랭·수랭 아크 용접', 'DAIHEN', '500 A', 'CO2, MIG, MAG', 'WB-M500Ⅱ'],
+        ['공랭 아크 용접', 'HYOSUNG', '350 A / 500 A', 'CO2, MIG, MAG', 'PFC 350R / PFC 500R'],
+        ['수랭 아크 용접', 'Fronius', '400 A / 600 A', 'CMT / Pushpull', 'TPSi 400 CMT / TPSi 600 CMT'],
+        ['수랭 레이저 용접', 'ASEA', '1.5 / 2 / 3 kW', '레이저 용접, 클리닝', 'ASEA-1500W / 2000W / 3000W'],
+        ['플라즈마 절단', 'THERMACUT', '45 / 85 / 105 A', '절단', 'EX-TRAFIRE 45HD / 85HD / 105HD'],
+        ['플라즈마 절단', 'HYPERTHERM', '170 / 300 A', '절단', 'XPR 170 / XPR 300']
+      ].map((r) => ({ u: r[0], m: r[1], o: r[2], f: r[3], n: r[4] })),
+      robotArms: [
+        ['RB3-730', '3 kg', '730 mm', '±0.05 mm', 'Ø128 mm', '11.0 kg'],
+        ['RB5-850', '5 kg', '850 mm', '±0.05 mm', 'Ø173 mm', '22.0 kg'],
+        ['RB3-1200', '3 kg', '1,200 mm', '±0.05 mm', 'Ø173 mm', '22.4 kg'],
+        ['RB10-1300', '10 kg', '1,300 mm', '±0.05 mm', 'Ø196 mm', '37.1 kg'],
+        ['RB20-1900', '20 kg', '1,900 mm', '—', '—', '—']
+      ].map((r) => ({ m: r[0], p: r[1], r: r[2], a: r[3], f: r[4], w: r[5] })),
+      robotOptions: [
+        { t: '포지셔너', d: '워크를 회전·경사시켜 용접하기 쉬운 자세로 유지합니다.' },
+        { t: '툴 체인저(수동·자동)', d: '나사 체결 없이 간단하고 빠르게 공구를 교환할 수 있습니다. 가볍고 장시간 가동에도 대응합니다.' },
+        { t: 'OLP(오프라인 프로그래밍)', d: '소프트웨어 \'OCTOPUS\'. 시뮬레이션으로 프로세스를 검증하고 충돌·오작동을 자동으로 검사합니다.' },
+        { t: '3D 비전 센서', d: 'Photoneo 제품. 포인트 클라우드를 활용한 3차원 스캔으로 높은 정밀도와 넓은 인식 범위를 갖추고 있습니다.' },
+        { t: '용접선 자동 검출 센서', d: 'SCANSONIC 제품 TH6D. 레이저 센서로 용접선을 검출하며 고반사 소재에도 적용할 수 있습니다.' },
+        { t: '플라즈마·레이저 적용', d: '갠트리·주행형은 플라즈마 절단이나 레이저 용접과의 조합에도 대응합니다.' }
+      ],
+      robots: [
+        { img: B('d8ba7ac305ac453b0c0bad9823efbf20'), name: '독립 이동형(대차)', use: '용접기·가스 등 필요한 기자재를 대차에 싣고, 전원만 켜면 어디서든 용접' },
+        { img: B('1940102c67df8ebb8653f3eae7c251c9'), name: '고정 설치형', use: '평소 쓰시는 용접 지그에 설치해 그대로 사용' },
+        { img: B('452587a66d183c7b916710d3ef996b98'), name: '정반 설치형', use: '용접 정반 위에 협동 로봇을 설치' },
+        { img: B('b87dddcdbf57b2e02be0ee6080c36957'), name: '이동형(포터블)', use: '로봇 중량 약 15 kg. 좁은 공간이나 설치가 어려운 현장에도 운반 가능' },
+        { img: B('135da41385a20a3aa72ee7ff85745b91'), name: '호이스트 이동형', use: '크레인·호이스트로 작업 위치로 이동' },
+        { img: B('0991b5fe1ccd5e382ff0a3496a40ce1d'), name: '파이프·플랜지 용접형', use: '관과 플랜지의 원주를 용접' },
+        { img: B('dd3e36b671c1f11d8ae236efabea53e1'), name: '갠트리·주행형', use: 'X·Y·Z축 동기 주행으로 넓은 범위의 대형 용접물에 대응' }
+      ]
+    };
+
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

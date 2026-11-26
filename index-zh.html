@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAKAE GLOBAL 株式会社 官方网站</title>
+<meta name="description" content="从板材、管材激光切割机，到激光焊接机、协作焊接机器人。SAKAE GLOBAL 根据加工内容，从机型选定到导入全程协助。">
+<link rel="icon" href="assets/117c52be5ecb1ebafe997be82697934e.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5CAD}a:hover{color:#083F78}
+.pg{font-family:'Inter','Noto Sans SC','Noto Sans JP',system-ui,sans-serif;color:#1D1D1F;background:#FFFFFF;line-height:1.65;-webkit-font-smoothing:antialiased}
+.pg{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+.pg h1,.pg h2,.pg h3,.pg h4,.pg summary,.pg figcaption,.pg .lead,.pg th{text-wrap:balance}
+.pg p,.pg li,.pg dd,.pg td{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px, 2vw, 24px)}
+.sec{padding:clamp(56px, 9.33vw, 112px) 0}
+.pale{background:#F5F5F7}
+.dark{background:#0B1320;color:#F5F5F7}
+.eye{font-size:15px;font-weight:600;color:#0B5CAD;letter-spacing:.04em;margin:0}
+.dark .eye{color:#8CC4FF}
+.h1{margin:10px 0 0;font-size: clamp(40px, 6vw, 72px);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.h2{margin:0;font-size: clamp(26px, 3.83vw, 46px);line-height:1.2;font-weight:700}
+.h3{margin:0;font-size: clamp(18px, 1.83vw, 22px);line-height:1.35;font-weight:700}
+.lead{margin:18px 0 0;font-size: clamp(16px, 1.67vw, 20px);line-height:1.6;color:#5F5F64}
+.dark .lead,.dark .mut{color:#C4CAD4}
+.mut{color:#5F5F64}
+.c{text-align:center}
+.c .lead{margin-left:auto;margin-right:auto;max-width:720px}
+.pill{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:500;border:0;cursor:pointer;font-family:inherit}
+.pill:hover{background:#083F78;color:#FFFFFF}
+.ghost{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;border:1px solid #0B5CAD;color:#0B5CAD;text-decoration:none;font-size:16px;font-weight:500;background:transparent}
+.ghost:hover{background:#0B5CAD;color:#FFFFFF}
+.lk{text-decoration:none;font-size:16px}.lk:hover{text-decoration:underline}
+.dark a.lk{color:#8CC4FF}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:#FFFFFF;border-radius:22px;padding:clamp(20px, 2.67vw, 32px);color:#1D1D1F;text-decoration:none;display:block}
+.pale .card{background:#FFFFFF}
+.card.g{background:#F5F5F7}
+.dark .card{background:#162235;color:#F5F5F7}
+a.card:hover{color:#1D1D1F;background:#E6EEF8;box-shadow:0 16px 44px rgba(11,40,80,.16)}
+.dark a.card:hover{color:#FFFFFF;background:#22395A;box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.pill,.ghost,.chip,.card,.lk,.nav a,.topic,.foot a,.tb tbody tr,details summary{transition:background-color .2s,color .2s,border-color .2s,box-shadow .25s}
+.card img,.slide img{transition:transform .5s}
+a.card:hover img{transform:scale(1.04)}
+.chip:hover{background:#0B5CAD !important;color:#FFFFFF !important;border-color:#0B5CAD !important}
+.chip.dng:hover{background:#B3261E !important;border-color:#B3261E !important}
+.topic{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2vw, 24px);border-radius:999px;border:1px solid #5C6B80;color:#FFFFFF;text-decoration:none;font-size:16px}
+.topic:hover{background:#FFFFFF;color:#0B1320;border-color:#FFFFFF}
+.lk:hover{color:#083F78}
+.dark a.lk:hover{color:#FFFFFF}
+.tb tbody tr:hover{background:#EEF5FC}
+.dark .tb tbody tr:hover{background:#22395A}
+details summary:hover{color:#0B5CAD}
+.slide:hover .more{background:#083F78}
+.show{display:none}
+.stage{position:relative}
+.slide{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px, 4vw, 48px);align-items:center;text-decoration:none;color:#1D1D1F;background:#F5F5F7;border-radius:28px;padding:clamp(28px, 4.67vw, 56px) clamp(32px, 5.33vw, 64px);box-sizing:border-box}
+.slide:hover{color:#1D1D1F}
+.more{display:inline-flex;align-items:center;min-height:48px;padding:0 clamp(16px, 2.17vw, 26px);border-radius:999px;background:#0B5CAD;color:#FFFFFF;font-size:16px;font-weight:500;margin-top:clamp(17px, 2.33vw, 28px)}
+@keyframes rise{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scale(.88);border-radius:48px}to{transform:none}}
+@keyframes k1{0%{opacity:1;visibility:visible;transform:none}13%{opacity:1;visibility:visible;transform:none}17.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}17.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k2{0%,17.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}17.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}22%{opacity:1;visibility:visible;transform:none}33%{opacity:1;visibility:visible;transform:none}37.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}37.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k3{0%,37.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}37.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}42%{opacity:1;visibility:visible;transform:none}53%{opacity:1;visibility:visible;transform:none}57.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}57.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k4{0%,57.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}57.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}62%{opacity:1;visibility:visible;transform:none}73%{opacity:1;visibility:visible;transform:none}77.4%{opacity:0;visibility:visible;transform:translateY(-60px) scale(.95)}77.5%,100%{opacity:0;visibility:hidden;transform:translateY(-60px) scale(.95)}}
+@keyframes k5{0%,77.5%{opacity:0;visibility:hidden;transform:translateY(80px) scale(.95)}77.6%{opacity:0;visibility:visible;transform:translateY(80px) scale(.95)}82%{opacity:1;visibility:visible;transform:none}100%{opacity:1;visibility:visible;transform:none}}
+@keyframes kimg{from{transform:translateX(60px) rotate(2deg)}to{transform:translateX(-60px) rotate(-2deg)}}
+@keyframes kbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-height:1600px) and (min-width:901px) and (prefers-reduced-motion:no-preference){
+@supports (animation-timeline: view()){
+ .card,figure,.h2,.tb{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+ .growin{animation:grow linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+ .tiles{display:none}
+ .show{display:block;height:3400px;view-timeline-name:--show;view-timeline-axis:block}
+ .stage{position:sticky;top:92px;height:620px}
+ .stage .slide{position:absolute;inset:0;z-index:1;animation-timeline:--show;animation-range:contain 0% contain 100%;animation-timing-function:linear;animation-fill-mode:both}
+ .sl1{animation-name:k1}.sl2{animation-name:k2}.sl3{animation-name:k3}.sl4{animation-name:k4}.sl5{animation-name:k5}
+ .stage .slide img{animation:kimg linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .bar{animation:kbar linear both;animation-timeline:--show;animation-range:contain 0% contain 100%}
+ .stage figure,.stage .card,.stage .h2{animation:none}
+}}
+.ph{display:block;width:100%;object-fit:contain}
+.nav a{color:#1D1D1F;text-decoration:none}.nav a:hover{color:#0B5CAD}
+.foot a{color:#424245;text-decoration:none}.foot a:hover{text-decoration:underline}
+.chip{font:inherit;font-size:15px;font-weight:500;min-height:44px;padding:0 20px;border-radius:999px;cursor:pointer}
+.dl{margin:0;border-top:1px solid #D2D2D7}
+.dl>div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid #D2D2D7}
+.dl dt{color:#5F5F64}.dl dd{margin:0}
+.tb{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
+.tb th,.tb td{padding:14px 10px;border-bottom:1px solid #E3E3E8;vertical-align:top}
+.tb thead th{color:#5F5F64;font-weight:500;border-bottom:1px solid #C7C7CC}
+.scroll{overflow-x:auto}
+.spec th,.spec td{text-align:center;padding:16px 12px}
+.spec thead th{background:#F5F5F7;border-bottom:0;padding:20px 12px;color:#1D1D1F;font-weight:700;font-size: clamp(16px, 1.67vw, 20px)}
+.spec tbody th{text-align:left;padding-left:clamp(22px, 3vw, 36px);white-space:nowrap;font-weight:500;color:#5F5F64}
+.spec tbody tr:nth-child(odd){background:#F7F9FC}
+.spec tbody tr:first-child td{font-size: clamp(16px, 1.67vw, 20px);font-weight:700;color:#0B5CAD}
+.spec td:nth-child(5),.spec th:nth-child(5){border-left:2px solid #C7C7CC}
+.spec .tg{display:block;width:fit-content;margin:0 auto 8px;font-size:12px;font-weight:700;color:#FFFFFF;border-radius:999px;padding:3px 14px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
+.fld{font:inherit;font-size:16px;width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;border:1px solid #86868B;border-radius:12px;background:#FFFFFF;color:#1D1D1F}
+.fld:focus,.chip:focus-visible,.pill:focus-visible{outline:2px solid #0B5CAD;outline-offset:2px}
+.lab{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.hasdrop{position:relative;display:flex;align-items:center;height:76px}
+.sub{display:none;position:absolute;top:100%;left:-18px;z-index:20}
+.sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
+.sub a:hover{background:#F5F5F7}
+.hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
+.mnav,.mlang{display:none;position:relative}
+.mlang{display:block}
+.langtxt{display:none !important}
+.nhead:hover span{color:#0B5CAD}
+.mnav summary,.mlang summary{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;height:44px;padding:0 8px;border-radius:12px;box-sizing:border-box}
+.mnav summary:hover,.mlang summary:hover,.mnav[open] summary,.mlang[open] summary{background:#EDEDF0}
+.drop{position:absolute;right:0;top:54px;z-index:20;display:flex;flex-direction:column;min-width:230px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+.drop a,.drop>span{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border-radius:10px;color:#1D1D1F;text-decoration:none;font-size:16px;box-sizing:border-box}
+.drop a:hover{background:#F5F5F7}
+.drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
+@media (max-width:900px){
+ .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
+ .nav{display:none !important}
+
+ .dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .split{grid-template-columns:minmax(0,1fr) !important}
+}
+@media (min-width:901px) and (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body style="margin: 0">
+<div id="app">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-zh.html" aria-label="SAKAE GLOBAL 首页" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="主菜单" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-zh.html">产品信息</a><div class="sub"><div><a href="cutting-zh.html">光纤激光切割机</a><a href="welder-zh.html">激光焊接机</a><a href="robot-zh.html">协作焊接机器人</a><a href="stopper-zh.html">缓冲型车轮挡</a><a href="separator-zh.html">压缩空气用分离器</a></div></div></div>
+<a href="subsidy-zh.html">补助金、导入支持</a>
+<a href="company-zh.html">公司信息</a>
+<a href="news-zh.html">最新消息</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="index.html" style="color: inherit; text-decoration: none">日本語</a> · <a href="index-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="index-en.html" style="color: inherit; text-decoration: none">EN</a> · <strong style="color: #1D1D1F">中文</strong></span>
+<details class="mlang">
+<summary aria-label="选择语言"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">中文</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="index.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<a href="index-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="index-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</span>
+</div>
+</details>
+<a class="pill hpill" href="contact-zh.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">联系我们</a>
+<details class="mnav">
+<summary aria-label="打开菜单"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-zh.html">产品信息</a>
+<a href="cutting-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">光纤激光切割机</a>
+<a href="welder-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">激光焊接机</a>
+<a href="robot-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">协作焊接机器人</a>
+<a href="stopper-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">缓冲型车轮挡</a>
+<a href="separator-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">压缩空气用分离器</a>
+<a href="subsidy-zh.html">补助金、导入支持</a>
+<a href="company-zh.html">公司信息</a>
+<a href="news-zh.html">最新消息</a>
+<a href="contact-zh.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">联系我们</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main>
+<section class="c" style="padding: clamp(48px, 8vw, 96px) 0 0">
+<div class="wrap">
+<p class="eye">SAKAE GLOBAL</p>
+<h1 class="h1">切割。连接。<br>自动化。</h1>
+<p class="lead">从​板材、​管材​激光​切割机，​到​激光​焊​接机、​协作焊接机​器人。​SA​KAE ​G​LOBAL ​根据​加工内容，​从​机型​选定​到​导入​全程协助。</p>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px)">
+<a class="pill" href="products-zh.html">查找产品</a>
+<a class="ghost" href="contact-zh.html">导入咨询</a>
+</div>
+<figure style="margin: clamp(28px, 4.67vw, 56px) 0 0">
+<img src="assets/c568bca1db108f67d42ba7ccfbf8f8fa.webp" alt="在焊接工作台上朝工件移动焊枪的协作机器人" class="growin" style="display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; border-radius: 28px">
+<figcaption class="mut" style="font-size: 13px; margin-top: 12px">协作机器人​焊接</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="sec" id="products" aria-label="经营产品">
+<div class="wrap">
+<div class="row" style="justify-content: space-between; align-items: flex-end; margin-bottom: clamp(22px, 3vw, 36px)">
+<div><h2 class="h2">经营产品</h2><p class="lead" style="margin-top: 10px">从​加工​设备​到​停车​设施、​压缩​空气处理​设备，​可按​用​途浏览。</p></div>
+<a class="lk" href="products-zh.html" style="padding: 12px 0">查​看全部​产品 ​›</a>
+</div>
+<div class="tiles">
+<a class="card g" href="cutting-zh.html" style="padding: clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) 0; text-align: center; overflow: hidden">
+<small class="mut" style="font-size: 13px; font-weight: 600">HK LASER</small>
+<h3 class="h2" style="font-size: clamp(26px, 3.33vw, 40px); margin-top: 4px">光纤激光​切割机</h3>
+<p class="mut" style="margin: 10px auto 0; max-width: 720px; font-size: clamp(15px, 1.42vw, 17px)">从​钢板​上​切出​零件​的​平面​加工机，​以及​在​圆管、​方管​上​加工孔​和​轮廓​的​管材​专​用机。</p>
+<span class="lk" style="display: inline-block; margin-top: 12px; color: #0B5CAD">查看​机型​一览 ​›</span>
+<img class="ph" src="assets/79f9ea0bfe022518fa90c34ee33e8e9b.webp" alt="板材用 FL 3015 FIBER 及侧面的材料台" style="max-width: 860px; margin: clamp(17px, 2.33vw, 28px) auto 0">
+</a>
+<div class="g2" style="margin-top: 16px">
+
+<a class="card g" href="welder-zh.html" style="padding: clamp(22px, 3vw, 36px) clamp(22px, 3vw, 36px) clamp(17px, 2.33vw, 28px); text-align: center">
+<small class="mut" style="font-size: 13px; font-weight: 600">HK LASER</small>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: 4px">激光焊接机</h3>
+<p class="mut" style="margin: 6px 0 0; font-size: 16px">可选风冷式、水冷式的光纤激光焊接机</p>
+<div style="height: 240px; margin-top: 20px; background: #FFFFFF; border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+<img src="assets/3833a441fa922e5a23586bec32db14cd.webp" alt="HK HS2000HWM 激光焊接机主机" style="max-width: 100%; max-height: 100%; object-fit: contain">
+</div>
+</a>
+
+<a class="card g" href="robot-zh.html" style="padding: clamp(22px, 3vw, 36px) clamp(22px, 3vw, 36px) clamp(17px, 2.33vw, 28px); text-align: center">
+<small class="mut" style="font-size: 13px; font-weight: 600"></small>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: 4px">协作焊接机器人</h3>
+<p class="mut" style="margin: 6px 0 0; font-size: 16px">用手移动焊枪即可示教焊接路径</p>
+<div style="height: 240px; margin-top: 20px; background: #FFFFFF; border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+<img src="assets/c568bca1db108f67d42ba7ccfbf8f8fa.webp" alt="在焊接工作台上朝工件移动焊枪的协作机器人" style="max-width: 100%; max-height: 100%; object-fit: contain">
+</div>
+</a>
+
+<a class="card g" href="stopper-zh.html" style="padding: clamp(22px, 3vw, 36px) clamp(22px, 3vw, 36px) clamp(17px, 2.33vw, 28px); text-align: center">
+<small class="mut" style="font-size: 13px; font-weight: 600"></small>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: 4px">缓冲型车轮挡</h3>
+<p class="mut" style="margin: 6px 0 0; font-size: 16px">缓和停车时轮胎碰触冲击的车轮挡</p>
+<div style="height: 240px; margin-top: 20px; background: #FFFFFF; border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+<img src="assets/3101c7afdc686666240d270785270676.webp" alt="带黑色滚轮的黄色 CSJ-N-SB 车轮挡" style="max-width: 100%; max-height: 100%; object-fit: contain">
+</div>
+</a>
+
+<a class="card g" href="separator-zh.html" style="padding: clamp(22px, 3vw, 36px) clamp(22px, 3vw, 36px) clamp(17px, 2.33vw, 28px); text-align: center">
+<small class="mut" style="font-size: 13px; font-weight: 600"></small>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: 4px">压缩空气用分离器</h3>
+<p class="mut" style="margin: 6px 0 0; font-size: 16px">免维护（无需更换滤芯）</p>
+<div style="height: 240px; margin-top: 20px; background: #FFFFFF; border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+<img src="assets/dad52e669e99a47cd2400ac90ddcb0bf.webp" alt="TESLLON iA03" style="max-width: 100%; max-height: 100%; object-fit: contain">
+</div>
+</a>
+
+</div>
+</div>
+<div class="show">
+<div class="stage">
+
+<a class="slide sl1" href="cutting-zh.html">
+<div>
+<small class="mut" style="font-size: 15px; font-weight: 600; letter-spacing: .04em">01　HK LASER</small>
+<h3 class="h2" style="font-size: clamp(29px, 4.33vw, 52px); margin-top: 10px">光纤激光切割机</h3>
+<p class="mut" style="margin: 14px 0 0; font-size: clamp(16px, 1.58vw, 19px)">从钢板上切出零件的平面加工机，以及在圆管、方管上加工孔和轮廓的管材专用机。</p>
+<span class="more">了解详情 ›</span>
+</div>
+<div style="height: 440px; background: #FFFFFF; border-radius: 22px; display: flex; align-items: center; justify-content: center; padding: clamp(17px, 2.33vw, 28px); box-sizing: border-box; overflow: hidden"><img src="assets/79f9ea0bfe022518fa90c34ee33e8e9b.webp" alt="板材用 FL 3015 FIBER 及侧面的材料台" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</a>
+
+<a class="slide sl2" href="welder-zh.html">
+<div>
+<small class="mut" style="font-size: 15px; font-weight: 600; letter-spacing: .04em">02　HK LASER</small>
+<h3 class="h2" style="font-size: clamp(29px, 4.33vw, 52px); margin-top: 10px">激光焊接机</h3>
+<p class="mut" style="margin: 14px 0 0; font-size: clamp(16px, 1.58vw, 19px)">可选风冷式、水冷式的光纤激光焊接机。可用于焊接、切割及除锈、除漆膜。</p>
+<span class="more">了解详情 ›</span>
+</div>
+<div style="height: 440px; background: #FFFFFF; border-radius: 22px; display: flex; align-items: center; justify-content: center; padding: clamp(17px, 2.33vw, 28px); box-sizing: border-box; overflow: hidden"><img src="assets/68344d9c1a286534374fed3dce835c01.webp" alt="ASEA 风冷激光焊接机主机" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</a>
+
+<a class="slide sl3" href="robot-zh.html">
+<div>
+<small class="mut" style="font-size: 15px; font-weight: 600; letter-spacing: .04em">03　</small>
+<h3 class="h2" style="font-size: clamp(29px, 4.33vw, 52px); margin-top: 10px">协作焊接机器人</h3>
+<p class="mut" style="margin: 14px 0 0; font-size: clamp(16px, 1.58vw, 19px)">用手移动焊枪即可示教焊接路径。没有接触过机器人的人也能马上使用。</p>
+<span class="more">了解详情 ›</span>
+</div>
+<div style="height: 440px; background: #FFFFFF; border-radius: 22px; display: flex; align-items: center; justify-content: center; padding: clamp(17px, 2.33vw, 28px); box-sizing: border-box; overflow: hidden"><img src="assets/c568bca1db108f67d42ba7ccfbf8f8fa.webp" alt="在焊接工作台上朝工件移动焊枪的协作机器人" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</a>
+
+<a class="slide sl4" href="stopper-zh.html">
+<div>
+<small class="mut" style="font-size: 15px; font-weight: 600; letter-spacing: .04em">04　</small>
+<h3 class="h2" style="font-size: clamp(29px, 4.33vw, 52px); margin-top: 10px">缓冲型车轮挡</h3>
+<p class="mut" style="margin: 14px 0 0; font-size: clamp(16px, 1.58vw, 19px)">吸收并缓和停车时轮胎碰触的冲击，同时保护车辆和车轮挡。</p>
+<span class="more">了解详情 ›</span>
+</div>
+<div style="height: 440px; background: #FFFFFF; border-radius: 22px; display: flex; align-items: center; justify-content: center; padding: clamp(17px, 2.33vw, 28px); box-sizing: border-box; overflow: hidden"><img src="assets/3101c7afdc686666240d270785270676.webp" alt="带黑色滚轮的黄色 CSJ-N-SB 车轮挡" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</a>
+
+<a class="slide sl5" href="separator-zh.html">
+<div>
+<small class="mut" style="font-size: 15px; font-weight: 600; letter-spacing: .04em">05　</small>
+<h3 class="h2" style="font-size: clamp(29px, 4.33vw, 52px); margin-top: 10px">压缩空气用分离器</h3>
+<p class="mut" style="margin: 14px 0 0; font-size: clamp(16px, 1.58vw, 19px)">利用离心力分离压缩空气中的冷凝水。无需更换滤芯的免维护结构。</p>
+<span class="more">了解详情 ›</span>
+</div>
+<div style="height: 440px; background: #FFFFFF; border-radius: 22px; display: flex; align-items: center; justify-content: center; padding: clamp(17px, 2.33vw, 28px); box-sizing: border-box; overflow: hidden"><img src="assets/dad52e669e99a47cd2400ac90ddcb0bf.webp" alt="TESLLON iA03" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</a>
+
+<div aria-hidden="true" style="position: absolute; left: 64px; right: 64px; bottom: 22px; height: 4px; background: #D2D2D7; border-radius: 2px; overflow: hidden"><div class="bar" style="height: 100%; background: #0B5CAD; transform-origin: left center"></div></div>
+</div>
+</div>
+<div class="card g row" style="margin-top: 16px; justify-content: space-between">
+<div><h3 class="h3">其他设备咨询</h3><p class="mut" style="margin: 4px 0 0">有关制造、​生产辅助​设备，​未刊载​的​设备​也​欢迎​垂询。</p></div>
+<a class="ghost" href="contact-zh.html">联系我们</a>
+</div>
+</div>
+</section>
+
+<section class="sec pale">
+<div class="wrap">
+<div class="c"><h2 class="h2">按目的选择。</h2><p class="lead">选择​加工、​搬运条​件后，​将​显示​可选​的​ ​HK ​L​ASER ​机型。</p></div>
+<div class="split" style="display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 16px; margin-top: clamp(25px, 3.33vw, 40px)">
+<div role="group" aria-label="加工、搬运条件" style="display: flex; flex-direction: column; gap: 8px">
+
+<button type="button" class="chip" aria-pressed="" style="text-align: left; border-radius: 14px; padding: 12px 18px; line-height: 1.45; border: 1px solid #0B5CAD; background: #0B5CAD; color: #FFFFFF">小型板材，正面上料</button>
+
+<button type="button" class="chip" style="text-align: left; border-radius: 14px; padding: 12px 18px; line-height: 1.45; border: 1px solid #C7C7CC; background: #FFFFFF; color: #1D1D1F">板材，手动或双层工作台交换</button>
+
+<button type="button" class="chip" style="text-align: left; border-radius: 14px; padding: 12px 18px; line-height: 1.45; border: 1px solid #C7C7CC; background: #FFFFFF; color: #1D1D1F">侧面取放，按搬入动线布置</button>
+
+<button type="button" class="chip" style="text-align: left; border-radius: 14px; padding: 12px 18px; line-height: 1.45; border: 1px solid #C7C7CC; background: #FFFFFF; color: #1D1D1F">定尺板，比较切割速度与工作台规格</button>
+
+<button type="button" class="chip" style="text-align: left; border-radius: 14px; padding: 12px 18px; line-height: 1.45; border: 1px solid #C7C7CC; background: #FFFFFF; color: #1D1D1F">切割零件自动分拣</button>
+
+<button type="button" class="chip" style="text-align: left; border-radius: 14px; padding: 12px 18px; line-height: 1.45; border: 1px solid #C7C7CC; background: #FFFFFF; color: #1D1D1F">长尺钢板</button>
+
+<button type="button" class="chip" style="text-align: left; border-radius: 14px; padding: 12px 18px; line-height: 1.45; border: 1px solid #C7C7CC; background: #FFFFFF; color: #1D1D1F">圆管、方管，按直径和单根质量选型</button>
+
+</div>
+<div class="card" style="padding: clamp(25px, 3.33vw, 40px); display: flex; flex-direction: column; gap: 14px">
+<span class="eye">候选机型</span>
+<div class="h2" style="font-size: clamp(24px, 3vw, 36px)">KUBE 1212</div>
+<p class="mut" style="margin: 0; font-size: clamp(15px, 1.42vw, 17px)">配备适合小型板材加工的正方形工作台，可从正面取放材料。</p>
+<div style="flex-grow: 1; min-height: 200px; display: flex; align-items: center; justify-content: center"><img src="assets/b1eeea59d8e4efbd51b27eff7747e2d2.webp" alt="KUBE 1212" style="max-width: 100%; max-height: 220px; object-fit: contain"></div>
+<p class="mut" style="margin: 0; font-size: 14px">报价​时​请​填写​材质、​板厚​或​管材​截面​尺寸、​材料​长度、​月加​工量。</p>
+<div class="row"><a class="pill" href="contact-zh.html">按此条件咨询</a><a class="lk" href="cutting-zh.html">前往​机型​一览 ​›</a></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec dark">
+<div class="wrap">
+<div class="c"><h2 class="h2">海外​设备，​日本本​地​支持。</h2></div>
+<div class="g3" style="margin-top: clamp(24px, 4vw, 48px)">
+<a class="card" href="products-zh.html"><h3 class="h3">产品信息</h3><p class="mut" style="margin: 10px 0 14px; font-size: 15px">从​加工​设备​到​停车​设施、​压缩​空气处理​设备，​可按​用​途浏览。</p><span class="lk" style="color: #8CC4FF">产品一览 ›</span></a>
+<a class="card" href="contact-zh.html"><h3 class="h3">索取样本</h3><p class="mut" style="margin: 10px 0 14px; font-size: 15px">请​告知​您​需要​的​产品​或​型号。</p><span class="lk" style="color: #8CC4FF">索取样本 ›</span></a>
+<a class="card" href="contact-zh.html"><h3 class="h3">试加工、演示</h3><p class="mut" style="margin: 10px 0 14px; font-size: 15px">请​告知​使用​材料、​板​厚及​希望​确认​的​加工​内容。</p><span class="lk" style="color: #8CC4FF">申请演示 ›</span></a>
+</div>
+</div>
+</section>
+
+
+<section class="sec pale" id="funding">
+<div class="wrap c">
+<p class="eye">补助金、​导入​支持</p>
+<h2 class="h2" style="margin-top: 10px">利用​补助​金导入​设备，<br>从申请​准备​开始​提供​支持。</h2>
+<p class="lead">从​制度​介绍，​到​报​价​单、​规格书、​比较​资料​的​准备，​直至​交付​决定​后​的​交货，​全程​协助。</p>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px)"><a class="pill" href="subsidy-zh.html">详细​了解​支持​内容</a><a class="lk" href="contact-zh.html">咨询补助金 ​›</a></div>
+</div>
+</section>
+
+
+
+<section class="sec">
+<div class="wrap">
+<div class="row" style="justify-content: space-between; align-items: flex-end; margin-bottom: 20px">
+<h2 class="h2">最新消息</h2>
+<a class="lk" href="news-zh.html" style="padding: 12px 0">查看全部 ›</a>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; border-top: 1px solid #D2D2D7">
+
+<li style="border-bottom: 1px solid #D2D2D7"><a href="news-zh.html" style="display: flex; gap: clamp(20px, 2.67vw, 32px); padding: 22px 0; text-decoration: none; color: #1D1D1F; flex-wrap: wrap"><time class="mut" style="min-width: 110px">2026.11.12</time><strong style="font-weight: 600">年末年初营业安排</strong></a></li>
+
+<li style="border-bottom: 1px solid #D2D2D7"><a href="news-zh.html" style="display: flex; gap: clamp(20px, 2.67vw, 32px); padding: 22px 0; text-decoration: none; color: #1D1D1F; flex-wrap: wrap"><time class="mut" style="min-width: 110px">2026.10.19</time><strong style="font-weight: 600">参加富山、福井展会</strong></a></li>
+
+<li style="border-bottom: 1px solid #D2D2D7"><a href="news-zh.html" style="display: flex; gap: clamp(20px, 2.67vw, 32px); padding: 22px 0; text-decoration: none; color: #1D1D1F; flex-wrap: wrap"><time class="mut" style="min-width: 110px">2026.09.03</time><strong style="font-weight: 600">在松山演示协作机器人和激光焊接机</strong></a></li>
+
+</ul>
+</div>
+</section>
+
+<section class="sec dark c" id="contact">
+<div class="wrap">
+<h2 class="h2">先​从​咨询​开始。</h2>
+<p class="lead">请​选择​事项。​输入项目将​随内​容变化。</p>
+<div class="row" style="justify-content: center; margin-top: clamp(20px, 2.67vw, 32px); gap: 12px">
+
+<a class="topic" href="contact-zh.html">报价、订购</a>
+
+<a class="topic" href="contact-zh.html">补助金咨询</a>
+
+<a class="topic" href="contact-zh.html">试加工、演示</a>
+
+<a class="topic" href="contact-zh.html">索取样本</a>
+
+</div>
+<p class="mut" style="margin: clamp(22px, 3vw, 36px) 0 0; font-size: 16px">总机 <strong style="color: #FFFFFF">050-1753-9326</strong>　 / 　<a class="lk" href="mailto:info@sakaeglobal.com">info@sakaeglobal.com</a></p>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 ​愛知県名​古屋​市西区​又​穂町1丁目7​1</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">产品信息</strong>
+<a href="cutting-zh.html">光纤激光​切割机</a>
+<a href="welder-zh.html">激光焊接机</a>
+<a href="robot-zh.html">协作焊接机器人</a>
+<a href="stopper-zh.html">缓冲型车轮挡</a>
+<a href="separator-zh.html">压缩​空气​用​分离器</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">咨询</strong>
+<a href="contact-zh.html">报价、订购</a>
+<a href="subsidy-zh.html">补助金、​导入​支持</a>
+<a href="contact-zh.html">试加工、演示</a>
+<a href="contact-zh.html">索取样本</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">公司信息</strong>
+<a href="company-zh.html">企业介绍</a>
+<a href="news-zh.html">最新消息</a>
+<a href="company-zh.html#careers">招聘信息</a>
+<a href="company-zh.html#privacy">个人​信息​保护​方针</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">官方 ​YouTube ​频道</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© ​SA​KAE ​G​LOBAL ​株式​会​社</div>
+</div>
+</footer>
+</div>
+</div>
+<template id="tpl">
+
+<div class="pg">
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08)">
+<div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index-zh.html" aria-label="SAKAE GLOBAL 首页" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
+<nav class="nav" aria-label="主菜单" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
+<div class="hasdrop"><a href="products-zh.html">产品信息</a><div class="sub"><div><a href="cutting-zh.html">光纤激光切割机</a><a href="welder-zh.html">激光焊接机</a><a href="robot-zh.html">协作焊接机器人</a><a href="stopper-zh.html">缓冲型车轮挡</a><a href="separator-zh.html">压缩空气用分离器</a></div></div></div>
+<a href="subsidy-zh.html">补助金、导入支持</a>
+<a href="company-zh.html">公司信息</a>
+<a href="news-zh.html">最新消息</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px">
+<span class="mut langtxt" style="white-space: nowrap; margin-right: 6px"><a href="index.html" style="color: inherit; text-decoration: none">日本語</a> · <a href="index-ko.html" style="color: inherit; text-decoration: none">한국어</a> · <a href="index-en.html" style="color: inherit; text-decoration: none">EN</a> · <strong style="color: #1D1D1F">中文</strong></span>
+<details class="mlang">
+<summary aria-label="选择语言"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg><span class="lname" style="font-size: 14px; color: #1D1D1F">中文</span><span aria-hidden="true" style="font-size: 11px; color: #5F5F64">▼</span></summary>
+<div class="drop" style="min-width: 190px">
+<a href="index.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><circle cx="12" cy="8" r="4.8" fill="#BC002D"></circle></svg>日本語</a>
+<a href="index-ko.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><path d="M8 8a4 4 0 0 1 8 0z" fill="#CD2E3A" transform="rotate(33 12 8)"></path><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047A0" transform="rotate(33 12 8)"></path><g stroke="#1D1D1F" stroke-width="1.1"><path d="M3.2 4.6l2.4-3M4.4 5.4l2.4-3M17.2 13.4l2.4-3M18.4 14.2l2.4-3M17.2 2.6l2.4 3M18.4 1.8l2.4 3M3.2 11.4l2.4 3M4.4 10.6l2.4 3"></path></g></svg>한국어</a>
+<a href="index-en.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#FFFFFF"></rect><g fill="#B22234"><rect width="24" height="2.3"></rect><rect y="4.6" width="24" height="2.3"></rect><rect y="9.2" width="24" height="2.3"></rect><rect y="13.7" width="24" height="2.3"></rect></g><rect width="10.5" height="8.6" fill="#3C3B6E"></rect></svg>English</a>
+<span style="font-weight: 700"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" style="border-radius: 3px; box-shadow: 0 0 0 1px #D2D2D7; flex: none"><rect width="24" height="16" fill="#DE2910"></rect><path d="M5 2.2l.9 2.7H8.7L6.4 6.6l.9 2.7L5 7.6 2.7 9.3l.9-2.7L1.3 4.9h2.8z" fill="#FFDE00"></path></svg>中文</span>
+</div>
+</details>
+<a class="pill hpill" href="contact-zh.html" style="min-height: 40px; padding: 0 18px; font-size: 14px">联系我们</a>
+<details class="mnav">
+<summary aria-label="打开菜单"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
+<div class="drop">
+<a href="products-zh.html">产品信息</a>
+<a href="cutting-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">光纤激光切割机</a>
+<a href="welder-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">激光焊接机</a>
+<a href="robot-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">协作焊接机器人</a>
+<a href="stopper-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">缓冲型车轮挡</a>
+<a href="separator-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">压缩空气用分离器</a>
+<a href="subsidy-zh.html">补助金、导入支持</a>
+<a href="company-zh.html">公司信息</a>
+<a href="news-zh.html">最新消息</a>
+<a href="contact-zh.html" style="background: #0B5CAD; color: #FFFFFF; justify-content: center; margin-top: 6px; font-weight: 600">联系我们</a>
+</div>
+</details>
+</div>
+</div>
+</header>
+
+<main>
+<section class="c" style="padding: clamp(48px, 8vw, 96px) 0 0">
+<div class="wrap">
+<p class="eye">SAKAE GLOBAL</p>
+<h1 class="h1">切割。连接。<br>自动化。</h1>
+<p class="lead">从&#8203;板材、&#8203;管材&#8203;激光&#8203;切割机，&#8203;到&#8203;激光&#8203;焊&#8203;接机、&#8203;协作焊接机&#8203;器人。&#8203;SA&#8203;KAE &#8203;G&#8203;LOBAL &#8203;根据&#8203;加工内容，&#8203;从&#8203;机型&#8203;选定&#8203;到&#8203;导入&#8203;全程协助。</p>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px)">
+<a class="pill" href="products-zh.html">查找产品</a>
+<a class="ghost" href="contact-zh.html">导入咨询</a>
+</div>
+<figure style="margin: clamp(28px, 4.67vw, 56px) 0 0">
+<img src="assets/c568bca1db108f67d42ba7ccfbf8f8fa.webp" alt="在焊接工作台上朝工件移动焊枪的协作机器人" class="growin" style="display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; border-radius: 28px">
+<figcaption class="mut" style="font-size: 13px; margin-top: 12px">协作机器人&#8203;焊接</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="sec" id="products" aria-label="经营产品">
+<div class="wrap">
+<div class="row" style="justify-content: space-between; align-items: flex-end; margin-bottom: clamp(22px, 3vw, 36px)">
+<div><h2 class="h2">经营产品</h2><p class="lead" style="margin-top: 10px">从&#8203;加工&#8203;设备&#8203;到&#8203;停车&#8203;设施、&#8203;压缩&#8203;空气处理&#8203;设备，&#8203;可按&#8203;用&#8203;途浏览。</p></div>
+<a class="lk" href="products-zh.html" style="padding: 12px 0">查&#8203;看全部&#8203;产品 &#8203;›</a>
+</div>
+<div class="tiles">
+<a class="card g" href="cutting-zh.html" style="padding: clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) 0; text-align: center; overflow: hidden">
+<small class="mut" style="font-size: 13px; font-weight: 600">HK LASER</small>
+<h3 class="h2" style="font-size: clamp(26px, 3.33vw, 40px); margin-top: 4px">光纤激光&#8203;切割机</h3>
+<p class="mut" style="margin: 10px auto 0; max-width: 720px; font-size: clamp(15px, 1.42vw, 17px)">从&#8203;钢板&#8203;上&#8203;切出&#8203;零件&#8203;的&#8203;平面&#8203;加工机，&#8203;以及&#8203;在&#8203;圆管、&#8203;方管&#8203;上&#8203;加工孔&#8203;和&#8203;轮廓&#8203;的&#8203;管材&#8203;专&#8203;用机。</p>
+<span class="lk" style="display: inline-block; margin-top: 12px; color: #0B5CAD">查看&#8203;机型&#8203;一览 &#8203;›</span>
+<img class="ph" src="assets/79f9ea0bfe022518fa90c34ee33e8e9b.webp" alt="板材用 FL 3015 FIBER 及侧面的材料台" style="max-width: 860px; margin: clamp(17px, 2.33vw, 28px) auto 0">
+</a>
+<div class="g2" style="margin-top: 16px">
+<template data-for="families" data-as="f">
+<a class="card g" href="{{f.href}}" style="padding: clamp(22px, 3vw, 36px) clamp(22px, 3vw, 36px) clamp(17px, 2.33vw, 28px); text-align: center">
+<small class="mut" style="font-size: 13px; font-weight: 600">{{f.maker}}</small>
+<h3 class="h3" style="font-size: clamp(22px, 2.33vw, 28px); margin-top: 4px">{{f.title}}</h3>
+<p class="mut" style="margin: 6px 0 0; font-size: 16px">{{f.short}}</p>
+<div style="height: 240px; margin-top: 20px; background: #FFFFFF; border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+<img src="{{f.img}}" alt="{{f.alt}}" style="max-width: 100%; max-height: 100%; object-fit: contain">
+</div>
+</a>
+</template>
+</div>
+</div>
+<div class="show">
+<div class="stage">
+<template data-for="slides" data-as="s">
+<a class="slide {{s.cls}}" href="{{s.href}}">
+<div>
+<small class="mut" style="font-size: 15px; font-weight: 600; letter-spacing: .04em">{{s.no}}　{{s.maker}}</small>
+<h3 class="h2" style="font-size: clamp(29px, 4.33vw, 52px); margin-top: 10px">{{s.title}}</h3>
+<p class="mut" style="margin: 14px 0 0; font-size: clamp(16px, 1.58vw, 19px)">{{s.text}}</p>
+<span class="more">了解详情 ›</span>
+</div>
+<div style="height: 440px; background: #FFFFFF; border-radius: 22px; display: flex; align-items: center; justify-content: center; padding: clamp(17px, 2.33vw, 28px); box-sizing: border-box; overflow: hidden"><img src="{{s.img}}" alt="{{s.alt}}" style="max-width: 100%; max-height: 100%; object-fit: contain"></div>
+</a>
+</template>
+<div aria-hidden="true" style="position: absolute; left: 64px; right: 64px; bottom: 22px; height: 4px; background: #D2D2D7; border-radius: 2px; overflow: hidden"><div class="bar" style="height: 100%; background: #0B5CAD; transform-origin: left center"></div></div>
+</div>
+</div>
+<div class="card g row" style="margin-top: 16px; justify-content: space-between">
+<div><h3 class="h3">其他设备咨询</h3><p class="mut" style="margin: 4px 0 0">有关制造、&#8203;生产辅助&#8203;设备，&#8203;未刊载&#8203;的&#8203;设备&#8203;也&#8203;欢迎&#8203;垂询。</p></div>
+<a class="ghost" href="contact-zh.html">联系我们</a>
+</div>
+</div>
+</section>
+
+<section class="sec pale">
+<div class="wrap">
+<div class="c"><h2 class="h2">按目的选择。</h2><p class="lead">选择&#8203;加工、&#8203;搬运条&#8203;件后，&#8203;将&#8203;显示&#8203;可选&#8203;的&#8203; &#8203;HK &#8203;L&#8203;ASER &#8203;机型。</p></div>
+<div class="split" style="display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 16px; margin-top: clamp(25px, 3.33vw, 40px)">
+<div role="group" aria-label="加工、搬运条件" style="display: flex; flex-direction: column; gap: 8px">
+<template data-for="conds" data-as="c">
+<button type="button" class="chip" onClick="{{c.pick}}" aria-pressed="{{c.on}}" style="text-align: left; border-radius: 14px; padding: 12px 18px; line-height: 1.45; border: 1px solid {{c.bd}}; background: {{c.bg}}; color: {{c.fg}}">{{c.label}}</button>
+</template>
+</div>
+<div class="card" style="padding: clamp(25px, 3.33vw, 40px); display: flex; flex-direction: column; gap: 14px">
+<span class="eye">候选机型</span>
+<div class="h2" style="font-size: clamp(24px, 3vw, 36px)">{{pick.models}}</div>
+<p class="mut" style="margin: 0; font-size: clamp(15px, 1.42vw, 17px)">{{pick.text}}</p>
+<div style="flex-grow: 1; min-height: 200px; display: flex; align-items: center; justify-content: center"><img src="{{pick.img}}" alt="{{pick.models}}" style="max-width: 100%; max-height: 220px; object-fit: contain"></div>
+<p class="mut" style="margin: 0; font-size: 14px">报价&#8203;时&#8203;请&#8203;填写&#8203;材质、&#8203;板厚&#8203;或&#8203;管材&#8203;截面&#8203;尺寸、&#8203;材料&#8203;长度、&#8203;月加&#8203;工量。</p>
+<div class="row"><a class="pill" href="contact-zh.html">按此条件咨询</a><a class="lk" href="cutting-zh.html">前往&#8203;机型&#8203;一览 &#8203;›</a></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec dark">
+<div class="wrap">
+<div class="c"><h2 class="h2">海外&#8203;设备，&#8203;日本本&#8203;地&#8203;支持。</h2></div>
+<div class="g3" style="margin-top: clamp(24px, 4vw, 48px)">
+<a class="card" href="products-zh.html"><h3 class="h3">产品信息</h3><p class="mut" style="margin: 10px 0 14px; font-size: 15px">从&#8203;加工&#8203;设备&#8203;到&#8203;停车&#8203;设施、&#8203;压缩&#8203;空气处理&#8203;设备，&#8203;可按&#8203;用&#8203;途浏览。</p><span class="lk" style="color: #8CC4FF">产品一览 ›</span></a>
+<a class="card" href="contact-zh.html"><h3 class="h3">索取样本</h3><p class="mut" style="margin: 10px 0 14px; font-size: 15px">请&#8203;告知&#8203;您&#8203;需要&#8203;的&#8203;产品&#8203;或&#8203;型号。</p><span class="lk" style="color: #8CC4FF">索取样本 ›</span></a>
+<a class="card" href="contact-zh.html"><h3 class="h3">试加工、演示</h3><p class="mut" style="margin: 10px 0 14px; font-size: 15px">请&#8203;告知&#8203;使用&#8203;材料、&#8203;板&#8203;厚及&#8203;希望&#8203;确认&#8203;的&#8203;加工&#8203;内容。</p><span class="lk" style="color: #8CC4FF">申请演示 ›</span></a>
+</div>
+</div>
+</section>
+
+
+<section class="sec pale" id="funding">
+<div class="wrap c">
+<p class="eye">补助金、&#8203;导入&#8203;支持</p>
+<h2 class="h2" style="margin-top: 10px">利用&#8203;补助&#8203;金导入&#8203;设备，<br>从申请&#8203;准备&#8203;开始&#8203;提供&#8203;支持。</h2>
+<p class="lead">从&#8203;制度&#8203;介绍，&#8203;到&#8203;报&#8203;价&#8203;单、&#8203;规格书、&#8203;比较&#8203;资料&#8203;的&#8203;准备，&#8203;直至&#8203;交付&#8203;决定&#8203;后&#8203;的&#8203;交货，&#8203;全程&#8203;协助。</p>
+<div class="row" style="justify-content: center; margin-top: clamp(17px, 2.33vw, 28px)"><a class="pill" href="subsidy-zh.html">详细&#8203;了解&#8203;支持&#8203;内容</a><a class="lk" href="contact-zh.html">咨询补助金 &#8203;›</a></div>
+</div>
+</section>
+
+
+
+<section class="sec">
+<div class="wrap">
+<div class="row" style="justify-content: space-between; align-items: flex-end; margin-bottom: 20px">
+<h2 class="h2">最新消息</h2>
+<a class="lk" href="news-zh.html" style="padding: 12px 0">查看全部 ›</a>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; border-top: 1px solid #D2D2D7">
+<template data-for="news" data-as="n">
+<li style="border-bottom: 1px solid #D2D2D7"><a href="news-zh.html" style="display: flex; gap: clamp(20px, 2.67vw, 32px); padding: 22px 0; text-decoration: none; color: #1D1D1F; flex-wrap: wrap"><time class="mut" style="min-width: 110px">{{n.date}}</time><strong style="font-weight: 600">{{n.title}}</strong></a></li>
+</template>
+</ul>
+</div>
+</section>
+
+<section class="sec dark c" id="contact">
+<div class="wrap">
+<h2 class="h2">先&#8203;从&#8203;咨询&#8203;开始。</h2>
+<p class="lead">请&#8203;选择&#8203;事项。&#8203;输入项目将&#8203;随内&#8203;容变化。</p>
+<div class="row" style="justify-content: center; margin-top: clamp(20px, 2.67vw, 32px); gap: 12px">
+<template data-for="topics" data-as="t">
+<a class="topic" href="contact-zh.html">{{t}}</a>
+</template>
+</div>
+<p class="mut" style="margin: clamp(22px, 3vw, 36px) 0 0; font-size: 16px">总机 <strong style="color: #FFFFFF">050-1753-9326</strong>　 / 　<a class="lk" href="mailto:info@sakaeglobal.com">info@sakaeglobal.com</a></p>
+</div>
+</section>
+</main>
+<footer class="foot pale" style="font-size: 13px; color: #5F5F64">
+<div class="wrap" style="padding-top: clamp(24px, 4vw, 48px); padding-bottom: 20px">
+<div class="g4">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社" style="height: 52px; width: auto; align-self: flex-start">
+<span>〒451-0014 &#8203;愛知県名&#8203;古屋&#8203;市西区&#8203;又&#8203;穂町1丁目7&#8203;1</span>
+<span>TEL 050-1753-9326</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">产品信息</strong>
+<a href="cutting-zh.html">光纤激光&#8203;切割机</a>
+<a href="welder-zh.html">激光焊接机</a>
+<a href="robot-zh.html">协作焊接机器人</a>
+<a href="stopper-zh.html">缓冲型车轮挡</a>
+<a href="separator-zh.html">压缩&#8203;空气&#8203;用&#8203;分离器</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">咨询</strong>
+<a href="contact-zh.html">报价、订购</a>
+<a href="subsidy-zh.html">补助金、&#8203;导入&#8203;支持</a>
+<a href="contact-zh.html">试加工、演示</a>
+<a href="contact-zh.html">索取样本</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<strong style="color: #1D1D1F">公司信息</strong>
+<a href="company-zh.html">企业介绍</a>
+<a href="news-zh.html">最新消息</a>
+<a href="company-zh.html#careers">招聘信息</a>
+<a href="company-zh.html#privacy">个人&#8203;信息&#8203;保护&#8203;方针</a>
+<a href="https://www.youtube.com/@SAKAEGLOBAL">官方 &#8203;YouTube &#8203;频道</a>
+</div>
+</div>
+<div style="border-top: 1px solid #D2D2D7; margin-top: clamp(20px, 2.67vw, 32px); padding-top: 16px">© &#8203;SA&#8203;KAE &#8203;G&#8203;LOBAL &#8203;株式&#8203;会&#8203;社</div>
+</div>
+</footer>
+</div>
+</template>
+<script src="site.js"></script>
+<script>
+var EXT = {"3101c7afdc686666240d270785270676": "webp", "3477239982ff3a3c6205ce0693975190": "webp", "35831a17966fd9e8be06de5e284ea465": "webp", "3833a441fa922e5a23586bec32db14cd": "webp", "4df533686cd27ffd309c2434f629425b": "webp", "68344d9c1a286534374fed3dce835c01": "webp", "7378c43bc5e401b9bd793d1791ea638c": "webp", "79f9ea0bfe022518fa90c34ee33e8e9b": "webp", "8ce3e98554736f919eda7d18c87419e5": "webp", "af4799858c655c5be942306a14fcfd89": "webp", "b1eeea59d8e4efbd51b27eff7747e2d2": "webp", "c568bca1db108f67d42ba7ccfbf8f8fa": "webp", "dad52e669e99a47cd2400ac90ddcb0bf": "webp"};
+class Component extends DCLogic {
+  renderVals() {
+    if (!this._oc) {
+      this._oc = true;
+      try {
+        document.addEventListener('click', (e) => {
+          const path = e.composedPath ? e.composedPath() : [e.target];
+          const root = path[0] && path[0].getRootNode ? path[0].getRootNode() : document;
+          const close = (r) => { try { r.querySelectorAll('details.mlang[open], details.mnav[open]').forEach((d) => { if (path.indexOf(d) < 0) d.removeAttribute('open'); }); } catch (x) {} };
+          close(root); if (root !== document) close(document);
+        }, true);
+      } catch (x) {}
+    }
+
+    const sel = (this.state && this.state.cond) || 0;
+    const B = (id) => 'assets/' + id + '.' + (EXT[id] || 'webp');
+    const rows = [
+      { label: '小型板材，正面上料', models: 'KUBE 1212', img: B('b1eeea59d8e4efbd51b27eff7747e2d2'), text: '配备适合小型板材加工的正方形工作台，可从正面取放材料。' },
+      { label: '板材，手动或双层工作台交换', models: 'FL 2512', img: B('35831a17966fd9e8be06de5e284ea465'), text: '可选手动抽出的单工作台规格，或使用升降式穿梭台的双工作台规格。' },
+      { label: '侧面取放，按搬入动线布置', models: 'FL 3015', img: B('3477239982ff3a3c6205ce0693975190'), text: '通过大型侧门取放定尺板材的激光切割机。' },
+      { label: '定尺板，比较切割速度与工作台规格', models: 'RS3015 / FS / FE / HD / FC3015', img: B('af4799858c655c5be942306a14fcfd89'), text: '以 3015 级为中心，可按门的位置、工作台交换方式、控制装置的不同进行选择。' },
+      { label: '切割零件自动分拣', models: 'S-Matic K315', img: B('4df533686cd27ffd309c2434f629425b'), text: '板材上料、激光切割、零件分拣、余料回收在一条生产线上完成。' },
+      { label: '长尺钢板', models: 'FO Series', img: B('8ce3e98554736f919eda7d18c87419e5'), text: '龙门架在大型钢板上方移动的开放式切割机。' },
+      { label: '圆管、方管，按直径和单根质量选型', models: 'TL6527-S / TL9036-X', img: B('7378c43bc5e401b9bd793d1791ea638c'), text: '加工圆管、方管的管材激光切割机。' }
+    ];
+    const conds = rows.map((r, i) => {
+      const on = i === sel;
+      return { label: r.label, on: on, bg: on ? '#0B5CAD' : '#FFFFFF', fg: on ? '#FFFFFF' : '#1D1D1F', bd: on ? '#0B5CAD' : '#C7C7CC', pick: () => this.setState({ cond: i }) };
+    });
+    const NEWS_API = 'https://script.google.com/macros/s/AKfycbyFh9tbWZEB00ZYwCVkKzWnG3e6AvMgxGcLqifpfTPZEno5jNm5Ddn4AfXnrh6WQvA/exec';
+    if (NEWS_API && !this._nf) {
+      this._nf = true;
+      try { fetch(NEWS_API + '?action=list&lang=zh').then((r) => r.json()).then((j) => { if (j && j.ok && j.posts) this.setState({ remoteNews: j.posts.map((p) => ({ date: String(p.date).replace(/-/g, '.'), title: p.title })) }); }).catch(() => {}); } catch (e) {}
+    }
+    const all = [
+      { date: '2026.11.12', title: '年末年初营业安排' },
+      { date: '2026.10.19', title: '参加富山、福井展会' },
+      { date: '2026.09.03', title: '在松山演示协作机器人和激光焊接机', body: '9月2日，在松山市介绍了台车移动式、便携式协作机器人和 ASEA-2000W，并就接入现有生产线及安装空间接受了咨询。' },
+      { date: '2026.08.27', title: '在广岛市、吴市展出产品', body: '在8月26、27日的展会上介绍了 ASEA-2000W、移动式和便携式协作机器人以及车轮挡。' },
+      { date: '2026.07.16', title: '在福岛市演示协作机器人', body: '7月15日展出了光纤激光焊接机和协作机器人实机，并进行了激光加工机导入咨询。' }
+    ];
+    return {
+      conds: conds,
+      slides: [
+        { cls: 'sl1', no: '01', href: 'cutting-zh.html', maker: 'HK LASER', title: '光纤激光切割机', text: '从钢板上切出零件的平面加工机，以及在圆管、方管上加工孔和轮廓的管材专用机。', img: B('79f9ea0bfe022518fa90c34ee33e8e9b'), alt: '板材用 FL 3015 FIBER 及侧面的材料台' },
+        { cls: 'sl2', no: '02', href: 'welder-zh.html', maker: 'HK LASER', title: '激光焊接机', text: '可选风冷式、水冷式的光纤激光焊接机。可用于焊接、切割及除锈、除漆膜。', img: B('68344d9c1a286534374fed3dce835c01'), alt: 'ASEA 风冷激光焊接机主机' },
+        { cls: 'sl3', no: '03', href: 'robot-zh.html', maker: '', title: '协作焊接机器人', text: '用手移动焊枪即可示教焊接路径。没有接触过机器人的人也能马上使用。', img: B('c568bca1db108f67d42ba7ccfbf8f8fa'), alt: '在焊接工作台上朝工件移动焊枪的协作机器人' },
+        { cls: 'sl4', no: '04', href: 'stopper-zh.html', maker: '', title: '缓冲型车轮挡', text: '吸收并缓和停车时轮胎碰触的冲击，同时保护车辆和车轮挡。', img: B('3101c7afdc686666240d270785270676'), alt: '带黑色滚轮的黄色 CSJ-N-SB 车轮挡' },
+        { cls: 'sl5', no: '05', href: 'separator-zh.html', maker: '', title: '压缩空气用分离器', text: '利用离心力分离压缩空气中的冷凝水。无需更换滤芯的免维护结构。', img: B('dad52e669e99a47cd2400ac90ddcb0bf'), alt: 'TESLLON iA03' }
+      ],
+      pick: rows[sel],
+      families: [
+        { href: 'welder-zh.html', maker: 'HK LASER', title: '激光焊接机', short: '可选风冷式、水冷式的光纤激光焊接机', img: B('3833a441fa922e5a23586bec32db14cd'), alt: 'HK HS2000HWM 激光焊接机主机' },
+        { href: 'robot-zh.html', maker: '', title: '协作焊接机器人', short: '用手移动焊枪即可示教焊接路径', img: B('c568bca1db108f67d42ba7ccfbf8f8fa'), alt: '在焊接工作台上朝工件移动焊枪的协作机器人' },
+        { href: 'stopper-zh.html', maker: '', title: '缓冲型车轮挡', short: '缓和停车时轮胎碰触冲击的车轮挡', img: B('3101c7afdc686666240d270785270676'), alt: '带黑色滚轮的黄色 CSJ-N-SB 车轮挡' },
+        { href: 'separator-zh.html', maker: '', title: '压缩空气用分离器', short: '免维护（无需更换滤芯）', img: B('dad52e669e99a47cd2400ac90ddcb0bf'), alt: 'TESLLON iA03' }
+      ],
+      news: ((this.state || {}).remoteNews || all).slice(0, 3),
+      topics: ['报价、订购', '补助金咨询', '试加工、演示', '索取样本']
+    
+    };
+
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>
