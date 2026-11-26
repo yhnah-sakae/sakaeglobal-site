@@ -299,13 +299,23 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 
 <tr><th scope="row">RB3-730</th><td>3 kg</td><td>730 mm</td><td>±0.05 mm</td><td>Ø128 mm</td><td>11.0 kg</td></tr>
 
+<tr><th scope="row">RB3-1200</th><td>3 kg</td><td>1,200 mm</td><td>±0.05 mm</td><td>Ø173 mm</td><td>22.4 kg</td></tr>
+
 <tr><th scope="row">RB5-850</th><td>5 kg</td><td>850 mm</td><td>±0.05 mm</td><td>Ø173 mm</td><td>22.0 kg</td></tr>
 
-<tr><th scope="row">RB3-1200</th><td>3 kg</td><td>1,200 mm</td><td>±0.05 mm</td><td>Ø173 mm</td><td>22.4 kg</td></tr>
+<tr><th scope="row">RB6-920</th><td>6 kg</td><td>920 mm</td><td>—</td><td>Ø173 mm</td><td>21.0 kg</td></tr>
+
+<tr><th scope="row">RB6-1700</th><td>6 kg</td><td>1,700 mm</td><td>—</td><td>Ø196 mm</td><td>39.0 kg</td></tr>
 
 <tr><th scope="row">RB10-1300</th><td>10 kg</td><td>1,300 mm</td><td>±0.05 mm</td><td>Ø196 mm</td><td>37.1 kg</td></tr>
 
-<tr><th scope="row">RB20-1900</th><td>20 kg</td><td>1,900 mm</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><th scope="row">RB16-900</th><td>16 kg</td><td>900 mm</td><td>—</td><td>Ø196 mm</td><td>35.5 kg</td></tr>
+
+<tr><th scope="row">RB20-1800</th><td>20 kg</td><td>1,800 mm</td><td>—</td><td>Ø245 mm</td><td>70.5 kg</td></tr>
+
+<tr><th scope="row">RB20-1900</th><td>20 kg</td><td>1,900 mm</td><td>—</td><td>Ø245 mm</td><td>75.0 kg</td></tr>
+
+<tr><th scope="row">RB30-1400</th><td>30 kg</td><td>1,400 mm</td><td>—</td><td>Ø245 mm</td><td>71.0 kg</td></tr>
 
 </tbody>
 </table>
@@ -570,10 +580,15 @@ class Component extends DCLogic {
       ].map((r) => ({ u: r[0], m: r[1], o: r[2], f: r[3], n: r[4] })),
       robotArms: [
         ['RB3-730', '3 kg', '730 mm', '±0.05 mm', 'Ø128 mm', '11.0 kg'],
-        ['RB5-850', '5 kg', '850 mm', '±0.05 mm', 'Ø173 mm', '22.0 kg'],
         ['RB3-1200', '3 kg', '1,200 mm', '±0.05 mm', 'Ø173 mm', '22.4 kg'],
+        ['RB5-850', '5 kg', '850 mm', '±0.05 mm', 'Ø173 mm', '22.0 kg'],
+        ['RB6-920', '6 kg', '920 mm', '—', 'Ø173 mm', '21.0 kg'],
+        ['RB6-1700', '6 kg', '1,700 mm', '—', 'Ø196 mm', '39.0 kg'],
         ['RB10-1300', '10 kg', '1,300 mm', '±0.05 mm', 'Ø196 mm', '37.1 kg'],
-        ['RB20-1900', '20 kg', '1,900 mm', '—', '—', '—']
+        ['RB16-900', '16 kg', '900 mm', '—', 'Ø196 mm', '35.5 kg'],
+        ['RB20-1800', '20 kg', '1,800 mm', '—', 'Ø245 mm', '70.5 kg'],
+        ['RB20-1900', '20 kg', '1,900 mm', '—', 'Ø245 mm', '75.0 kg'],
+        ['RB30-1400', '30 kg', '1,400 mm', '—', 'Ø245 mm', '71.0 kg']
       ].map((r) => ({ m: r[0], p: r[1], r: r[2], a: r[3], f: r[4], w: r[5] })),
       robotOptions: [
         { t: '变位机', d: '旋转、倾斜工件，保持便于焊接的姿态。' },
