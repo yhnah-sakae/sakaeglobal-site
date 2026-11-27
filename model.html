@@ -128,6 +128,7 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 .drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
 @media (max-width:900px){
  .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .g5{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
  .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
  .nav{display:none !important}
 
@@ -246,17 +247,17 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <thead><tr><th scope="col">レーザー出力</th><th scope="col">軟鋼</th><th scope="col">ステンレス鋼</th><th scope="col">アルミ</th><th scope="col">銅</th><th scope="col">黄銅</th></tr></thead>
 <tbody>
 
-<tr><th scope="row">4 kW</th><td>20 mm</td><td>12 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
+<tr><th scope="row">4 kW</th><td>20 mm</td><td>13 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
 
-<tr><th scope="row">6 kW</th><td>25 mm</td><td>17 mm</td><td>15 mm</td><td>8 mm</td><td>12 mm</td></tr>
+<tr><th scope="row">6 kW</th><td>25 mm</td><td>19 mm</td><td>15 mm</td><td>8 mm</td><td>12 mm</td></tr>
 
-<tr><th scope="row">8 kW</th><td>30 mm</td><td>21 mm</td><td>21 mm</td><td>8 mm</td><td>12 mm</td></tr>
+<tr><th scope="row">8 kW</th><td>30 mm</td><td>23 mm</td><td>21 mm</td><td>8 mm</td><td>12 mm</td></tr>
 
-<tr><th scope="row">10 kW</th><td>30 mm</td><td>21 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
+<tr><th scope="row">10 kW</th><td>30 mm</td><td>23 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
 
-<tr><th scope="row">12 kW</th><td>30 mm</td><td>21 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
+<tr><th scope="row">12 kW</th><td>30 mm</td><td>23 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
 
-<tr><th scope="row">15 kW</th><td>35 mm</td><td>24 mm</td><td>24 mm</td><td>12 mm</td><td>15 mm</td></tr>
+<tr><th scope="row">15 kW</th><td>35 mm</td><td>26 mm</td><td>24 mm</td><td>12 mm</td><td>15 mm</td></tr>
 
 </tbody>
 </table>
@@ -556,14 +557,14 @@ class Component extends DCLogic {
       { kind: 'sheet', title: 'RS3015 FIBER', short: '前面・側面からの\u200b作業', img: B('af4799858c655c5be942306a14fcfd89'), alt: 'RS3015 FIBERの\u200b前面と\u200b側面の\u200b筐体', lead: '前面と\u200b側面の\u200b扉から、\u200b加工室内の\u200bワークに\u200b手が\u200b届きます。', specs: S([[area, '3,048 × 1,524 mm'], [trav, '140 m/min'], ['アクセス', '前面・側面扉']]) },
       { kind: 'sheet', title: 'FS Series', short: '長尺板材・両開き扉', img: B('4bbbc7702f1ec1eaade26de07e474e07'), alt: 'FSシリーズの\u200bFS3015 FIBER本体', lead: '板材の\u200b長さに\u200b合わせて\u200b加工範囲を\u200b選ぶシリーズです。\u200b写真は\u200bFS3015 FIBERです。', specs: S([['FS3015 加工サイズ', '3,048 × 1,524 mm'], ['FS8025 加工サイズ', '8,250 × 2,540 mm'], [trav, '140 m/min']]) },
       { kind: 'sheet', title: 'FO Series', short: '大型鋼板用ガントリー', img: B('8ce3e98554736f919eda7d18c87419e5'), alt: 'FO12025 FIBERの\u200b開放型テーブルと\u200bガントリー', lead: '大型鋼板の\u200b上を\u200bガントリーが\u200b移動する\u200b開放型の\u200b切断機です。\u200b写真は\u200bFO12025 FIBERです。', specs: S([['掲載機種', 'FO12025 FIBER'], ['国内向け仕様の\u200bテーブル長', '12 / 20 / 30 m'], ['テーブル幅の\u200b構成', '2.5 / 3.1 m']]) },
-      { kind: 'sheet', title: 'HD Series', short: '材料検知・水平シャトル', img: B('b7e873589b57ec47752e1214ea789838'), alt: 'HDシリーズの\u200bHD3015と\u200bシャトルテーブル', lead: '材料の\u200b自動検知と\u200b水平シャトルテーブルを\u200b備えた\u200b板材用レーザー切断機です。\u200b掲載機種は\u200bHD3015です。', specs: S([['掲載機種', 'HD3015'], ['制御装置', 'FSCUT'], ['テーブル', '水平シャトル']]) },
+      { kind: 'sheet', title: 'HD Series', short: '水平シャトルテーブル', img: B('b7e873589b57ec47752e1214ea789838'), alt: 'HDシリーズの\u200bHD3015と\u200bシャトルテーブル', lead: '水平シャトルテーブルを\u200b備えた\u200b板材用レーザー切断機です。\u200b掲載機種は\u200bHD3015です。', specs: S([['掲載機種', 'HD3015'], ['制御装置', 'FSCUT'], ['テーブル', '水平シャトル']]) },
       { kind: 'sheet', title: 'FC3015 FIBER', short: '品質重視・価格を\u200b抑えた\u200b主力機', img: B('7ba3b3bf582caf4370471f950167260b'), alt: 'FC3015 FIBERの\u200b本体と\u200b材料交換テーブル', lead: '切断品質を\u200b最優先に\u200bしながら、\u200b価格を\u200b大きく\u200b抑えた\u200b3015クラスの\u200b切断機です。\u200b昇降式シャトルテーブルで\u200b材料を\u200b交換します。', specs: S([[area, '3,048 × 1,524 mm'], ['最大切断速度', '50 m/min'], ['制御装置', 'Siemens NC']]) },
       { kind: 'tube', title: 'TL6527-S', short: '丸管 Ø12–273 mm', img: B('7378c43bc5e401b9bd793d1791ea638c'), alt: 'TL6527-Sの\u200bパイプ加工ラインと\u200b材料支持部', lead: '丸管・角管を\u200b加工する\u200bパイプ用レーザー切断機です。\u200b日本向け6 kW仕様は、\u200b外径12〜273 mmの\u200b丸管に\u200b対応します。', specs: S([['丸管の外径', 'Ø12–273 mm'], ['角管の\u200b断面寸法', '12 × 12 – 200 × 200 mm'], ['最大加工長', '6,500 mm'], ['ワークの\u200b最大質量', '200 kg'], ['日本向けレーザー出力', '6 kW']]) },
       { kind: 'tube', title: 'TL9036-X', short: '丸管 Ø40–360 mm', img: B('8f79d2b48bd837ca652cea95046d5a6b'), alt: 'TL9036-Xの\u200b長尺パイプ切断機全体', lead: '大径・長尺の\u200bパイプに\u200b対応する\u200bレーザー切断機です。\u200b丸管は\u200b外径360 mmまで、\u200b角管は\u200b250 mm角まで\u200b加工できます。', specs: S([['丸管の外径', 'Ø40–360 mm'], ['角管の\u200b断面寸法', '40 × 40 – 250 × 250 mm'], ['標準加工長', '9,000 mm'], ['ワークの\u200b最大質量', '1,200 kg'], ['日本向けレーザー出力', '6–12 kW']]) }
     ];
-    const fs = [[2.5, 16, 8, 8, 4, 6], [3, 16, 10, 10, 6, 8], [4, 20, 12, 12, 6, 10], [6, 25, 17, 15, 8, 12], [8, 30, 21, 21, 8, 12], [10, 30, 21, 21, 10, 15], [12, 30, 21, 21, 10, 15], [15, 35, 24, 24, 12, 15]];
-    const fe = [[6, 22, 15, 14, 6, 10], [12, 25, 17, 17, 8, 12], [20, 40, 28, 28, 15, 15], [30, 50, 35, 35, 20, 20]];
-    const fc = [[6, 25, 17, 15, 8, 12], [12, 30, 21, 21, 10, 15], [20, 40, 28, 28, 12, 20], [30, 50, 35, 35, 12, 20]];
+    const fs = [[2.5, 16, 9, 8, 4, 6], [3, 16, 11, 10, 6, 8], [4, 20, 13, 12, 6, 10], [6, 25, 19, 15, 8, 12], [8, 30, 23, 21, 8, 12], [10, 30, 23, 21, 10, 15], [12, 30, 23, 21, 10, 15], [15, 35, 26, 24, 12, 15]];
+    const fe = [[6, 22, 17, 14, 6, 10], [12, 25, 19, 17, 8, 12], [20, 40, 31, 28, 15, 15], [30, 50, 39, 35, 20, 20]];
+    const fc = [[6, 25, 19, 15, 8, 12], [12, 30, 23, 21, 10, 15], [20, 40, 31, 28, 12, 20], [30, 50, 39, 35, 12, 20]];
     const caps = { fs: { label: 'FS Series', rows: fs }, fl: { label: 'FL 3015', rows: fs.slice(2) }, rs: { label: 'RS3015', rows: fs.slice(3) }, fe: { label: 'HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
     const DETAIL = ['真空\u200b吸着で\u200b部品を\u200b仕分けし、\u200b残材は\u200bブラシテーブルから\u200b回収位置へ\u200b移します。\u200b図中の\u200b番号は\u200bラインを\u200b構成する\u200b各装置を\u200b示します。', 'テーブルを\u200b引き出して\u200b傾けると、\u200b材料の\u200b載せ\u200b替えや\u200b小物部品の\u200b取り出しが\u200bできます。\u200b電装ボックスを\u200b機内に\u200b収めた\u200b構造です。', '1テーブル仕様の\u200bボールリフトは、\u200b材料を\u200bテーブル上で\u200b動かし、\u200b切断前に\u200b位置を\u200b合わせる\u200bための\u200b装備です。\u200b2テーブル仕様では\u200b外部に\u200b交換ユニットを\u200b配置します。', '日本向けの\u200b配置図には、\u200b機械と\u200bテーブルの\u200b向きが\u200b異なる\u200bSタイプと\u200bRタイプを\u200b掲載しています。\u200b材料置き場や\u200b搬送経路に\u200b合わせて\u200b配置を\u200b検討できます。', '2.5 Gの\u200bモーション制御と\u200b高剛性フレームを\u200b組み合わせています。\u200b材料の\u200b搬入方向と\u200b扉の\u200b開閉スペースを\u200bもとに\u200bレイアウトを\u200b検討できます。', '操作パネル側には\u200b両開きの\u200b扉が\u200bあります。\u200bFS3015は\u200b長さ3,048 mm、\u200bFS8025は\u200b長さ8,250 mmの\u200bワークに\u200b対応します。', 'モジュール式テーブルを\u200b使い、\u200b鋼板の\u200b長さに\u200b合わせて\u200bラインを\u200b構成します。\u200b造船・鉄骨加工などでは、\u200bクレーンの\u200b搬入方向と\u200b製品の\u200b搬出位置も\u200b選定条件に\u200bなります。', '日本向け資料では\u200bFSCUTコントローラーを\u200b案内しています。\u200bテーブル交換側の\u200b空き寸法と\u200b材料置き場の\u200b位置が、\u200b据付計画の\u200b確認点です。', '国内向け仕様には\u200bシーメンス製の\u200bNC装置を\u200b採用しています。\u200bメーカー公表の\u200b最大切断速度は\u200b50 m/minで、\u200b材料を\u200b切らずに\u200b軸を\u200b早送りする\u200b速度とは\u200b別の\u200b指標です。', '最大加工長は\u200b6,500 mm、\u200bワーク1本の\u200b最大質量は\u200b200 kgです。\u200b角管は\u200b一辺の\u200b寸法で\u200b選定します。', '標準加工長は\u200b9,000 mmで、\u200bワークは\u200b1本あたり\u200b最大1,200 kgです。\u200b日本向け資料では、\u200b加工・搬出長12,000 mmの\u200bオプションも\u200b案内しています。'];
     const REL = [['kube-1212', 'fl-3015'], ['fl-2512', 's-matic-k315'], ['kube-1212', 'fl-3015'], ['fl-2512', 'rs-3015'], ['fl-3015', 'fs-series'], ['fc-3015', 'fo-series'], ['fs-series', 'hd-series'], ['fs-series', 'fc-3015'], ['hd-series', 'fl-3015'], ['tl9036-x'], ['tl6527-s']];

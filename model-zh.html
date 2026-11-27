@@ -128,6 +128,7 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 .drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
 @media (max-width:900px){
  .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .g5{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
  .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
  .nav{display:none !important}
 
@@ -246,17 +247,17 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <thead><tr><th scope="col">激光功率</th><th scope="col">低碳钢</th><th scope="col">不锈钢</th><th scope="col">铝</th><th scope="col">铜</th><th scope="col">黄铜</th></tr></thead>
 <tbody>
 
-<tr><th scope="row">4 kW</th><td>20 mm</td><td>12 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
+<tr><th scope="row">4 kW</th><td>20 mm</td><td>13 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
 
-<tr><th scope="row">6 kW</th><td>25 mm</td><td>17 mm</td><td>15 mm</td><td>8 mm</td><td>12 mm</td></tr>
+<tr><th scope="row">6 kW</th><td>25 mm</td><td>19 mm</td><td>15 mm</td><td>8 mm</td><td>12 mm</td></tr>
 
-<tr><th scope="row">8 kW</th><td>30 mm</td><td>21 mm</td><td>21 mm</td><td>8 mm</td><td>12 mm</td></tr>
+<tr><th scope="row">8 kW</th><td>30 mm</td><td>23 mm</td><td>21 mm</td><td>8 mm</td><td>12 mm</td></tr>
 
-<tr><th scope="row">10 kW</th><td>30 mm</td><td>21 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
+<tr><th scope="row">10 kW</th><td>30 mm</td><td>23 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
 
-<tr><th scope="row">12 kW</th><td>30 mm</td><td>21 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
+<tr><th scope="row">12 kW</th><td>30 mm</td><td>23 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
 
-<tr><th scope="row">15 kW</th><td>35 mm</td><td>24 mm</td><td>24 mm</td><td>12 mm</td><td>15 mm</td></tr>
+<tr><th scope="row">15 kW</th><td>35 mm</td><td>26 mm</td><td>24 mm</td><td>12 mm</td><td>15 mm</td></tr>
 
 </tbody>
 </table>
@@ -556,14 +557,14 @@ class Component extends DCLogic {
       { kind: 'sheet', title: 'RS3015 FIBER', short: '从正面、侧面作业', img: B('af4799858c655c5be942306a14fcfd89'), alt: 'RS3015 FIBER 的正面与侧面机箱', lead: '通过正面和侧面的门，可触及加工室内的工件。', specs: S([[area, '3,048 × 1,524 mm'], [trav, '140 m/min'], ['取放方式', '正面、侧面门']]) },
       { kind: 'sheet', title: 'FS Series', short: '长尺板材、双开门', img: B('4bbbc7702f1ec1eaade26de07e474e07'), alt: 'FS 系列的 FS3015 FIBER 主机', lead: '可根据板材长度选择加工范围的系列。照片为 FS3015 FIBER。', specs: S([['FS3015 加工尺寸', '3,048 × 1,524 mm'], ['FS8025 加工尺寸', '8,250 × 2,540 mm'], [trav, '140 m/min']]) },
       { kind: 'sheet', title: 'FO Series', short: '大型钢板用龙门', img: B('8ce3e98554736f919eda7d18c87419e5'), alt: 'FO12025 FIBER 的开放式工作台与龙门架', lead: '龙门架在大型钢板上方移动的开放式切割机。照片为 FO12025 FIBER。', specs: S([['所载机型', 'FO12025 FIBER'], ['日本规格的工作台长度', '12 / 20 / 30 m'], ['工作台宽度构成', '2.5 / 3.1 m']]) },
-      { kind: 'sheet', title: 'HD Series', short: '材料检测、水平穿梭台', img: B('b7e873589b57ec47752e1214ea789838'), alt: 'HD 系列的 HD3015 与穿梭工作台', lead: '具备材料自动检测和水平穿梭工作台的板材激光切割机。所载机型为 HD3015。', specs: S([['所载机型', 'HD3015'], ['控制装置', 'FSCUT'], ['工作台', '水平穿梭台']]) },
+      { kind: 'sheet', title: 'HD Series', short: '水平穿梭工作台', img: B('b7e873589b57ec47752e1214ea789838'), alt: 'HD 系列的 HD3015 与穿梭工作台', lead: '配备水平穿梭工作台的板材激光切割机。所示机型为 HD3015。', specs: S([['所载机型', 'HD3015'], ['控制装置', 'FSCUT'], ['工作台', '水平穿梭台']]) },
       { kind: 'sheet', title: 'FC3015 FIBER', short: '重视品质、大幅降低价格的主力机', img: B('7ba3b3bf582caf4370471f950167260b'), alt: 'FC3015 FIBER 主机与材料交换工作台', lead: '在把切割品质放在首位的同时大幅降低价格的 3015 级切割机。用升降式穿梭工作台交换材料。', specs: S([[area, '3,048 × 1,524 mm'], ['最大切割速度', '50 m/min'], ['控制装置', 'Siemens NC']]) },
       { kind: 'tube', title: 'TL6527-S', short: '圆管 Ø12–273 mm', img: B('7378c43bc5e401b9bd793d1791ea638c'), alt: 'TL6527-S 的管材加工线与材料支撑部', lead: '加工圆管、方管的管材激光切割机。日本规格 6 kW 机型适用于外径 12～273 mm 的圆管。', specs: S([['圆管外径', 'Ø12–273 mm'], ['方管截面尺寸', '12 × 12 – 200 × 200 mm'], ['最大加工长度', '6,500 mm'], ['工件最大质量', '200 kg'], ['日本规格激光功率', '6 kW']]) },
       { kind: 'tube', title: 'TL9036-X', short: '圆管 Ø40–360 mm', img: B('8f79d2b48bd837ca652cea95046d5a6b'), alt: 'TL9036-X 长尺管材切割机全貌', lead: '适用于大口径、长尺管材的激光切割机。圆管可加工至外径 360 mm，方管可加工至 250 mm 见方。', specs: S([['圆管外径', 'Ø40–360 mm'], ['方管截面尺寸', '40 × 40 – 250 × 250 mm'], ['标准加工长度', '9,000 mm'], ['工件最大质量', '1,200 kg'], ['日本规格激光功率', '6–12 kW']]) }
     ];
-    const fs = [[2.5, 16, 8, 8, 4, 6], [3, 16, 10, 10, 6, 8], [4, 20, 12, 12, 6, 10], [6, 25, 17, 15, 8, 12], [8, 30, 21, 21, 8, 12], [10, 30, 21, 21, 10, 15], [12, 30, 21, 21, 10, 15], [15, 35, 24, 24, 12, 15]];
-    const fe = [[6, 22, 15, 14, 6, 10], [12, 25, 17, 17, 8, 12], [20, 40, 28, 28, 15, 15], [30, 50, 35, 35, 20, 20]];
-    const fc = [[6, 25, 17, 15, 8, 12], [12, 30, 21, 21, 10, 15], [20, 40, 28, 28, 12, 20], [30, 50, 35, 35, 12, 20]];
+    const fs = [[2.5, 16, 9, 8, 4, 6], [3, 16, 11, 10, 6, 8], [4, 20, 13, 12, 6, 10], [6, 25, 19, 15, 8, 12], [8, 30, 23, 21, 8, 12], [10, 30, 23, 21, 10, 15], [12, 30, 23, 21, 10, 15], [15, 35, 26, 24, 12, 15]];
+    const fe = [[6, 22, 17, 14, 6, 10], [12, 25, 19, 17, 8, 12], [20, 40, 31, 28, 15, 15], [30, 50, 39, 35, 20, 20]];
+    const fc = [[6, 25, 19, 15, 8, 12], [12, 30, 23, 21, 10, 15], [20, 40, 31, 28, 12, 20], [30, 50, 39, 35, 12, 20]];
     const caps = { fs: { label: 'FS Series', rows: fs }, fl: { label: 'FL 3015', rows: fs.slice(2) }, rs: { label: 'RS3015', rows: fs.slice(3) }, fe: { label: 'HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
     const DETAIL = ['通过真空吸附分拣零件，余料由毛刷工作台移至回收位置。图中的编号表示构成生产线的各装置。', '将工作台拉出并倾斜，即可更换材料或取出小型零件。电气柜内置于机身。', '单工作台规格的滚珠升降装置用于在工作台上移动材料，在切割前对准位置。双工作台规格在外部配置交换单元。', '面向日本的布局图中列有机械与工作台方向不同的 S 型和 R 型，可根据材料堆放处和搬运路线考虑布局。', '结合 2.5 G 运动控制与高刚性机架。可根据材料搬入方向和门的开闭空间考虑布局。', '操作面板一侧设有双开门。FS3015 适用于长 3,048 mm 的工件，FS8025 适用于长 8,250 mm 的工件。', '采用模块式工作台，根据钢板长度构成生产线。在造船、钢结构加工等领域，起重机的搬入方向和成品的搬出位置也是选型条件。', '面向日本的资料中介绍的是 FSCUT 控制器。工作台交换侧的空余尺寸和材料堆放位置是安装规划的确认要点。', '日本规格采用西门子 NC 装置。厂商公布的最大切割速度为 50 m/min，与不切割材料时各轴快移的速度是不同的指标。', '最大加工长度为 6,500 mm，单根工件最大质量为 200 kg。方管按边长选型。', '标准加工长度为 9,000 mm，单根工件最大 1,200 kg。面向日本的资料中还介绍了加工、搬出长度 12,000 mm 的选配。'];
     const REL = [['kube-1212', 'fl-3015'], ['fl-2512', 's-matic-k315'], ['kube-1212', 'fl-3015'], ['fl-2512', 'rs-3015'], ['fl-3015', 'fs-series'], ['fc-3015', 'fo-series'], ['fs-series', 'hd-series'], ['fs-series', 'fc-3015'], ['hd-series', 'fl-3015'], ['tl9036-x'], ['tl6527-s']];

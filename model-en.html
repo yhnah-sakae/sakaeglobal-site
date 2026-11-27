@@ -128,6 +128,7 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 .drop .off{color:#86868B}.drop .off small{margin-left:auto;font-size:11px}
 @media (max-width:900px){
  .g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}
+ .g5{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
  .mnav,.mlang{display:block}.langtxt,.hpill{display:none !important}.lname{display:none}.hlogo{height:40px !important}
  .nav{display:none !important}
 
@@ -247,17 +248,17 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <thead><tr><th scope="col">Laser power</th><th scope="col">Mild steel</th><th scope="col">Stainless steel</th><th scope="col">Aluminum</th><th scope="col">Copper</th><th scope="col">Brass</th></tr></thead>
 <tbody>
 
-<tr><th scope="row">4 kW</th><td>20 mm</td><td>12 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
+<tr><th scope="row">4 kW</th><td>20 mm</td><td>13 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
 
-<tr><th scope="row">6 kW</th><td>25 mm</td><td>17 mm</td><td>15 mm</td><td>8 mm</td><td>12 mm</td></tr>
+<tr><th scope="row">6 kW</th><td>25 mm</td><td>19 mm</td><td>15 mm</td><td>8 mm</td><td>12 mm</td></tr>
 
-<tr><th scope="row">8 kW</th><td>30 mm</td><td>21 mm</td><td>21 mm</td><td>8 mm</td><td>12 mm</td></tr>
+<tr><th scope="row">8 kW</th><td>30 mm</td><td>23 mm</td><td>21 mm</td><td>8 mm</td><td>12 mm</td></tr>
 
-<tr><th scope="row">10 kW</th><td>30 mm</td><td>21 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
+<tr><th scope="row">10 kW</th><td>30 mm</td><td>23 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
 
-<tr><th scope="row">12 kW</th><td>30 mm</td><td>21 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
+<tr><th scope="row">12 kW</th><td>30 mm</td><td>23 mm</td><td>21 mm</td><td>10 mm</td><td>15 mm</td></tr>
 
-<tr><th scope="row">15 kW</th><td>35 mm</td><td>24 mm</td><td>24 mm</td><td>12 mm</td><td>15 mm</td></tr>
+<tr><th scope="row">15 kW</th><td>35 mm</td><td>26 mm</td><td>24 mm</td><td>12 mm</td><td>15 mm</td></tr>
 
 </tbody>
 </table>
@@ -557,14 +558,14 @@ class Component extends DCLogic {
       { kind: 'sheet', title: 'RS3015 FIBER', short: 'Work from the front and side', img: B('af4799858c655c5be942306a14fcfd89'), alt: 'Front and side of the RS3015 FIBER', lead: 'Front and side doors give access to the workpiece in the cutting chamber.', specs: S([[area, '3,048 × 1,524 mm'], [trav, '140 m/min'], ['Access', 'Front and side doors']]) },
       { kind: 'sheet', title: 'FS Series', short: 'Long sheets, double doors', img: B('4bbbc7702f1ec1eaade26de07e474e07'), alt: 'FS3015 FIBER of the FS series', lead: 'A series with working ranges to match sheet length. Photo: FS3015 FIBER.', specs: S([['FS3015 working size', '3,048 × 1,524 mm'], ['FS8025 working size', '8,250 × 2,540 mm'], [trav, '140 m/min']]) },
       { kind: 'sheet', title: 'FO Series', short: 'Gantry for large steel plate', img: B('8ce3e98554736f919eda7d18c87419e5'), alt: 'Open table and gantry of the FO12025 FIBER', lead: 'An open-type cutting machine with a gantry that travels over large steel plate. Photo: FO12025 FIBER.', specs: S([['Model shown', 'FO12025 FIBER'], ['Table lengths for Japan', '12 / 20 / 30 m'], ['Table widths', '2.5 / 3.1 m']]) },
-      { kind: 'sheet', title: 'HD Series', short: 'Material detection, horizontal shuttle', img: B('b7e873589b57ec47752e1214ea789838'), alt: 'HD3015 of the HD series with its shuttle table', lead: 'A sheet laser cutting machine with automatic material detection and a horizontal shuttle table. Model shown: HD3015.', specs: S([['Model shown', 'HD3015'], ['Controller', 'FSCUT'], ['Table', 'Horizontal shuttle']]) },
+      { kind: 'sheet', title: 'HD Series', short: 'Horizontal shuttle table', img: B('b7e873589b57ec47752e1214ea789838'), alt: 'HD3015 of the HD series with its shuttle table', lead: 'A sheet laser cutting machine with a horizontal shuttle table. The model shown is the HD3015.', specs: S([['Model shown', 'HD3015'], ['Controller', 'FSCUT'], ['Table', 'Horizontal shuttle']]) },
       { kind: 'sheet', title: 'FC3015 FIBER', short: 'Quality first, at a much lower price', img: B('7ba3b3bf582caf4370471f950167260b'), alt: 'FC3015 FIBER with its material exchange table', lead: 'A 3015-class cutting machine that puts cut quality first while keeping the price much lower. Material is exchanged with a lifting shuttle table.', specs: S([[area, '3,048 × 1,524 mm'], ['Max. cutting speed', '50 m/min'], ['Controller', 'Siemens NC']]) },
       { kind: 'tube', title: 'TL6527-S', short: 'Round tube Ø12–273 mm', img: B('7378c43bc5e401b9bd793d1791ea638c'), alt: 'TL6527-S pipe line and material supports', lead: 'A laser cutting machine for round and square tube. The 6 kW version for Japan handles round tube from 12 to 273 mm outside diameter.', specs: S([['Round tube OD', 'Ø12–273 mm'], ['Square tube section', '12 × 12 – 200 × 200 mm'], ['Max. working length', '6,500 mm'], ['Max. workpiece weight', '200 kg'], ['Laser power for Japan', '6 kW']]) },
       { kind: 'tube', title: 'TL9036-X', short: 'Round tube Ø40–360 mm', img: B('8f79d2b48bd837ca652cea95046d5a6b'), alt: 'Full view of the TL9036-X long-pipe cutting machine', lead: 'A laser cutting machine for large-diameter, long pipe: round tube up to 360 mm OD and square tube up to 250 mm.', specs: S([['Round tube OD', 'Ø40–360 mm'], ['Square tube section', '40 × 40 – 250 × 250 mm'], ['Standard working length', '9,000 mm'], ['Max. workpiece weight', '1,200 kg'], ['Laser power for Japan', '6–12 kW']]) }
     ];
-    const fs = [[2.5, 16, 8, 8, 4, 6], [3, 16, 10, 10, 6, 8], [4, 20, 12, 12, 6, 10], [6, 25, 17, 15, 8, 12], [8, 30, 21, 21, 8, 12], [10, 30, 21, 21, 10, 15], [12, 30, 21, 21, 10, 15], [15, 35, 24, 24, 12, 15]];
-    const fe = [[6, 22, 15, 14, 6, 10], [12, 25, 17, 17, 8, 12], [20, 40, 28, 28, 15, 15], [30, 50, 35, 35, 20, 20]];
-    const fc = [[6, 25, 17, 15, 8, 12], [12, 30, 21, 21, 10, 15], [20, 40, 28, 28, 12, 20], [30, 50, 35, 35, 12, 20]];
+    const fs = [[2.5, 16, 9, 8, 4, 6], [3, 16, 11, 10, 6, 8], [4, 20, 13, 12, 6, 10], [6, 25, 19, 15, 8, 12], [8, 30, 23, 21, 8, 12], [10, 30, 23, 21, 10, 15], [12, 30, 23, 21, 10, 15], [15, 35, 26, 24, 12, 15]];
+    const fe = [[6, 22, 17, 14, 6, 10], [12, 25, 19, 17, 8, 12], [20, 40, 31, 28, 15, 15], [30, 50, 39, 35, 20, 20]];
+    const fc = [[6, 25, 19, 15, 8, 12], [12, 30, 23, 21, 10, 15], [20, 40, 31, 28, 12, 20], [30, 50, 39, 35, 12, 20]];
     const caps = { fs: { label: 'FS Series', rows: fs }, fl: { label: 'FL 3015', rows: fs.slice(2) }, rs: { label: 'RS3015', rows: fs.slice(3) }, fe: { label: 'HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
     const DETAIL = ['Vacuum sorting separates cut parts. The brush table transfers the remaining sheet skeleton to the unloading area. The numbered drawing identifies the line’s modules.', 'The table slides forward and tilts to give the operator access to the sheet and cut parts. The electrical cabinet is built into the machine.', 'Ball lifts on the single-table version help position the blank before cutting. The twin-table layout includes a separate exchange unit outside the enclosure.', 'The Japanese layout drawings show mirrored S and R arrangements. The choice depends on where the stock is stored and how blanks reach the machine.', 'The machine combines 2.5 G motion control with a rigid main frame. The two access directions help determine the loading path and space needed around the doors.', 'Double doors open on the operator side. The FS3015 accepts sheets up to 3,048 mm long and the FS8025 extends that length to 8,250 mm.', 'The modular bed is configured around plate length. In shipbuilding and structural-steel work, crane access and the unloading position also shape the layout.', 'The Japanese product information lists an FSCUT controller. Plan stock storage and clearance on the shuttle side when laying out the machine.', 'The Japanese specification includes Siemens numerical control. The maker’s published maximum cutting speed is 50 m/min, a separate figure from the traverse speed used to move the axes without cutting.', 'The machine accepts workpieces up to 6,500 mm long and 200 kg each. Square stock is specified by its side dimensions.', 'The standard processing length is 9,000 mm and the limit per workpiece is 1,200 kg. The Japanese product sheet also lists a 12,000 mm processing and unloading option.'];
     const REL = [['kube-1212', 'fl-3015'], ['fl-2512', 's-matic-k315'], ['kube-1212', 'fl-3015'], ['fl-2512', 'rs-3015'], ['fl-3015', 'fs-series'], ['fc-3015', 'fo-series'], ['fs-series', 'hd-series'], ['fs-series', 'fc-3015'], ['hd-series', 'fl-3015'], ['tl9036-x'], ['tl6527-s']];
