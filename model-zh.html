@@ -112,6 +112,9 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 .sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
 .sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
 .sub a:hover{background:#F5F5F7}
+.nav a.on{color:#0B5CAD;font-weight:700;position:relative}
+.nav>a.on::after,.hasdrop>a.on::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:3px;border-radius:3px;background:#0B5CAD}
+.sub a.on{background:#EEF4FB;color:#0B5CAD;font-weight:700}
 .hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
 .mnav,.mlang{display:none;position:relative}
 .mlang{display:block}
@@ -142,7 +145,7 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
 <a href="index-zh.html" aria-label="SAKAE GLOBAL 首页" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
 <nav class="nav" aria-label="主菜单" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
-<div class="hasdrop"><a href="products-zh.html" style="font-weight: 700">产品信息</a><div class="sub"><div><a href="cutting-zh.html">光纤激光切割机</a><a href="welder-zh.html">激光焊接机</a><a href="robot-zh.html">协作焊接机器人</a><a href="stopper-zh.html">缓冲型车轮挡</a><a href="separator-zh.html">压缩空气用分离器</a></div></div></div>
+<div class="hasdrop"><a href="products-zh.html" class="on">产品信息</a><div class="sub"><div><a href="cutting-zh.html" class="on" aria-current="page">光纤激光切割机</a><a href="welder-zh.html">激光焊接机</a><a href="robot-zh.html">协作焊接机器人</a><a href="stopper-zh.html">缓冲型车轮挡</a><a href="separator-zh.html">压缩空气用分离器</a></div></div></div>
 <a href="subsidy-zh.html">补助金、导入支持</a>
 <a href="company-zh.html">公司信息</a>
 <a href="news-zh.html">最新消息</a>
@@ -162,8 +165,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <details class="mnav">
 <summary aria-label="打开菜单"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
 <div class="drop">
-<a href="products-zh.html" style="font-weight: 700">产品信息</a>
-<a href="cutting-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">光纤激光切割机</a>
+<a href="products-zh.html" style="font-weight: 700; color: #0B5CAD; background: #EEF4FB">产品信息</a>
+<a href="cutting-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #0B5CAD; font-weight: 700; background: #EEF4FB">光纤激光切割机</a>
 <a href="welder-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">激光焊接机</a>
 <a href="robot-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">协作焊接机器人</a>
 <a href="stopper-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">缓冲型车轮挡</a>
@@ -239,8 +242,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap">
 <h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">各激​光​功率​的​最大​切割板​厚</h2>
 <div class="scroll" style="margin-top: clamp(16px, 2vw, 24px)">
-<table class="tb" style="min-width: 640px">
-<thead><tr><th scope="col">激光功率</th><th scope="col">低碳钢</th><th scope="col">不锈钢（洁净切割）</th><th scope="col">铝</th><th scope="col">铜</th><th scope="col">黄铜</th></tr></thead>
+<table class="tb" style="min-width: 640px; table-layout: fixed">
+<thead><tr><th scope="col">激光功率</th><th scope="col">低碳钢</th><th scope="col">不锈钢</th><th scope="col">铝</th><th scope="col">铜</th><th scope="col">黄铜</th></tr></thead>
 <tbody>
 
 <tr><th scope="row">4 kW</th><td>20 mm</td><td>12 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
@@ -361,7 +364,7 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
 <a href="index-zh.html" aria-label="SAKAE GLOBAL 首页" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="SAKAE GLOBAL 株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
 <nav class="nav" aria-label="主菜单" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
-<div class="hasdrop"><a href="products-zh.html" style="font-weight: 700">产品信息</a><div class="sub"><div><a href="cutting-zh.html">光纤激光切割机</a><a href="welder-zh.html">激光焊接机</a><a href="robot-zh.html">协作焊接机器人</a><a href="stopper-zh.html">缓冲型车轮挡</a><a href="separator-zh.html">压缩空气用分离器</a></div></div></div>
+<div class="hasdrop"><a href="products-zh.html" class="on">产品信息</a><div class="sub"><div><a href="cutting-zh.html" class="on" aria-current="page">光纤激光切割机</a><a href="welder-zh.html">激光焊接机</a><a href="robot-zh.html">协作焊接机器人</a><a href="stopper-zh.html">缓冲型车轮挡</a><a href="separator-zh.html">压缩空气用分离器</a></div></div></div>
 <a href="subsidy-zh.html">补助金、导入支持</a>
 <a href="company-zh.html">公司信息</a>
 <a href="news-zh.html">最新消息</a>
@@ -381,8 +384,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <details class="mnav">
 <summary aria-label="打开菜单"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
 <div class="drop">
-<a href="products-zh.html" style="font-weight: 700">产品信息</a>
-<a href="cutting-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">光纤激光切割机</a>
+<a href="products-zh.html" style="font-weight: 700; color: #0B5CAD; background: #EEF4FB">产品信息</a>
+<a href="cutting-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #0B5CAD; font-weight: 700; background: #EEF4FB">光纤激光切割机</a>
 <a href="welder-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">激光焊接机</a>
 <a href="robot-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">协作焊接机器人</a>
 <a href="stopper-zh.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">缓冲型车轮挡</a>
@@ -442,8 +445,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap">
 <h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">各激&#8203;光&#8203;功率&#8203;的&#8203;最大&#8203;切割板&#8203;厚</h2>
 <div class="scroll" style="margin-top: clamp(16px, 2vw, 24px)">
-<table class="tb" style="min-width: 640px">
-<thead><tr><th scope="col">激光功率</th><th scope="col">低碳钢</th><th scope="col">{{susHead}}</th><th scope="col">铝</th><th scope="col">铜</th><th scope="col">黄铜</th></tr></thead>
+<table class="tb" style="min-width: 640px; table-layout: fixed">
+<thead><tr><th scope="col">激光功率</th><th scope="col">低碳钢</th><th scope="col">不锈钢</th><th scope="col">铝</th><th scope="col">铜</th><th scope="col">黄铜</th></tr></thead>
 <tbody>
 <template data-for="cap" data-as="r">
 <tr><th scope="row">{{r.p}} kW</th><td>{{r.a}} mm</td><td>{{r.b}} mm</td><td>{{r.c}} mm</td><td>{{r.d}} mm</td><td>{{r.e}} mm</td></tr>
@@ -561,7 +564,7 @@ class Component extends DCLogic {
     const fs = [[2.5, 16, 8, 8, 4, 6], [3, 16, 10, 10, 6, 8], [4, 20, 12, 12, 6, 10], [6, 25, 17, 15, 8, 12], [8, 30, 21, 21, 8, 12], [10, 30, 21, 21, 10, 15], [12, 30, 21, 21, 10, 15], [15, 35, 24, 24, 12, 15]];
     const fe = [[6, 22, 15, 14, 6, 10], [12, 25, 17, 17, 8, 12], [20, 40, 28, 28, 15, 15], [30, 50, 35, 35, 20, 20]];
     const fc = [[6, 25, 17, 15, 8, 12], [12, 30, 21, 21, 10, 15], [20, 40, 28, 28, 12, 20], [30, 50, 35, 35, 12, 20]];
-    const caps = { fs: { label: 'FS Series', rows: fs, clean: true }, fl: { label: 'FL 3015', rows: fs.slice(2), clean: true }, rs: { label: 'RS3015', rows: fs.slice(3), clean: true }, fe: { label: 'HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
+    const caps = { fs: { label: 'FS Series', rows: fs }, fl: { label: 'FL 3015', rows: fs.slice(2) }, rs: { label: 'RS3015', rows: fs.slice(3) }, fe: { label: 'HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
     const DETAIL = ['通过真空吸附分拣零件，余料由毛刷工作台移至回收位置。图中的编号表示构成生产线的各装置。', '将工作台拉出并倾斜，即可更换材料或取出小型零件。电气柜内置于机身。', '单工作台规格的滚珠升降装置用于在工作台上移动材料，在切割前对准位置。双工作台规格在外部配置交换单元。', '面向日本的布局图中列有机械与工作台方向不同的 S 型和 R 型，可根据材料堆放处和搬运路线考虑布局。', '结合 2.5 G 运动控制与高刚性机架。可根据材料搬入方向和门的开闭空间考虑布局。', '操作面板一侧设有双开门。FS3015 适用于长 3,048 mm 的工件，FS8025 适用于长 8,250 mm 的工件。', '采用模块式工作台，根据钢板长度构成生产线。在造船、钢结构加工等领域，起重机的搬入方向和成品的搬出位置也是选型条件。', '面向日本的资料中介绍的是 FSCUT 控制器。工作台交换侧的空余尺寸和材料堆放位置是安装规划的确认要点。', '日本规格采用西门子 NC 装置。厂商公布的最大切割速度为 50 m/min，与不切割材料时各轴快移的速度是不同的指标。', '最大加工长度为 6,500 mm，单根工件最大质量为 200 kg。方管按边长选型。', '标准加工长度为 9,000 mm，单根工件最大 1,200 kg。面向日本的资料中还介绍了加工、搬出长度 12,000 mm 的选配。'];
     const REL = [['kube-1212', 'fl-3015'], ['fl-2512', 's-matic-k315'], ['kube-1212', 'fl-3015'], ['fl-2512', 'rs-3015'], ['fl-3015', 'fs-series'], ['fc-3015', 'fo-series'], ['fs-series', 'hd-series'], ['fs-series', 'fc-3015'], ['hd-series', 'fl-3015'], ['tl9036-x'], ['tl6527-s']];
     const TAGS = ['钣金激光加工全自动系统', '占地小的小型激光切割系统', '兼顾紧凑布局与易用性', '侧门结构的高品质、高效率机型', '具备 2.5 G 高速运动的高端机型', '年度畅销系列', '面向大型钢板的龙门式激光切割机', '追求实用性的经济型机型', '品质优先、大幅降低价格的机型', '高速切割与高生产率', '大口径管材切割解决方案'];
@@ -583,7 +586,6 @@ class Component extends DCLogic {
       kindLabel: m.kind === 'tube' ? '管材用' : '板材用',
       hasCap: !!capKey,
       cap: rows.map((r) => ({ p: r[0], a: r[1], b: r[2], c: r[3], d: r[4], e: r[5] })),
-      susHead: capKey && caps[capKey].clean ? '不锈钢（洁净切割）' : '不锈钢',
       related: REL[idx].map((id) => { const k = IDS.indexOf(id); const r = all[k]; return { title: r.title, short: r.short, img: r.img, alt: r.alt, pick: go(id) }; }),
       others: all.map((r, k) => ({ title: r.title, ...chip(k === idx), pick: go(IDS[k]) }))
     

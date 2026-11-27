@@ -112,6 +112,9 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 .sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
 .sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
 .sub a:hover{background:#F5F5F7}
+.nav a.on{color:#0B5CAD;font-weight:700;position:relative}
+.nav>a.on::after,.hasdrop>a.on::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:3px;border-radius:3px;background:#0B5CAD}
+.sub a.on{background:#EEF4FB;color:#0B5CAD;font-weight:700}
 .hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
 .mnav,.mlang{display:none;position:relative}
 .mlang{display:block}
@@ -142,7 +145,7 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
 <a href="index.html" aria-label="SAKAE GLOBAL ホーム" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
 <nav class="nav" aria-label="メインメニュー" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
-<div class="hasdrop"><a href="products.html" style="font-weight: 700">製品情報</a><div class="sub"><div><a href="cutting.html">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
+<div class="hasdrop"><a href="products.html" class="on">製品情報</a><div class="sub"><div><a href="cutting.html" class="on" aria-current="page">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
 <a href="subsidy.html">補助金・導入支援</a>
 <a href="company.html">会社情報</a>
 <a href="news.html">お知らせ</a>
@@ -162,8 +165,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <details class="mnav">
 <summary aria-label="メニューを開く"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
 <div class="drop">
-<a href="products.html" style="font-weight: 700">製品情報</a>
-<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">ファイバーレーザー切断機</a>
+<a href="products.html" style="font-weight: 700; color: #0B5CAD; background: #EEF4FB">製品情報</a>
+<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #0B5CAD; font-weight: 700; background: #EEF4FB">ファイバーレーザー切断機</a>
 <a href="welder.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">レーザー溶接機</a>
 <a href="robot.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">協働溶接ロボット</a>
 <a href="stopper.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">衝撃吸収型カーストッパー</a>
@@ -239,8 +242,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap">
 <h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">レーザー出力別の​最大切断板厚</h2>
 <div class="scroll" style="margin-top: clamp(16px, 2vw, 24px)">
-<table class="tb" style="min-width: 640px">
-<thead><tr><th scope="col">レーザー出力</th><th scope="col">軟鋼</th><th scope="col">ステンレス鋼​（クリーンカット）</th><th scope="col">アルミ</th><th scope="col">銅</th><th scope="col">黄銅</th></tr></thead>
+<table class="tb" style="min-width: 640px; table-layout: fixed">
+<thead><tr><th scope="col">レーザー出力</th><th scope="col">軟鋼</th><th scope="col">ステンレス鋼</th><th scope="col">アルミ</th><th scope="col">銅</th><th scope="col">黄銅</th></tr></thead>
 <tbody>
 
 <tr><th scope="row">4 kW</th><td>20 mm</td><td>12 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
@@ -361,7 +364,7 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
 <a href="index.html" aria-label="SAKAE GLOBAL ホーム" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="栄グローバル株式会社 SAKAE GLOBAL CORP." style="height: 48px; width: auto; display: block"></a>
 <nav class="nav" aria-label="メインメニュー" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
-<div class="hasdrop"><a href="products.html" style="font-weight: 700">製品情報</a><div class="sub"><div><a href="cutting.html">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
+<div class="hasdrop"><a href="products.html" class="on">製品情報</a><div class="sub"><div><a href="cutting.html" class="on" aria-current="page">ファイバーレーザー切断機</a><a href="welder.html">レーザー溶接機</a><a href="robot.html">協働溶接ロボット</a><a href="stopper.html">衝撃吸収型カーストッパー</a><a href="separator.html">圧縮空気用セパレーター</a></div></div></div>
 <a href="subsidy.html">補助金・導入支援</a>
 <a href="company.html">会社情報</a>
 <a href="news.html">お知らせ</a>
@@ -381,8 +384,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <details class="mnav">
 <summary aria-label="メニューを開く"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
 <div class="drop">
-<a href="products.html" style="font-weight: 700">製品情報</a>
-<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">ファイバーレーザー切断機</a>
+<a href="products.html" style="font-weight: 700; color: #0B5CAD; background: #EEF4FB">製品情報</a>
+<a href="cutting.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #0B5CAD; font-weight: 700; background: #EEF4FB">ファイバーレーザー切断機</a>
 <a href="welder.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">レーザー溶接機</a>
 <a href="robot.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">協働溶接ロボット</a>
 <a href="stopper.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">衝撃吸収型カーストッパー</a>
@@ -442,8 +445,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap">
 <h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">レーザー出力別の&#8203;最大切断板厚</h2>
 <div class="scroll" style="margin-top: clamp(16px, 2vw, 24px)">
-<table class="tb" style="min-width: 640px">
-<thead><tr><th scope="col">レーザー出力</th><th scope="col">軟鋼</th><th scope="col">{{susHead}}</th><th scope="col">アルミ</th><th scope="col">銅</th><th scope="col">黄銅</th></tr></thead>
+<table class="tb" style="min-width: 640px; table-layout: fixed">
+<thead><tr><th scope="col">レーザー出力</th><th scope="col">軟鋼</th><th scope="col">ステンレス鋼</th><th scope="col">アルミ</th><th scope="col">銅</th><th scope="col">黄銅</th></tr></thead>
 <tbody>
 <template data-for="cap" data-as="r">
 <tr><th scope="row">{{r.p}} kW</th><td>{{r.a}} mm</td><td>{{r.b}} mm</td><td>{{r.c}} mm</td><td>{{r.d}} mm</td><td>{{r.e}} mm</td></tr>
@@ -561,7 +564,7 @@ class Component extends DCLogic {
     const fs = [[2.5, 16, 8, 8, 4, 6], [3, 16, 10, 10, 6, 8], [4, 20, 12, 12, 6, 10], [6, 25, 17, 15, 8, 12], [8, 30, 21, 21, 8, 12], [10, 30, 21, 21, 10, 15], [12, 30, 21, 21, 10, 15], [15, 35, 24, 24, 12, 15]];
     const fe = [[6, 22, 15, 14, 6, 10], [12, 25, 17, 17, 8, 12], [20, 40, 28, 28, 15, 15], [30, 50, 35, 35, 20, 20]];
     const fc = [[6, 25, 17, 15, 8, 12], [12, 30, 21, 21, 10, 15], [20, 40, 28, 28, 12, 20], [30, 50, 35, 35, 12, 20]];
-    const caps = { fs: { label: 'FS Series', rows: fs, clean: true }, fl: { label: 'FL 3015', rows: fs.slice(2), clean: true }, rs: { label: 'RS3015', rows: fs.slice(3), clean: true }, fe: { label: 'HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
+    const caps = { fs: { label: 'FS Series', rows: fs }, fl: { label: 'FL 3015', rows: fs.slice(2) }, rs: { label: 'RS3015', rows: fs.slice(3) }, fe: { label: 'HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
     const DETAIL = ['真空\u200b吸着で\u200b部品を\u200b仕分けし、\u200b残材は\u200bブラシテーブルから\u200b回収位置へ\u200b移します。\u200b図中の\u200b番号は\u200bラインを\u200b構成する\u200b各装置を\u200b示します。', 'テーブルを\u200b引き出して\u200b傾けると、\u200b材料の\u200b載せ\u200b替えや\u200b小物部品の\u200b取り出しが\u200bできます。\u200b電装ボックスを\u200b機内に\u200b収めた\u200b構造です。', '1テーブル仕様の\u200bボールリフトは、\u200b材料を\u200bテーブル上で\u200b動かし、\u200b切断前に\u200b位置を\u200b合わせる\u200bための\u200b装備です。\u200b2テーブル仕様では\u200b外部に\u200b交換ユニットを\u200b配置します。', '日本向けの\u200b配置図には、\u200b機械と\u200bテーブルの\u200b向きが\u200b異なる\u200bSタイプと\u200bRタイプを\u200b掲載しています。\u200b材料置き場や\u200b搬送経路に\u200b合わせて\u200b配置を\u200b検討できます。', '2.5 Gの\u200bモーション制御と\u200b高剛性フレームを\u200b組み合わせています。\u200b材料の\u200b搬入方向と\u200b扉の\u200b開閉スペースを\u200bもとに\u200bレイアウトを\u200b検討できます。', '操作パネル側には\u200b両開きの\u200b扉が\u200bあります。\u200bFS3015は\u200b長さ3,048 mm、\u200bFS8025は\u200b長さ8,250 mmの\u200bワークに\u200b対応します。', 'モジュール式テーブルを\u200b使い、\u200b鋼板の\u200b長さに\u200b合わせて\u200bラインを\u200b構成します。\u200b造船・鉄骨加工などでは、\u200bクレーンの\u200b搬入方向と\u200b製品の\u200b搬出位置も\u200b選定条件に\u200bなります。', '日本向け資料では\u200bFSCUTコントローラーを\u200b案内しています。\u200bテーブル交換側の\u200b空き寸法と\u200b材料置き場の\u200b位置が、\u200b据付計画の\u200b確認点です。', '国内向け仕様には\u200bシーメンス製の\u200bNC装置を\u200b採用しています。\u200bメーカー公表の\u200b最大切断速度は\u200b50 m/minで、\u200b材料を\u200b切らずに\u200b軸を\u200b早送りする\u200b速度とは\u200b別の\u200b指標です。', '最大加工長は\u200b6,500 mm、\u200bワーク1本の\u200b最大質量は\u200b200 kgです。\u200b角管は\u200b一辺の\u200b寸法で\u200b選定します。', '標準加工長は\u200b9,000 mmで、\u200bワークは\u200b1本あたり\u200b最大1,200 kgです。\u200b日本向け資料では、\u200b加工・搬出長12,000 mmの\u200bオプションも\u200b案内しています。'];
     const REL = [['kube-1212', 'fl-3015'], ['fl-2512', 's-matic-k315'], ['kube-1212', 'fl-3015'], ['fl-2512', 'rs-3015'], ['fl-3015', 'fs-series'], ['fc-3015', 'fo-series'], ['fs-series', 'hd-series'], ['fs-series', 'fc-3015'], ['hd-series', 'fl-3015'], ['tl9036-x'], ['tl6527-s']];
     const TAGS = ['板金レーザー加工の\u200bフル\u200b自動システム', '設置面積を\u200b抑えた\u200b小型レーザー切断システム', 'コンパクトな\u200bレイアウトと\u200b使いやすさを\u200b両立', 'サイドドア構造の\u200b高品質・高効率モデル', '2.5 Gの\u200b高速モーションを\u200b備えた\u200b上位モデル', '年間ベストセラーシリーズ', '大型鋼板向けガントリー型レーザー切断機', '実用性を\u200b追求した\u200bエコノミーモデル', '品質を\u200b最優先に、\u200b価格を\u200b大きく\u200b抑えた\u200bモデル', '高速切断と\u200b高い\u200b生産性', '大口径パイプの\u200b切断ソリューション'];
@@ -583,7 +586,6 @@ class Component extends DCLogic {
       kindLabel: m.kind === 'tube' ? 'パイプ用' : '板材用',
       hasCap: !!capKey,
       cap: rows.map((r) => ({ p: r[0], a: r[1], b: r[2], c: r[3], d: r[4], e: r[5] })),
-      susHead: capKey && caps[capKey].clean ? 'ステンレス鋼\u200b（クリーンカット）' : 'ステンレス鋼',
       related: REL[idx].map((id) => { const k = IDS.indexOf(id); const r = all[k]; return { title: r.title, short: r.short, img: r.img, alt: r.alt, pick: go(id) }; }),
       others: all.map((r, k) => ({ title: r.title, ...chip(k === idx), pick: go(IDS[k]) }))
     

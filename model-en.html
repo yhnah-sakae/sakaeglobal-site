@@ -112,6 +112,9 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 .sub>div{display:flex;flex-direction:column;min-width:250px;padding:8px;background:#FFFFFF;border:1px solid #D2D2D7;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
 .sub a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;white-space:nowrap}
 .sub a:hover{background:#F5F5F7}
+.nav a.on{color:#0B5CAD;font-weight:700;position:relative}
+.nav>a.on::after,.hasdrop>a.on::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:3px;border-radius:3px;background:#0B5CAD}
+.sub a.on{background:#EEF4FB;color:#0B5CAD;font-weight:700}
 .hasdrop:hover .sub,.hasdrop:focus-within .sub{display:block}
 .mnav,.mlang{display:none;position:relative}
 .mlang{display:block}
@@ -143,7 +146,7 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
 <a href="index-en.html" aria-label="SAKAE GLOBAL home" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="Sakae Global Corp." style="height: 48px; width: auto; display: block"></a>
 <nav class="nav" aria-label="Main menu" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
-<div class="hasdrop"><a href="products-en.html" style="font-weight: 700">Products</a><div class="sub"><div><a href="cutting-en.html">Fiber laser cutting machines</a><a href="welder-en.html">Laser welders</a><a href="robot-en.html">Collaborative welding robots</a><a href="stopper-en.html">Shock-absorbing car stopper</a><a href="separator-en.html">Compressed-air separator</a></div></div></div>
+<div class="hasdrop"><a href="products-en.html" class="on">Products</a><div class="sub"><div><a href="cutting-en.html" class="on" aria-current="page">Fiber laser cutting machines</a><a href="welder-en.html">Laser welders</a><a href="robot-en.html">Collaborative welding robots</a><a href="stopper-en.html">Shock-absorbing car stopper</a><a href="separator-en.html">Compressed-air separator</a></div></div></div>
 <a href="subsidy-en.html">Subsidies and support</a>
 <a href="company-en.html">Company</a>
 <a href="news-en.html">News</a>
@@ -163,8 +166,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <details class="mnav">
 <summary aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
 <div class="drop">
-<a href="products-en.html" style="font-weight: 700">Products</a>
-<a href="cutting-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">Fiber laser cutting machines</a>
+<a href="products-en.html" style="font-weight: 700; color: #0B5CAD; background: #EEF4FB">Products</a>
+<a href="cutting-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #0B5CAD; font-weight: 700; background: #EEF4FB">Fiber laser cutting machines</a>
 <a href="welder-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">Laser welders</a>
 <a href="robot-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">Collaborative welding robots</a>
 <a href="stopper-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">Shock-absorbing car stopper</a>
@@ -240,8 +243,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap">
 <h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">Maximum cutting thickness by laser power</h2>
 <div class="scroll" style="margin-top: clamp(16px, 2vw, 24px)">
-<table class="tb" style="min-width: 640px">
-<thead><tr><th scope="col">Laser power</th><th scope="col">Mild steel</th><th scope="col">Stainless steel (clean cut)</th><th scope="col">Aluminum</th><th scope="col">Copper</th><th scope="col">Brass</th></tr></thead>
+<table class="tb" style="min-width: 640px; table-layout: fixed">
+<thead><tr><th scope="col">Laser power</th><th scope="col">Mild steel</th><th scope="col">Stainless steel</th><th scope="col">Aluminum</th><th scope="col">Copper</th><th scope="col">Brass</th></tr></thead>
 <tbody>
 
 <tr><th scope="row">4 kW</th><td>20 mm</td><td>12 mm</td><td>12 mm</td><td>6 mm</td><td>10 mm</td></tr>
@@ -362,7 +365,7 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap" style="height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
 <a href="index-en.html" aria-label="SAKAE GLOBAL home" style="display: flex; align-items: center; min-width: 0"><img class="hlogo" src="assets/117c52be5ecb1ebafe997be82697934e.png" alt="Sakae Global Corp." style="height: 48px; width: auto; display: block"></a>
 <nav class="nav" aria-label="Main menu" style="display: flex; align-items: center; gap: clamp(17px, 2.33vw, 28px); font-size: 14px">
-<div class="hasdrop"><a href="products-en.html" style="font-weight: 700">Products</a><div class="sub"><div><a href="cutting-en.html">Fiber laser cutting machines</a><a href="welder-en.html">Laser welders</a><a href="robot-en.html">Collaborative welding robots</a><a href="stopper-en.html">Shock-absorbing car stopper</a><a href="separator-en.html">Compressed-air separator</a></div></div></div>
+<div class="hasdrop"><a href="products-en.html" class="on">Products</a><div class="sub"><div><a href="cutting-en.html" class="on" aria-current="page">Fiber laser cutting machines</a><a href="welder-en.html">Laser welders</a><a href="robot-en.html">Collaborative welding robots</a><a href="stopper-en.html">Shock-absorbing car stopper</a><a href="separator-en.html">Compressed-air separator</a></div></div></div>
 <a href="subsidy-en.html">Subsidies and support</a>
 <a href="company-en.html">Company</a>
 <a href="news-en.html">News</a>
@@ -382,8 +385,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <details class="mnav">
 <summary aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path></svg></summary>
 <div class="drop">
-<a href="products-en.html" style="font-weight: 700">Products</a>
-<a href="cutting-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">Fiber laser cutting machines</a>
+<a href="products-en.html" style="font-weight: 700; color: #0B5CAD; background: #EEF4FB">Products</a>
+<a href="cutting-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #0B5CAD; font-weight: 700; background: #EEF4FB">Fiber laser cutting machines</a>
 <a href="welder-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">Laser welders</a>
 <a href="robot-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">Collaborative welding robots</a>
 <a href="stopper-en.html" style="min-height: 40px; padding-left: clamp(19px, 2.5vw, 30px); font-size: 14px; color: #5F5F64">Shock-absorbing car stopper</a>
@@ -443,8 +446,8 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <div class="wrap">
 <h2 class="h2" style="font-size: clamp(26px, 3.17vw, 38px)">Maximum cutting thickness by laser power</h2>
 <div class="scroll" style="margin-top: clamp(16px, 2vw, 24px)">
-<table class="tb" style="min-width: 640px">
-<thead><tr><th scope="col">Laser power</th><th scope="col">Mild steel</th><th scope="col">{{susHead}}</th><th scope="col">Aluminum</th><th scope="col">Copper</th><th scope="col">Brass</th></tr></thead>
+<table class="tb" style="min-width: 640px; table-layout: fixed">
+<thead><tr><th scope="col">Laser power</th><th scope="col">Mild steel</th><th scope="col">Stainless steel</th><th scope="col">Aluminum</th><th scope="col">Copper</th><th scope="col">Brass</th></tr></thead>
 <tbody>
 <template data-for="cap" data-as="r">
 <tr><th scope="row">{{r.p}} kW</th><td>{{r.a}} mm</td><td>{{r.b}} mm</td><td>{{r.c}} mm</td><td>{{r.d}} mm</td><td>{{r.e}} mm</td></tr>
@@ -562,7 +565,7 @@ class Component extends DCLogic {
     const fs = [[2.5, 16, 8, 8, 4, 6], [3, 16, 10, 10, 6, 8], [4, 20, 12, 12, 6, 10], [6, 25, 17, 15, 8, 12], [8, 30, 21, 21, 8, 12], [10, 30, 21, 21, 10, 15], [12, 30, 21, 21, 10, 15], [15, 35, 24, 24, 12, 15]];
     const fe = [[6, 22, 15, 14, 6, 10], [12, 25, 17, 17, 8, 12], [20, 40, 28, 28, 15, 15], [30, 50, 35, 35, 20, 20]];
     const fc = [[6, 25, 17, 15, 8, 12], [12, 30, 21, 21, 10, 15], [20, 40, 28, 28, 12, 20], [30, 50, 35, 35, 12, 20]];
-    const caps = { fs: { label: 'FS Series', rows: fs, clean: true }, fl: { label: 'FL 3015', rows: fs.slice(2), clean: true }, rs: { label: 'RS3015', rows: fs.slice(3), clean: true }, fe: { label: 'HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
+    const caps = { fs: { label: 'FS Series', rows: fs }, fl: { label: 'FL 3015', rows: fs.slice(2) }, rs: { label: 'RS3015', rows: fs.slice(3) }, fe: { label: 'HD Series', rows: fe }, fc: { label: 'FC3015', rows: fc } };
     const DETAIL = ['Vacuum sorting separates cut parts. The brush table transfers the remaining sheet skeleton to the unloading area. The numbered drawing identifies the line’s modules.', 'The table slides forward and tilts to give the operator access to the sheet and cut parts. The electrical cabinet is built into the machine.', 'Ball lifts on the single-table version help position the blank before cutting. The twin-table layout includes a separate exchange unit outside the enclosure.', 'The Japanese layout drawings show mirrored S and R arrangements. The choice depends on where the stock is stored and how blanks reach the machine.', 'The machine combines 2.5 G motion control with a rigid main frame. The two access directions help determine the loading path and space needed around the doors.', 'Double doors open on the operator side. The FS3015 accepts sheets up to 3,048 mm long and the FS8025 extends that length to 8,250 mm.', 'The modular bed is configured around plate length. In shipbuilding and structural-steel work, crane access and the unloading position also shape the layout.', 'The Japanese product information lists an FSCUT controller. Plan stock storage and clearance on the shuttle side when laying out the machine.', 'The Japanese specification includes Siemens numerical control. The maker’s published maximum cutting speed is 50 m/min, a separate figure from the traverse speed used to move the axes without cutting.', 'The machine accepts workpieces up to 6,500 mm long and 200 kg each. Square stock is specified by its side dimensions.', 'The standard processing length is 9,000 mm and the limit per workpiece is 1,200 kg. The Japanese product sheet also lists a 12,000 mm processing and unloading option.'];
     const REL = [['kube-1212', 'fl-3015'], ['fl-2512', 's-matic-k315'], ['kube-1212', 'fl-3015'], ['fl-2512', 'rs-3015'], ['fl-3015', 'fs-series'], ['fc-3015', 'fo-series'], ['fs-series', 'hd-series'], ['fs-series', 'fc-3015'], ['hd-series', 'fl-3015'], ['tl9036-x'], ['tl6527-s']];
     const TAGS = ['Fully automatic sheet laser processing system', 'Compact laser cutting system with a small footprint', 'Compact layout and ease of use combined', 'High-quality, high-efficiency model with side-door access', 'Top-range model with 2.5 G high-speed motion', 'The best-selling series of the year', 'Gantry-type laser cutting machine for large steel plate', 'An economy model built for practicality', 'Quality first, at a much lower price', 'High-speed cutting and high productivity', 'Cutting solution for large-diameter pipe'];
@@ -584,7 +587,6 @@ class Component extends DCLogic {
       kindLabel: m.kind === 'tube' ? 'Pipe' : 'Sheet',
       hasCap: !!capKey,
       cap: rows.map((r) => ({ p: r[0], a: r[1], b: r[2], c: r[3], d: r[4], e: r[5] })),
-      susHead: capKey && caps[capKey].clean ? 'Stainless steel (clean cut)' : 'Stainless steel',
       related: REL[idx].map((id) => { const k = IDS.indexOf(id); const r = all[k]; return { title: r.title, short: r.short, img: r.img, alt: r.alt, pick: go(id) }; }),
       others: all.map((r, k) => ({ title: r.title, ...chip(k === idx), pick: go(IDS[k]) }))
     
