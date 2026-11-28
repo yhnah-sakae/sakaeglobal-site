@@ -384,6 +384,9 @@ details summary{cursor:pointer;list-style:none}details summary::-webkit-details-
 <img src="{{ph.src}}" alt="{{ph.alt}}" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; background: #EDEDF0">
 </template>
 </div>
+<template data-if="n.phNote">
+<p class="mut" role="status" style="margin: 10px 0 0; font-size: 13px">{{n.phNoteText}}</p>
+</template>
 </template>
 </div>
 </template>
@@ -463,6 +466,7 @@ class Component extends DCLogic {
 
     const st = this.state || {};
     if (!this._ph) this._ph = {};
+    if (!this._ps) this._ps = {};
     if (NEWS_API && !this._loaded) {
       this._loaded = true;
       try { fetch(NEWS_API + '?action=list&lang=ja').then((r) => r.json()).then((j) => { if (j && j.ok && j.posts) this.setState({ list: j.posts }); }).catch(() => {}); } catch (e) {}
@@ -470,9 +474,10 @@ class Component extends DCLogic {
     const list = st.list || defaults;
     const loadPhotos = (n) => {
       (n.photos || []).forEach((id) => {
-        if (this._ph[id] || !NEWS_API) return;
-        this._ph[id] = BLANK;
-        try { fetch(NEWS_API + '?action=photo&id=' + encodeURIComponent(id)).then((r) => r.json()).then((j) => { if (j && j.ok) { this._ph[id] = j.data; this.setState({ tick: Date.now() }); } }).catch(() => {}); } catch (e) {}
+        if (this._ps[id] === 'ok' || this._ps[id] === 'loading' || !NEWS_API) return;
+        this._ps[id] = 'loading';
+        const fail = () => { this._ps[id] = 'error'; this.setState({ tick: Date.now() }); };
+        try { fetch(NEWS_API + '?action=photo&id=' + encodeURIComponent(id)).then((r) => r.json()).then((j) => { if (j && j.ok && j.data) { this._ph[id] = j.data; this._ps[id] = 'ok'; this.setState({ tick: Date.now() }); } else fail(); }).catch(fail); } catch (e) { fail(); }
       });
     };
     return {
@@ -482,6 +487,8 @@ class Component extends DCLogic {
           title: n.title, body: n.body, dateText: String(n.date).replace(/-/g, '.'),
           hasPhotos: !!(n.photos && n.photos.length),
           photos: (n.photos || []).map((id, i) => ({ src: this._ph[id] || BLANK, alt: n.title + ' の写真 ' + (i + 1) })),
+          phNote: (n.photos || []).some((id) => this._ps[id] === 'loading' || this._ps[id] === 'error'),
+          phNoteText: (n.photos || []).some((id) => this._ps[id] === 'error') ? '一部の\u200b写真を\u200b読み込めませんでした。\u200b時間を\u200bおいて、\u200bもう\u200b一度\u200b開いてください。' : '写真を\u200b読み込んでいます…',
           open: open, openText: open ? 'true' : 'false', mark: open ? '−' : '+', badge: (n.photos || []).length ? '写真あり' : '',
           toggle: () => { if (!open) loadPhotos(n); this.setState({ openId: open ? null : n.id }); }
         };
